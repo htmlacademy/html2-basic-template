@@ -1,5 +1,6 @@
 {
   "name": "HTML Academy gulp template",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
