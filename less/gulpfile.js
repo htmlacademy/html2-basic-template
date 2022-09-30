@@ -15,7 +15,7 @@ import browser from 'browser-sync';
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/sass/style.sass', { sourcemaps: true })
+  return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -129,7 +129,7 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.sass', gulp.series(styles));
+  gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
