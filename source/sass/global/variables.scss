@@ -1,1 +1,24 @@
-/* здесь используйте глобальные переменные */
+//Основные цвета
+
+$base-white: #ffffff;
+$base-grey: #bdbdbd;
+$base-black: #333333;
+$base-primary: #7859cf;
+$base-secondary: #f0ebff;
+$primary-opacity: rgba (120, 89, 207, 0.25);
+$primary-lighter: #9070EC;
+$primary-darker: #593CAC;
+$light-grey: #E2E2E2;
+$lightest-grey: #F8F8F8;
+$flat-white: #F3EBE1;
+$lavender-latte: #EAE6FC;
+$espresso: #E5E6E8;
+
+//Медиа выражения
+
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-width-only: 767px;
+
+// максимальная ширина в desktop
+$desktop-page-width: 1050px;
