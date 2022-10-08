@@ -1,0 +1,30 @@
+.site-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-list__item {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 60px;
+  border-bottom: 1px solid $base-secondary;
+  box-sizing: border-box;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+}
+
+.site-list__link {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $base-black;
+  cursor: pointer;
+}

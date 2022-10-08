@@ -13,48 +13,56 @@
 </head>
 <body class="page__body">
 <header class="header">
-  <a href="#" class="page-header__logo">
-    <span class="visually-hidden">Логотип "Coffee2Go"</span>
-  </a>
-  <button class="main-nav__toggle" type="button">
-    <span class="visually-hidden">Открыть меню</span>
-  </button>
-  <nav class="header__site-nav">
-    <ul class="site-list">
-      <li class="site-list__item">
-        <a href="#" class="site-list__link">Главная</a>
-      </li>
-      <li class="site-list__item">
-        <a href="#" class="site-list__link">Каталог</a>
-      </li>
-      <li class="site-list__item">
-        <a href="#" class="site-list__link">Доставка</a>
-      </li>
-      <li class="site-list__item">
-        <a href="#" class="site-list__link">О нас</a>
-      </li>
-    </ul>
-  </nav>
-  <nav class="header__user-nav">
-    <ul class="user-list">
-      <li class="user-list__item">
-        <button class="user-list__user" type="button">
-          <svg class="page-header__user-icon" width="18" height="18">
-            <use xlink:href="img/sprite.svg#header-search"></use>
-          </svg>
-          Личный кабинет
-        </button>
-      </li>
-      <li class="user-list__item">
-        <button class="user-list__cart" type="button">
-          <svg class="page-header__cart-icon" width="21" height="18">
-            <use xlink:href="img/sprite.svg#header-cart"></use>
-          </svg>
-          Корзина
-        </button>
-      </li>
-    </ul>
-  </nav>
+  <div class="header__wrapper header__wrapper--nojs">
+
+    <a href="#" class="header__logo">
+      <picture class="header__picture">
+        <source media="(min-width: 1150px)" srcset="img/header-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
+        <img class="header__image" src="img/header-logo-mobile.svg" width="36" height="36"
+             alt="Логотип coffee2go">
+      </picture>
+      <span class="visually-hidden">Логотип "Coffee2Go"</span>
+    </a>
+
+    <nav class="header__site-nav header__site-nav--nojs">
+      <ul class="site-list">
+        <li class="site-list__item">
+          <a href="#" class="site-list__link">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#" class="site-list__link">Каталог</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#" class="site-list__link">Доставка</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#" class="site-list__link">О нас</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="header__user-nav user__wrapper">
+      <button class="user-list__button" type="button">
+        <svg class="page-header__user-icon" width="18" height="18">
+          <use xlink:href="img/sprite.svg#header-user"></use>
+        </svg>
+        <span class="visually-hidden">Личный кабинет</span>
+      </button>
+      <button class="user-list__button" type="button">
+        <svg class="page-header__cart-icon" width="21" height="18">
+          <use xlink:href="img/sprite.svg#header-cart"></use>
+        </svg>
+        <span class="visually-hidden">Корзина</span>
+      </button>
+    </nav>
+
+    <button class="header__toggle header__toggle--nojs" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+
+  </div>
+
 </header>
 <main>
   <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
@@ -435,10 +443,11 @@
   </section>
 </footer>
 
+<script src="./js/header.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="./js/script.js" defer></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
+crossorigin=""></script>
+<script src="./js/script.js"></script>
 </body>
 </html>

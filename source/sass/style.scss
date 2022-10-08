@@ -4,8 +4,12 @@
 @import "global/fonts";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "blocks/header/header";
+@import "blocks/header/user-nav";
+@import "blocks/header/site-nav";
 
 //common elements
 
 @import "blocks/common/button";
+@import "blocks/common/visually-hiden";
+
