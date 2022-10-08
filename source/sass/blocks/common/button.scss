@@ -1,5 +1,6 @@
 .button {
-  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
   min-height: 40px;
   border: 2px solid $base-primary;
   color: $base-white;
@@ -13,7 +14,6 @@
   border-radius: 4px;
   outline: none;
   margin: 0;
-  padding: 0;
 
   &:focus, &:hover {
     border-color: $primary-lighter;

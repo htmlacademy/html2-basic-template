@@ -6,7 +6,6 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Магазин кофейных напитков Coffee2Go</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
         integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
         crossorigin=""/>
@@ -69,51 +68,94 @@
   <section class="main-slider">
     <div class="swiper">
       <div class="swiper-wrapper">
+
         <div class="swiper-slide">
-          <img class="slide__image" src="" width="280" height="280" alt="coffee image">
-          <p class="slide__new-mark"></p>
-          <h3 class="slide__title">Декаф Флэт Уайт</h3>
-          <p class="slide__text">
-            Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
-          </p>
-          <div class="slide__buy-block">
-            <p class="slide__old-price">295₽</p>
-            <p class="slide__new-price">225₽</p>
-            <button class="button slide__button" type="button">
-              Заказать
-            </button>
+          <div class="slide__container slide__flat-white">
+            <picture class="slide__image">
+              <source media="(min-width: 1150px)" srcset="img/flat_white_img_desktop.webp 1x, img/flat_white_img_desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/flat_white_img_tablet.webp 1x, img/flat_white_img_tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/flat_white_img_mobile.webp 1x, img/flat_white_img_mobile@2x.webp 2x"
+                      type="image/webp">
+              <source media="(min-width: 1150px)"
+                      srcset="img/flat_white_img_desktop.png 1x, img/flat_white_img_desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                      srcset="img/flat_white_img_tablet.png 1x, img/flat_white_img_tablet@2x.png 2x">
+              <img class="product-card__image" src="img/flat_white_img_mobile.png"
+                   srcset="img/flat_white_img_mobile@2x.png 2x" alt="coffee image" width="280" height="280">
+            </picture>
+            <p class="slide__new-mark">Новинка!</p>
+            <h3 class="slide__title">Декаф Флэт Уайт</h3>
+            <p class="slide__text">
+              Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+            </p>
+            <div class="slide__buy-block">
+              <p class="slide__old-price">295₽</p>
+              <p class="slide__new-price">225₽</p>
+              <button class="button slide__button" type="button">
+                Заказать
+              </button>
+            </div>
           </div>
         </div>
+
         <div class="swiper-slide">
-          <img class="slide__image" src="" width="280" height="280" alt="coffee image">
-          <p class="slide__new-mark"></p>
-          <h3 class="slide__title">Лавандовый Латте</h3>
-          <p class="slide__text">
-            Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
-          </p>
-          <div class="slide__buy-block">
-            <p class="slide__old-price">285₽</p>
-            <p class="slide__new-price">265₽</p>
-            <button class="button slide__button" type="button">
-              Заказать
-            </button>
+          <div class="slide__container slide__latte">
+            <picture class="slide__image">
+              <source media="(min-width: 1150px)" srcset="img/lavender_img_desktop.webp 1x, img/lavender_img_desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/lavender_img_tablet.webp 1x, img/lavender_img_tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/lavender_img_mobile.webp 1x, img/lavender_img_mobile@2x.webp 2x"
+                      type="image/webp">
+              <source media="(min-width: 1150px)"
+                      srcset="img/lavender_img_desktop.png 1x, img/lavender_img_desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                      srcset="img/lavender_img_tablet.png 1x, img/lavender_img_tablet@2x.png 2x">
+              <img class="product-card__image" src="img/lavender_img_mobile.png"
+                   srcset="img/lavender_img_mobile@2x.png 2x" alt="coffee image" width="280" height="280">
+            </picture>
+            <p class="slide__new-mark">Новинка!</p>
+            <h3 class="slide__title">Лавандовый Латте</h3>
+            <p class="slide__text">
+              Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+            </p>
+            <div class="slide__buy-block">
+              <p class="slide__old-price">285₽</p>
+              <p class="slide__new-price">265₽</p>
+              <button class="button slide__button" type="button">
+                Заказать
+              </button>
+            </div>
           </div>
         </div>
+
         <div class="swiper-slide">
-          <img class="slide__image" src="" width="280" height="280" alt="coffee image">
-          <p class="slide__new-mark"></p>
-          <h3 class="slide__title">Тройной Эспрессо</h3>
-          <p class="slide__text">
-            Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
-          </p>
-          <div class="slide__buy-block">
-            <p class="slide__old-price">395₽</p>
-            <p class="slide__new-price">375₽</p>
-            <button class=" button slide__button" type="button">
-              Заказать
-            </button>
+          <div class="slide__container slide__espresso">
+            <picture class="slide__image">
+              <source media="(min-width: 1150px)" srcset="img/espresso_img_desktop.webp 1x, img/espresso_img_desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/espresso_img_tablet.webp 1x, img/espresso_img_tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/espresso_img_mobile.webp 1x, img/espresso_img_mobile@2x.webp 2x"
+                      type="image/webp">
+              <source media="(min-width: 1150px)"
+                      srcset="img/espresso_img_desktop.png 1x, img/espresso_img_desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                      srcset="img/espresso_img_tablet.png 1x, img/espresso_img_tablet@2x.png 2x">
+              <img class="product-card__image" src="img/espresso_img_mobile.png"
+                   srcset="img/espresso_img_mobile@2x.png 2x" alt="coffee image" width="280" height="280">
+            </picture>
+            <p class="slide__new-mark">Новинка!</p>
+            <h3 class="slide__title">Тройной Эспрессо</h3>
+            <p class="slide__text">
+              Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+            </p>
+            <div class="slide__buy-block">
+              <p class="slide__old-price">395₽</p>
+              <p class="slide__new-price">375₽</p>
+              <button class=" button slide__button" type="button">
+                Заказать
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
@@ -447,7 +489,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-crossorigin=""></script>
+        crossorigin=""></script>
 <script src="./js/script.js"></script>
 </body>
 </html>
