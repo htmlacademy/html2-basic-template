@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
         integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
         crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
+
 </head>
 <body class="page__body">
 <header class="header">
@@ -212,14 +214,21 @@
       <form class="catalog__form">
         <fieldset class="form__element">
           <legend class="visually-hidden">Цена</legend>
+          <div class="form__title">
+            Цена
+          </div>
+          <div class="price__slider"></div>
           <label class="form__label">
             <input id="price-min" name="price-min" type="number" placeholder="0" min="0" max="1000">
             <input id="price-max" name="price-max" type="number" placeholder="1000" min="0" max="1000">
           </label>
-          <div class="price__slider">SLIDER</div>
+
         </fieldset>
         <fieldset class="form__element">
           <legend class="visually-hidden">Наличие молока</legend>
+          <div class="form__title">
+            Наличие молока
+          </div>
           <ul class="form__list">
             <li class="form__items">
               <label class="control">
@@ -251,8 +260,11 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__items">
+        <fieldset class="form__element">
           <legend class="visually-hidden">Страна произрастания</legend>
+          <div class="form__title">
+            Страна произрастания
+          </div>
           <ul class="form__list">
             <li class="form__items">
               <label class="control">
@@ -490,6 +502,8 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+<script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+<script src="./js/price-slider.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>

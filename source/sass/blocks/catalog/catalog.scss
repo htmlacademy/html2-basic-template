@@ -1,0 +1,26 @@
+.catalog__wrapper {
+  background-color: $lightest-grey;
+  padding: 50px 20px 44px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__badge {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: $base-primary;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.catalog__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 21px;
+}
+

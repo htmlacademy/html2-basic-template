@@ -1,0 +1,14 @@
+.catalog__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__element {
+  outline: none;
+  border: none;
+}
+
+.form__title {
+  font-weight: 700;
+  line-height: 24px;
+}
