@@ -1,0 +1,118 @@
+.container {
+  box-sizing: border-box;
+  width: 190px;
+}
+
+.custom-select-wrapper {
+  display: flex;
+  position: relative;
+  user-select: none;
+  justify-content: end;
+  width: 100%;
+}
+
+.custom-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-select__trigger {
+
+  width: fit-content;
+  position: relative;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $base-secondary ;
+  }
+}
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 42px;
+  left: 0;
+  right: 0;
+  border-radius: 4px;
+  background: $base-white;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.custom-select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+  line-height: 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.custom-option:hover {
+  cursor: pointer;
+  background-color: $base-secondary;
+  border-radius: 4px;
+}
+
+.custom-option.selected {
+  color: $base-white;
+  background-color: $base-primary;
+  border-radius: 4px;
+}
+
+.arrow {
+  position: relative;
+  height: 6px;
+  width: 6px;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  background-color: $base-primary;
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.arrow::before {
+  left: -1px;
+  transform: rotate(-45deg);
+}
+
+.arrow::after {
+  left: 2px;
+  transform: rotate(45deg);
+}
+
+.open .arrow::before {
+  left: -2px;
+  transform: rotate(45deg);
+}
+
+.open .arrow::after {
+  left: 1px;
+  transform: rotate(-45deg);
+}

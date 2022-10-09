@@ -1,0 +1,136 @@
+.control {
+  display: flex;
+  position: relative;
+  align-self: center;
+  min-height: 24px;
+}
+
+.control__mark {
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid $base-grey;
+}
+
+.control__input {
+  &[type="radio"] + .control__mark {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      border: 2px solid $primary-lighter;
+    }
+  }
+
+  &[type="radio"]:hover + .control__mark {
+    &:after {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $base-primary;
+      opacity: 0.25;
+      content: "";
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &[type="radio"]:checked + .control__mark {
+    border: 2px solid $base-primary;
+  }
+
+  &[type="radio"]:checked + .control__mark::before {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $base-primary;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  &[type="checkbox"] + .control__mark {
+    border-radius: 12px;
+    width: 42px;
+    height: 24px;
+    background-color: $base-grey;
+
+    &:hover, &:focus {
+      border: 2px solid $base-primary;
+      background-color: rgba(120, 89, 207, 0.25);
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border-radius: 50%;
+      background-color: $base-white;
+      width: 20px;
+      height: 20px;
+      content: "";
+      transform: translateY(-50%);
+    }
+  }
+
+  &[type="checkbox"]:checked + .control__mark {
+    background-color: $base-primary;
+    border: 2px solid $base-primary;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 18px;
+      border-radius: 50%;
+      background-color: $base-white;
+      width: 20px;
+      height: 20px;
+      content: "";
+      transform: translateY(-50%);
+    }
+  }
+
+  &:disabled + .control__mark,
+  &:disabled:hover + .control__mark {
+    border-color: $light-grey;
+  }
+
+  &[type="radio"]:disabled + .control__mark:after {
+    display: none;
+  }
+
+  &[type="radio"]:checked:disabled + .control__mark {
+    border: 2px solid $light-grey;
+    &:before {
+      background-color: $light-grey;
+    }
+  }
+
+  &[type="checkbox"]:disabled + .control__mark {
+    background-color: $light-grey;
+  }
+
+  &[type="checkbox"]:checked:disabled + .control__mark::before {
+    background-color: $base-grey;
+  }
+
+  &[type="checkbox"]:checked:disabled + .control__mark {
+    border-color: $light-grey;
+  }
+
+  &:disabled ~ .control__label {
+    color: $base-grey;
+  }
+}
+
+.control__label {
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 10px;
+}

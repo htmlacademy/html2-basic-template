@@ -24,3 +24,14 @@
   margin-bottom: 21px;
 }
 
+.catalog__sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort__label {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}

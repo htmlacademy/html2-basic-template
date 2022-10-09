@@ -82,7 +82,7 @@
                       srcset="img/flat_white_img_desktop.png 1x, img/flat_white_img_desktop@2x.png 2x">
               <source media="(min-width: 768px)"
                       srcset="img/flat_white_img_tablet.png 1x, img/flat_white_img_tablet@2x.png 2x">
-              <img class="product-card__image" src="img/flat_white_img_mobile.png"
+              <img src="img/flat_white_img_mobile.png"
                    srcset="img/flat_white_img_mobile@2x.png 2x" alt="coffee image" width="280" height="280">
             </picture>
             <p class="slide__new-mark">Новинка!</p>
@@ -217,10 +217,11 @@
           <div class="form__title">
             Цена
           </div>
-          <div class="price__slider"></div>
-          <label class="form__label">
-            <input id="price-min" name="price-min" type="number" placeholder="0" min="0" max="1000">
-            <input id="price-max" name="price-max" type="number" placeholder="1000" min="0" max="1000">
+          <div class="price__slider" id="price-slider"></div>
+          <label class="price__label">
+            <input class="price__input" id="price-min" name="price-min" type="number" placeholder="0" min="0"
+                   max="1000">
+            <input class="price__input" id="price-max" name="price-max" type="number" placeholder="1000" min="0" max="1000">
           </label>
 
         </fieldset>
@@ -232,7 +233,7 @@
           <ul class="form__list">
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="radio" name="milk-type" value="no-matter" checked>
+                <input class="visually-hidden control__input" type="radio" name="milk-type" value="no-matter">
                 <span class="control__mark"></span>
                 <span class="control__label">Неважно</span>
               </label>
@@ -253,7 +254,8 @@
             </li>
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="radio" name="milk-type" value="without-milk" disabled>
+                <input class="visually-hidden control__input" type="radio" name="milk-type" value="without-milk" checked
+                       disabled>
                 <span class="control__mark"></span>
                 <span class="control__label">Без молока</span>
               </label>
@@ -268,7 +270,7 @@
           <ul class="form__list">
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="Brazil" checked>
+                <input class="visually-hidden control__input" type="checkbox" name="Brazil" checked disabled>
                 <span class="control__mark"></span>
                 <span class="control__label">Бразилия</span>
               </label>
@@ -310,17 +312,33 @@
       </form>
       <div class="catalog__cards">
         <div class="catalog__sort">
-          <label class="sort__label" for="sort-type">Сортировка:</label>
-          <select id="sort-type" name="sort-type">
-            <option value="default">по умолчанию</option>
-            <option value="expensive-first" selected>сначала дорогие</option>
-            <option value="cheap-first">сначала дешёвые</option>
-            <option value="high-rating">высокий рейтинг</option>
-          </select>
+          <p class="sort__label">Сортировка:</p>
+          <div class="container">
+            <div class="custom-select-wrapper">
+              <div class="custom-select">
+                <div class="custom-select__trigger">
+                  <div>по умолчанию</div>
+                  <div class="arrow"></div>
+                </div>
+                <div class="custom-options">
+                  <span class="custom-option selected" data-value="default">по умолчанию</span>
+                  <span class="custom-option" data-value="expensive">сначала дорогие</span>
+                  <span class="custom-option" data-value="chip">сначала дешёвые</span>
+                  <span class="custom-option" data-value="high rating">высокий рейтинг</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div class="cards__container">
           <article class="catalog__item product-card">
-            <img src="#" class="product-card__image" alt="card image"/>
+            <picture class="product-card__image">
+              <source srcset="img/coffee-can-1.webp 1x, img/coffee-can-1@2x.webp 2x"
+                      type="image/webp">
+              <img src="img/coffee-can-1.jpg" srcset="img/coffee-can-1@2x.jpg 2x" alt="coffee can image" width="130"
+                   height="188">
+            </picture>
             <h3 class="product-card__title">Декаф Флэт Уайт</h3>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
@@ -331,7 +349,12 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <img src="#" class="product-card__image" alt="card image"/>
+            <picture class="product-card__image">
+              <source srcset="img/coffee-can-2.webp 1x, img/coffee-can-2@2x.webp 2x"
+                      type="image/webp">
+              <img src="img/coffee-can-2.jpg" srcset="img/coffee-can-2@2x.jpg 2x" alt="coffee can image" width="130"
+                   height="188">
+            </picture>
             <h3 class="product-card__title">Декаф Флэт Уайт</h3>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
@@ -342,7 +365,12 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <img src="#" class="product-card__image" alt="card image"/>
+            <picture class="product-card__image">
+              <source srcset="img/coffee-can-3.webp 1x, img/coffee-can-3@2x.webp 2x"
+                      type="image/webp">
+              <img src="img/coffee-can-3.jpg" srcset="img/coffee-can-3@2x.jpg 2x" alt="coffee can image" width="130"
+                   height="188">
+            </picture>
             <h3 class="product-card__title">Декаф Флэт Уайт</h3>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
@@ -353,7 +381,12 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <img src="#" class="product-card__image" alt="card image"/>
+            <picture class="product-card__image">
+              <source srcset="img/coffee-can-4.webp 1x, img/coffee-can-4@2x.webp 2x"
+                      type="image/webp">
+              <img src="img/coffee-can-4.jpg" srcset="img/coffee-can-4@2x.jpg 2x" alt="coffee can image" width="130"
+                   height="188">
+            </picture>
             <h3 class="product-card__title">Декаф Флэт Уайт</h3>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
@@ -364,7 +397,12 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <img src="#" class="product-card__image" alt="card image"/>
+            <picture class="product-card__image">
+              <source srcset="img/coffee-can-5.webp 1x, img/coffee-can-5@2x.webp 2x"
+                      type="image/webp">
+              <img src="img/coffee-can-5.jpg" srcset="img/coffee-can-5@2x.jpg 2x" alt="coffee can image" width="130"
+                   height="188">
+            </picture>
             <h3 class="product-card__title">Декаф Флэт Уайт</h3>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
@@ -375,7 +413,12 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <img src="#" class="product-card__image" alt="card image"/>
+            <picture class="product-card__image">
+              <source srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x"
+                      type="image/webp">
+              <img src="img/coffee-can-6.jpg" srcset="img/coffee-can-6@2x.jpg 2x" alt="coffee can image" width="130"
+                   height="188">
+            </picture>
             <h3 class="product-card__title">Декаф Флэт Уайт</h3>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
@@ -504,6 +547,7 @@
         crossorigin=""></script>
 <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
 <script src="./js/price-slider.js"></script>
+<script src="./js/custom-select.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>

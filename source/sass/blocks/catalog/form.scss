@@ -1,9 +1,12 @@
 .catalog__form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 23px;
 }
 
 .form__element {
+  margin: 0;
+  padding: 0;
   outline: none;
   border: none;
 }
@@ -12,3 +15,114 @@
   font-weight: 700;
   line-height: 24px;
 }
+
+#price-slider {
+  margin: 31px 0 35px;
+  padding: 0 12px;
+  max-width: 280px;
+  height: 4px;
+  outline: none;
+  border: none;
+  background-color: $light-grey;
+}
+
+#price-slider .noUi-connect {
+  background: $primary-lighter;
+}
+
+#price-slider .noUi-handle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid $primary-lighter;
+  background-color: $base-white;
+  box-sizing: border-box;
+  border-radius: 50%;
+  top: -10px;
+  right: -12px;
+  box-shadow: none;
+
+  &:after, &:before {
+    display: none;
+  }
+
+  &:hover, &:focus {
+    background-color: $lavender-latte;
+    outline: 2px solid $base-white;
+    outline-offset: -4px;
+  }
+
+  &:active {
+    background-color: $base-primary;
+    outline: 2px solid $base-white;
+    outline-offset: -4px;
+  }
+}
+
+#price-slider:disabled .noUi-handle {
+  background-color: $base-white;
+  border: 2px solid $base-grey;
+}
+
+#price-slider:disabled .noUi-connect {
+  background: $base-grey;
+}
+
+.price__label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: $base-grey;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.price__input {
+  text-align: center;
+  border: 2px solid $primary-lighter;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 0;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-grey;
+
+  &:focus-visible {
+    color: $base-black;
+    border: 2px solid $primary-darker;
+    outline: none;
+  }
+}
+
+.form__list {
+  padding-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 35px;
+}
+
+.button.form__button {
+  min-width: 160px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 14px;
+}
+
