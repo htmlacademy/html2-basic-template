@@ -15,4 +15,40 @@
   &:active {
     background-color: $base-secondary;
   }
+
+  @media (min-width: $tablet-width) {
+    height: 100%;
+    display: flex;
+    gap: 8px;
+    padding: 0 20px;
+
+    &:hover .user-list__text, &:focus .user-list__text {
+      color: $base-primary;
+    }
+    &:hover .page-header__cart-icon, &:hover .page-header__user-icon {
+      fill: $base-primary;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.user-list__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $base-black;
+  }
+}
+
+.page-header__cart-icon, .page-header__user-icon {
+  fill: $base-black;
 }

@@ -8,7 +8,7 @@
   top: 0;
   z-index: 10;
   display: grid;
-  grid-template-columns: auto 1fr 60px;
+  grid-template-columns: auto 1fr auto;
   grid-template-areas:
     "logo user toggle"
     "site site site";
@@ -17,6 +17,21 @@
   &--nojs {
     position: relative;
   }
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+    "logo site user";
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-page-width;
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-areas:
+      "logo description site user";
+    margin: 0 auto;
+  }
 }
 
 .header__logo {
@@ -24,12 +39,28 @@
   display: grid;
   place-items: center;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.header__description {
+  display: none;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    grid-area: description;
+    font-size: 12px;
+    line-height: 16px;
+    width: 130px;
+  }
 }
 
 .header__user-nav {
   grid-area: user;
 }
-
 
 .header__site-nav {
   grid-area: site;
@@ -44,7 +75,7 @@
     }
     &--open:after {
       position: absolute;
-      content: '';
+      content: "";
       top: 0;
       height: 1px;
       background-color: $base-secondary;
@@ -59,14 +90,15 @@
     }
   }
 
-
-
   &--nojs {
     position: relative;
     display: block;
   }
-}
 
+  @media (min-width: $tablet-width) {
+    height: 100%;
+  }
+}
 
 .header__toggle {
   cursor: pointer;
@@ -92,9 +124,11 @@
   &:active {
     background-color: $base-secondary;
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
-
-
 
 .header__picture {
   display: flex;
