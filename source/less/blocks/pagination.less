@@ -1,0 +1,86 @@
+.pagination {
+  padding: 30px 20px 44px;
+  background-color: @LightestGrey;
+
+  @media (min-width: @tablet-width) {
+    padding: 46px 0 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 0 120px;
+  }
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.pagination-nav {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @BaseWhite;
+  color: @BasePrimary;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: @PrimaryLighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @PrimaryDarker;
+  }
+
+  &:disabled {
+    color: @LightGrey;
+  }
+}
+
+.pointer {
+  @media (min-width: @tablet-width) {
+    width: 150px;
+  }
+}
+
+.pagination-arr__svg {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.arrow {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.right {
+  transform: scaleX(-1);
+}
+
+.selected {
+  background-color: transparent;
+  color: @BaseBlack;
+  font-weight: 600;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 20px;
+  }
+}

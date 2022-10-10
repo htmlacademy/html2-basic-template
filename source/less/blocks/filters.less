@@ -1,0 +1,436 @@
+.catalog-filter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 20px;
+  }
+}
+
+.catalog-filter__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    margin-top: -16px;
+  }
+}
+
+.catalog-filter__body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.filter-price {
+  padding: 0 20px;
+  margin-bottom: 27px;
+  margin-top: 18px;
+  width: 280px;
+  border: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-left: 25px;
+    width: 220px;
+  }
+}
+
+.milk__container {
+  padding-top: 17px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.origin__container {
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+    padding-left: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 6px;
+    padding-left: 20px;
+  }
+}
+
+.filter-price,
+.filter-milk,
+.filter-origin {
+  border: none;
+}
+
+.filter-milk {
+  margin: 0 20px;
+}
+
+.filter-price__title,
+.filter-milk__title,
+.filter-origin__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter-price__title {
+  padding-bottom: 34px;
+}
+
+.filter-milk__title {
+  padding-bottom: 24px;
+}
+
+.filter-origin__title {
+  padding-bottom: 25px;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.filter-price__container {
+  position: relative;
+  padding-bottom: 107px;
+}
+
+.filter-scale {
+  position: relative;
+  height: 2px;
+  background-color: @LightGrey;
+  margin-bottom: 35px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 314px;
+    margin-bottom: 31px;
+  }
+}
+
+.filter-scale::after {
+  position: absolute;
+  content: " ";
+  border: 1px solid @BaseGrey;
+  left: 146px;
+  top: 60px;
+  width: 9px;
+
+  @media (min-width: @tablet-width) {
+    left: 115px;
+  }
+}
+
+.filter-scale__bar {
+  position: absolute;
+  height: 2px;
+  background-color: @PrimaryLighter;
+  left: 0;
+  width: 241px;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
+}
+
+.range-toggle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: calc(50% - 24px / 2 + 0.45px);
+  background: @BaseWhite;
+  border: 2px solid @PrimaryLighter;
+  border-radius: 50%;
+}
+
+.toggle-min {
+  left: 0;
+}
+
+.toggle-max {
+  left: 241px;
+
+  @media (min-width: @tablet-width) {
+    left: 190px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 270px;
+  }
+}
+
+.range-input {
+  width: 110px;
+  height: 35px;
+  border: 2px solid @PrimaryLighter;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: @BaseGrey;
+
+  @media (min-width: @tablet-width) {
+    width: 85px;
+    height: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 127px;
+    height: 34px;
+  }
+}
+
+.from {
+  margin-right: 44px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 44px;
+  }
+}
+
+.disabled {
+  color: @BaseGrey;
+}
+
+.not-zero {
+  color: @BaseBlack;
+}
+
+.filter-range {
+  display: flex;
+}
+
+.control-label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.control-label__origin {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 56px;
+  width: 100%;
+  display: table-caption;
+}
+
+.filter-origin__item + .control-label {
+  padding-left: 60px;
+}
+
+.filter-milk__item {
+  padding-bottom: 21px;
+  padding-left: 38px;
+  position: relative;
+}
+
+.filter-origin {
+  margin: 0 20px;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.filter-origin__item {
+  padding-bottom: 15px;
+}
+
+.filter-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+}
+
+.filter-button__apply {
+  background-color: @BasePrimary;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  color: @BaseWhite;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 14px 10px 14px;
+  cursor: pointer;
+  width: 160px;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 30px;
+    width: 153px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: @PrimaryLighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @PrimaryDarker;
+  }
+
+  &:disabled {
+    background-color: @BaseGrey;
+  }
+}
+
+.filter-button__reset {
+  color: @BasePrimary;
+  background-color: @BaseWhite;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 14px 10px 14px;
+  cursor: pointer;
+  width: 160px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 150px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: @PrimaryLighter;
+    color: @BaseWhite;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @PrimaryDarker;
+    color: @BaseWhite;
+  }
+
+  &:disabled {
+    background-color: @LightGrey;
+    color: @BaseWhite;
+  }
+}
+
+.control-mark {
+  border: 2px solid @BaseGrey;
+  background-color: @BaseWhite;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  left: 0;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: @BasePrimary;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input {
+  display: none;
+}
+
+.control-input + .control,
+.control-input + .control::before,
+.control-input + .control::after {
+  transition: all 0.3s;
+}
+
+.control-input + .control {
+  display: inline-block;
+  position: relative;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: @BaseGrey;
+}
+
+.control-input + .control::before {
+  display: block;
+  content: attr(data-offlabel);
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  color: @BaseBlack;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+}
+
+.control-input + .control::after {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: @BaseWhite;
+}
+
+.control-input:checked + .control::before {
+  content: attr(data-onlabel);
+  left: 16px;
+  right: auto;
+  color: @BaseWhite;
+}
+
+.control-input:checked + .control::after {
+  left: 20px;
+  background-color: @BaseWhite;
+}
+
+.control-input:checked + .control {
+  background-color: @BasePrimary;
+}

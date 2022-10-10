@@ -1,0 +1,250 @@
+.page-header {
+  background-color: @BaseWhite;
+}
+
+.page-header__container {
+  padding-top: 12px;
+  padding-bottom: 9px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+    padding: 0 0 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 0 20px;
+  }
+}
+
+.page-header__logo {
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: @tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+    margin-left: 20px;
+  }
+}
+
+.page-header__title {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 20px;
+  }
+}
+
+.main-nav {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.no-js {
+  display: block;
+}
+
+.main-nav__list {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    z-index: 1000;
+    top: -80px;
+    flex-wrap: wrap;
+    right: 50%;
+    transform: translateX(50%);
+    width: max-content;
+    padding-top: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 518px;
+    position: absolute;
+    top: -80px;
+    padding-top: 0;
+  }
+}
+
+.main-nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    color: @BaseBlack;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    text-decoration: underline;
+  }
+}
+
+.site-list__link--active {
+  @media (min-width: @tablet-width) {
+    color: @BasePrimary;
+  }
+}
+
+.site-list__link--active::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: " ";
+    border: 1px solid #7859cf;
+    width: 103px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.user-nav {
+  position: absolute;
+  top: -63px;
+  right: 62px;
+
+  @media (min-width: @tablet-width) {
+    top: -80px;
+    right: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -80px;
+    right: 28px;
+  }
+}
+
+.user-nav__list {
+  display: flex;
+}
+
+.main-nav__item {
+  min-height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid @LightestGrey;
+
+  @media (min-width: @tablet-width) {
+    width: fit-content;
+    padding: 0 20px 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 11px 20px;
+    margin-right: 23px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: @BaseSecondary;
+    color: @PrimaryDarker;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @PrimaryLighter;
+  }
+}
+
+.user-nav__text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    padding-left: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.user-nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-nav-toggle {
+  position: absolute;
+  top: 0;
+  right: 4px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.hide {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.user-nav__card,
+.user-nav__enter,
+.main-nav__toggle,
+.main-nav__cross {
+  height: 60px;
+  min-width: 60px;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    height: 80px;
+    min-width: 80px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: @BaseSecondary;
+    outline: none;
+    border-bottom: 2px solid @BasePrimary;
+  }
+
+  &:active {
+    background-color: @PrimaryLighter;
+  }
+}
+
+.user-nav__enter,
+.user-nav__card {
+  @media (min-width: @desktop-width) {
+    height: 80px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+}
+
+.toggle-button,
+.cross-button {
+  height: 60px;
+  min-width: 60px;
+  background-color: transparent;
+  border: none;
+}

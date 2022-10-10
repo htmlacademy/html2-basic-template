@@ -1,0 +1,328 @@
+.footer__container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.social,
+.online-store,
+.media,
+.contacts {
+  position: relative;
+  margin: 0;
+}
+
+.social::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: @BaseSecondary;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.online-store::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: @BaseSecondary;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.media::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: @BaseSecondary;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.contacts::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: @BaseSecondary;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.social__wrapper {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer__logo {
+  width: 82px;
+  margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 170px;
+  }
+}
+
+.social__buttons {
+  display: flex;
+  width: 100%;
+  margin-bottom: 18px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.social__buttons::after {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "Интернет-магазин кофейных напитков";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    top: 8px;
+    left: 0;
+    width: max-content;
+  }
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -7px;
+    margin-top: 77px;
+  }
+}
+
+.social-link {
+  padding: 10px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+}
+
+.social-link__svg,
+.social-link {
+  fill: @BaseGrey;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: @BaseSecondary;
+    fill: @BasePrimary;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  &:active {
+    background: rgba(120, 89, 207, 0.25);
+    fill: @BasePrimary;
+    border-radius: 4px;
+  }
+}
+
+.footer__wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 335px 360px 360px;
+    padding-top: 52px;
+    margin-right: 16px;
+  }
+}
+
+.online-store__title,
+.media__title,
+.contacts__title {
+  margin: 0;
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: @BasePrimary;
+}
+
+.contacts__title {
+  padding-bottom: 20px;
+}
+
+.online-store__link,
+.media__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @BaseBlack;
+
+  &:hover,
+  &:focus {
+    color: @PrimaryLighter;
+  }
+
+  &:active {
+    color: @PrimaryDarker;
+  }
+}
+
+.online-store,
+.media,
+.contacts {
+  padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.online-store__item,
+.media__item {
+  padding-bottom: 17px;
+}
+
+.media {
+  margin-top: 20px;
+  padding-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 11px;
+  }
+}
+
+.online-store__list {
+  padding-bottom: 10px;
+}
+
+.contacts {
+  padding-bottom: 20px;
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.contacts-address,
+.contacts-tel {
+  position: relative;
+  text-decoration: none;
+  font-style: normal;
+  color: @BaseBlack;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts-address {
+  padding-left: 19px;
+  padding-bottom: 16px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 10px;
+  }
+}
+
+.contacts-address::before {
+  content: url("../img/location.svg");
+  position: absolute;
+  left: 0;
+}
+
+.tel::before {
+  content: url("../img/phone.svg");
+  position: absolute;
+  left: 19px;
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+  }
+}
+
+.contacts-tel {
+  padding-left: 19px;
+}
+
+.designed-in {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 30px;
+  }
+}
+
+.designed-in__link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: @BaseGrey;
+  fill: @BaseGrey;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: @BasePrimary;
+    fill: @BasePrimary;
+  }
+
+  &:active {
+    color: @PrimaryDarker;
+    fill: @PrimaryDarker;
+  }
+}
