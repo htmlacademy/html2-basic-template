@@ -1,0 +1,125 @@
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__social {
+  display: flex;
+  padding: 22px 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid $base-secondary;
+}
+
+.social__list {
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social__link {
+  display: grid;
+  place-items: center;
+}
+
+.social__icon {
+  fill: $base-grey;
+
+  &:hover, &:focus, &:active, &:focus-visible {
+    fill: $base-primary;
+    outline: none;
+  }
+}
+
+.footer__navigation, .footer__media, .footer__contacts {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: start;
+  border-bottom: 1px solid $base-secondary;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: $base-primary;
+  margin-bottom: 20px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__link {
+  color: $base-black;
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: $primary-lighter;
+    outline: none;
+  }
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.footer__address, .footer__telephone {
+  display: flex;
+  align-items: start;
+  gap: 6px;
+}
+
+.footer__address {
+  margin-bottom: 16px;
+}
+
+.contacts__text {
+  display:block;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.footer__copyright {
+  padding: 20px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.copyright {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-grey;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__icon {
+  fill: $base-grey;
+  &:hover, &:focus {
+    fill: $base-primary;
+  }
+  &:active {
+    fill: $primary-darker;
+  }
+}

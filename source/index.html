@@ -430,20 +430,20 @@
           </article>
         </div>
         <ul class="catalog__pagination">
-          <li class="pagination-item-first">
-            <a class="pagination-prev" href="#">назад</a>
+          <li class="pagination-item pagination-item-first">
+            <a class="pagination-prev" href="#"></a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">1</a>
+            <a class="pagination-link " href="#">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
+            <a class="pagination-link paganation-link--current" href="#">2</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">3</a>
           </li>
-          <li class="pagination-item-last">
-            <a class="pagination-next" href="#">вперёд</a>
+          <li class="pagination-item pagination-item-last">
+            <a class="pagination-next" href="#"></a>
           </li>
         </ul>
       </div>
@@ -453,7 +453,7 @@
     <div class="map__canvas" id="map-canvas"></div>
   </section>
 </main>
-<footer>
+<footer class="footer__container">
   <section class="footer__social">
     <img class="footer__logo" src="img/site-logo-mobile.svg" width="86" height="36" alt="Логотип coffee2go">
     <ul class="social__list">
@@ -484,7 +484,7 @@
     </ul>
   </section>
   <section class="footer__navigation">
-    <h3 class="footer__title">Интернет-магазин</h3>
+    <h4 class="footer__title">Интернет-магазин</h4>
     <ul class="footer__list">
       <li class="footer__item">
         <a href="#" class="footer__link">Каталог</a>
@@ -501,7 +501,7 @@
     </ul>
   </section>
   <section class="footer__media">
-    <h3 class="footer__title">Медиа</h3>
+    <h4 class="footer__title">Медиа</h4>
     <ul class="footer__list">
       <li class="footer__item">
         <a href="#" class="footer__link">Блог</a>
@@ -515,6 +515,7 @@
     </ul>
   </section>
   <section class="footer__contacts">
+    <h4 class="footer__title">Контакты</h4>
     <div class="footer__address">
       <svg class="contacts__icon" width="13" height="16" viewBox="0 0 13 16">
         <use xlink:href="img/sprite.svg#address-icon"></use>
@@ -534,9 +535,12 @@
   </section>
   <section class="footer__copyright">
     <p class="copyright">Разработано в HTML Academy</p>
-    <svg class="copyright__icon" width="12" height="16" viewBox="0 0 12 16">
-      <use xlink:href="img/sprite.svg#academy-logo"></use>
-    </svg>
+    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <svg class="copyright__icon" width="12" height="16" viewBox="0 0 12 16">
+        <use xlink:href="img/sprite.svg#academy-logo"></use>
+      </svg>
+    </a>
+
   </section>
 </footer>
 
@@ -548,6 +552,7 @@
 <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
 <script src="./js/price-slider.js"></script>
 <script src="./js/custom-select.js"></script>
+<script src="./js/paganation.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>

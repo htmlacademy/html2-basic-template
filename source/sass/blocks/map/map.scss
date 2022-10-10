@@ -1,0 +1,11 @@
+.main__map {
+  width: 100%;
+  height: 420px;
+  background-image: url("../img/map_mobile.jpg");
+  background-color: $base-grey;
+}
+
+.map__canvas {
+  z-index: 10;
+  height: 100%;
+}

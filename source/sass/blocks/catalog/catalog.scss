@@ -35,3 +35,99 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+.catalog__pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-link {
+  color: $base-primary;
+  display: block;
+  width: 24px;
+  line-height: 24px;
+  text-align: center;
+  padding: 8px;
+  background-color: $base-white;
+  border-radius: 4px;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    background-color: $primary-lighter;
+    color: $base-white;
+    font-weight: 400;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    font-weight: 400;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+  }
+}
+
+.pagination-next, .pagination-prev {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  background-color: $base-white;
+  border-radius: 4px;
+  text-decoration: none;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 10px;
+    height: 6px;
+    background-image: url("../img/custom-select-arrow.svg");
+    filter: invert(36%) sepia(92%) saturate(587%) hue-rotate(219deg) brightness(90%) contrast(89%);
+  }
+
+  &:hover, &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+  }
+
+  &:hover:after, &:active:after, &:focus:after {
+    filter: invert(100%) sepia(0%) saturate(7450%) hue-rotate(18deg) brightness(94%) contrast(103%);
+  }
+}
+
+.pagination-next:after {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.pagination-prev:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.paganation-link--current {
+  background-color: transparent;
+  font-weight: 600;
+  color: $base-black;
+}
+
+.paganation--hidden {
+  background-color: transparent;
+  cursor: auto;
+  &:after {
+    display: none;
+  }
+  &:hover, &:focus, &:active {
+    background-color: transparent;
+  }
+}

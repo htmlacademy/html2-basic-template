@@ -6,8 +6,36 @@ const swiper = new Swiper (".swiper", {
   },
 });
 
-const map = L.map('map-canvas',
+const map = L.map ('map-canvas').setView ({
+  lat: 59.968288,
+  lng: 30.317421,
+}, 17);
+
+const mapMainPin = L.icon (
   {
-    center: [59.968562, 30.3169523],
-    zoom: 13
-  });
+    iconUrl: 'img/map_pin.svg',
+    iconSize: [52, 52],
+    iconAnchor: [26, 52],
+  }
+);
+
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+).addTo(map);
+
+const mainMarker = L.marker (
+  {
+    lat: 59.968288,
+    lng: 30.317421,
+  },
+  {
+    draggable: false,
+    icon: mapMainPin,
+  },
+);
+
+
+mainMarker.addTo (map);

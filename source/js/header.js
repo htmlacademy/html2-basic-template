@@ -1,7 +1,6 @@
-
-var navSite = document.querySelector ('.header__site-nav');
-var navToggle = document.querySelector ('.header__toggle');
-var navWrapper = document.querySelector ('.header__wrapper');
+const navSite = document.querySelector ('.header__site-nav');
+const navToggle = document.querySelector ('.header__toggle');
+const navWrapper = document.querySelector ('.header__wrapper');
 
 navSite.classList.remove('header__site-nav--nojs');
 navToggle.classList.remove('header__toggle--nojs');
