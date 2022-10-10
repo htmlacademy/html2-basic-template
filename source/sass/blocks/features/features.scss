@@ -4,6 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 100px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 100px 30px 120px;
+  }
 }
 
 .features__badge {
@@ -22,22 +28,61 @@
   line-height: 36px;
   text-align: center;
   margin-bottom: 36px;
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin-bottom: 60px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin-bottom: 80px;
+  }
 }
 
 .features__list {
   display: flex;
   flex-direction: column;
   gap: 36px;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 315px);
+  }
 }
 
 .features__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:
+      "icon title"
+      "icon content";
+    column-gap: 20px;
+    row-gap: 10px;
+  }
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 0;
+  }
+
 }
 
 .feature__icon {
   margin-bottom: 10px;
+  @media (min-width: $tablet-width) {
+    grid-area: icon;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .feature__title {
@@ -46,10 +91,28 @@
   line-height: 32px;
   text-align: center;
   margin-bottom: 4px;
+  @media (min-width: $tablet-width) {
+    grid-area: title;
+    text-align: start;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .feature__content {
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+  @media (min-width: $tablet-width) {
+    grid-area: content;
+    text-align: start;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }
