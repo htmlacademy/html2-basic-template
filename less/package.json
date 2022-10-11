@@ -45,7 +45,7 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "16.13.0"
+    "node": ">=16.13.0"
   },
   "type": "module"
 }
