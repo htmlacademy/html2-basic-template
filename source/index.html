@@ -233,18 +233,22 @@
     <div class="catalog__wrapper">
       <p class="catalog__badge">Каталог</p>
       <h2 class="catalog__title">Каталог кофейных напитков</h2>
-      <form class="catalog__form">
+      <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="form__element">
           <legend class="visually-hidden">Цена</legend>
           <div class="form__title">
             Цена
           </div>
-          <div class="price__slider" id="price-slider"></div>
-          <label class="price__label">
-            <input class="price__input" id="price-min" name="price-min" type="number" placeholder="0" min="0"
-                   max="1000">
-            <input class="price__input" id="price-max" name="price-max" type="number" placeholder="1000" min="0" max="1000">
-          </label>
+          <div class="price-slider" id="price-slider"></div>
+          <div class="price-input__wrapper">
+            <label class="price__label">
+              <input class="price__input" id="price-min" name="price-min" type="number" placeholder="0" min="0"
+                     max="1000">
+            </label>
+            <label class="price__label">
+              <input class="price__input" id="price-max" name="price-max" type="number" placeholder="1000" min="0" max="1000">
+            </label>
+          </div>
 
         </fieldset>
         <fieldset class="form__element">
@@ -329,7 +333,7 @@
           </ul>
         </fieldset>
         <div class="form__buttons">
-          <button class="button form__button">Применить фильтр</button>
+          <button class="button form__button" type="submit">Применить фильтр</button>
           <button class="button form__button secondary-button">Сбросить фильтр</button>
         </div>
       </form>
@@ -356,13 +360,17 @@
         </div>
         <div class="cards__container">
           <article class="catalog__item product-card">
-            <picture class="product-card__image">
-              <source srcset="img/coffee-can-1.webp 1x, img/coffee-can-1@2x.webp 2x"
-                      type="image/webp">
-              <img src="img/coffee-can-1.jpg" srcset="img/coffee-can-1@2x.jpg 2x" alt="coffee can image" width="130"
-                   height="188">
-            </picture>
-            <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            <a href="#" class="product-card__image">
+              <picture>
+                <source srcset="img/coffee-can-1.webp 1x, img/coffee-can-1@2x.webp 2x"
+                        type="image/webp">
+                <img src="img/coffee-can-1.jpg" srcset="img/coffee-can-1@2x.jpg 2x" alt="coffee can image" width="130"
+                     height="188">
+              </picture>
+            </a>
+            <a href="#" class="product-card__link">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
             </p>
@@ -372,13 +380,17 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <picture class="product-card__image">
-              <source srcset="img/coffee-can-2.webp 1x, img/coffee-can-2@2x.webp 2x"
-                      type="image/webp">
-              <img src="img/coffee-can-2.jpg" srcset="img/coffee-can-2@2x.jpg 2x" alt="coffee can image" width="130"
-                   height="188">
-            </picture>
-            <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            <a href="#" class="product-card__image">
+              <picture>
+                <source srcset="img/coffee-can-2.webp 1x, img/coffee-can-2@2x.webp 2x"
+                        type="image/webp">
+                <img src="img/coffee-can-2.jpg" srcset="img/coffee-can-2@2x.jpg 2x" alt="coffee can image" width="130"
+                     height="188">
+              </picture>
+            </a>
+            <a href="#" class="product-card__link">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
             </p>
@@ -388,13 +400,17 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <picture class="product-card__image">
-              <source srcset="img/coffee-can-3.webp 1x, img/coffee-can-3@2x.webp 2x"
-                      type="image/webp">
-              <img src="img/coffee-can-3.jpg" srcset="img/coffee-can-3@2x.jpg 2x" alt="coffee can image" width="130"
-                   height="188">
-            </picture>
-            <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            <a href="#" class="product-card__image">
+              <picture>
+                <source srcset="img/coffee-can-3.webp 1x, img/coffee-can-3@2x.webp 2x"
+                        type="image/webp">
+                <img src="img/coffee-can-3.jpg" srcset="img/coffee-can-3@2x.jpg 2x" alt="coffee can image" width="130"
+                     height="188">
+              </picture>
+            </a>
+            <a href="#" class="product-card__link">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
             </p>
@@ -404,13 +420,17 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <picture class="product-card__image">
-              <source srcset="img/coffee-can-4.webp 1x, img/coffee-can-4@2x.webp 2x"
-                      type="image/webp">
-              <img src="img/coffee-can-4.jpg" srcset="img/coffee-can-4@2x.jpg 2x" alt="coffee can image" width="130"
-                   height="188">
-            </picture>
-            <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            <a href="#" class="product-card__image">
+              <picture>
+                <source srcset="img/coffee-can-4.webp 1x, img/coffee-can-4@2x.webp 2x"
+                        type="image/webp">
+                <img src="img/coffee-can-4.jpg" srcset="img/coffee-can-4@2x.jpg 2x" alt="coffee can image" width="130"
+                     height="188">
+              </picture>
+            </a>
+            <a href="#" class="product-card__link">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
             </p>
@@ -420,13 +440,17 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <picture class="product-card__image">
-              <source srcset="img/coffee-can-5.webp 1x, img/coffee-can-5@2x.webp 2x"
-                      type="image/webp">
-              <img src="img/coffee-can-5.jpg" srcset="img/coffee-can-5@2x.jpg 2x" alt="coffee can image" width="130"
-                   height="188">
-            </picture>
-            <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            <a href="#" class="product-card__image">
+              <picture>
+                <source srcset="img/coffee-can-5.webp 1x, img/coffee-can-5@2x.webp 2x"
+                        type="image/webp">
+                <img src="img/coffee-can-5.jpg" srcset="img/coffee-can-5@2x.jpg 2x" alt="coffee can image" width="130"
+                     height="188">
+              </picture>
+            </a>
+            <a href="#" class="product-card__link">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
             </p>
@@ -436,12 +460,17 @@
             </div>
           </article>
           <article class="catalog__item product-card">
-            <picture class="product-card__image">
-              <source srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x"
-                      type="image/webp">
-              <img src="img/coffee-can-6.jpg" srcset="img/coffee-can-6@2x.jpg 2x" alt="coffee can image" width="130" height="188">
-            </picture>
-            <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            <a href="#" class="product-card__image">
+              <picture>
+                <source srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x"
+                        type="image/webp">
+                <img src="img/coffee-can-6.jpg" srcset="img/coffee-can-6@2x.jpg 2x" alt="coffee can image" width="130"
+                     height="188">
+              </picture>
+            </a>
+            <a href="#" class="product-card__link">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
                                           с натуральным фермерским молоком
             </p>
@@ -476,11 +505,13 @@
     </div>
   </section>
   <section class="main__map">
+    <h2 class="visually-hidden">Схема расположения кафе</h2>
     <div class="map__canvas" id="map-canvas"></div>
   </section>
 </main>
 <footer class="footer__container">
   <section class="footer__social">
+    <h4 class="visually-hidden">Мы в социальных сетях</h4>
     <a href="#" class="footer__logo">
       <picture class="footer__picture">
         <source media="(min-width: 768px)" srcset="img/header-logo-desktop.svg">
@@ -559,7 +590,7 @@
       </p>
     </div>
   </section>
-  <section class="footer__copyright">
+  <div class="footer__copyright">
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
       <p class="copyright">Разработано в HTML Academy</p>
       <svg class="copyright__icon" width="12" height="16" viewBox="0 0 12 16">
@@ -567,14 +598,16 @@
       </svg>
     </a>
 
-  </section>
+  </div>
 </footer>
 
 <script src="./js/header.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
+        crossorigin="">
+
+</script>
 <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
 <script src="./js/price-slider.js"></script>
 <script src="./js/custom-select.js"></script>

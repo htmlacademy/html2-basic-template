@@ -1,6 +1,7 @@
 .footer__container {
   display: flex;
   flex-direction: column;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -9,11 +10,12 @@
       "nav media contacts"
       "copyright copyright copyright";
   }
+
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-    "social nav media contacts"
-    "copyright copyright copyright copyright";
+      "social nav media contacts"
+      "copyright copyright copyright copyright";
     max-width: $desktop-page-width;
     margin: 0 auto;
     padding-top: 20px;
@@ -23,6 +25,8 @@
 .footer__image {
   width: 86px;
   height: 36px;
+  position: relative;
+
   @media (min-width: $tablet-width) {
     width: 170px;
   }
@@ -30,16 +34,32 @@
 
 .footer__social {
   display: flex;
+  position: relative;
   justify-content: space-between;
   padding: 22px 20px;
   border-bottom: 1px solid $base-secondary;
+
   @media (min-width: $tablet-width) {
     grid-area: social;
     padding: 22px 20px 10px;
     border-bottom: none;
   }
+
   @media (min-width: $desktop-width) {
     flex-direction: column;
+
+    &::after {
+      position: absolute;
+      content: "Интернет-магазин кофейных напитков";
+      font-size: 14px;
+      line-height: 20px;
+      color: $base-black;
+      top: 65px;
+      left: 20px;
+      width: 320px;
+      background-color: transparent;
+      height: 20px;
+    }
   }
 }
 
@@ -63,15 +83,18 @@
   background-color: transparent;
   place-items: center;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $base-secondary;
   }
+
   &:active {
     background: rgba(120, 89, 207, 0.25);
   }
 }
 
-.social__link:hover .social__icon, .social__link:focus .social__icon, {
+.social__link:hover .social__icon,
+.social__link:focus .social__icon, {
   outline: none;
   fill: $base-primary;
 }
@@ -80,12 +103,15 @@
   fill: $base-grey;
 }
 
-.footer__navigation, .footer__media, .footer__contacts {
+.footer__navigation,
+.footer__media,
+.footer__contacts {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
   padding: 20px;
   border-bottom: 1px solid $base-secondary;
+
   @media (min-width: $tablet-width) {
     border-bottom: none;
   }
@@ -133,21 +159,26 @@
   text-decoration: none;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     color: $primary-lighter;
     outline: none;
   }
+
   &:active {
     color: $primary-darker;
   }
 }
 
-.footer__address, .footer__telephone {
+.footer__address,
+.footer__telephone {
   position: relative;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 6px;
-  &:after {
+
+  &::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -158,18 +189,17 @@
 }
 
 .footer__telephone {
-  &:after {
+  &::after {
     background-image: url("./../img/address-icon.svg");
   }
-
 }
 
 .footer__address {
   margin-bottom: 16px;
-  &:after {
+
+  &::after {
     background-image: url("./../img/telephone-icon.svg");
   }
-
 }
 
 .contacts__text {
@@ -191,6 +221,7 @@
   gap: 4px;
   justify-content: center;
   padding: 20px 0 30px;
+
   @media (min-width: $tablet-width) {
     grid-area: copyright;
   }
@@ -201,7 +232,6 @@
   font-size: 12px;
   line-height: 16px;
   color: $base-grey;
-
 }
 
 .copyright__link {
@@ -210,15 +240,21 @@
   gap: 4px;
   outline: none;
   text-decoration: none;
-  &:hover .copyright, &:focus .copyright {
+
+  &:hover .copyright,
+  &:focus .copyright {
     color: $base-primary;
   }
+
   &:active .copyright {
     color: $primary-darker;
   }
-  &:hover .copyright__icon, &:focus .copyright__icon {
+
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
     fill: $base-primary;
   }
+
   &:active .copyright__icon {
     fill: $primary-darker;
   }

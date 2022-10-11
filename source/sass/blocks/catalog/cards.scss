@@ -53,12 +53,18 @@
   margin-bottom: 24px;
 }
 
+.product-card__link {
+  outline: none;
+  text-decoration: none;
+}
+
 .product-card__title {
   align-self: start;
   margin-bottom: 4px;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
+  color: $base-black;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 10px;

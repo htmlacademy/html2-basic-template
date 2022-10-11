@@ -17,14 +17,16 @@
     width: 24px;
     height: 24px;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border: 2px solid $primary-lighter;
       outline: none;
     }
   }
 
-  &[type="radio"]:hover + .control__mark, &[type="radio"] + .control__mark:focus {
-    &:after {
+  &[type="radio"]:hover + .control__mark,
+  &[type="radio"] + .control__mark:focus {
+    &::after {
       position: absolute;
       z-index: 2;
       top: 50%;
@@ -62,13 +64,14 @@
     height: 24px;
     background-color: $base-grey;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border: 2px solid $base-primary;
       background-color: rgba(120, 89, 207, 0.25);
       outline: none;
     }
 
-    &:before {
+    &::before {
       position: absolute;
       top: 50%;
       left: 0;
@@ -85,7 +88,7 @@
     background-color: $base-primary;
     border: 2px solid $base-primary;
 
-    &:before {
+    &::before {
       position: absolute;
       top: 50%;
       left: 18px;
@@ -104,13 +107,14 @@
     border-color: $light-grey;
   }
 
-  &[type="radio"]:disabled + .control__mark:after {
+  &[type="radio"]:disabled + .control__mark::after {
     display: none;
   }
 
   &[type="radio"]:checked:disabled + .control__mark {
     border: 2px solid $light-grey;
-    &:before {
+
+    &::before {
       background-color: $light-grey;
     }
   }

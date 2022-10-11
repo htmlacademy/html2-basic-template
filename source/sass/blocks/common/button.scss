@@ -15,7 +15,8 @@
   outline: none;
   margin: 0;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     border-color: $primary-lighter;
     background-color: $primary-lighter;
   }
@@ -29,7 +30,6 @@
     border-color: $base-grey;
     background-color: $base-grey;
   }
-
 }
 
 .secondary-button {
@@ -37,8 +37,10 @@
   color: $base-primary;
   background-color: $base-white;
 
-  &:focus, &:hover, &:active {
-    color: $base-white
+  &:focus,
+  &:hover,
+  &:active {
+    color: $base-white;
   }
 
   &:disabled {
@@ -53,8 +55,8 @@
   padding-right: 20px;
   position: relative;
 
-  &:after {
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     width: 20px;
     height: 16px;

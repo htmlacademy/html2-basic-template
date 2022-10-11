@@ -2,19 +2,20 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 23px;
+
   @media (min-width: $tablet-width) {
     grid-template-columns: 220px max-content max-content;
     row-gap: 40px;
   }
+
   @media (min-width: $desktop-width) {
     grid-area: form;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     align-self: start;
   }
-
 }
 
 .form__element {
@@ -22,6 +23,7 @@
   padding: 0;
   outline: none;
   border: none;
+
   @media (min-width: $desktop-width) {
     width: 100%;
   }
@@ -32,7 +34,7 @@
   line-height: 24px;
 }
 
-#price-slider {
+div .price-slider {
   margin: 31px 0 35px;
   padding: 0 12px;
   max-width: 100%;
@@ -40,16 +42,17 @@
   outline: none;
   border: none;
   background-color: $light-grey;
+
   @media (min-width: $desktop-width) {
     width: 100%;
   }
 }
 
-#price-slider .noUi-connect {
+.price-slider .noUi-connect {
   background: $primary-lighter;
 }
 
-#price-slider .noUi-handle {
+div .price-slider .noUi-handle {
   width: 24px;
   height: 24px;
   border: 2px solid $primary-lighter;
@@ -60,11 +63,13 @@
   right: -12px;
   box-shadow: none;
 
-  &:after, &:before {
+  &::after,
+  &::before {
     display: none;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $lavender-latte;
     outline: 2px solid $base-white;
     outline-offset: -4px;
@@ -77,22 +82,26 @@
   }
 }
 
-#price-slider:disabled .noUi-handle {
+.price-slider:disabled .noUi-handle {
   background-color: $base-white;
   border: 2px solid $base-grey;
 }
 
-#price-slider:disabled .noUi-connect {
+.price-slider:disabled .noUi-connect {
   background: $base-grey;
 }
 
 .price__label {
+  width: 100%;
+}
+
+.price-input__wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
   gap: 40px;
 
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     width: 8px;
@@ -102,6 +111,7 @@
     top: 50%;
     left: 50%;
   }
+
   @media (min-width: $desktop-width) {
     gap: 60px;
   }
@@ -138,14 +148,15 @@
   align-items: center;
   gap: 25px;
   padding-bottom: 35px;
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / 4;
     flex-direction: row;
     justify-content: center;
     gap: 30px;
     padding-bottom: 45px;
-//    flex-wrap: wrap;
   }
+
   @media (min-width: $desktop-width) {
     gap: 20px;
   }
@@ -158,6 +169,7 @@
   text-align: center;
   box-sizing: border-box;
   padding: 0 14px;
+
   @media (min-width: $desktop-width) {
     padding: 0 7px;
     min-width: 143px;

@@ -1,4 +1,4 @@
-const sliderElement = document.querySelector ('.price__slider');
+const sliderElement = document.querySelector ('.price-slider');
 const priceMin = document.querySelector ('#price-min');
 const priceMax = document.querySelector ('#price-max');
 const inputs = [priceMin, priceMax];

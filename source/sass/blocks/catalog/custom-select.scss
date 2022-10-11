@@ -7,7 +7,7 @@
   display: flex;
   position: relative;
   user-select: none;
-  justify-content: end;
+  justify-content: flex-end;
   width: 100%;
 }
 
@@ -33,8 +33,9 @@
   cursor: pointer;
   border-radius: 4px;
 
-  &:hover, &:focus {
-    background-color: $base-secondary ;
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
     outline: none;
   }
 }

@@ -19,8 +19,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-areas:
-    "logo site user";
+    grid-template-areas: "logo site user";
     height: 80px;
     padding: 0 20px;
   }
@@ -28,8 +27,7 @@
   @media (min-width: $desktop-width) {
     max-width: $desktop-page-width;
     grid-template-columns: auto auto 1fr auto;
-    grid-template-areas:
-      "logo description site user";
+    grid-template-areas: "logo description site user";
     margin: 0 auto;
   }
 }
@@ -48,6 +46,7 @@
 
 .header__description {
   display: none;
+
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
@@ -74,7 +73,8 @@
     &--closed {
       display: none;
     }
-    &--open:after {
+
+    &--open::after {
       position: absolute;
       content: "";
       top: 0;

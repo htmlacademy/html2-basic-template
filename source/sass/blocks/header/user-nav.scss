@@ -1,6 +1,6 @@
 .user__wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .user-list__button {
@@ -23,14 +23,18 @@
     gap: 8px;
     padding: 0 20px;
 
-    &:hover .user-list__text, &:focus .user-list__text {
+    &:hover .user-list__text,
+    &:focus .user-list__text {
       color: $base-primary;
     }
-    &:hover .page-header__cart-icon, &:hover .page-header__user-icon {
+
+    &:hover .page-header__cart-icon,
+    &:hover .page-header__user-icon {
       fill: $base-primary;
     }
 
-    &:focus .page-header__cart-icon, &:focus .page-header__user-icon {
+    &:focus .page-header__cart-icon,
+    &:focus .page-header__user-icon {
       fill: $base-primary;
     }
   }
@@ -54,6 +58,7 @@
   }
 }
 
-.page-header__cart-icon, .page-header__user-icon {
+.page-header__cart-icon,
+.page-header__user-icon {
   fill: $base-black;
 }

@@ -1,6 +1,5 @@
 
 div.swiper-slide {
-
   @media (min-width: $desktop-width) {
     margin: 0 auto;
   }
@@ -20,11 +19,11 @@ div.swiper-slide {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, fit-content(200px));
     grid-template-areas:
-    "mark"
-    "title"
-    "text"
-    "buy-block"
-    "image";
+      "mark"
+      "title"
+      "text"
+      "buy-block"
+      "image";
     min-height: 876px;
     padding: 60px 80px 0 80px;
   }
@@ -55,7 +54,6 @@ div.swiper-slide {
   @media (min-width: $desktop-width) {
     background: $flat-white;
   }
-
 }
 
 .slide__espresso {
@@ -94,13 +92,12 @@ div.swiper-slide {
   }
 
   @media (min-width: $desktop-width) {
-    align-items: end;
-    justify-content: end;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 }
 
 .slide__image img {
-
   @media (min-width: $tablet-width) {
     width: 476px;
     height: 476px;
@@ -109,7 +106,6 @@ div.swiper-slide {
   @media (min-width: $desktop-width) {
     width: 600px;
     height: 600px;
-
   }
 }
 
@@ -193,7 +189,7 @@ div.swiper-slide {
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: start;
+    justify-content: flex-start;
     max-width: 600px;
   }
 }
@@ -212,7 +208,8 @@ div.swiper-slide {
   line-height: 32px;
 }
 
-div .swiper-button-next, div .swiper-button-prev {
+div .swiper-button-next,
+div .swiper-button-prev {
   top: 0;
   bottom: 0;
   width: 40px;
@@ -223,7 +220,7 @@ div .swiper-button-next, div .swiper-button-prev {
     width: 80px;
   }
 
-  &:after {
+  &::after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -237,11 +234,12 @@ div .swiper-button-next, div .swiper-button-prev {
 div .swiper-button-prev {
   left: 0;
 
-  &:after {
+  &::after {
     background-image: url("./../img/arrow-left.svg");
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     outline: none;
     background: linear-gradient(to right, $base-white 0%, rgba(255, 255, 255, 0) 100%);
   }
@@ -254,17 +252,18 @@ div .swiper-button-prev {
 div .swiper-button-next {
   right: 0;
 
-  &:after {
+  &::after {
     background-image: url("./../img/arrow-right.svg");
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     outline: none;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $base-white 100%);
   }
 
   &:active {
-    background: linear-gradient(to right, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, .25) 100%);
+    background: linear-gradient(to right, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
   }
 }
 
@@ -279,18 +278,19 @@ div .swiper-pagination-bullet {
     border-radius: 0;
     background-color: $base-white;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: rgba(120, 89, 207, 0.25);
     }
   }
 }
 
 div .swiper-pagination-bullet-active {
-
   @media (min-width: $desktop-width) {
     background-color: $base-primary;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: $base-primary;
     }
   }
@@ -298,6 +298,7 @@ div .swiper-pagination-bullet-active {
 
 div .swiper-horizontal > .swiper-pagination-bullets,
 div .swiper-pagination-bullets.swiper-pagination-horizontal,
-div .swiper-pagination-custom, .swiper-pagination-fraction {
+div .swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: 70px;
 }
