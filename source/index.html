@@ -2,8 +2,11 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+        crossorigin=""/>
   <link rel="icon" type="image/svg+xml" href="img/favicon/favicon-32x32.svg">
   <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -20,10 +23,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-        crossorigin=""/>
   <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
   <link rel="preload" href="fonts/montserrat-400.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -34,7 +33,6 @@
   <link rel="preload" href="fonts/montserrat-700.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>Магазин кофейных напитков Coffee2Go</title>
-
 </head>
 <body class="page__body">
 <header class="header">
@@ -44,8 +42,7 @@
       <picture class="header__picture">
         <source media="(min-width: 1150px)" srcset="img/header-logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
-        <img class="header__image" src="img/header-logo-mobile.svg" width="36" height="36"
-             alt="Логотип coffee2go">
+        <img class="header__image" src="img/header-logo-mobile.svg" width="36" height="36" alt="Логотип coffee2go">
       </picture>
       <span class="visually-hidden">Логотип "Coffee2Go"</span>
     </a>
@@ -442,8 +439,7 @@
             <picture class="product-card__image">
               <source srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x"
                       type="image/webp">
-              <img src="img/coffee-can-6.jpg" srcset="img/coffee-can-6@2x.jpg 2x" alt="coffee can image" width="130"
-                   height="188">
+              <img src="img/coffee-can-6.jpg" srcset="img/coffee-can-6@2x.jpg 2x" alt="coffee can image" width="130" height="188">
             </picture>
             <h3 class="product-card__title">Декаф Флэт Уайт</h3>
             <p class="product-card__text">Кофе без кофеина из Эфиопии
@@ -488,8 +484,7 @@
     <a href="#" class="footer__logo">
       <picture class="footer__picture">
         <source media="(min-width: 768px)" srcset="img/header-logo-desktop.svg">
-        <img class="footer__image" src="img/header-logo-tablet.svg" width="86" height="36"
-             alt="Логотип coffee2go">
+        <img class="footer__image" src="img/header-logo-tablet.svg" width="86" height="36" alt="Логотип coffee2go">
       </picture>
       <span class="visually-hidden">Логотип "Coffee2Go"</span>
     </a>

@@ -1,12 +1,14 @@
 .features__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: 50px 20px 60px;
   background-color: $base-white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   @media (min-width: $tablet-width) {
     padding: 0 30px 100px;
   }
+
   @media (min-width: $desktop-width) {
     max-width: $desktop-page-width;
     margin: 0 auto;
@@ -15,43 +17,47 @@
 }
 
 .features__badge {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.04em;
-  color: $base-primary;
   margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $base-primary;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .features__title {
-  font-weight: 700;
+  margin-bottom: 36px;
   font-size: 24px;
+  font-weight: 700;
   line-height: 36px;
   text-align: center;
-  margin-bottom: 36px;
+
   @media (min-width: $tablet-width) {
-    font-size: 42px;
-    line-height: 64px;
     margin-bottom: 60px;
-  }
-  @media (min-width: $desktop-width) {
     font-size: 42px;
     line-height: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 80px;
+    font-size: 42px;
+    line-height: 64px;
   }
 }
 
 .features__list {
   display: flex;
-  flex-direction: column;
   gap: 36px;
+  flex-direction: column;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     row-gap: 50px;
   }
+
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -59,8 +65,9 @@
 
 .features__item {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -70,35 +77,39 @@
     column-gap: 20px;
     row-gap: 10px;
   }
+
   @media (min-width: $desktop-width) {
     display: flex;
     gap: 0;
   }
-
 }
 
 .feature__icon {
   margin-bottom: 10px;
+
   @media (min-width: $tablet-width) {
     grid-area: icon;
   }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 24px;
   }
 }
 
 .feature__title {
-  font-weight: 700;
+  margin-bottom: 4px;
   font-size: 18px;
+  font-weight: 700;
   line-height: 32px;
   text-align: center;
-  margin-bottom: 4px;
+
   @media (min-width: $tablet-width) {
     grid-area: title;
-    text-align: start;
     font-size: 24px;
     line-height: 36px;
+    text-align: start;
   }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 10px;
   }
@@ -108,12 +119,14 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
   @media (min-width: $tablet-width) {
     grid-area: content;
-    text-align: start;
     font-size: 16px;
     line-height: 24px;
+    text-align: start;
   }
+
   @media (min-width: $desktop-width) {
     text-align: center;
   }

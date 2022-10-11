@@ -30,13 +30,13 @@
 
 .footer__social {
   display: flex;
-  padding: 22px 20px;
   justify-content: space-between;
+  padding: 22px 20px;
   border-bottom: 1px solid $base-secondary;
   @media (min-width: $tablet-width) {
-    border-bottom: none;
     grid-area: social;
     padding: 22px 20px 10px;
+    border-bottom: none;
   }
   @media (min-width: $desktop-width) {
     flex-direction: column;
@@ -48,20 +48,20 @@
 }
 
 .social__list {
-  gap: 20px;
   display: flex;
   align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .social__link {
   display: grid;
-  place-items: center;
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background-color: transparent;
   outline: none;
+  background-color: transparent;
+  place-items: center;
 
   &:hover, &:focus {
     background-color: $base-secondary;
@@ -72,8 +72,8 @@
 }
 
 .social__link:hover .social__icon, .social__link:focus .social__icon, {
-  fill: $base-primary;
   outline: none;
+  fill: $base-primary;
 }
 
 .social__icon {
@@ -82,9 +82,9 @@
 
 .footer__navigation, .footer__media, .footer__contacts {
   display: flex;
+  align-items: start;
   flex-direction: column;
   padding: 20px;
-  align-items: start;
   border-bottom: 1px solid $base-secondary;
   @media (min-width: $tablet-width) {
     border-bottom: none;
@@ -110,29 +110,29 @@
 }
 
 .footer__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  color: $base-primary;
   margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $base-primary;
+  letter-spacing: 0.02em;
 }
 
 .footer__list {
   display: flex;
-  flex-direction: column;
   gap: 20px;
+  flex-direction: column;
 }
 
 .footer__link {
-  color: $base-black;
   display: block;
-  font-weight: 500;
   font-size: 12px;
+  font-weight: 500;
   line-height: 16px;
+  color: $base-black;
+  text-decoration: none;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  text-decoration: none;
   &:hover, &:focus {
     color: $primary-lighter;
     outline: none;
@@ -149,11 +149,11 @@
   gap: 6px;
   &:after {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     width: 13px;
     height: 16px;
+    content: "";
   }
 }
 
@@ -174,9 +174,9 @@
 
 .contacts__text {
   display: block;
+  margin-left: 20px;
   font-size: 14px;
   line-height: 20px;
-  margin-left: 20px;
 }
 
 .contacts__icon {
@@ -186,11 +186,11 @@
 }
 
 .footer__copyright {
-  padding: 20px 0 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 4px;
+  justify-content: center;
+  padding: 20px 0 30px;
   @media (min-width: $tablet-width) {
     grid-area: copyright;
   }
@@ -207,16 +207,16 @@
 .copyright__link {
   display: flex;
   align-items: center;
-  text-decoration: none;
   gap: 4px;
   outline: none;
+  text-decoration: none;
   &:hover .copyright, &:focus .copyright {
     color: $base-primary;
   }
   &:active .copyright {
     color: $primary-darker;
   }
-  &:hover .copyright__icon , &:focus .copyright__icon  {
+  &:hover .copyright__icon, &:focus .copyright__icon {
     fill: $base-primary;
   }
   &:active .copyright__icon {

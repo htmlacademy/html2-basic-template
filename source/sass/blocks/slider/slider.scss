@@ -1,37 +1,37 @@
 
 div.swiper-slide {
+
   @media (min-width: $desktop-width) {
     margin: 0 auto;
   }
 }
 
 .slide__container {
-  padding: 20px 20px 0 20px;
-  box-sizing: border-box;
-  min-height: 640px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
+  min-height: 640px;
+  padding: 20px 20px 0 20px;
+
   @media (min-width: $tablet-width) {
-    padding: 60px 80px 0 80px;
-    min-height: 876px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, fit-content(200px) );
     align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, fit-content(200px));
     grid-template-areas:
     "mark"
     "title"
     "text"
     "buy-block"
     "image";
+    min-height: 876px;
+    padding: 60px 80px 0 80px;
   }
+
   @media (min-width: $desktop-width) {
-    padding: 30px 0 0 0;
-    min-height: 714px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(7, fit-content(200px) );
-    column-gap: 30px;
+    grid-template-rows: repeat(7, fit-content(200px));
     grid-template-areas:
       "image ."
       "image mark"
@@ -39,14 +39,19 @@ div.swiper-slide {
       "image text"
       "image buy-block"
       "image .";
+    min-height: 714px;
+    padding: 30px 0 0 0;
+    column-gap: 30px;
   }
 }
 
 .slide__flat-white {
   background-color: $flat-white;
+
   @media (min-width: $tablet-width) {
     background: linear-gradient(180deg, $flat-white 75%, $base-white 75%);
   }
+
   @media (min-width: $desktop-width) {
     background: $flat-white;
   }
@@ -55,9 +60,11 @@ div.swiper-slide {
 
 .slide__espresso {
   background-color: $espresso;
+
   @media (min-width: $tablet-width) {
     background: linear-gradient(180deg, $espresso 75%, $base-white 75%);
   }
+
   @media (min-width: $desktop-width) {
     background: $espresso;
   }
@@ -65,23 +72,27 @@ div.swiper-slide {
 
 .slide__latte {
   background-color: $lavender-latte;
+
   @media (min-width: $tablet-width) {
     background: linear-gradient(180deg, $lavender-latte 75%, $base-white 75%);
   }
+
   @media (min-width: $desktop-width) {
     background: $lavender-latte;
   }
 }
 
 .slide__image {
-  background-color: transparent;
   margin-bottom: 10px;
+  background-color: transparent;
+
   @media (min-width: $tablet-width) {
-    grid-area: image;
     display: flex;
     align-items: center;
+    grid-area: image;
     justify-content: center;
   }
+
   @media (min-width: $desktop-width) {
     align-items: end;
     justify-content: end;
@@ -89,10 +100,12 @@ div.swiper-slide {
 }
 
 .slide__image img {
+
   @media (min-width: $tablet-width) {
     width: 476px;
     height: 476px;
   }
+
   @media (min-width: $desktop-width) {
     width: 600px;
     height: 600px;
@@ -101,76 +114,84 @@ div.swiper-slide {
 }
 
 .slide__new-mark {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.04em;
-  color: $base-primary;
   margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $base-primary;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
   @media (min-width: $tablet-width) {
     grid-area: mark;
     text-align: center;
   }
+
   @media (min-width: $desktop-width) {
-    text-align: start;
     max-width: 600px;
+    text-align: start;
   }
 }
 
 .slide__title {
-  padding: 0 20px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
-  letter-spacing: 0.02em;
-  text-align: center;
   margin-bottom: 10px;
+  padding: 0 20px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.02em;
+
   @media (min-width: $tablet-width) {
     grid-area: title;
-    font-size: 56px;
-    line-height: 80px;
     margin-bottom: 16px;
-  }
-  @media (min-width: $desktop-width) {
-    text-align: start;
     font-size: 56px;
     line-height: 80px;
-    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
     max-width: 600px;
+    padding: 0;
+    font-size: 56px;
+    line-height: 80px;
+    text-align: start;
   }
 }
 
 .slide__text {
+  margin-bottom: 20px;
+  padding: 0 10px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  margin-bottom: 20px;
-  padding: 0 10px;
+
   @media (min-width: $tablet-width) {
     grid-area: text;
     font-size: 20px;
     line-height: 32px;
   }
+
   @media (min-width: $desktop-width) {
-    text-align: start;
-    padding: 0;
-    margin-bottom: 40px;
     max-width: 600px;
+    margin-bottom: 40px;
+    padding: 0;
+    text-align: start;
   }
 }
 
 .slide__buy-block {
   display: flex;
-  padding: 0 25px;
   align-items: center;
   justify-content: space-between;
+  padding: 0 25px;
+
   @media (min-width: $tablet-width) {
     grid-area: buy-block;
     justify-content: center;
-    padding: 0;
     margin-bottom: 20px;
+    padding: 0;
   }
+
   @media (min-width: $desktop-width) {
     justify-content: start;
     max-width: 600px;
@@ -178,50 +199,51 @@ div.swiper-slide {
 }
 
 .slide__old-price {
-  text-decoration: line-through;
-  color: $base-primary;
   margin-right: 6px;
   line-height: 32px;
+  color: $base-primary;
+  text-decoration: line-through;
 }
 
 .slide__new-price {
   margin-right: 20px;
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   line-height: 32px;
 }
 
 div .swiper-button-next, div .swiper-button-prev {
-  margin: 0;
   top: 0;
   bottom: 0;
-  height: 100%;
   width: 40px;
+  height: 100%;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     width: 80px;
   }
 
   &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 11px;
     height: 20px;
     content: "";
-    position: absolute;
     transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
   }
 }
 
 div .swiper-button-prev {
   left: 0;
+
   &:after {
     background-image: url("./../img/arrow-left.svg");
   }
 
   &:hover, &:focus {
-    background: linear-gradient(to right, $base-white 0%, rgba(255, 255, 255, 0) 100%);
     outline: none;
+    background: linear-gradient(to right, $base-white 0%, rgba(255, 255, 255, 0) 100%);
   }
 
   &:active {
@@ -231,13 +253,14 @@ div .swiper-button-prev {
 
 div .swiper-button-next {
   right: 0;
+
   &:after {
     background-image: url("./../img/arrow-right.svg");
   }
 
   &:hover, &:focus {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $base-white 100%);
     outline: none;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $base-white 100%);
   }
 
   &:active {
@@ -247,13 +270,14 @@ div .swiper-button-next {
 
 div .swiper-pagination-bullet {
   display: none;
+
   @media (min-width: $desktop-width) {
     display: inline-block;
     width: 62px;
     height: 4px;
+    opacity: 1;
     border-radius: 0;
     background-color: $base-white;
-    opacity: 1;
 
     &:hover, &:focus {
       background-color: rgba(120, 89, 207, 0.25);
@@ -262,10 +286,10 @@ div .swiper-pagination-bullet {
 }
 
 div .swiper-pagination-bullet-active {
-  //  display: none;
+
   @media (min-width: $desktop-width) {
-    //    display: flex;
     background-color: $base-primary;
+
     &:hover, &:focus {
       background-color: $base-primary;
     }
