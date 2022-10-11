@@ -11,6 +11,7 @@
   border-radius: 0;
   background-color: $base-white;
   border: none;
+  outline: none;
 
   &:active {
     background-color: $base-secondary;
@@ -26,6 +27,10 @@
       color: $base-primary;
     }
     &:hover .page-header__cart-icon, &:hover .page-header__user-icon {
+      fill: $base-primary;
+    }
+
+    &:focus .page-header__cart-icon, &:focus .page-header__user-icon {
       fill: $base-primary;
     }
   }

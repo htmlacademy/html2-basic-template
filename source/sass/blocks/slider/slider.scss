@@ -219,6 +219,11 @@ div .swiper-button-prev {
     background-image: url("./../img/arrow-left.svg");
   }
 
+  &:hover, &:focus {
+    background: linear-gradient(to right, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+    outline: none;
+  }
+
   &:active {
     background: linear-gradient(to right, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
@@ -230,11 +235,15 @@ div .swiper-button-next {
     background-image: url("./../img/arrow-right.svg");
   }
 
+  &:hover, &:focus {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $base-white 100%);
+    outline: none;
+  }
+
   &:active {
     background: linear-gradient(to right, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, .25) 100%);
   }
 }
-
 
 div .swiper-pagination-bullet {
   display: none;
@@ -253,9 +262,9 @@ div .swiper-pagination-bullet {
 }
 
 div .swiper-pagination-bullet-active {
-//  display: none;
+  //  display: none;
   @media (min-width: $desktop-width) {
-//    display: flex;
+    //    display: flex;
     background-color: $base-primary;
     &:hover, &:focus {
       background-color: $base-primary;

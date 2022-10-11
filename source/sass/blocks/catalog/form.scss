@@ -2,6 +2,19 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 23px;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 220px max-content max-content;
+    row-gap: 40px;
+  }
+  @media (min-width: $desktop-width) {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    align-self: start;
+  }
+
 }
 
 .form__element {
@@ -9,21 +22,27 @@
   padding: 0;
   outline: none;
   border: none;
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .form__title {
-  font-weight: 700;
+  font-weight: 600;
   line-height: 24px;
 }
 
 #price-slider {
   margin: 31px 0 35px;
   padding: 0 12px;
-  max-width: 280px;
+  max-width: 100%;
   height: 4px;
   outline: none;
   border: none;
   background-color: $light-grey;
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 #price-slider .noUi-connect {
@@ -83,6 +102,9 @@
     top: 50%;
     left: 50%;
   }
+  @media (min-width: $desktop-width) {
+    gap: 60px;
+  }
 }
 
 .price__input {
@@ -116,6 +138,17 @@
   align-items: center;
   gap: 25px;
   padding-bottom: 35px;
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 4;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 45px;
+//    flex-wrap: wrap;
+  }
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
 }
 
 .button.form__button {
@@ -123,6 +156,11 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+  box-sizing: border-box;
   padding: 0 14px;
+  @media (min-width: $desktop-width) {
+    padding: 0 7px;
+    min-width: 143px;
+  }
 }
 

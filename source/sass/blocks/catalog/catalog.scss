@@ -1,8 +1,27 @@
-.catalog__wrapper {
+.catalog {
   background-color: $lightest-grey;
+}
+
+.catalog__wrapper {
   padding: 50px 20px 44px 20px;
   display: flex;
   flex-direction: column;
+  @media (min-width: $tablet-width) {
+    padding: 80px 20px 90px 20px;
+    align-items: center;
+  }
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-page-width;
+    margin: 0 auto;
+    padding: 100px 30px 120px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas:
+      "badge badge"
+      "title title"
+      "form cards" ;
+    column-gap: 30px;
+  }
 }
 
 .catalog__badge {
@@ -14,6 +33,9 @@
   color: $base-primary;
   text-align: center;
   margin-bottom: 4px;
+  @media (min-width: $desktop-width) {
+    grid-area: badge;
+  }
 }
 
 .catalog__title {
@@ -22,12 +44,23 @@
   line-height: 36px;
   text-align: center;
   margin-bottom: 21px;
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    grid-area: title;
+  }
 }
 
 .catalog__sort {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+  }
 }
 
 .sort__label {
@@ -40,6 +73,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: $tablet-width) {
+    margin-right: -30px;
+    justify-content: end;
+    gap: 20px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
 }
 
 .pagination-link {
@@ -52,11 +93,13 @@
   background-color: $base-white;
   border-radius: 4px;
   text-decoration: none;
+  z-index: 2;
 
   &:hover, &:focus {
     background-color: $primary-lighter;
     color: $base-white;
     font-weight: 400;
+    outline: none;
   }
 
   &:active {
@@ -78,6 +121,7 @@
   background-color: $base-white;
   border-radius: 4px;
   text-decoration: none;
+  z-index: 1;
 
   &:after {
     position: absolute;
@@ -88,10 +132,21 @@
     height: 6px;
     background-image: url("../img/custom-select-arrow.svg");
     filter: invert(36%) sepia(92%) saturate(587%) hue-rotate(219deg) brightness(90%) contrast(89%);
+    @media (min-width: $tablet-width) {
+      background-image: none;
+    }
   }
 
   &:hover, &:focus {
     background-color: $primary-lighter;
+    outline: none;
+
+    &:before {
+      background-color: $primary-lighter;
+    }
+    & .paganation-button-text {
+      color: $base-white;
+    }
   }
 
   &:active {
@@ -105,6 +160,11 @@
   &:hover:after, &:active:after, &:focus:after {
     filter: invert(100%) sepia(0%) saturate(7450%) hue-rotate(18deg) brightness(94%) contrast(103%);
   }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 8px 50px;
+  }
 }
 
 .pagination-next:after {
@@ -113,6 +173,52 @@
 
 .pagination-prev:after {
   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.pagination-next {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin-left: -20px;
+    border-radius: 0 4px 4px 0;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 40px;
+      width: 4px;
+      background-color: $base-white;
+      left: -4px;
+      top: 0;
+      z-index: 0;
+    }
+  }
+}
+
+.pagination-prev {
+  @media (min-width: $tablet-width) {
+    margin-right: -20px;
+    border-radius: 4px 0 0 4px;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 40px;
+      width: 4px;
+      background-color: $base-white;
+      right: -4px;
+      top: 0;
+      z-index: 0;
+    }
+  }
+}
+
+.paganation-button-text {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: $base-primary;
+  }
 }
 
 .paganation-link--current {
@@ -129,5 +235,13 @@
   }
   &:hover, &:focus, &:active {
     background-color: transparent;
+    outline: none;
   }
+  &:before {
+    display: none;
+  }
+}
+
+.paganation--hidden .paganation-button-text {
+  color: transparent;
 }

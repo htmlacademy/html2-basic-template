@@ -17,12 +17,13 @@
     width: 24px;
     height: 24px;
 
-    &:hover {
+    &:hover, &:focus {
       border: 2px solid $primary-lighter;
+      outline: none;
     }
   }
 
-  &[type="radio"]:hover + .control__mark {
+  &[type="radio"]:hover + .control__mark, &[type="radio"] + .control__mark:focus {
     &:after {
       position: absolute;
       z-index: 2;
@@ -64,6 +65,7 @@
     &:hover, &:focus {
       border: 2px solid $base-primary;
       background-color: rgba(120, 89, 207, 0.25);
+      outline: none;
     }
 
     &:before {
@@ -97,7 +99,8 @@
   }
 
   &:disabled + .control__mark,
-  &:disabled:hover + .control__mark {
+  &:disabled:hover + .control__mark,
+  &:disabled + .control__mark:focus {
     border-color: $light-grey;
   }
 

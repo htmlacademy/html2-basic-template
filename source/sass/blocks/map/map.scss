@@ -3,6 +3,12 @@
   height: 420px;
   background-image: url("../img/map_mobile.jpg");
   background-color: $base-grey;
+  @media (min-width: $tablet-width) {
+    height: 480px;
+  }
+  @media (min-width: $desktop-width) {
+    height: 540px;
+  }
 }
 
 .map__canvas {

@@ -4,12 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Магазин кофейных напитков Coffee2Go</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon/favicon-32x32.svg">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
         integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
         crossorigin=""/>
   <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
+  <link rel="preload" href="fonts/montserrat-400.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-500.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-600.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-700.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <title>Магазин кофейных напитков Coffee2Go</title>
 
 </head>
 <body class="page__body">
@@ -234,22 +258,23 @@
           <ul class="form__list">
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="radio" name="milk-type" value="no-matter">
-                <span class="control__mark"></span>
+                <input class="visually-hidden control__input" type="radio" name="milk-type" value="no-matter"
+                       tabindex="0">
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Неважно</span>
               </label>
             </li>
             <li class="form__items">
               <label class="control">
                 <input class="visually-hidden control__input" type="radio" name="milk-type" value="animal-milk">
-                <span class="control__mark"></span>
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Только животное</span>
               </label>
             </li>
             <li class="form__items">
               <label class="control">
                 <input class="visually-hidden control__input" type="radio" name="milk-type" value="only-vegetable">
-                <span class="control__mark"></span>
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Только растительное</span>
               </label>
             </li>
@@ -257,7 +282,7 @@
               <label class="control">
                 <input class="visually-hidden control__input" type="radio" name="milk-type" value="without-milk" checked
                        disabled>
-                <span class="control__mark"></span>
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Без молока</span>
               </label>
             </li>
@@ -271,36 +296,36 @@
           <ul class="form__list">
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="Brazil" checked disabled>
-                <span class="control__mark"></span>
+                <input class="visually-hidden control__input" type="checkbox" name="Brazil" tabindex="-1">
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Бразилия</span>
               </label>
             </li>
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="Ethiopia">
-                <span class="control__mark"></span>
+                <input class="visually-hidden control__input" type="checkbox" name="Ethiopia" tabindex="-1">
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Эфиопия</span>
               </label>
             </li>
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="Colombia">
-                <span class="control__mark"></span>
+                <input class="visually-hidden control__input" type="checkbox" name="Colombia" tabindex="-1">
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Колумбия</span>
               </label>
             </li>
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="Costa-Rica">
-                <span class="control__mark"></span>
+                <input class="visually-hidden control__input" type="checkbox" name="Costa-Rica" tabindex="-1">
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Коста-Рика</span>
               </label>
             </li>
             <li class="form__items">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="Peru" disabled>
-                <span class="control__mark"></span>
+                <input class="visually-hidden control__input" type="checkbox" name="Peru" tabindex="-1" disabled>
+                <span class="control__mark" tabindex="0"></span>
                 <span class="control__label">Перу</span>
               </label>
             </li>
@@ -317,7 +342,7 @@
           <div class="container">
             <div class="custom-select-wrapper">
               <div class="custom-select">
-                <div class="custom-select__trigger">
+                <div class="custom-select__trigger" tabindex="0">
                   <div>по умолчанию</div>
                   <div class="arrow"></div>
                 </div>
@@ -432,7 +457,9 @@
         </div>
         <ul class="catalog__pagination">
           <li class="pagination-item pagination-item-first">
-            <a class="pagination-prev" href="#"></a>
+            <a class="pagination-prev" href="#">
+              <span class="paganation-button-text">Назад</span>
+            </a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link " href="#">1</a>
@@ -444,7 +471,9 @@
             <a class="pagination-link" href="#">3</a>
           </li>
           <li class="pagination-item pagination-item-last">
-            <a class="pagination-next" href="#"></a>
+            <a class="pagination-next" href="#">
+              <span class="paganation-button-text">Вперед</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -456,7 +485,14 @@
 </main>
 <footer class="footer__container">
   <section class="footer__social">
-    <img class="footer__logo" src="img/site-logo-mobile.svg" width="86" height="36" alt="Логотип coffee2go">
+    <a href="#" class="footer__logo">
+      <picture class="footer__picture">
+        <source media="(min-width: 768px)" srcset="img/header-logo-desktop.svg">
+        <img class="footer__image" src="img/header-logo-tablet.svg" width="86" height="36"
+             alt="Логотип coffee2go">
+      </picture>
+      <span class="visually-hidden">Логотип "Coffee2Go"</span>
+    </a>
     <ul class="social__list">
       <li class="social__item">
         <a href="" class="social__link">
@@ -518,25 +554,19 @@
   <section class="footer__contacts">
     <h4 class="footer__title">Контакты</h4>
     <div class="footer__address">
-      <svg class="contacts__icon" width="13" height="16" viewBox="0 0 13 16">
-        <use xlink:href="img/sprite.svg#address-icon"></use>
-      </svg>
       <p class="contacts__text">
         Санкт-Петербург, набережная реки Карповки, дом 5
       </p>
     </div>
     <div class="footer__telephone">
-      <svg class="contacts__icon" width="13" height="16" viewBox="0 0 13 16">
-        <use xlink:href="img/sprite.svg#telephone-icon"></use>
-      </svg>
       <p class="contacts__text">
         +7 (999) 999-99-99
       </p>
     </div>
   </section>
   <section class="footer__copyright">
-    <p class="copyright">Разработано в HTML Academy</p>
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <p class="copyright">Разработано в HTML Academy</p>
       <svg class="copyright__icon" width="12" height="16" viewBox="0 0 12 16">
         <use xlink:href="img/sprite.svg#academy-logo"></use>
       </svg>

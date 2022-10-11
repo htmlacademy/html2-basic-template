@@ -8,6 +8,8 @@
     padding: 0 30px 100px;
   }
   @media (min-width: $desktop-width) {
+    max-width: $desktop-page-width;
+    margin: 0 auto;
     padding: 100px 30px 120px;
   }
 }
@@ -51,7 +53,7 @@
     row-gap: 50px;
   }
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 315px);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
