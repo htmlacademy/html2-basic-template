@@ -1,0 +1,35 @@
+name: Deploy on GH pages
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ git-hub-pages ]
+  pull_request:
+    branches: [ git-hub-pages ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout git-hub-pages branch
+        uses: actions/checkout@v2
+      
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+            npm install
+            npm run build
+  
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          # In order for GitHub to trigger the rebuild of your page you must provide the action with the repositories provided GitHub token.
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # This is the branch you wish to deploy to, for example gh-pages or docs.
+          BRANCH: gh-pages
+          # The folder in your repository that you want to deploy. If your build script compiles into a directory named build you would put it here. Folder paths cannot have a leading / or ./. If you wish to deploy the root directory you can place a . here.
+          FOLDER: source
+          # If your project generates hashed files on build you can use this option to automatically delete them from the deployment branch with each deploy. This option can be toggled on by setting it to true.
+          CLEAN: true

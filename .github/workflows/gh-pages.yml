@@ -1,0 +1,38 @@
+name: Deploy to GitHub-Pages
+
+on:
+  push:
+    branches:
+      - git-hub-pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Out
+        uses: actions/checkout@v2.4.0
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+
+      - name: Installing Dependencies
+        run: npm ci
+
+      - name: Linting
+        run: npm test
+
+      - name: Building
+        run: npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          folder: ./build
+          branch: git-hub-pages
+

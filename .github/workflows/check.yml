@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: '*'
+
+name: Project check
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16'
+
+    - uses: actions/checkout@master
+      name: Checkout
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Run checks
+      run: |
+        npm test
