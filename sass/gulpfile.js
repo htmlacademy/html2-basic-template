@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
-import sass from 'gulp-dart-sass';
+import dartSass from "sass";
+import gulpSass from "gulp-sass";
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
@@ -14,6 +15,8 @@ import {deleteAsync} from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
+
+const sass = gulpSass(dartSass);
 
 // Styles
 
