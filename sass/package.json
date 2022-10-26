@@ -1,11 +1,7 @@
 {
-  "browserslist": [
-    "last 2 versions",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all",
-    "not < 0.25%"
-  ],
+  "name": "htmlacademy-gulp-template",
+  "version": "1.0.0",
+  "private": true,
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.12",
@@ -31,6 +27,22 @@
     "stylelint": "14.14.0",
     "stylelint-config-htmlacademy": "1.1.2"
   },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
+    "w3c": "gulp validateMarkup --silent",
+    "bemlinter": "gulp lintBem --silent",
+    "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
   "editorconfig-cli": [
     "*.json",
     "*.js",
@@ -42,17 +54,5 @@
   "engines": {
     "node": ">=16.13.0"
   },
-  "name": "htmlacademy-gulp-template",
-  "private": true,
-  "scripts": {
-    "bemlinter": "gulp lintBem --silent",
-    "build": "gulp build",
-    "editorconfig": "editorconfig-cli",
-    "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
-    "start": "gulp",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
-    "w3c": "gulp validateMarkup --silent"
-  },
-  "type": "module",
-  "version": "1.0.0"
+  "type": "module"
 }
