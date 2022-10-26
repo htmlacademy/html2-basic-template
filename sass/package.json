@@ -9,6 +9,7 @@
     "del": "7.0.0",
     "gulp": "4.0.2",
     "gulp-dart-sass": "1.0.2",
+    "gulp-html-bemlinter": "2.1.2",
     "gulp-libsquoosh": "1.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
@@ -27,8 +28,9 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
+    "bemlinter": "gulp lintBem --silent",
     "w3c": "gulp validateMarkup --silent",
-    "lint": "npm run editorconfig && npm run stylelint && npm run w3c",
+    "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
     "build": "gulp build",
     "start": "gulp"
   },

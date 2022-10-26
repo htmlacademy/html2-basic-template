@@ -12,6 +12,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
 import browser from 'browser-sync';
+import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
 
 // Styles
@@ -36,6 +37,11 @@ export const styles = () => {
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(gulp.dest('build'));
+}
+
+export const lintBem = () => {
+  return gulp.src('source/*.html')
+    .pipe(bemlinter());
 }
 
 export const validateMarkup = () => {
