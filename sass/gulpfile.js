@@ -20,7 +20,7 @@ const sass = gulpSass(dartSass);
 
 // Styles
 
-export const styles = () => {
+export function styles () {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
@@ -37,18 +37,18 @@ export const styles = () => {
 
 // HTML
 
-const html = () => {
+export function html () {
   return gulp.src('source/*.html')
     .pipe(gulp.dest('build'));
 }
 
 
-export const lintBem = () => {
+export function lintBem () {
   return gulp.src('source/*.html')
     .pipe(bemlinter());
 }
 
-export const validateMarkup = () => {
+export function validateMarkup () {
   return gulp.src('source/*.html')
 		.pipe(htmlValidator.analyzer())
 		.pipe(htmlValidator.reporter({ throwErrors: true }));
@@ -56,7 +56,7 @@ export const validateMarkup = () => {
 
 // Scripts
 
-const scripts = () => {
+export function scripts () {
   return gulp.src('source/js/**/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
@@ -65,20 +65,20 @@ const scripts = () => {
 
 // Images
 
-const optimizeImages = () => {
+export function optimizeImages () {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
-const copyImages = () => {
+export function copyImages () {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
-const createWebp = () => {
+export function createWebp () {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
@@ -88,12 +88,13 @@ const createWebp = () => {
 
 // SVG
 
-const svg = () =>
-  gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
+export function svg () {
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
+}
 
-const stack = () => {
+export function stack () {
   return gulp.src('source/img/icons/**/*.svg')
     .pipe(svgo())
     .pipe(stacksvg())
@@ -102,28 +103,27 @@ const stack = () => {
 
 // Copy
 
-const copy = (done) => {
-  gulp.src([
+export function copy () {
+  return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
   ], {
     base: 'source'
   })
-    .pipe(gulp.dest('build'))
-  done();
+    .pipe(gulp.dest('build'));
 }
 
 
 // Clean
 
-const clean = () => {
+export function clean () {
   return deleteAsync('build');
-};
+}
 
 // Server
 
-const server = (done) => {
+export function server (done) {
   browser.init({
     server: {
       baseDir: 'build'
@@ -137,14 +137,14 @@ const server = (done) => {
 
 // Reload
 
-const reload = (done) => {
+function reload (done) {
   browser.reload();
   done();
 }
 
 // Watcher
 
-const watcher = () => {
+function watcher () {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
@@ -152,19 +152,22 @@ const watcher = () => {
 
 // Build
 
-export const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    stack,
-    createWebp
-  ),
-);
+export function build (done) {
+  gulp.series(
+    clean,
+    copy,
+    optimizeImages,
+    gulp.parallel(
+      styles,
+      html,
+      scripts,
+      svg,
+      stack,
+      createWebp
+    ),
+  );
+  done();
+}
 
 // Default
 
@@ -183,4 +186,5 @@ export default gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  )
+);
