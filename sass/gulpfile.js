@@ -10,7 +10,7 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
+import { stacksvg } from "gulp-stacksvg";
 import {deleteAsync} from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
@@ -89,18 +89,15 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src(['source/img/**/*.svg', '!source/img/sprites/**/*.svg'])
+  gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
-  return gulp.src('source/img/sprites/**/*.svg')
+const stack = () => {
+  return gulp.src('source/img/icons/**/*.svg')
     .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+    .pipe(stacksvg())
+    .pipe(gulp.dest('build/img/icons'));
 }
 
 // Copy
@@ -164,7 +161,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
+    stack,
     createWebp
   ),
 );
@@ -180,7 +177,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite,
+    stack,
     createWebp
   ),
   gulp.series(
