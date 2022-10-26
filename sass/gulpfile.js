@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
+import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
@@ -12,6 +13,7 @@ import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
+import { htmlValidator } from "gulp-w3c-html-validator";
 
 // Styles
 
@@ -20,6 +22,7 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
+      postUrl({ assetsPath: '../' }),
       autoprefixer(),
       csso()
     ]))
@@ -36,9 +39,16 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 
+
 export const lintBem = () => {
   return gulp.src('source/*.html')
     .pipe(bemlinter());
+}
+
+export const validateMarkup = () => {
+  return gulp.src('source/*.html')
+		.pipe(htmlValidator.analyzer())
+		.pipe(htmlValidator.reporter({ throwErrors: true }));
 }
 
 // Scripts
