@@ -15,27 +15,26 @@ import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
 
-const { src, dest, watch, series, parallel } = gulp;
 let isDevelopment = true;
 
 export function processMarkup () {
-  return src('source/*.html')
-    .pipe(dest('build'));
+  return gulp.src('source/*.html')
+    .pipe(gulp.dest('build'));
 }
 
 export function lintBem () {
-  return src('source/*.html')
+  return gulp.src('source/*.html')
     .pipe(bemlinter());
 }
 
 export function validateMarkup () {
-  return src('source/*.html')
+  return gulp.src('source/*.html')
 		.pipe(htmlValidator.analyzer())
 		.pipe(htmlValidator.reporter({ throwErrors: true }));
 }
 
 export function processStyles () {
-  return src('source/less/*.less', { sourcemaps: isDevelopment })
+  return gulp.src('source/less/*.less', { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -43,53 +42,53 @@ export function processStyles () {
       autoprefixer(),
       csso()
     ]))
-    .pipe(dest('build/css', { sourcemaps: isDevelopment }))
+    .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
 
 export function processScripts () {
-  return src('source/js/**/*.js')
+  return gulp.src('source/js/**/*.js')
     .pipe(terser())
-    .pipe(dest('build/js'))
+    .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
 
 export function optimizeImages () {
-  return src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(gulpIf(!isDevelopment, squoosh()))
-    .pipe(dest('build/img'))
+    .pipe(gulp.dest('build/img'))
 }
 
 export function createWebp () {
-  return src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
     }))
-    .pipe(dest('build/img'))
+    .pipe(gulp.dest('build/img'))
 }
 
 export function optimizeVector () {
-  return src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
     .pipe(svgo())
-    .pipe(dest('build/img'));
+    .pipe(gulp.dest('build/img'));
 }
 
 export function createStack () {
-  return src('source/img/icons/**/*.svg')
+  return gulp.src('source/img/icons/**/*.svg')
     .pipe(svgo())
     .pipe(stacksvg())
-    .pipe(dest('build/img/icons'));
+    .pipe(gulp.dest('build/img/icons'));
 }
 
 export function copyAssets () {
-  return src([
+  return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
   ], {
     base: 'source'
   })
-    .pipe(dest('build'));
+    .pipe(gulp.dest('build'));
 }
 
 export function startServer (done) {
@@ -110,13 +109,13 @@ function reloadServer (done) {
 }
 
 function watchFiles () {
-  watch('source/less/**/*.less', series(processStyles));
-  watch('source/js/script.js', series(processScripts));
-  watch('source/*.html', series(processMarkup, reloadServer));
+  gulp.watch('source/less/**/*.less', gulp.series(processStyles));
+  gulp.watch('source/js/script.js', gulp.series(processScripts));
+  gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
 }
 
 function compileProject (done) {
-  parallel(
+  gulp.parallel(
     processMarkup,
     processStyles,
     processScripts,
@@ -134,14 +133,14 @@ function deleteBuild () {
 
 export function buildProd (done) {
   isDevelopment = false;
-  series(
+  gulp.series(
     deleteBuild,
     compileProject
   )(done);
 }
 
 export function runDev (done) {
-  series(
+  gulp.series(
     deleteBuild,
     compileProject,
     startServer,
