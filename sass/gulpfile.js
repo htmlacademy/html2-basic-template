@@ -16,11 +16,12 @@ import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
 
 const sass = gulpSass(dartSass);
+let isDevelopment = true;
 
 // Styles
 
 export function processStyles () {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  return gulp.src('source/sass/style.scss', { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -28,7 +29,7 @@ export function processStyles () {
       autoprefixer(),
       csso()
     ]))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
 
@@ -151,6 +152,7 @@ function watchFiles () {
 // Build
 
 export function buildProd (done) {
+  isDevelopment = false;
   gulp.series(
     deleteBuild,
     copyAssets,

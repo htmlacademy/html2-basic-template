@@ -14,10 +14,12 @@ import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
 
+let isDevelopment = true;
+
 // Styles
 
 export function processStyles () {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
+  return gulp.src('source/less/style.less', { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -25,7 +27,7 @@ export function processStyles () {
       autoprefixer(),
       csso()
     ]))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
 
@@ -147,6 +149,7 @@ function watchFiles () {
 // Build
 
 export function buildProd (done) {
+  isDevelopment = false;
   gulp.series(
     deleteBuild,
     copyAssets,
