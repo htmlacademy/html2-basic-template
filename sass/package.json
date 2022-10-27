@@ -9,6 +9,7 @@
     "del": "7.0.0",
     "gulp": "4.0.2",
     "gulp-html-bemlinter": "2.1.2",
+    "gulp-if": "3.0.0",
     "gulp-libsquoosh": "1.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",

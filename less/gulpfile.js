@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
+import gulpIf from 'gulp-if';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
@@ -63,12 +64,7 @@ export function processScripts () {
 
 export function optimizeImages () {
   return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(squoosh())
-    .pipe(gulp.dest('build/img'))
-}
-
-export function copyImages () {
-  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(gulpIf(!isDevelopment, squoosh()))
     .pipe(gulp.dest('build/img'))
 }
 
@@ -172,7 +168,7 @@ export function runDev (done) {
   gulp.series(
     deleteBuild,
     copyAssets,
-    copyImages,
+    optimizeImages,
     gulp.parallel(
       processStyles,
       processMarkup,
