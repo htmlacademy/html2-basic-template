@@ -21,7 +21,7 @@ let isDevelopment = true;
 // Styles
 
 export function processStyles () {
-  return gulp.src('source/sass/style.scss', { sourcemaps: isDevelopment })
+  return gulp.src('source/sass/*.scss', { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
