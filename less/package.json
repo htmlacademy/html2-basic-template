@@ -14,7 +14,7 @@
     "gulp-libsquoosh": "1.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
-    "gulp-stacksvg": "^1.0.4",
+    "gulp-stacksvg": "1.0.5",
     "gulp-svgmin": "4.1.0",
     "gulp-terser": "2.1.0",
     "gulp-w3c-html-validator": "5.1.3",
