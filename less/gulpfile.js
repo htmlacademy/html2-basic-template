@@ -10,14 +10,14 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from "gulp-stacksvg";
-import {deleteAsync} from 'del';
+import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
 
 // Styles
 
-export function styles () {
+export function processStyles () {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
@@ -34,7 +34,7 @@ export function styles () {
 
 // HTML
 
-export function html () {
+export function processMarkup () {
   return gulp.src('source/*.html')
     .pipe(gulp.dest('build'));
 }
@@ -52,7 +52,7 @@ export function validateMarkup () {
 
 // Scripts
 
-export function scripts () {
+export function processScripts () {
   return gulp.src('source/js/**/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
@@ -84,12 +84,13 @@ export function createWebp () {
 
 // SVG
 
-export function svg () {
+export function optimizeVector () {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
-export function stack () {
+
+export function createStack () {
   return gulp.src('source/img/icons/**/*.svg')
     .pipe(svgo())
     .pipe(stacksvg())
@@ -98,7 +99,7 @@ export function stack () {
 
 // Copy
 
-export function copy () {
+export function copyAssets () {
   return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
@@ -112,13 +113,13 @@ export function copy () {
 
 // Clean
 
-export function clean () {
+export function deleteBuild () {
   return deleteAsync('build');
 };
 
 // Server
 
-export function server (done) {
+export function startServer (done) {
   browser.init({
     server: {
       baseDir: 'build'
@@ -132,32 +133,32 @@ export function server (done) {
 
 // Reload
 
-export function reload (done) {
+export function reloadServer (done) {
   browser.reload();
   done();
 }
 
 // Watcher
 
-function watcher () {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+function watchFiles () {
+  gulp.watch('source/less/**/*.less', gulp.series(processStyles));
+  gulp.watch('source/js/script.js', gulp.series(processScripts));
+  gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
 }
 
 // Build
 
-export function build (done) {
+export function buildProd (done) {
   gulp.series(
-    clean,
-    copy,
+    deleteBuild,
+    copyAssets,
     optimizeImages,
     gulp.parallel(
-      styles,
-      html,
-      scripts,
-      svg,
-      stack,
+      processStyles,
+      processMarkup,
+      processScripts,
+      optimizeVector,
+      createStack,
       createWebp
     ),
   );
@@ -166,20 +167,23 @@ export function build (done) {
 
 // Default
 
-export default gulp.series(
-  clean,
-  copy,
-  copyImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    stack,
-    createWebp
-  ),
+export function runDev (done) {
   gulp.series(
-    server,
-    watcher
-  )
-);
+    deleteBuild,
+    copyAssets,
+    copyImages,
+    gulp.parallel(
+      processStyles,
+      processMarkup,
+      processScripts,
+      optimizeVector,
+      createStack,
+      createWebp
+    ),
+    gulp.series(
+      startServer,
+      watchFiles
+    )
+  );
+  done();
+}

@@ -31,8 +31,8 @@
     "w3c": "gulp validateMarkup --silent",
     "bemlinter": "gulp lintBem --silent",
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
-    "build": "gulp build",
-    "start": "gulp"
+    "build": "gulp buildProd",
+    "start": "gulp runDev"
   },
   "browserslist": [
     "last 2 versions",
