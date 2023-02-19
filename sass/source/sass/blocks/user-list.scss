@@ -1,0 +1,90 @@
+.user-list {
+  display: flex;
+  align-items: center;
+
+  @media #{$tablet-only} {
+    margin-left: 60px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 162px;
+    gap: 20px;
+  }
+}
+
+.user-list__link {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-color: var(--base-black);
+  }
+
+  &--login::before {
+    mask: url("/../img/icons/stack.svg#login-icon") no-repeat center / contain;
+  }
+
+  &--cart::before {
+    mask: url("/../img/icons/stack.svg#cart-icon") no-repeat center / contain;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+
+    &::before {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &:active {
+    color: var(--accent-color);
+    background: var(--accent-opacity-color);
+
+    &::before {
+      background-color: var(--accent-color);
+    }
+  }
+
+  @media #{$not-mobile} {
+    height: 80px;
+
+    &::before {
+      top: 32px;
+    }
+  }
+
+  @media #{$desktop-only} {
+    width: auto;
+    padding: 32px 20px 32px 44px;
+
+    &::before {
+      left: 20px;
+    }
+  }
+}
+
+.user-list__desktop {
+  display: none;
+
+  @media #{$desktop-only} {
+    display: block;
+  }
+}

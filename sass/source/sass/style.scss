@@ -2,6 +2,25 @@
 @import "global/variables";
 @import "global/global";
 @import "global/fonts";
+@import "global/media";
 
 /* BLOCKS */
+@import "blocks/page";
+@import "blocks/visually-hidden";
 @import "blocks/header";
+@import "blocks/nav";
+@import "blocks/site-list";
+@import "blocks/user-list";
+@import "blocks/intro";
+@import "blocks/swiper";
+@import "blocks/promo";
+@import "blocks/button";
+@import "blocks/title";
+@import "blocks/features";
+@import "blocks/catalog";
+@import "blocks/filter";
+@import "blocks/select";
+@import "blocks/product-card";
+@import "blocks/pagination";
+@import "blocks/map";
+@import "blocks/footer";

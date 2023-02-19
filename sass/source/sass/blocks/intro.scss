@@ -1,0 +1,207 @@
+.intro {
+  background: var(--intro-color);
+
+  @media #{$tablet-only} {
+    background: linear-gradient(var(--intro-color) 77%, var(--base-white) 23%);
+  }
+
+  &--lavender {
+    background: var(--lavender-color);
+
+    @media #{$tablet-only} {
+      background: linear-gradient(var(--lavender-color) 77%, var(--base-white) 23%);
+    }
+  }
+
+  &--lavender .intro__image {
+    background-image: url("/../img/intro-2-mobile@1x.png");
+
+    @media #{$tablet-only} {
+      background-image: url("/../img/intro-2-tablet@1x.png");
+    }
+
+    @media #{$desktop-only} {
+      background-image: url("/../img/intro-2-desktop@1x.png");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/../img/intro-2-mobile@2x.png");
+
+      @media #{$tablet-only} {
+        background-image: url("/../img/intro-2-tablet@2x.png");
+      }
+
+      @media #{$desktop-only} {
+        background-image: url("/../img/intro-2-desktop@2x.png");
+      }
+    }
+  }
+
+  &--turbo {
+    background: var(--turbo-color);
+
+    @media #{$tablet-only} {
+      background: linear-gradient(var(--turbo-color) 77%, var(--base-white) 23%);
+    }
+  }
+
+  &--turbo .intro__image {
+    background-image: url("/../img/intro-3-mobile@1x.png");
+
+    @media #{$tablet-only} {
+      background-image: url("/../img/intro-3-tablet@1x.png");
+    }
+
+    @media #{$desktop-only} {
+      background-image: url("/../img/intro-3-desktop@1x.png");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/../img/intro-3-mobile@2x.png");
+
+      @media #{$tablet-only} {
+        background-image: url("/../img/intro-3-tablet@2x.png");
+      }
+
+      @media #{$desktop-only} {
+        background-image: url("/../img/intro-3-desktop@2x.png");
+      }
+    }
+  }
+}
+
+.intro__content-wrapper {
+  padding: 20px;
+  padding-bottom: 60px;
+
+  @media #{$tablet-only} {
+    padding: 60px 50px 0;
+  }
+
+  @media #{$desktop-only} {
+    padding: 30px 80px 84px 105px;
+  }
+}
+
+.intro__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.intro__item {
+  display: grid;
+  justify-items: center;
+
+  @media #{$desktop-only} {
+    grid-template-columns: 600px 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+.intro__image {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 10px;
+  background: url("/../img/intro-1-mobile@1x.png") no-repeat center / cover;
+
+  @media #{$tablet-only} {
+    width: 476px;
+    height: 476px;
+    grid-row: 5/6;
+    margin-bottom: 0;
+    background-image: url("/../img/intro-1-tablet@1x.png");
+  }
+
+  @media #{$desktop-only} {
+    width: 600px;
+    height: 600px;
+    margin-bottom: 0;
+    background-image: url("/../img/intro-1-desktop@1x.png");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/../img/intro-1-mobile@2x.png");
+
+    @media #{$tablet-only} {
+      background-image: url("/../img/intro-1-tablet@2x.png");
+    }
+
+    @media #{$desktop-only} {
+      background-image: url("/../img/intro-1-desktop@2x.png");
+    }
+  }
+}
+
+.intro__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media #{$desktop-only} {
+    align-items: flex-start;
+  }
+}
+
+.intro__title {
+  margin: 4px 0 10px;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  @media #{$not-mobile} {
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media #{$desktop-only} {
+    text-align: left;
+  }
+}
+
+.intro__description {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+}
+
+.intro__wrapper {
+  display: flex;
+  align-items: center;
+
+  @media #{$tablet-only} {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+}
+
+.intro__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.intro__old-price {
+  margin-right: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--accent-color);
+}
+
+.intro__button {
+  margin-left: 20px;
+}

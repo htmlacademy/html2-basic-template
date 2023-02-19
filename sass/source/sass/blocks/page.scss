@@ -1,0 +1,20 @@
+.page {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--base-color);
+  background-color: var(--light-color);
+}
+
+.page__body {
+  margin: 0 auto;
+}
+
+.page__centerer {
+  margin: 0;
+
+  @media #{$desktop-only} {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}

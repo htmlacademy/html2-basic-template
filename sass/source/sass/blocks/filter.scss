@@ -1,0 +1,90 @@
+.filter__label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &:has(input:disabled) {
+    color: var(--base-grey);
+  }
+}
+
+.filter__input {
+  position: relative;
+  margin: 0;
+  appearance: none;
+
+  &::before {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--base-grey);
+    border-radius: 12px;
+    content: "";
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background: var(--accent-opacity-color);
+    border: 2px solid var(--accent-lighter-color);
+    box-shadow: inset 0 0 0 2px var(--base-white);
+  }
+
+  &:checked::before {
+    background: var(--accent-lighter-color);
+    box-shadow: inset 0 0 0 2px var(--base-white);
+  }
+
+  &:disabled::before,
+  &:hover:disabled::before,
+  &:focus:disabled::before {
+    background: var(--base-white);
+    border: 2px solid var(--disabled-color);
+  }
+
+  &:checked:disabled::before {
+    background: var(--disabled-color);
+    box-shadow: inset 0 0 0 2px var(--base-white);
+    border: 2px solid var(--disabled-color);
+  }
+
+  &--checkbox {
+    margin-left: 3px;
+
+    @media #{$not-mobile} {
+      margin-left: 0;
+    }
+
+    &::before {
+      width: 42px;
+      background: var(--base-white);
+      box-shadow: inset -17px 0 0 0 #bdbdbd;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background: var(--base-white);
+      border: 2px solid var(--accent-lighter-color);
+      box-shadow: inset -17px 0 0 0 rgba(120, 89, 207, 0.25);
+    }
+
+    &:checked::before {
+      background: var(--base-white);
+      border: 2px solid var(--accent-lighter-color);
+      box-shadow: inset 17px 0 0 0 #9070ec;
+    }
+
+    &:disabled::before,
+    &:hover:disabled::before,
+    &:focus:disabled::before {
+      background: var(--base-white);
+      border: 2px solid var(--disabled-color);
+      box-shadow: inset -17px 0 0 0 #e2e2e2;
+    }
+
+    &:checked:disabled::before {
+      background: var(--base-grey);
+      border: 2px solid var(--disabled-color);
+      box-shadow: inset 17px 0 0 0 #e2e2e2;
+    }
+  }
+}

@@ -1,0 +1,261 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$tablet-only} {
+    padding: 40px 20px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1012px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 20px;
+  border-bottom: 1px solid var(--accent-pale-color);
+
+  @media #{$not-mobile} {
+    border: none;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+
+  @media #{$desktop-only} {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.footer__logo {
+  display: block;
+  width: 82px;
+  height: 36px;
+
+  @media #{$not-mobile} {
+    width: 170px;
+  }
+}
+
+.footer__logo-image {
+  width: 100%;
+}
+
+.footer__title {
+  display: none;
+
+  @media #{$desktop-only} {
+    display: block;
+    margin: 10px 0 50px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__social-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: var(--base-grey);
+  }
+
+  &--vk::after {
+    mask: url("/../img/icons/stack.svg#vk-icon") no-repeat center / contain;
+  }
+
+  &--pinterest::after {
+    mask: url("/../img/icons/stack.svg#pinterest-icon") no-repeat center / contain;
+  }
+
+  &--ok::after {
+    mask: url("/../img/icons/stack.svg#ok-icon") no-repeat center / contain;
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--accent-pale-color);
+
+    &::after {
+      background: var(--accent-color);
+    }
+  }
+
+  &:active {
+    background: var(--accent-opacity-color);
+
+    &::after {
+      background: var(--accent-color);
+    }
+  }
+}
+
+.footer__nav {
+  @media #{$not-mobile} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  @media #{$desktop-only} {
+    padding-top: 9px;
+  }
+}
+
+.footer__nav-wrapper {
+  padding: 20px;
+  border-bottom: 1px solid var(--accent-pale-color);
+
+  @media #{$not-mobile} {
+    border: none;
+    padding: 0;
+  }
+}
+
+.footer__nav-title {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__nav-item {
+  padding: 8px 0;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.footer__nav-link {
+  color: var(--base-black);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-lighter-color);
+  }
+
+  &:active {
+    color: var(--accent-dark-color);
+  }
+}
+
+.footer__nav-contact {
+  position: relative;
+  display: block;
+  padding: 8px 0;
+  padding-left: 19px;
+  color: var(--base-black);
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    content: "";
+  }
+
+  &--address::after {
+    background: url("/../img/icons/stack.svg#pin-marker") no-repeat center / contain;
+  }
+
+  &--tel {
+    padding: 6px 0 0;
+    padding-left: 19px;
+
+    &::after {
+      background: url("/../img/icons/stack.svg#tel-icon") no-repeat center / contain;
+    }
+  }
+}
+
+.footer__copyright {
+  margin: 0;
+  padding: 20px 0 30px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--base-grey);
+
+  @media #{$not-mobile} {
+    padding: 0;
+    padding-top: 30px;
+  }
+
+  @media #{$desktop-only} {
+    grid-column: 1/-1;
+    padding-top: 15px;
+  }
+
+  &-link {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    padding-right: 18px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 12px;
+      height: 16px;
+      background: var(--base-grey);
+      mask: url("/../img/icons/stack.svg#logo-academy") no-repeat center / contain;
+      content: "";
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--accent-lighter-color);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      background-color: var(--accent-lighter-color);
+    }
+
+    &:active {
+      color: var(--accent-dark-color);
+    }
+
+    &:active::after {
+      background-color: var(--accent-dark-color);
+    }
+  }
+}

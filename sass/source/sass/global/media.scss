@@ -1,0 +1,10 @@
+/* здесь перечислены брэйкпоинты*/
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+$breakpoint-gap: 0.02px;
+
+$mobile-only: "(max-width: #{$breakpoint-tablet - $breakpoint-gap})";
+$tablet-only: "(min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+$desktop-only: "(min-width: #{$breakpoint-desktop})";
+$not-mobile: "(min-width: #{$breakpoint-tablet})";
+$not-desktop: "(max-width: #{$breakpoint-desktop - $breakpoint-gap})";

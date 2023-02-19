@@ -1,1 +1,16 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}

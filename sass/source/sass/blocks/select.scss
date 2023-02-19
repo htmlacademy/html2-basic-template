@@ -1,0 +1,92 @@
+.select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.select__text {
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.select__wrapper {
+  position: relative;
+  padding-bottom: 10px;
+
+  select {
+    display: none;
+  }
+}
+
+.select__dropdown {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  padding: 4px 30px 4px 0;
+  width: 165px;
+  font-weight: 600;
+  text-align: right;
+  color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    background: var(--accent-pale-color);
+  }
+
+  &::after {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    width: 10px;
+    height: 10px;
+    background: url("/../img/icons/stack.svg#arrow") no-repeat center / contain;
+    content: "";
+  }
+
+  &--active {
+    &::after {
+      transform: rotate(180deg) translateY(-2px);
+    }
+  }
+}
+
+.select__list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 190px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--base-white);
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.select__item {
+  padding: 8px 20px;
+  background: var(--base-white);
+  border-bottom: 1px solid var(--accent-pale-color);
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--accent-opacity-color);
+  }
+
+  &--active {
+    color: var(--base-white);
+    background: var(--accent-color);
+  }
+}
