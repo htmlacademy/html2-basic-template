@@ -1,0 +1,15 @@
+env:
+  node: true
+  commonjs: true
+  es6: true
+extends: 'htmlacademy/es6'
+rules:
+ strict:
+  - off
+ no-extend-native:
+  - off
+ no-console:
+  - off
+ no-process-exit:
+  - off
+

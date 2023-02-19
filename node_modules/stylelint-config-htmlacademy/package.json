@@ -1,0 +1,50 @@
+{
+  "name": "stylelint-config-htmlacademy",
+  "version": "1.1.2",
+  "description": "Stylelint shareable config for the HTML Academy style",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "HTMLAcademy",
+    "HTML Academy",
+    "code",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "stylelint",
+    "validate",
+    "code style",
+    "strict",
+    "check",
+    "checker",
+    "verify",
+    "enforce",
+    "hint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlacademy/stylelint-config-htmlacademy.git"
+  },
+  "author": " <zyuzin.vitaly@htmlacademy.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/htmlacademy/stylelint-config-htmlacademy/issues"
+  },
+  "homepage": "https://github.com/htmlacademy/stylelint-config-htmlacademy#readme",
+  "devDependencies": {
+    "postcss-less": "6.0.0",
+    "postcss-scss": "4.0.5",
+    "stylelint": "14.13.0"
+  },
+  "scripts": {
+    "test": "npm run css && npm run less && npm run scss",
+    "css": "stylelint test/css/style.css --config index.js",
+    "less": "stylelint test/less/**/*.less --config index.js --custom-syntax postcss-less",
+    "scss": "stylelint test/sass/**/*.scss --config index.js --custom-syntax postcss-scss"
+  },
+  "dependencies": {
+    "stylelint-config-recommended": "9.0.0"
+  }
+}
