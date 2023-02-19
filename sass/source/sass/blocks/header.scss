@@ -1,5 +1,145 @@
+@import "../global/variables.scss";
+
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  color: $base-black;
+  min-width: 320px;
+  background-color: $white;
+  padding: 0;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.header__wrapper {
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 12px 0;
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+
+.header-logo {
+  padding-left: 20px;
+}
+
+.user-nav {
+  margin-left: 88px;
+}
+
+.user-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.user-nav__link {
+  padding: 22px;
+  text-decoration: none;
+}
+
+.user-nav__name {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.menu-nav {
+  position: relative;
+  width: 320px;
+  padding-top: 8px;
+}
+
+.menu-nav--closed .menu-nav__list {
+  display: none;
+}
+
+.menu-nav__toggle {
+  position: absolute;
+  top: -50px;
+  left: 260px;
+  width: 16px;
+  height: 16px;
+  padding: 30px;
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.menu-nav--closed .menu-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 16px;
+  height: 2px;
+  background-color: $base-black;
+  box-shadow: 0 6px 0 0 $base-black, 0 12px 0 0 $base-black;
+}
+
+.menu-nav--opened .menu-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 22px;
+  width: 16px;
+  height: 2px;
+  background-color: $base-black;
+  transform: rotate(45deg);
+}
+
+.menu-nav--opened .menu-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 22px;
+  width: 16px;
+  height: 2px;
+  background-color: $base-black;
+  transform: rotate(-45deg);
+}
+
+.menu-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  border-top: 1px $base-secondary solid;
+}
+
+.menu-nav__link {
+  display: block;
+  position: relative;
+  font-size: $font-size-tiny;
+  line-height: $line-height-mini;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $black;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  border-bottom: 1px $base-secondary solid;
 }

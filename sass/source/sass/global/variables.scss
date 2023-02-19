@@ -1,1 +1,52 @@
-/* здесь используйте глобальные переменные */
+// Colors
+
+$black: #000000;
+$base-black: #333333;
+$base-grey: #bdbdbd;
+$light-grey: #e2e2e2;
+$white: #ffffff;
+$base-purple: #7859cf;
+$purple-lighter: #9070ec;
+$purple-darker: #593cac;
+$base-secondary: #f0ebff;
+$background-grey: #f8f8f8;
+$background-white: #f3ebe1;
+$background-purple: #eae6fc;
+$background-black: #e5e6e8;
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-only-width: 767px;
+
+$font-montserrat: "Montserrat", "Arial", sans-serif;
+$font-arial: "Arial", sans-serif;
+
+$font-size-tiny: 12px;
+$font-size-small: 14px;
+$font-size-mini: 16px;
+$font-size-average: 18px;
+$font-size-default: 20px;
+$font-size-normal: 24px;
+$font-size-more: 30px;
+$font-size-big: 36px;
+$font-size-tablet: 60px;
+
+$line-height-tiny: 12px;
+$line-height-small: 14px;
+$line-height-mini: 16px;
+$line-height-average: 18px;
+$line-height-default: 20px;
+$line-height-normal: 24px;
+$line-height-more: 26px;
+$line-height-tall: 32px;
+$line-height-big: 36px;
+$line-height-mega: 37px;
+$line-height-super: 48px;
+$line-height-tablet: 60px;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;

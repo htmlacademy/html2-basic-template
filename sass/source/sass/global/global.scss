@@ -1,1 +1,49 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее*/
+@import "variables.scss";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page__body {
+  font-family: $font-montserrat;
+  text-transform: none;
+  font-style: normal;
+  color: $base-black;
+  background-color: $white;
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}

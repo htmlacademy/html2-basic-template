@@ -1,0 +1,68 @@
+@import "../global/variables.scss";
+
+.advantages {
+  color: $base-black;
+  background-color: $white;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+
+.advantages__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.advantages__top {
+  text-align: center;
+}
+
+.advantages__title {
+  color: $base-purple;
+  font-size: $font-size-tiny;
+  line-height: $line-height-mini;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.advantages__subtitle {
+  font-size: $font-size-normal;
+  line-height: $line-height-big;
+  font-weight: $font-weight-bold;
+  padding-top: 4px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.advantages__item {
+  padding-top: 32px;
+}
+
+.advantages__name {
+  font-size: $font-size-average;
+  line-height: $line-height-tall;
+  font-weight: $font-weight-bold;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.advantages__spec {
+  font-size: $font-size-small;
+  line-height: $line-height-default;
+  font-weight: $font-weight-regular;
+  margin: 0;
+}
+

@@ -1,0 +1,93 @@
+@import "../global/variables.scss";
+
+.catalog {
+  color: $base-black;
+  background-color: $background-grey;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+.catalog__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.catalog__title {
+  color: $base-purple;
+  font-size: $font-size-tiny;
+  line-height: $line-height-mini;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+.catalog__subtitle {
+  font-size: $font-size-normal;
+  line-height: $line-height-big;
+  font-weight: $font-weight-bold;
+  text-align: center;
+}
+
+.catalog__form-price,
+.catalog__form-milk,
+.catalog__form-origin {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 0;
+  position: relative;
+}
+
+.catalog__form-title {
+  font-size: $font-size-mini;
+  line-height: $line-height-normal;
+  font-weight: $font-weight-semibold;
+  padding-bottom: 22px;
+}
+
+.catalog__milk-radio,
+.catalog__origin-check {
+  font-size: $font-size-mini;
+  line-height: $line-height-normal;
+  font-weight: $font-weight-regular;
+  padding-bottom: 22px;
+}
+
+.catalog__milk-radio {
+  padding-left: 34px;
+}
+
+.catalog__origin-check {
+  padding-left: 54px;
+}
+
+.catalog__milk-radio::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  top: -2px;
+  left: 0;
+  background-color: $white;
+  border: 1px solid $base-grey;
+  border-radius: 50%;
+}
+
+.form__milk-input:checked + .catalog__milk-radio::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  top: -2px;
+  left: 0;
+  background-color: $base-purple;
+  border: 1px solid $base-purple;
+  border-radius: 50%;
+}

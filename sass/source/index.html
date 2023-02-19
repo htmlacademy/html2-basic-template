@@ -5,26 +5,42 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper">
         <div class="header-logo">
-          <a class="header-logo__link">
-            <img class="header__svg" src="" alt="Drink2Go логотип">
+          <a class="header-logo__link" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/d2g-logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/d2g-logo-tablet.svg">
+              <img class="header-logo__svg" src="img/d2g-logo-mobile.svg" alt="Drink2Go лого">
+            </picture>
           </a>
         </div>
         <nav class="header-nav user-nav">
           <ul class="user-nav__list">
             <li class="user-nav__item">
-              <a class="user-nav__link" href="#"><span class="user-nav__name">Войти</span></a>
+              <a class="user-nav__link" href="#">
+                <svg width="16" height="16" aria-label="Пользователь">
+                  <use href="img/icons/stack.svg#user-icon"></use>
+                </svg>
+                <span class="user-nav__name">Войти</span></a>
             </li>
             <li class="user-nav__item">
-              <a class="user-nav__link" href="#"><span class="user-nav__name">Корзина</span></a>
+              <a class="user-nav__link" href="#">
+                <svg width="16" height="16" aria-label="Корзина">
+                  <use href="img/icons/stack.svg#cart-icon"></use>
+                </svg>
+                <span class="user-nav__name">Корзина</span></a>
             </li>
           </ul>
         </nav>
-        <nav class="header-nav menu-nav">
+        <nav class="header-nav menu-nav menu-nav--closed menu-nav--nojs">
           <button class="menu-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="menu-nav__list">
             <li class="menu-nav__item menu-nav__item--main">
@@ -45,14 +61,19 @@
     </header>
     <main>
       <h1 class="visually-hidden">Drink2Go</h1>
-      <section class="slider">
+      <section class="slider slider--white">
         <h2 class="visually-hidden">Слайдер</h2>
         <div class="slider__wrapper">
           <ul class="slider__list">
-            <li class="slider__item">
-              <div class="slider__image">
-                <img class="slider__img" src="" alt="Decaf Flat White">
-              </div>
+            <li class="slider__item slider__item--current">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider-white-desktop.webp 1x, img/slider-white-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider-white-tablet.webp 1x, img/slider-white-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider-white-mobile.webp 1x, img/slider-white-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/slider-white-desktop.png 1x, img/slider-white-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/slider-white-tablet.png 1x, img/slider-white-tablet@2x.png 2x">
+                <img class="slider__image" src="img/slider-white-mobile.png" srcset="img/slider-white-mobile@2x.png 2x" alt="Decaf Flat White">
+              </picture>
               <div class="slider__description">
                 <span class="slider__new">Новинка!</span>
                 <h3 class="slider__title">Декаф Флэт Уайт</h3>
@@ -113,32 +134,40 @@
           <div class="advantages__bottom">
             <ul class="advantages__list">
               <li class="advantages__item">
-                <img class="advantages__icon" src="" alt="скорость">
+                <svg width="52" height="56" aria-label="Скорость">
+                  <use href="img/icons/stack.svg#speed-icon"></use>
+                </svg>
                 <div class="advantages__description">
-                  <h3 class="advantages__title">Скорость</h3>
-                  <p class="advantages__subtitle">Готовый напиток всегда под рукой — просто открой банку</p>
+                  <h3 class="advantages__name">Скорость</h3>
+                  <p class="advantages__spec">Готовый напиток всегда под рукой — просто открой банку</p>
                 </div>
               </li>
               <li class="advantages__item">
-                <img class="advantages__icon" src="" alt="удобство">
+                <svg width="52" height="56" aria-label="Удобство">
+                  <use href="img/icons/stack.svg#comfort-icon"></use>
+                </svg>
                 <div class="advantages__description">
-                  <h3 class="advantages__title">Удобство</h3>
-                  <p class="advantages__subtitle">Легко помещается и в карман,
+                  <h3 class="advantages__name">Удобство</h3>
+                  <p class="advantages__spec">Легко помещается и в карман,
                     и в маленькую сумочку</p>
                 </div>
               </li>
               <li class="advantages__item">
-                <img class="advantages__icon" src="" alt="бодрость">
+                <svg width="52" height="56" aria-label="Бодрость">
+                  <use href="img/icons/stack.svg#energy-icon"></use>
+                </svg>
                 <div class="advantages__description">
-                  <h3 class="advantages__title">Бодрость</h3>
-                  <p class="advantages__subtitle">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+                  <h3 class="advantages__name">Бодрость</h3>
+                  <p class="advantages__spec">Сбалансированная доза кофеина даст мощный заряд энергии</p>
                 </div>
               </li>
               <li class="advantages__item">
-                <img class="advantages__icon" src="" alt="экологичность">
+                <svg width="52" height="56" aria-label="Экологичность">
+                  <use href="img/icons/stack.svg#ecology-icon"></use>
+                </svg>
                 <div class="advantages__description">
-                  <h3 class="advantages__title">Экологичность</h3>
-                  <p class="advantages__subtitle">Вся упаковка сделана
+                  <h3 class="advantages__name">Экологичность</h3>
+                  <p class="advantages__spec">Вся упаковка сделана
                     из перерабатываемых материалов</p>
                 </div>
               </li>
@@ -149,9 +178,9 @@
       <section class="catalog">
         <h2 class="visually-hidden">Каталог</h2>
         <div class="catalog__wrapper">
-          <div class="catalog__filter">
-            <h3 class="catalog__title">Каталог</h3>
-            <p class="catalog__subtitle">Каталог кофейных напитков</p>
+          <h3 class="catalog__title">Каталог</h3>
+          <p class="catalog__subtitle">Каталог кофейных напитков</p>
+          <div class="catalog__filter"></div>
             <form class="catalog__form" action="https://echo.htmlacademy.ru" method="get">
               <fieldset class="catalog__form-price">
                 <legend class="catalog__form-title">Цена</legend>
@@ -180,143 +209,143 @@
                 <input class="visually-hidden catalog__origin-input" type="checkbox" name="origin-peru" id="per" value="peru" disabled>
                 <label class="catalog__origin-check" for="per">Перу</label>
               </fieldset>
-            </div>
-            <div class="catalog__buttons">
-              <button class="catalog__submit-button" type="submit">Применить фильтр</button>
-              <button class="catalog__reset-button" type="reset">Сбросить фильтр</button>
-            </div>
-          </div>
-          <div class="catalog__container">
-            <div class="catalog__sort">
-              <span class="catalog__sort-name">Сортировка:</span>
-              <select class="catalog__sort-control" aria-label="Сортировка">
-                <option value="default">По умолчанию</option>
-              </select>
-            </div>
-            <div class="catalog__products">
-              <ul class="catalog__list">
-                <li class="catalog__item">
-                  <div class="catalog__image">
-                    <img src="" alt="dfw-white">
-                  </div>
-                  <div class="catalog__description">
-                    <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                    <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
-                      с натуральным фермерским молоком</p>
-                  </div>
-                  <div class="catalog__product-order">
-                    <span class="catalog__product-price">225&#8381;</span>
-                    <a class="catalog__product-add" href="#">
-                      <img src="" alt="в корзину"></img>
-                      <span class="catalog__add-to-cart">В корзину</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="catalog__item">
-                  <div class="catalog__image">
-                    <img src="" alt="dfw-purple">
-                  </div>
-                  <div class="catalog__description">
-                    <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                    <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
-                      с натуральным фермерским молоком</p>
-                  </div>
-                  <div class="catalog__product-order">
-                    <span class="catalog__product-price">225&#8381;</span>
-                    <a class="catalog__product-add" href="#">
-                      <img src="" alt="в корзину"></img>
-                      <span class="catalog__add-to-cart">В корзину</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="catalog__item">
-                  <div class="catalog__image">
-                    <img src="" alt="dfw-black">
-                  </div>
-                  <div class="catalog__description">
-                    <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                    <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
-                      с натуральным фермерским молоком</p>
-                  </div>
-                  <div class="catalog__product-order">
-                    <span class="catalog__product-price">225&#8381;</span>
-                    <a class="catalog__product-add" href="#">
-                      <img src="" alt="в корзину"></img>
-                      <span class="catalog__add-to-cart">В корзину</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="catalog__item">
-                  <div class="catalog__image">
-                    <img src="" alt="dfw-pink">
-                  </div>
-                  <div class="catalog__description">
-                    <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                    <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
-                      с натуральным фермерским молоком</p>
-                  </div>
-                  <div class="catalog__product-order">
-                    <span class="catalog__product-price">225&#8381;</span>
-                    <a class="catalog__product-add" href="#">
-                      <img src="" alt="в корзину"></img>
-                      <span class="catalog__add-to-cart">В корзину</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="catalog__item">
-                  <div class="catalog__image">
-                    <img src="" alt="dfw-brown">
-                  </div>
-                  <div class="catalog__description">
-                    <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                    <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
-                      с натуральным фермерским молоком</p>
-                  </div>
-                  <div class="catalog__product-order">
-                    <span class="catalog__product-price">225&#8381;</span>
-                    <a class="catalog__product-add" href="#">
-                      <img src="" alt="в корзину"></img>
-                      <span class="catalog__add-to-cart">В корзину</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="catalog__item">
-                  <div class="catalog__image">
-                    <img src="" alt="dfw-vanila">
-                  </div>
-                  <div class="catalog__description">
-                    <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                    <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
-                      с натуральным фермерским молоком</p>
-                  </div>
-                  <div class="catalog__product-order">
-                    <span class="catalog__product-price">225&#8381;</span>
-                    <a class="catalog__product-add" href="#">
-                      <img src="" alt="в корзину"></img>
-                      <span class="catalog__add-to-cart">В корзину</span>
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="catalog__pagination">
-              <ul class="catalog__pagination-list">
-                <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-button" href="#">&lt;</a>
-                </li>
-                <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-button" href="#">1</a>
-                </li>
-                <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-button catalog__pagination-button--current" href="#">2</a>
-                </li>
-                <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-button" href="#">3</a>
-                </li>
-                <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-button" href="#">&gt;</a>
-                </li>
-              </ul>
+              <div class="catalog__buttons">
+                <button class="catalog__submit-button" type="submit">Применить фильтр</button>
+                <button class="catalog__reset-button" type="reset">Сбросить фильтр</button>
+              </div>
+            </form>
+            <div class="catalog__container">
+              <div class="catalog__sort">
+                <span class="catalog__sort-name">Сортировка:</span>
+                <select class="catalog__sort-control" aria-label="Сортировка">
+                  <option value="default">По умолчанию</option>
+                </select>
+              </div>
+              <div class="catalog__products">
+                <ul class="catalog__list">
+                  <li class="catalog__item">
+                    <div class="catalog__image">
+                      <img src="" alt="dfw-white">
+                    </div>
+                    <div class="catalog__description">
+                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
+                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                        с натуральным фермерским молоком</p>
+                    </div>
+                    <div class="catalog__product-order">
+                      <span class="catalog__product-price">225&#8381;</span>
+                      <a class="catalog__product-add" href="#">
+                        <img src="" alt="в корзину"></img>
+                        <span class="catalog__add-to-cart">В корзину</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="catalog__item">
+                    <div class="catalog__image">
+                      <img src="" alt="dfw-purple">
+                    </div>
+                    <div class="catalog__description">
+                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
+                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                        с натуральным фермерским молоком</p>
+                    </div>
+                    <div class="catalog__product-order">
+                      <span class="catalog__product-price">225&#8381;</span>
+                      <a class="catalog__product-add" href="#">
+                        <img src="" alt="в корзину"></img>
+                        <span class="catalog__add-to-cart">В корзину</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="catalog__item">
+                    <div class="catalog__image">
+                      <img src="" alt="dfw-black">
+                    </div>
+                    <div class="catalog__description">
+                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
+                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                        с натуральным фермерским молоком</p>
+                    </div>
+                    <div class="catalog__product-order">
+                      <span class="catalog__product-price">225&#8381;</span>
+                      <a class="catalog__product-add" href="#">
+                        <img src="" alt="в корзину"></img>
+                        <span class="catalog__add-to-cart">В корзину</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="catalog__item">
+                    <div class="catalog__image">
+                      <img src="" alt="dfw-pink">
+                    </div>
+                    <div class="catalog__description">
+                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
+                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                        с натуральным фермерским молоком</p>
+                    </div>
+                    <div class="catalog__product-order">
+                      <span class="catalog__product-price">225&#8381;</span>
+                      <a class="catalog__product-add" href="#">
+                        <img src="" alt="в корзину"></img>
+                        <span class="catalog__add-to-cart">В корзину</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="catalog__item">
+                    <div class="catalog__image">
+                      <img src="" alt="dfw-brown">
+                    </div>
+                    <div class="catalog__description">
+                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
+                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                        с натуральным фермерским молоком</p>
+                    </div>
+                    <div class="catalog__product-order">
+                      <span class="catalog__product-price">225&#8381;</span>
+                      <a class="catalog__product-add" href="#">
+                        <img src="" alt="в корзину"></img>
+                        <span class="catalog__add-to-cart">В корзину</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="catalog__item">
+                    <div class="catalog__image">
+                      <img src="" alt="dfw-vanila">
+                    </div>
+                    <div class="catalog__description">
+                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
+                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                        с натуральным фермерским молоком</p>
+                    </div>
+                    <div class="catalog__product-order">
+                      <span class="catalog__product-price">225&#8381;</span>
+                      <a class="catalog__product-add" href="#">
+                        <img src="" alt="в корзину"></img>
+                        <span class="catalog__add-to-cart">В корзину</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="catalog__pagination">
+                <ul class="catalog__pagination-list">
+                  <li class="catalog__pagination-item">
+                    <a class="catalog__pagination-button" href="#">&lt;</a>
+                  </li>
+                  <li class="catalog__pagination-item">
+                    <a class="catalog__pagination-button" href="#">1</a>
+                  </li>
+                  <li class="catalog__pagination-item">
+                    <a class="catalog__pagination-button catalog__pagination-button--current" href="#">2</a>
+                  </li>
+                  <li class="catalog__pagination-item">
+                    <a class="catalog__pagination-button" href="#">3</a>
+                  </li>
+                  <li class="catalog__pagination-item">
+                    <a class="catalog__pagination-button" href="#">&gt;</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

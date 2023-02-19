@@ -1,0 +1,113 @@
+@import "../global/variables.scss";
+
+.slider {
+  color: $base-black;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+
+.slider--white {
+  background-color: $background-white;
+}
+
+.slider--purple {
+  background-color: $background-purple;
+}
+
+.slider--black {
+  background-color: $background-black;
+}
+
+.slider__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.slider__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slider__item {
+  display: none;
+}
+
+.slider__item--current {
+  display: block;
+}
+
+.slider__description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.slider__new {
+  color: $base-purple;
+  font-size: $font-size-tiny;
+  line-height: $line-height-mini;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+.slider__title {
+  font-size: $font-size-big;
+  line-height: $line-height-super;
+  font-weight: $font-weight-bold;
+  margin: 0;
+}
+
+.slider__subtitle {
+  font-size: $font-size-small;
+  line-height: $line-height-default;
+  font-weight: $font-weight-regular;
+}
+
+.slider__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.slider__old-price {
+  color: $base-purple;
+  font-size: $font-size-mini;
+  line-height: $line-height-tall;
+  font-weight: $font-weight-regular;
+  text-decoration: line-through;
+  align-items: center;
+}
+
+.slider__new-price {
+  font-size: $font-size-default;
+  line-height: $line-height-tall;
+  font-weight: $font-weight-semibold;
+  margin-left: 6px;
+  margin-right: 20px;
+}
+
+.slider__button {
+  width: 73px;
+  font-family: $font-montserrat;
+  font-size: $font-size-mini;
+  line-height: $line-height-normal;
+  font-weight: $font-weight-regular;
+  color: $white;
+  background-color: $base-purple;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
