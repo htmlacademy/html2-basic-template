@@ -197,7 +197,7 @@
                 <label class="catalog__milk-radio" for="nope">Без молока</label>
               </fieldset>
               <fieldset class="catalog__form-origin">
-                <legend class="catalog__form-title">Старана произрастания</legend>
+                <legend class="catalog__form-title">Страна произрастания</legend>
                 <input class="visually-hidden catalog__origin-input" type="checkbox" name="origin-brazil" id="bra" value="brazil" checked>
                 <label class="catalog__origin-check" for="bra">Бразилия</label>
                 <input class="visually-hidden catalog__origin-input" type="checkbox" name="origin-ethiopia" id="eth" value="ethiopia">
@@ -214,135 +214,171 @@
                 <button class="catalog__reset-button" type="reset">Сбросить фильтр</button>
               </div>
             </form>
-            <div class="catalog__container">
-              <div class="catalog__sort">
-                <span class="catalog__sort-name">Сортировка:</span>
-                <select class="catalog__sort-control" aria-label="Сортировка">
-                  <option value="default">По умолчанию</option>
-                </select>
+            <div class="catalog__container container">
+              <div class="container__sort">
+                <span class="container__sort-name">Сортировка:</span>
+                <details class="container__sort">
+                  <summary class="container__sort-title">по умолчанию</summary>
+                  <ul class="container__sort-list">
+                    <li tabindex="0" class="container__sort-item catalog__sort-item--current">по умолчанию</li>
+                    <li tabindex="0" class="container__sort-item">сначала дорогие</li>
+                    <li tabindex="0" class="container__sort-item">сначала дешевые</li>
+                    <li tabindex="0" class="container__sort-item">высокий рейтинг</li>
+                  </ul>
+                </details>
               </div>
-              <div class="catalog__products">
-                <ul class="catalog__list">
-                  <li class="catalog__item">
-                    <div class="catalog__image">
-                      <img src="" alt="dfw-white">
-                    </div>
-                    <div class="catalog__description">
-                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+              <div class="container__products">
+                <ul class="container__list">
+                  <li class="container__item">
+                    <a class="container__image-link" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/coffee-can-1.webp 1x, img/coffee-can-1@2x.webp 2x">
+                        <img class="slider__image" src="img/coffee-can-1.png" srcset="img/coffee-can-1@2x.png 2x" alt="белая банка">
+                      </picture>
+                    </a>
+                    <div class="container__description">
+                      <a class="container__title-link" href="#">Декаф Флэт Уайт</a>
+                      <p class="container__subtitle">Кофе без кофеина из Эфиопии
                         с натуральным фермерским молоком</p>
                     </div>
-                    <div class="catalog__product-order">
-                      <span class="catalog__product-price">225&#8381;</span>
-                      <a class="catalog__product-add" href="#">
-                        <img src="" alt="в корзину"></img>
-                        <span class="catalog__add-to-cart">В корзину</span>
+                    <div class="container__product-order">
+                      <span class="container__product-price">225&#8381;</span>
+                      <a class="container__product-add" href="#">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                          <use href="img/icons/stack.svg#cart-plus-icon"></use>
+                        </svg>
+                        <span class="container__add-to-cart">В корзину</span>
                       </a>
                     </div>
                   </li>
-                  <li class="catalog__item">
-                    <div class="catalog__image">
-                      <img src="" alt="dfw-purple">
-                    </div>
-                    <div class="catalog__description">
-                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                  <li class="container__item">
+                    <a class="container__image-link" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/coffee-can-2.webp 1x, img/coffee-can-2@2x.webp 2x">
+                        <img class="slider__image" src="img/coffee-can-2.png" srcset="img/coffee-can-2@2x.png 2x" alt="фиолет банка">
+                      </picture>
+                    </a>
+                    <div class="container__description">
+                      <a class="container__title-link" href="#">Декаф Флэт Уайт</a>
+                      <p class="container__subtitle">Кофе без кофеина из Эфиопии
                         с натуральным фермерским молоком</p>
                     </div>
-                    <div class="catalog__product-order">
-                      <span class="catalog__product-price">225&#8381;</span>
-                      <a class="catalog__product-add" href="#">
-                        <img src="" alt="в корзину"></img>
-                        <span class="catalog__add-to-cart">В корзину</span>
+                    <div class="container__product-order">
+                      <span class="container__product-price">225&#8381;</span>
+                      <a class="container__product-add" href="#">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                          <use href="img/icons/stack.svg#cart-plus-icon"></use>
+                        </svg>
+                        <span class="container__add-to-cart">В корзину</span>
                       </a>
                     </div>
                   </li>
-                  <li class="catalog__item">
-                    <div class="catalog__image">
-                      <img src="" alt="dfw-black">
-                    </div>
-                    <div class="catalog__description">
-                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                  <li class="container__item">
+                    <a class="container__image-link" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/coffee-can-3.webp 1x, img/coffee-can-3@2x.webp 2x">
+                        <img class="slider__image" src="img/coffee-can-3.png" srcset="img/coffee-can-3@2x.png 2x" alt="черная банка">
+                      </picture>
+                    </a>
+                    <div class="container__description">
+                      <a class="container__title-link" href="#">Декаф Флэт Уайт</a>
+                      <p class="container__subtitle">Кофе без кофеина из Эфиопии
                         с натуральным фермерским молоком</p>
                     </div>
-                    <div class="catalog__product-order">
-                      <span class="catalog__product-price">225&#8381;</span>
-                      <a class="catalog__product-add" href="#">
-                        <img src="" alt="в корзину"></img>
-                        <span class="catalog__add-to-cart">В корзину</span>
+                    <div class="container__product-order">
+                      <span class="container__product-price">225&#8381;</span>
+                      <a class="container__product-add" href="#">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                          <use href="img/icons/stack.svg#cart-plus-icon"></use>
+                        </svg>
+                        <span class="container__add-to-cart">В корзину</span>
                       </a>
                     </div>
                   </li>
-                  <li class="catalog__item">
-                    <div class="catalog__image">
-                      <img src="" alt="dfw-pink">
-                    </div>
-                    <div class="catalog__description">
-                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                  <li class="container__item">
+                    <a class="container__image-link" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/coffee-can-4.webp 1x, img/coffee-can-4@2x.webp 2x">
+                        <img class="slider__image" src="img/coffee-can-4.png" srcset="img/coffee-can-4@2x.png 2x" alt="розовая банка">
+                      </picture>
+                    </a>
+                    <div class="container__description">
+                      <a class="container__title-link" href="#">Декаф Флэт Уайт</a>
+                      <p class="container__subtitle">Кофе без кофеина из Эфиопии
                         с натуральным фермерским молоком</p>
                     </div>
-                    <div class="catalog__product-order">
-                      <span class="catalog__product-price">225&#8381;</span>
-                      <a class="catalog__product-add" href="#">
-                        <img src="" alt="в корзину"></img>
-                        <span class="catalog__add-to-cart">В корзину</span>
+                    <div class="container__product-order">
+                      <span class="container__product-price">225&#8381;</span>
+                      <a class="container__product-add" href="#">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                          <use href="img/icons/stack.svg#cart-plus-icon"></use>
+                        </svg>
+                        <span class="container__add-to-cart">В корзину</span>
                       </a>
                     </div>
                   </li>
-                  <li class="catalog__item">
-                    <div class="catalog__image">
-                      <img src="" alt="dfw-brown">
-                    </div>
-                    <div class="catalog__description">
-                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                  <li class="container__item">
+                    <a class="container__image-link" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/coffee-can-5.webp 1x, img/coffee-can-5@2x.webp 2x">
+                        <img class="slider__image" src="img/coffee-can-5.png" srcset="img/coffee-can-5@2x.png 2x" alt="коричневая банка">
+                      </picture>
+                    </a>
+                    <div class="container__description">
+                      <a class="container__title-link" href="#">Декаф Флэт Уайт</a>
+                      <p class="container__subtitle">Кофе без кофеина из Эфиопии
                         с натуральным фермерским молоком</p>
                     </div>
-                    <div class="catalog__product-order">
-                      <span class="catalog__product-price">225&#8381;</span>
-                      <a class="catalog__product-add" href="#">
-                        <img src="" alt="в корзину"></img>
-                        <span class="catalog__add-to-cart">В корзину</span>
+                    <div class="container__product-order">
+                      <span class="container__product-price">225&#8381;</span>
+                      <a class="container__product-add" href="#">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                          <use href="img/icons/stack.svg#cart-plus-icon"></use>
+                        </svg>
+                        <span class="container__add-to-cart">В корзину</span>
                       </a>
                     </div>
                   </li>
-                  <li class="catalog__item">
-                    <div class="catalog__image">
-                      <img src="" alt="dfw-vanila">
-                    </div>
-                    <div class="catalog__description">
-                      <h3 class="catalog__product-title">Декаф Флэт Уайт</h3>
-                      <p class="catalog__product-subtitle">Кофе без кофеина из Эфиопии
+                  <li class="container__item">
+                    <a class="container__image-link" href="#">
+                      <picture>
+                        <source type="image/webp" srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x">
+                        <img class="slider__image" src="img/coffee-can-6.png" srcset="img/coffee-can-6@2x.png 2x" alt="ваниловая банка">
+                      </picture>
+                    </a>
+                    <div class="container__description">
+                      <a class="container__title-link" href="#">Декаф Флэт Уайт</a>
+                      <p class="container__subtitle">Кофе без кофеина из Эфиопии
                         с натуральным фермерским молоком</p>
                     </div>
-                    <div class="catalog__product-order">
-                      <span class="catalog__product-price">225&#8381;</span>
-                      <a class="catalog__product-add" href="#">
-                        <img src="" alt="в корзину"></img>
-                        <span class="catalog__add-to-cart">В корзину</span>
+                    <div class="container__product-order">
+                      <span class="container__product-price">225&#8381;</span>
+                      <a class="container__product-add" href="#">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                          <use href="img/icons/stack.svg#cart-plus-icon"></use>
+                        </svg>
+                        <span class="container__add-to-cart">В корзину</span>
                       </a>
                     </div>
                   </li>
                 </ul>
               </div>
-              <div class="catalog__pagination">
-                <ul class="catalog__pagination-list">
-                  <li class="catalog__pagination-item">
-                    <a class="catalog__pagination-button" href="#">&lt;</a>
+              <div class="catalog__pagination pagination">
+                <ul class="pagintaion__list">
+                  <li class="pagination__item">
+                    <a class="pagination__button pagination__prev-button" href="#"><span class="pagination__button-name">Назад</span></a>
                   </li>
-                  <li class="catalog__pagination-item">
-                    <a class="catalog__pagination-button" href="#">1</a>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">1</a>
                   </li>
-                  <li class="catalog__pagination-item">
-                    <a class="catalog__pagination-button catalog__pagination-button--current" href="#">2</a>
+                  <li class="pagination__item">
+                    <a class="pagination__button pagination__button--current" href="#">2</a>
                   </li>
-                  <li class="catalog__pagination-item">
-                    <a class="catalog__pagination-button" href="#">3</a>
+                  <li class="pagination__item">
+                    <a class="pagination__button" href="#">3</a>
                   </li>
-                  <li class="catalog__pagination-item">
-                    <a class="catalog__pagination-button" href="#">&gt;</a>
+                  <li class="pagination__item">
+                    <a class="pagination__button pagination__next-button " href="#"><span class="pagination__button-name">Вперед</span></a>
                   </li>
                 </ul>
               </div>
@@ -355,23 +391,33 @@
       </section>
     </main>
     <footer class="footer">
+      <h1 class="visually-hidden">Footer Drink2Go</h1>
       <div class="footer__top">
-        <img src="" alt="D2G логотип">
-        <div class="footer__socials">
+        <div class="footer__top-wrapper">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/d2g-logo-desktop.svg">
+            <img class="footer__logo-svg" src="img/d2g-logo-tablet.svg" alt="Drink2Go лого">
+          </picture>
           <ul class="footer__socials-list">
             <li class="footer__socials-item">
               <a class="footer__socials-link">
-                <img src="" alt="VK">
+                <svg class="footer__socials-svg" width="20" height="20" aria-label="VK">
+                  <use href="img/icons/stack.svg#vk-icon"></use>
+                </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a class="footer__socials-link">
-                <img src="" alt="Pinterest">
+                <svg class="footer__socials-svg" width="22" height="22" aria-label="Pinterest">
+                  <use href="img/icons/stack.svg#pinterest-icon"></use>
+                </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a class="footer__socials-link">
-                <img src="" alt="OK">
+                <svg class="footer__socials-svg" width="20" height="20" aria-label="OK">
+                  <use href="img/icons/stack.svg#ok-icon"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -379,45 +425,64 @@
       </div>
       <div class="footer__navigation">
         <div class="footer__store">
-          <h3 class="footer__title">Интернет-магазин</h3>
-          <ul class="footer__store-list">
-            <li class="footer__store-item">
-              <a class="footer__store-link" href="#">Каталог</a>
-            </li>
-            <li class="footer__store-item">
-              <a class="footer__store-link" href="#">Доставка</a>
-            </li>
-            <li class="footer__store-item">
-              <a class="footer__store-link" href="#">Способы оплаты</a>
-            </li>
-            <li class="footer__store-item">
-              <a class="footer__store-link" href="#">О нас</a>
-            </li>
-          </ul>
+          <div class="footer__store-wrapper">
+            <h2 class="footer__title">Интернет-магазин</h2>
+            <ul class="footer__store-list">
+              <li class="footer__store-item">
+                <a class="footer__store-link" href="#">Каталог</a>
+              </li>
+              <li class="footer__store-item">
+                <a class="footer__store-link" href="#">Доставка</a>
+              </li>
+              <li class="footer__store-item">
+                <a class="footer__store-link" href="#">Способы оплаты</a>
+              </li>
+              <li class="footer__store-item">
+                <a class="footer__store-link" href="#">О нас</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer__media">
-          <h3 class="footer__title">Медиа</h3>
-          <ul class="footer__media-list">
-            <li class="footer__media-item">
-              <a class="footer__media-link" href="#">Блог</a>
-            </li>
-            <li class="footer__media-item">
-              <a class="footer__media-link" href="#">Информация для СМИ</a>
-            </li>
-            <li class="footer__media-item">
-              <a class="footer__media-link" href="#">Правовая информация</a>
-            </li>
-          </ul>
+          <div class="footer__media-wrapper">
+            <h2 class="footer__title">Медиа</h2>
+            <ul class="footer__media-list">
+              <li class="footer__media-item">
+                <a class="footer__media-link" href="#">Блог</a>
+              </li>
+              <li class="footer__media-item">
+                <a class="footer__media-link" href="#">Информация для СМИ</a>
+              </li>
+              <li class="footer__media-item">
+                <a class="footer__media-link" href="#">Правовая информация</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer__contacts">
-          <h3 class="footer__title">Контакты</h3>
-          <p class="footer__adress">Санкт-Петербург, набережная реки Карповки, дом 5</p>
-          <a class="footer__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+          <div class="footer__contacts-wrapper">
+            <h2 class="footer__title">Контакты</h2>
+            <div class="footer__address">
+              <svg class="footer__address-svg" width="13" height="16" aria-label="Адрес">
+                <use href="img/icons/stack.svg#address-icon"></use>
+              </svg>
+              <p class="footer__address-name">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+            </div>
+            <div>
+              <svg class="footer__phone-svg" width="13" height="16" aria-label="Телефон">
+                <use href="img/icons/stack.svg#phone-icon"></use>
+              </svg>
+              <a class="footer__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer__html-academy">
         <a class="footer__html-academy-link" href="https://htmlacademy.ru/intensive/adaptive">
-          Разработанно в HTML Academy
+          <span>Разработанно в HTML Academy</span>
+          <svg class="footer__html-svg" width="12" height="16" aria-label="HTML Academy">
+            <use href="img/icons/stack.svg#html-academy-icon"></use>
+          </svg>
         </a>
       </div>
     </footer>
