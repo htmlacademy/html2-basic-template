@@ -180,7 +180,116 @@
       <p class="catalog__subtitle title title--secondary">
         Каталог кофейных напитков
       </p>
-      <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="post"></form>
+      <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form__wrapper">
+          <fieldset class="form__group">
+            <legend class="form__title">Цена</legend>
+            <div class="form__range range">
+              <div class="range__scale">
+                <div class="range__bar">
+                  <button class="range__toggle range__toggle--min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range__toggle range__toggle--max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <label class="visually-hidden form__label">
+              <input class="form__range-input" type="number" value="0" name="min-price">
+            </label>
+            -
+            <label class="visually-hidden form__label">
+              <input class="form__range-input" type="number" value="900" name="max-price">
+            </label>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__title">Наличие молока</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="radio" name="milk" value="no-matter" checked>
+                  <span class="form__control-mark form__control-mark--radio"></span>
+                  <span class="form__poin-name">Неважно</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="radio" name="milk" value="dairy-milk">
+                  <span class="form__control-mark form__control-mark--radio"></span>
+                  <span class="form__poin-name">Только животное</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="radio" name="milk" value="non-dairy-milk">
+                  <span class="form__control-mark form__control-mark--radio"></span>
+                  <span class="form__poin-name">Только растительное</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="radio" name="milk" value="no-milk">
+                  <span class="form__control-mark form__control-mark--radio"></span>
+                  <span class="form__poin-name">Без молока</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__title">Страна произрастания</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="brazil"
+                    checked>
+                  <span class="form__control-mark form__control-mark--checkbox"></span>
+                  <span class="form__poin-name">Бразилия</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="ethiopia">
+                  <span class="form__control-mark form__control-mark--checkbox"></span>
+                  <span class="form__poin-name">Эфиопия</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="colombia">
+                  <span class="form__control-mark form__control-mark--checkbox"></span>
+                  <span class="form__poin-name">Колумбия</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="costa-rica">
+                  <span class="form__control-mark form__control-mark--checkbox"></span>
+                  <span class="form__poin-name">Коста-Рика</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="country" value="peru">
+                  <span class="form__control-mark form__control-mark--checkbox"></span>
+                  <span class="form__poin-name">Перу</span>
+                </label>
+              </li>
+          </fieldset>
+          <button class="form__button button button--primary">Применить фильтр</button>
+          <button class="form__button button button--secondary">Сбросить фильтр</button>
+          <fieldset class="form__group">
+            <legend class="form__title">Сортировка:</legend>
+            <select class="form__sorting" aria-label="Сортировка">
+              <option value="default">по умолчанию</option>
+              <option value="expensive-first">сначала дорогие</option>
+              <option value="cheap-first">сначала дешёвые</option>
+              <option value="high-rating">высокий рейтинг</option>
+            </select>
+          </fieldset>
+        </div>
+      </form>
       <ul class="catalog__list">
         <li class="catalog__item card">
           <a class="card__image-link" href="#">
