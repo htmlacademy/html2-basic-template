@@ -20,8 +20,9 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-only-width: 767px;
 
+// Fonts
+
 $font-montserrat: "Montserrat", "Arial", sans-serif;
-$font-arial: "Arial", sans-serif;
 
 $font-size-tiny: 12px;
 $font-size-little: 13px;
@@ -32,7 +33,8 @@ $font-size-default: 20px;
 $font-size-normal: 24px;
 $font-size-more: 30px;
 $font-size-big: 36px;
-$font-size-tablet: 60px;
+$font-size-huge: 42px;
+$font-size-tablet: 56px;
 
 $line-height-tiny: 12px;
 $line-height-small: 14px;
@@ -45,7 +47,8 @@ $line-height-tall: 32px;
 $line-height-big: 36px;
 $line-height-mega: 37px;
 $line-height-super: 48px;
-$line-height-tablet: 60px;
+$line-height-huge: 64px;
+$line-height-tablet: 80px;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;

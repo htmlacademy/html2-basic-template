@@ -9,6 +9,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 44px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+    gap: 20px;
+    padding-bottom: 90px;
+  }
 }
 
 .pagination__button {
@@ -30,6 +36,20 @@
   text-align: center;
 }
 
+.pagination__prev-button {
+  @media (min-width: $tablet-width) {
+    width: 51px;
+    padding: 8px 20px;
+  }
+}
+
+.pagination__next-button {
+  @media (min-width: $tablet-width) {
+    width: 64px;
+    padding: 8px 20px;
+  }
+}
+
 .pagination__button--current {
   font-weight: $font-weight-semibold;
   color: $base-black;
@@ -39,6 +59,10 @@
 .pagination__button-name {
   display: none;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .pagination__prev-button::before {
@@ -51,6 +75,10 @@
   top: 17px;
   left: 17px;
   transform: rotate(135deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .pagination__next-button::before {
@@ -63,4 +91,8 @@
   top: 17px;
   left: 15px;
   transform: rotate(-45deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

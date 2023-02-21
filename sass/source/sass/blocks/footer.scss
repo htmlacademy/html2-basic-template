@@ -5,6 +5,13 @@
   flex-direction: column;
   flex-wrap: wrap;
   position: relative;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    width: 1360px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
 }
 
 .footer__top {
@@ -12,6 +19,16 @@
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding-top: 42px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
 }
 
 .footer__top::after {
@@ -22,6 +39,10 @@
   top: 80px;
   left: 0;
   background-color: $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .footer__top-wrapper {
@@ -31,6 +52,30 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    width: 318px;
+    padding: 0;
+  }
+}
+
+.footer__info {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 318px;
+    font-size: $font-size-tiny;
+    line-height: $line-height-mini;
+    font-weight: $font-weight-regular;
+    padding-top: 10px;
+    margin-bottom: 50px;
+  }
 }
 
 .footer__socials-list {
@@ -68,6 +113,17 @@
   flex-wrap: wrap;
   min-width: 320px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: 728px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-top: 49px;
+    width: 1012px;
+  }
 }
 
 .footer__store::after {
@@ -78,6 +134,10 @@
   top: 280px;
   left: 0;
   background-color: $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .footer__store-wrapper,
@@ -86,6 +146,15 @@
   width: 280px;
   padding: 0 20px;
   padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 312px;
+  }
 }
 
 .footer__media::after {
@@ -96,6 +165,10 @@
   top: 450px;
   left: 0;
   background-color: $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .footer__contacts::after {
@@ -106,6 +179,10 @@
   top: 600px;
   left: 0;
   background-color: $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .footer__title {
@@ -123,6 +200,10 @@
   padding: 0;
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__store-link,
@@ -149,6 +230,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 8px;
+  }
 }
 
 .footer__address-name {
@@ -159,9 +244,17 @@
   margin: 0;
   padding-left: 6px;
   margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 290px;
+  }
 }
 
-.footer__phone {
+.footer__phone-number {
   color: $base-black;
   font-family: $font-montserrat;
   font-size: $font-size-small;
@@ -192,4 +285,13 @@
   margin-top: 20px;
   margin-left: 35px;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
 }

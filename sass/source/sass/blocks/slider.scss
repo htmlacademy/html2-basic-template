@@ -8,6 +8,18 @@
   display: block;
   box-sizing: border-box;
   padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    padding-bottom: 308px;
+    margin-bottom: 188px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 100%;
+    padding-bottom: 84px;
+    margin-bottom: 0;
+  }
 }
 
 .slider--white {
@@ -27,12 +39,27 @@
   padding: 0 20px;
   padding-top: 20px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    width: 608px;
+    padding: 0 80px;
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1280px;
+  }
 }
 
 .slider__list {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+  }
 }
 
 .slider__item {
@@ -41,6 +68,26 @@
 
 .slider__item--current {
   display: block;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.slider__image {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 352px;
+    left: 146px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 
 .slider__description {
@@ -48,6 +95,17 @@
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 625px;
+    padding-top: 160px;
+    margin-left: 30px;
+    text-align: start;
+  }
 }
 
 .slider__new {
@@ -56,6 +114,8 @@
   line-height: $line-height-mini;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
 }
 
 .slider__title {
@@ -63,12 +123,31 @@
   line-height: $line-height-super;
   font-weight: $font-weight-bold;
   margin: 0;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-tablet;
+    line-height: $line-height-tablet;
+  }
 }
 
 .slider__subtitle {
   font-size: $font-size-small;
   line-height: $line-height-default;
   font-weight: $font-weight-regular;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-default;
+    line-height: $line-height-tall;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    padding: 0;
+    width: 600px;
+  }
 }
 
 .slider__price {
@@ -77,6 +156,10 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
 }
 
 .slider__old-price {
@@ -85,7 +168,7 @@
   line-height: $line-height-tall;
   font-weight: $font-weight-regular;
   text-decoration: line-through;
-  align-items: center;
+  padding-top: 1px;
 }
 
 .slider__new-price {

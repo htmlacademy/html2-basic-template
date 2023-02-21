@@ -14,9 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
-    padding-left: 110px;
-    padding-right: 110px;
+    min-width: 100%;
   }
 }
 
@@ -29,14 +27,58 @@
   padding: 12px 0;
   padding-bottom: 0;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+    padding: 0 40px;
+    justify-content: space-between;
+  }
 }
 
 .header-logo {
   padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.header__info {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 126px;
+    font-size: $font-size-tiny;
+    line-height: $line-height-mini;
+    font-weight: $font-weight-regular;
+  }
 }
 
 .user-nav {
+  position: relative;
   margin-left: 88px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 55px;
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .user-nav__list {
@@ -51,6 +93,17 @@
 .user-nav__link {
   padding: 22px;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 }
 
 .user-nav__name {
@@ -65,10 +118,23 @@
   position: relative;
   width: 320px;
   padding-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    width: fit-content;
+    padding-top: 0;
+    order: 1;
+    margin-left: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .menu-nav--closed .menu-nav__list {
-  display: none;
+  @media (max-width: $mobile-only-width) {
+    display: none;
+  }
 }
 
 .menu-nav__toggle {
@@ -128,6 +194,12 @@
   flex-wrap: wrap;
   text-align: center;
   border-top: 1px $base-secondary solid;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 100%;
+    border: none;
+  }
 }
 
 .menu-nav__link {
@@ -142,4 +214,15 @@
   padding-top: 20px;
   padding-bottom: 21px;
   border-bottom: 1px $base-secondary solid;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+    border: 1px transparent solid;
+  }
+}
+
+.menu-nav__link--current {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px $base-purple solid;
+  }
 }
