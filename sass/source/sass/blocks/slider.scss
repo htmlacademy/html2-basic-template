@@ -194,3 +194,16 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+.slider__button:focus,
+.slider__button:hover {
+  background-color: $purple-lighter;
+}
+
+.slider__button:active {
+  background-color: $purple-darker;
+}
+
+.slider__button:disabled {
+  background-color: $base-grey;
+}

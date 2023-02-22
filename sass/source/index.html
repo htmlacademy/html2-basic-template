@@ -202,26 +202,26 @@
               <fieldset class="catalog__form-milk">
                 <legend class="catalog__form-title">Наличие молока</legend>
                 <input class="visually-hidden catalog__milk-input" type="radio" name="milk" id="nvm" value="nevermind" checked>
-                <label class="catalog__milk-radio" for="nvm">Неважно</label>
+                <label tabindex="0" class="catalog__milk-radio" for="nvm">Неважно</label>
                 <input class="visually-hidden catalog__milk-input" type="radio" name="milk" id="animal" value="just-animal">
-                <label class="catalog__milk-radio" for="animal">Только животное</label>
+                <label tabindex="0" class="catalog__milk-radio" for="animal">Только животное</label>
                 <input class="visually-hidden catalog__milk-input" type="radio" name="milk" id="vegetable" value="just-vegetable">
-                <label class="catalog__milk-radio" for="vegetable">Только растительное</label>
+                <label tabindex="0" class="catalog__milk-radio" for="vegetable">Только растительное</label>
                 <input class="visually-hidden catalog__milk-input" type="radio" name="milk" id="nope" value="no-milk" disabled>
-                <label class="catalog__milk-radio" for="nope">Без молока</label>
+                <label tabindex="0" class="catalog__milk-radio" for="nope">Без молока</label>
               </fieldset>
               <fieldset class="catalog__form-origin">
                 <legend class="catalog__form-title">Страна произрастания</legend>
                 <input class="visually-hidden catalog__origin-input" type="checkbox" name="origin-brazil" id="bra" value="brazil" checked>
-                <label class="catalog__origin-check" for="bra">Бразилия</label>
+                <label tabindex="0" class="catalog__origin-check" for="bra">Бразилия</label>
                 <input class="visually-hidden catalog__origin-input" type="checkbox" name="origin-ethiopia" id="eth" value="ethiopia">
-                <label class="catalog__origin-check" for="eth">Эфиопия</label>
+                <label tabindex="0" class="catalog__origin-check" for="eth">Эфиопия</label>
                 <input class="visually-hidden catalog__origin-input" type="checkbox" name="origin-colombia" id="col" value="colombia">
-                <label class="catalog__origin-check" for="col">Колумбия</label>
+                <label tabindex="0" class="catalog__origin-check" for="col">Колумбия</label>
                 <input class="visually-hidden catalog__origin-input" type="checkbox" name="origin-costa-rica" id="crc" value="costa-rica">
-                <label class="catalog__origin-check" for="crc">Коста-Рика</label>
+                <label tabindex="0" class="catalog__origin-check" for="crc">Коста-Рика</label>
                 <input class="visually-hidden catalog__origin-input" type="checkbox" name="origin-peru" id="per" value="peru" disabled>
-                <label class="catalog__origin-check" for="per">Перу</label>
+                <label tabindex="0" class="catalog__origin-check" for="per">Перу</label>
               </fieldset>
               <div class="catalog__buttons">
                 <button class="catalog__submit-button" type="submit">Применить фильтр</button>
@@ -234,7 +234,7 @@
                 <details class="container__sort-details">
                   <summary class="container__sort-title">по умолчанию</summary>
                   <ul class="container__sort-list">
-                    <li tabindex="0" class="container__sort-item catalog__sort-item--current">по умолчанию</li>
+                    <li tabindex="0" class="container__sort-item container__sort-item--current">по умолчанию</li>
                     <li tabindex="0" class="container__sort-item">сначала дорогие</li>
                     <li tabindex="0" class="container__sort-item">сначала дешевые</li>
                     <li tabindex="0" class="container__sort-item">высокий рейтинг</li>
@@ -243,7 +243,7 @@
               </div>
               <div class="container__products">
                 <ul class="container__list">
-                  <li class="container__item container__item-1">
+                  <li tabindex="0" class="container__item">
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-1.webp 1x, img/coffee-can-1@2x.webp 2x">
@@ -265,7 +265,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="container__item container__item-2">
+                  <li tabindex="0" class="container__item">
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-2.webp 1x, img/coffee-can-2@2x.webp 2x">
@@ -287,7 +287,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="container__item container__item-3">
+                  <li tabindex="0" class="container__item">
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-3.webp 1x, img/coffee-can-3@2x.webp 2x">
@@ -309,7 +309,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="container__item container__item-4">
+                  <li tabindex="0" class="container__item">
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-4.webp 1x, img/coffee-can-4@2x.webp 2x">
@@ -331,7 +331,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="container__item container__item-5">
+                  <li tabindex="0" class="container__item">
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-5.webp 1x, img/coffee-can-5@2x.webp 2x">
@@ -353,7 +353,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="container__item container__item-6">
+                  <li tabindex="0" class="container__item">
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x">
@@ -383,7 +383,7 @@
                     <a class="pagination__button pagination__prev-button" href="#"><span class="pagination__button-name">Назад</span></a>
                   </li>
                   <li class="pagination__item">
-                    <a class="pagination__button" href="#">1</a>
+                    <a class="pagination__button" href="#" disabled>1</a>
                   </li>
                   <li class="pagination__item">
                     <a class="pagination__button pagination__button--current" href="#">2</a>

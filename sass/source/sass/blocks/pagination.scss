@@ -36,6 +36,21 @@
   text-align: center;
 }
 
+.pagination__button:hover,
+.pagination__button:focus {
+  background-color: $purple-lighter;
+  color: $white;
+}
+
+.pagination__button:active {
+  background-color: $purple-darker;
+}
+
+.pagination__button:disabled {
+  background-color: $light-grey;
+  color: $white;
+}
+
 .pagination__prev-button {
   @media (min-width: $tablet-width) {
     width: 51px;
@@ -50,7 +65,9 @@
   }
 }
 
-.pagination__button--current {
+.pagination__button--current,
+.pagination__button--current:hover,
+.pagination__button--current:focus {
   font-weight: $font-weight-semibold;
   color: $base-black;
   background-color: transparent;
@@ -81,10 +98,40 @@
   }
 }
 
+.pagination__prev-button:hover::before,
+.pagination__prev-button:focus::before {
+  border: solid $white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  top: 17px;
+  left: 17px;
+  transform: rotate(135deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .pagination__next-button::before {
   position: absolute;
   content: "";
   border: solid $base-purple;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  top: 17px;
+  left: 15px;
+  transform: rotate(-45deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__next-button:hover::before,
+.pagination__next-button:focus::before {
+  border: solid $white;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;

@@ -111,6 +111,7 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    color: $base-black;
   }
 }
 
@@ -210,15 +211,40 @@
   font-weight: $font-weight-medium;
   text-decoration: none;
   text-transform: uppercase;
-  color: $black;
+  color: $base-black;
   padding-top: 20px;
   padding-bottom: 21px;
   border-bottom: 1px $base-secondary solid;
 
   @media (min-width: $tablet-width) {
     padding: 32px 20px;
-    border: 1px transparent solid;
+    border: none;
   }
+}
+
+.user-nav__link svg {
+  fill: $base-black;
+}
+
+.user-nav__link:hover svg,
+.user-nav__link:focus svg,
+.user-nav__link:active svg {
+  @media (min-width: $desktop-width) {
+    fill: $base-purple;
+  }
+}
+
+.user-nav__link:hover .user-nav__name,
+.user-nav__link:focus .user-nav__name,
+.menu-nav__link:hover,
+.menu-nav__link:focus {
+  color: $base-purple;
+}
+
+.user-nav__link:active,
+.menu-nav__link:active {
+  background-color: $base-secondary;
+  color: $base-purple;
 }
 
 .menu-nav__link--current {

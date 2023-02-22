@@ -9,7 +9,6 @@
 
   @media (min-width: $tablet-width) {
     justify-content: end;
-    margin-right: 15px;
     margin-bottom: 30px;
   }
 }
@@ -20,11 +19,6 @@
   font-weight: $font-weight-semibold;
 }
 
-.container__sort[open] .container__sort-title::after {
-  top: 14px;
-  transform: rotate(225deg);
-}
-
 .container__sort-title {
   list-style: none;
   display: flex;
@@ -33,11 +27,18 @@
   line-height: $line-height-normal;
   font-weight: $font-weight-semibold;
   padding: 4px 0;
-  padding-left: 18px;
-  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
+  margin-left: 8px;
   color: $base-purple;
   width: fit-content;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.container__sort-title:hover,
+.container__sort-title:focus {
+  background-color: $base-secondary;
 }
 
 
@@ -51,10 +52,15 @@
   top: 10px;
   right: 10px;
   transform: rotate(45deg);
+}
 
-  @media (min-width: $tablet-width) {
-    right: -10px;
-  }
+.container__sort-details[open] .container__sort-title {
+  background-color: $background-grey;
+}
+
+.container__sort-details[open] .container__sort-title::after {
+  top: 14px;
+  transform: rotate(225deg);
 }
 
 .container__sort-list {
@@ -63,30 +69,41 @@
   padding: 0;
   position: absolute;
   top: 100%;
+  right: 0;
   font-size: $font-size-mini;
   line-height: $line-height-normal;
   font-weight: $font-weight-regular;
   border-radius: 4px;
   width: max-content;
   background-color: $white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .container__sort-item {
+  cursor: pointer;
   padding: 8px 18px;
   border-bottom: 1px solid $base-secondary;
 }
 
-.container__sort-item--current {
-  background-color: $base-purple;
+.container__sort-item:first-child {
+  border-radius: 4px 4px 0 0;
 }
 
 .container__sort-item:last-child {
+  border-radius: 0 0 4px 4px;
   border-bottom: 0;
 }
 
 .container__sort-item:hover,
 .container__sort-item:focus {
   background-color: $base-secondary;
+}
+
+.container__sort-item--current,
+.container__sort-item--current:hover,
+.container__sort-item--current:focus {
+  background-color: $base-purple;
+  color: $white;
 }
 
 .container__sort-item:active {
@@ -130,9 +147,10 @@
   }
 }
 
-.container__item-2 {
+.container__item:hover,
+.container__item:focus {
   @media (min-width: $desktop-width) {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -193,6 +211,19 @@
   width: 101px;
   padding: 8px 20px;
   cursor: pointer;
+}
+
+.container__product-add:focus,
+.container__product-add:hover {
+  background-color: $purple-lighter;
+}
+
+.container__product-add:active {
+  background-color: $purple-darker;
+}
+
+.container__product-add:disabled {
+  background-color: $base-grey;
 }
 
 .container__product-svg {
