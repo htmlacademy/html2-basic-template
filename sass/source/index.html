@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -62,67 +63,98 @@
     </header>
     <main>
       <h1 class="visually-hidden">Drink2Go</h1>
-      <section class="slider slider--white">
+      <section class="slider">
         <h2 class="visually-hidden">Слайдер</h2>
-        <div class="slider__wrapper">
-          <ul class="slider__list">
-            <li class="slider__item slider__item--current">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider-white-desktop.webp 1x, img/slider-white-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider-white-tablet.webp 1x, img/slider-white-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/slider-white-mobile.webp 1x, img/slider-white-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/slider-white-desktop.png 1x, img/slider-white-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/slider-white-tablet.png 1x, img/slider-white-tablet@2x.png 2x">
-                <img class="slider__image" src="img/slider-white-mobile.png" srcset="img/slider-white-mobile@2x.png 2x" alt="Decaf Flat White">
-              </picture>
-              <div class="slider__description">
-                <span class="slider__new">Новинка!</span>
-                <h3 class="slider__title">Декаф Флэт Уайт</h3>
-                <p class="slider__subtitle">
-                  Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
-                </p>
-                <div class="slider__price">
-                  <span class="slider__old-price">295&#8381;</span>
-                  <span class="slider__new-price">225&#8381;</span>
-                  <a class="slider__button" href="#">Заказать</a>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slider__white">
+              <div class="slider__card">
+                <div class="slider__inner-wrapper">
+                  <div class="slider__picture">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider-white-desktop.webp 1x, img/slider-white-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/slider-white-tablet.webp 1x, img/slider-white-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/slider-white-mobile.webp 1x, img/slider-white-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="img/slider-white-desktop.png 1x, img/slider-white-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/slider-white-tablet.png 1x, img/slider-white-tablet@2x.png 2x">
+                      <img class="slider__image" src="img/slider-white-mobile.png" srcset="img/slider-white-mobile@2x.png 2x" alt="Decaf Flat White">
+                    </picture>
+                  </div>
+                  <div class="slider__description">
+                    <span class="slider__new">Новинка!</span>
+                    <h3 class="slider__title">Декаф Флэт Уайт</h3>
+                    <p class="slider__subtitle">
+                      Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+                    </p>
+                    <div class="slider__price">
+                      <span class="slider__old-price">295&#8381;</span>
+                      <span class="slider__new-price">225&#8381;</span>
+                      <a class="slider__button" href="#">Заказать</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__image">
-                <img class="slider__img" src="" alt="Lavender Latte">
-              </div>
-              <div class="slider__description">
-                <span class="slider__new">Новинка!</span>
-                <h3 class="slider__title">Лавандовый Латте</h3>
-                <p class="slider__subtitle">
-                  Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
-                </p>
-                <div class="slider__price">
-                  <span class="slider__old-price">285&#8381;</span>
-                  <span class="slider__new-price">265&#8381;</span>
-                  <a class="slider__button" href="#">Заказать</a>
+            </div>
+            <div class="swiper-slide slider__purple">
+              <div class="slider__card">
+                <div class="slider__inner-wrapper">
+                  <div class="slider__picture">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider-purple-desktop.webp 1x, img/slider-purple-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/slider-purple-tablet.webp 1x, img/slider-purple-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/slider-purple-mobile.webp 1x, img/slider-purple-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="img/slider-purple-desktop.png 1x, img/slider-purple-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/slider-purple-tablet.png 1x, img/slider-purple-tablet@2x.png 2x">
+                      <img class="slider__image" src="img/slider-purple-mobile.png" srcset="img/slider-purple-mobile@2x.png 2x" alt="Lavender Latte">
+                    </picture>
+                  </div>
+                  <div class="slider__description">
+                    <span class="slider__new">Новинка!</span>
+                    <h3 class="slider__title">Лавандовый Латте</h3>
+                    <p class="slider__subtitle slider__subtitle--purple">
+                      Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+                    </p>
+                    <div class="slider__price">
+                      <span class="slider__old-price">285&#8381;</span>
+                      <span class="slider__new-price">265&#8381;</span>
+                      <a class="slider__button" href="#">Заказать</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__image">
-                <img class="slider__img" src="" alt="Triple Espresso">
-              </div>
-              <div class="slider__description">
-                <span class="slider__new">Новинка!</span>
-                <h3 class="slider__title">Тройной эспрессо</h3>
-                <p class="slider__subtitle">
-                  Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
-                </p>
-                <div class="slider__price">
-                  <span class="slider__old-price">395&#8381;</span>
-                  <span class="slider__new-price">375&#8381;</span>
-                  <a class="slider__button" href="#">Заказать</a>
+            </div>
+            <div class="swiper-slide slider__black">
+              <div class="slider__card">
+                <div class="slider__inner-wrapper">
+                  <div class="slider__picture">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider-black-desktop.webp 1x, img/slider-black-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/slider-black-tablet.webp 1x, img/slider-black-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/slider-black-mobile.webp 1x, img/slider-black-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="img/slider-black-desktop.png 1x, img/slider-black-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/slider-black-tablet.png 1x, img/slider-black-tablet@2x.png 2x">
+                      <img class="slider__image" src="img/slider-black-mobile.png" srcset="img/slider-black-mobile@2x.png 2x" alt="Triple Espresso">
+                    </picture>
+                  </div>
+                  <div class="slider__description">
+                    <span class="slider__new">Новинка!</span>
+                    <h3 class="slider__title">Тройной эспрессо</h3>
+                    <p class="slider__subtitle slider__subtitle--black">
+                      Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+                    </p>
+                    <div class="slider__price">
+                      <span class="slider__old-price">395&#8381;</span>
+                      <span class="slider__new-price">375&#8381;</span>
+                      <a class="slider__button" href="#">Заказать</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section class="advantages">
@@ -502,6 +534,7 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
