@@ -3,7 +3,6 @@
   flex-direction: column;
   padding: 48px 20px;
   position: relative;
-  width: 320px;
   background-color: #f8f8f8;
 
   &::after {
@@ -719,7 +718,6 @@
   .catalog {
     padding-top: 108px;
     padding-bottom: 72px;
-    width: 768px;
   }
 
   .catalog__heading {
@@ -895,7 +893,6 @@
     padding: 128px 40px 102px;
     display: grid;
     grid-template-columns: 350px 1fr;
-    width: 768px;
   }
 
   .catalog__product-list {

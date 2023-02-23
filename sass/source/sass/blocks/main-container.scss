@@ -1,3 +1,16 @@
 .main-container {
   margin: 0 auto;
+  width: 320px;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-container {
+    width: 1440px;
+  }
 }
