@@ -96,7 +96,6 @@
   line-height: 16px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #333333;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -106,10 +105,11 @@
 
   & a {
     text-decoration: none;
+    color: #333333;
   }
 }
 
-.footer__shop-item:hover {
+.footer__shop-item a:hover {
   color: #9070ec;
 
   &:focus {
@@ -155,9 +155,14 @@
   gap: 20px;
   padding: 0;
   margin: 0;
+
+  & a {
+    text-decoration: none;
+    color: #333333;
+  }
 }
 
-.footer__media-item:hover {
+.footer__media-item a:hover {
   color: #9070ec;
 
   &:focus {

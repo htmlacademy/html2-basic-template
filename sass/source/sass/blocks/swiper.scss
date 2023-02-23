@@ -184,14 +184,14 @@
   display: none;
 }
 
-.swiper .swiper-button-prev::after{
+.swiper .swiper-button-prev::after {
   content: url("/img/prev.svg");
   size: 18px;
   width: 18px;
   height: 18px;
 }
 
-.swiper .swiper-button-next::after{
+.swiper .swiper-button-next::after {
   content: url("/img/prev.svg");
   size: 18px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -367,7 +367,7 @@
     background-color: #7859cf;
   }
 
-  .swiper-pagination  span {
+  .swiper-pagination span {
     background-color: #ffffff;
   }
 
