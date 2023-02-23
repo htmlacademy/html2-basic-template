@@ -2,13 +2,654 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="/fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
-
+    <header class="header">
+        <div class="header__logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/Logo-Drink2Go-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/Logo-Drink2Go-tablet.svg">
+            <img class="header__logo-img" src="./img/mobile-logo.png" alt="">
+          </picture>
+          <h1 class="header__title">
+            Интернет-магазин <br>
+            кофейных напитков
+          </h1>
+        </div>
+        <nav class="header__nav header__nav--closed header__nav--nojs">
+          <ul class="header__nav-list ">
+            <li class="header__nav-item">
+              <a href="">Главная</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="">Каталог</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="">Доставка</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="">О нас</a>
+            </li>
+          </ul>
+          <ul class="header__links">
+            <li class="header__links-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 4C10.6667 5.47276 9.47276 6.66667 8 6.66667C6.52724 6.66667 5.33333 5.47276 5.33333 4C5.33333 2.52724 6.52724 1.33333 8 1.33333C9.47276 1.33333 10.6667 2.52724 10.6667 4ZM12 4C12 6.20914 10.2091 8 8 8C5.79086 8 4 6.20914 4 4C4 1.79086 5.79086 0 8 0C10.2091 0 12 1.79086 12 4ZM3.19673 12.3102C4.43611 11.2774 6.1613 10.6667 8 10.6667C9.8387 10.6667 11.5639 11.2774 12.8033 12.3102C14.0354 13.337 14.6667 14.6719 14.6667 16H16C16 14.2321 15.1573 12.5363 13.6569 11.286C12.1566 10.0357 10.1218 9.33333 8 9.33333C5.87821 9.33333 3.8434 10.0357 2.34315 11.286C0.842686 12.5363 0 14.2321 0 16L1.33333 16C1.33333 14.6719 1.96465 13.337 3.19673 12.3102Z" fill="#333333"/>
+              </svg>
+              <span>Войти</span>
+            </li>
+            <li class="header__links-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z" fill="#333333"/>
+              </svg>
+              <span>Корзина</span>
+            </li>
+          </ul>
+          <button class="header__button" type="button"></button>
+          <span class="visually-hidden">Открыть меню</span>
+        </nav>
+    </header>
+    <main class="main-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/slide-white-desktop.webp 1x, ./img/slide-white-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="./img/slider-tablet-white.webp 1x, ./img/slider-tablet-white@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="./img/mobile-slide.webp 1x, ./img/mobile-slide@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/slide-white-desktop.png 1x, ./img/slide-white-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/slider-tablet-white.png 1x, ./img/slider-tablet-white@2x.png 2x">
+              <img class="swiper__img" src="./img/mobile-slide.png" srcset="./img/mobile-slide@2x.png" alt="">
+            </picture>
+            <p class="swiper__new">
+              Новинка!
+            </p>
+            <h2 class="swiper__title">
+              Декаф Флэт Уайт
+            </h2>
+            <p class="swiper__description">
+              Свежесваренный кофе без кофеина
+              из Эфиопии <br> с натуральным
+              фермерским молоком — то, что
+               нужно <br> для расслабления после
+                тяжёлого рабочего дня
+            </p>
+            <div class="swiper__buy">
+              <p class="swiper__cost">
+                <span class="swiper__old-cost">295₽</span>
+                225₽
+              </p>
+              <button class="swiper__order" type="button">
+                Заказать
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--purple">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/lavender-desktop.webp 1x, ./img/lavender-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="./img/lavender-tablet.webp 1x, ./img/lavender-tablet@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="./img/lavender_slide.webp 1x, ./img/lavender_slide@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/lavender-desktop.png 1x, ./img/lavender-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/lavender-tablet.png 1x, ./img/lavender-tablet@2x.png 2x">
+              <img class="swiper__img" src="./img/lavender_slide.png" srcset="./img/lavender_slide@2x.png" alt="">
+            </picture>
+            <p class="swiper__new">
+              Новинка!
+            </p>
+            <h2 class="swiper__title">
+              Лавандовый Латте
+            </h2>
+            <p class="swiper__description">
+              Невероятное сочетание перуанской высокогорной <br>
+              арабики с молоком ламы и лавандовым сиропом унесёт <br>
+              вас прямо на вершину Радужных гор
+            </p>
+            <div class="swiper__buy">
+              <p class="swiper__cost">
+                <span class="swiper__old-cost">285₽</span>
+                265₽
+              </p>
+              <button class="swiper__order" type="button">
+                Заказать
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--grey">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/espresso_desktop.webp 1x, ./img/espresso_desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="./img/espresso_tablet.webp 1x, ./img/espresso_tablet@2x.webp 2x">
+              <source media="(min-width: 320px)" srcset="./img/espresso_slide.webp 1x, ./img/espresso_slide@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/espresso_desktop.png1x, espresso_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/espresso_tablet.png 1x, ./img/espresso_tablet@2x.png 2x">
+              <img class="swiper__img" src="./img/espresso_slide.png" srcset="./img/espresso_slide@2x.png" alt="">
+            </picture>
+            <p class="swiper__new">
+              Новинка!
+            </p>
+            <h2 class="swiper__title">
+              Тройной Эспрессо
+            </h2>
+            <p class="swiper__description">
+              Мощнее укола адреналина, чернее самой тёмной ночи, <br>
+              этот тройной эспрессо из Колумбии покажет вам, что такое <br>
+              настоящая бодрость
+            </p>
+            <div class="swiper__buy">
+              <p class="swiper__cost">
+                <span class="swiper__old-cost">395₽</span>
+                375₽
+              </p>
+              <button class="swiper__order" type="button">
+                Заказать
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination--swiper-theme-color swiper-pagination--swiper-pagination-bullet-inactive-color">
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <section class="features">
+        <h2 class="features__title">
+          Преимущества
+        </h2>
+        <h3 class="features__heading">
+          Главные причины выбрать Drink2Go
+        </h3>
+        <ul class="features__list">
+          <li class="features__item">
+            <svg class="features__speed" width="50" height="56" viewBox="0 0 50 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4H31V7H28V10.0213C31.8152 10.1846 35.3896 11.2772 38.5027 13.0786C40.354 11.1476 44.7551 13.2459 43.2635 16.7365C43.2309 16.704 43.1983 16.6716 43.1656 16.6393C47.3853 20.8089 50 26.5991 50 33C50 45.7025 39.7025 56 27 56C14.2975 56 4 45.7025 4 33C4 26.3297 6.83949 20.3226 11.3757 16.1215C11.1588 16.3222 10.9457 16.5272 10.7365 16.7364C8.70719 13.7075 13.3199 10.5817 15.4975 13.0784C18.6105 11.2771 22.1849 10.1846 26 10.0213V7H23V4Z" fill="#F0EBFF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M26 1H20V2L22 2L24 2H26V1ZM24 3H26H27V2V1V0H26H20H19V1V2V3H20H22V6.02135C18.5463 6.1691 15.2898 7.07848 12.3944 8.58582L12.2544 8.42496C10.7163 6.6569 8.39521 6.98255 6.95484 8.02395C6.21517 8.55874 5.60253 9.33813 5.35204 10.2775C5.09438 11.2438 5.24251 12.3031 5.90574 13.293L6.02865 13.4765C2.28444 17.5676 0 23.017 0 29C0 41.7025 10.2975 52 23 52C35.7025 52 46 41.7025 46 29C46 23.0401 43.7331 17.6096 40.0145 13.5238L40.183 13.1295C40.6454 12.0474 40.6748 11.0021 40.3518 10.087C40.0339 9.1862 39.4018 8.48773 38.6665 8.02632C37.2591 7.14319 35.1326 6.97177 33.777 8.39054L33.5955 8.58053C30.7025 7.07636 27.4497 6.16892 24 6.02135V3ZM23 7C19.1406 7 15.5133 7.99379 12.36 9.73944L12 9.94732C10.5856 10.7639 9.26738 11.735 8.06924 12.8421C3.72198 16.8612 1 22.6127 1 29C1 41.1503 10.8497 51 23 51C35.1503 51 45 41.1503 45 29C45 22.9249 42.5376 17.4248 38.5563 13.4436C38.4319 13.3192 38.306 13.1963 38.1787 13.0749C36.9153 11.8707 35.5126 10.8207 34 9.94741L33.6357 9.7371C30.4835 7.99291 26.8577 7 23 7ZM11.4975 9.07845C10.0109 9.93867 8.62944 10.9605 7.37728 12.12C7.15986 12.3212 6.94622 12.5267 6.73652 12.7364C6.51811 12.4104 6.37664 12.0833 6.30079 11.7622C5.75443 9.44925 8.61277 7.44804 10.6466 8.42332C10.9539 8.57068 11.2424 8.78599 11.4975 9.07845ZM34.5027 9.07856C36.0672 9.98386 37.5152 11.0682 38.8186 12.3035C38.9688 12.4458 39.1171 12.5902 39.2635 12.7365C39.43 12.3468 39.523 11.9745 39.5544 11.6232C39.7632 9.28719 37.2441 7.88062 35.4507 8.48214C35.0978 8.60048 34.7731 8.79655 34.5027 9.07856ZM23 31C24.1046 31 25 30.1046 25 29C25 28.2049 24.536 27.5182 23.8641 27.1958L22.9501 27.0006C21.8686 27.0271 21 27.9121 21 29C21 30.1046 21.8954 31 23 31ZM22.3638 26.0676L21.0176 21.1316L20.9778 20.9855L21.0257 20.8419L22.5257 16.3419L23 14.9189L23.4743 16.3419L24.9743 20.8419L25.0222 20.9855L24.9824 21.1316L23.6362 26.0676C23.7657 26.0956 23.8921 26.1319 24.0148 26.176L31.5642 12.7549L32.4358 13.2451L24.8861 26.6669C25.5656 27.2169 26 28.0577 26 29C26 30.6569 24.6569 32 23 32C21.3431 32 20 30.6569 20 29C20 27.5614 21.0125 26.3594 22.3638 26.0676ZM22.0222 21.0145L23 24.5997L23.9778 21.0145L23 18.0811L22.0222 21.0145Z" fill="#7859CF"/>
+            </svg>
+            <h3 class="features__title-item features__title-item--speed">
+              Скорость
+            </h3>
+            <p class="features__description features__description--speed">
+              Готовый напиток всегда под рукой —
+              просто открой банку
+            </p>
+          </li>
+          <li class="features__item">
+            <svg class="features__comfort" width="52" height="56" viewBox="0 0 52 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H52L48 48L28 56L8 48L4 4Z" fill="#F0EBFF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.00412 0H0L0.0909091 1L4 44L24 52L44 44L47.9091 1L48 0H46.9959H1.00412ZM1.09503 1L1.45867 5H5H5.50198H6.00396H6.9H10.7H14.5H18.3H22.1H25.9H29.7H33.5H37.3H41.1H41.996H42.498H43H46.5413L46.905 1H1.09503ZM41.9069 6H41.1H37.3H33.5H29.7H25.9H22.1H18.3H14.5H10.7H6.9H6.09307L6.19397 7.1324L5.69594 7.17678L5.19792 7.22115L5.08911 6H1.54958L4.94041 43.2991L24 50.923L43.0596 43.2991L46.4504 6H42.9109L42.8021 7.22115L42.3041 7.17678L41.806 7.1324L41.9069 6ZM6.09178 11.6191L5.59375 11.6635L5.98958 16.1058L6.48761 16.0614L6.98564 16.017L6.5898 11.5747L6.09178 11.6191ZM6.88344 20.5037L6.38542 20.5481L6.78125 24.9904L7.27928 24.946L7.7773 24.9016L7.38147 20.4593L6.88344 20.5037ZM7.67511 29.3883L7.17708 29.4327L7.57292 33.875L8.07094 33.8306L8.56897 33.7862L8.17314 29.3439L7.67511 29.3883ZM8.46678 38.2729L7.96875 38.3173L8.16667 40.5385L10.1458 41.3462L10.3348 40.8832L10.5237 40.4203L9.10864 39.8428L8.9648 38.2286L8.46678 38.2729ZM14.2931 42.4986L14.1042 42.9615L18.0625 44.5769L18.2514 44.114L18.4403 43.6511L14.482 42.0357L14.2931 42.4986ZM22.2098 45.7294L22.0208 46.1923L24 47L25.9792 46.1923L25.7902 45.7294L25.6013 45.2664L24 45.9199L22.3987 45.2664L22.2098 45.7294ZM29.7486 44.114L29.9375 44.5769L33.8958 42.9615L33.7069 42.4986L33.518 42.0357L29.5597 43.6511L29.7486 44.114ZM37.6652 40.8832L37.8542 41.3462L39.8333 40.5385L40.0313 38.3173L39.5332 38.2729L39.0352 38.2286L38.8914 39.8428L37.4763 40.4203L37.6652 40.8832ZM39.9291 33.8306L40.4271 33.875L40.8229 29.4327L40.3249 29.3883L39.8269 29.3439L39.431 33.7862L39.9291 33.8306ZM40.7207 24.946L41.2188 24.9904L41.6146 20.5481L41.1166 20.5037L40.6185 20.4593L40.2227 24.9016L40.7207 24.946ZM41.5124 16.0614L42.0104 16.1058L42.4062 11.6635L41.9082 11.6191L41.4102 11.5747L41.0144 16.017L41.5124 16.0614Z" fill="#7859CF"/>
+            </svg>
+            <h3 class="features__title-item features__title-item--comfort">
+              Удобство
+            </h3>
+            <p class="features__description features__description--comfort">
+              Легко помещается и в карман, <br>
+              и в маленькую сумочку
+            </p>
+          </li>
+          <li class="features__item">
+            <svg class="features__stamina" width="42" height="56" viewBox="0 0 42 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9731 35.2L38.1345 4L4 30.6753L19.9731 35.2ZM26.0271 24.8L7.86572 56L42.0002 29.3247L26.0271 24.8Z" fill="#F0EBFF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M34.1345 0L0 26.6753L15.9731 31.2L3.86555 52.0001L38 25.3248L22.0269 20.8001L34.1345 0ZM35.8319 25.75L20.5143 21.4109L30.6566 3.98704L2.1681 26.2501L17.4858 30.5892L7.34345 48.013L35.8319 25.75Z" fill="#7859CF"/>
+            </svg>
+            <h3 class="features__title-item features__title-item--stamina">
+              Бодрость
+            </h3>
+            <p class="features__description features__description--stamina">
+              Сбалансированная доза кофеина
+              даст мощный заряд энергии
+            </p>
+          </li>
+          <li class="features__item">
+            <svg class="features__eco" width="46" height="56" viewBox="0 0 46 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M38.7068 22.1225C39.4764 15.5574 40.2041 9.34979 45.9997 4C19.5072 3.99988 11.8468 12.128 7.9998 17.9999C-0.541753 31.0373 7.08506 43.6704 8.7106 46.0864C7.76149 47.9699 6.8453 49.8228 5.96853 51.596C5.28756 52.9732 4.63037 54.3023 4 55.5603L4.88103 55.9999C5.51647 54.7318 6.17882 53.3919 6.86491 52.0041C7.71305 50.2884 8.59746 48.4993 9.51217 46.6817C12.1065 47.5486 23.9646 50.8651 31.5 41.9999C37.1568 35.3449 37.9519 28.5617 38.7068 22.1225Z" fill="#F0EBFF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23221 41.055C9.18989 33.2582 13.686 25.0948 18.2668 19.9999L19 20.6562C14.4314 25.7376 9.93043 33.9532 5.96782 41.779C6.34578 41.9019 6.88834 42.0652 7.56144 42.2326C8.95668 42.5795 10.8987 42.9402 13.0898 43.0003C17.4744 43.1204 22.753 42.0406 26.7381 37.3522C32.1982 30.9285 32.9631 24.4063 33.7206 17.9463L33.7357 17.8172C34.4173 12.0063 35.12 6.18297 39.6108 1.02289C27.8214 1.2525 20.1299 3.18456 14.9438 5.69784C9.44336 8.36348 6.69156 11.7161 4.83626 14.5479C0.283102 21.4976 0.51823 28.3097 1.90266 33.4262C2.59642 35.9902 3.57807 38.1203 4.38638 39.6085C4.70612 40.1972 4.99777 40.6837 5.23221 41.055ZM4.7106 42.0864C3.08506 39.6704 -4.54175 27.0373 3.9998 13.9999C7.77584 8.23634 15.2259 0.299055 40.5524 0.00822987C41.0285 0.00276494 41.5109 -2.58931e-06 41.9997 1.81779e-09C41.6406 0.331444 41.301 0.666183 40.9796 1.0041C36.1138 6.12034 35.4287 11.9641 34.7068 18.1225C33.952 24.5617 33.1568 31.3449 27.5 37.9999C19.9646 46.8651 8.10646 43.5486 5.51217 42.6817C4.59746 44.4993 3.71305 46.2884 2.86491 48.0041C2.17882 49.3919 1.51647 50.7318 0.881027 51.9999L0 51.5603C0.630371 50.3023 1.28756 48.9732 1.96853 47.596C2.8453 45.8228 3.76149 43.9699 4.7106 42.0864Z" fill="#7859CF"/>
+            </svg>
+            <h3 class="features__title-item features__title-item--eco">
+              Экологичность
+            </h3>
+            <p class="features__description features__description--eco">
+              Вся упаковка сделана <br>
+              из перерабатываемых <br> материалов
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="catalog">
+        <h2 class="catalog__title">
+          Каталог
+        </h2>
+        <h3 class="catalog__heading">
+          Каталог кофейных напитков
+        </h3>
+        <div class="catalog__filter-wraper">
+          <div class="catalog__filter">
+            <div class="catalog__range">
+              <h3 class="catalog__cost">
+                Цена
+              </h3>
+              <div class="catalog__range-scale">
+                <div class="catalog__range-bar">
+                  <button class="catalog__range-toggle catalog__range--toggle-min">
+                  </button>
+                  <button class="catalog__range-toggle catalog__range--toggle-max">
+                  </button>
+                </div>
+              </div>
+              <div class="catalog__range-wrapper-inputs">
+                <label class="catalog__filter-label" tabindex="0">
+                  <input class="catalog__range-input" type="number" value="0" name="min-price" tabindex="1">
+                </label>
+                <label class="catalog__filter-label" tabindex="0">
+                  <input class="catalog__range-input" type="number" value="900" name="max-price" tabindex="1">
+                </label>
+              </div>
+            </div>
+            </div>
+            <fieldset class="catalog__radio">
+              <h3 class="catalog__radio-title">
+                Наличие молока
+              </h3>
+              <ul class="catalog__radio-list">
+                <li class="catalog__radio-item">
+                  <label class="catalog__radio-label">
+                    <input  class="catalog__radio-mark visually-hidden" type="radio" name="milk" disabled checked>
+                    <span class="catalog__control-mark"></span>
+                    <span class="catalog__radio-name">Неважно</span>
+                  </label>
+                </li>
+                <li class="catalog__radio-item">
+                  <label class="catalog__radio-label">
+                    <input  class="catalog__radio-mark visually-hidden" type="radio" name="milk">
+                    <span class="catalog__control-mark" tabindex="0"></span>
+                    <span class="catalog__radio-name">Только животное</span>
+                  </label>
+                </li>
+                <li class="catalog__radio-item">
+                  <label class="catalog__radio-label">
+                    <input  class="catalog__radio-mark visually-hidden" type="radio" name="milk">
+                    <span class="catalog__control-mark" tabindex="0"></span>
+                    <span class="catalog__radio-name">Только растительное</span>
+                  </label>
+                </li>
+                <li class="catalog__radio-item">
+                  <label class="catalog__radio-label">
+                    <input  class="catalog__radio-mark visually-hidden" type="radio" name="milk">
+                    <span class="catalog__control-mark" tabindex="0"></span>
+                    <span class="catalog__radio-name">Без молока</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog__checkbox">
+              <h3 class="catalog__checkbox-title">
+                Страна произрастания
+              </h3>
+              <ul class="catalog__checkbox-list">
+                <li class="catalog__checkbox-item">
+                  <label class="catalog__checkbox-label">
+                    <input class="catalog__checkbox-mark visually-hidden" type="checkbox" name="" disabled checked>
+                    <span class="catalog__control-mark-check" tabindex="0"></span>
+                    <span class="catalog__name">Бразилия</span>
+                  </label>
+                </li>
+                <li class="catalog__checkbox-item">
+                  <label class="catalog__checkbox-label">
+                    <input class="catalog__checkbox-mark visually-hidden" type="checkbox" name="">
+                    <span class="catalog__control-mark-check" tabindex="0"></span>
+                    <span class="catalog__name">Эфиопия</span>
+                  </label>
+                </li>
+                <li class="catalog__checkbox-item">
+                  <label class="catalog__checkbox-label">
+                    <input class="catalog__checkbox-mark visually-hidden" type="checkbox" name="">
+                    <span class="catalog__control-mark-check" tabindex="0"></span>
+                    <span class="catalog__name">Колумбия</span>
+                  </label>
+                </li>
+                <li class="catalog__checkbox-item">
+                  <label class="catalog__checkbox-label">
+                    <input class="catalog__checkbox-mark visually-hidden" type="checkbox" name="">
+                    <span class="catalog__control-mark-check" tabindex="0"></span>
+                    <span class="catalog__name">Коста-Рика</span>
+                  </label>
+                </li>
+                <li class="catalog__checkbox-item">
+                  <label class="catalog__checkbox-label">
+                    <input class="catalog__checkbox-mark visually-hidden" type="checkbox" name="">
+                    <span class="catalog__control-mark-check" tabindex="0"></span>
+                    <span class="catalog__name">Перу</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="catalog__filter-buttons">
+              <button class="catalog__confirm-button">
+                Применить фильтр
+              </button>
+              <button class="catalog__reset-button">
+                Сбросить фильтр
+              </button>
+            </div>
+        </div>
+          <div class="catalog__sort">
+            <h3 class="catalog__sort-title">
+              Сортировка:
+            </h3>
+            <select name="catalog__select" style="height: 32px; color: #7859CF; background: transparent; border: 0;font-family: 'Montserrat';">
+              <option class="catalog__select-item" value="default" selected>по умолчанию</option>
+              <option class="catalog__select-item" value="expensive" >сначала дорогие</option>
+              <option class="catalog__select-item" value="cheap">сначала дешёвые</option>
+              <option class="catalog__select-item" value="high-rating">высокий рейтинг</option>
+            </select>
+          </div>
+        </div>
+        <ul class="catalog__product-list">
+          <li class="catalog__product-item">
+            <a href="">
+              <picture>
+                <source media="(min-width: 320px)" srcset="./img/coffee-catalog-1.webp 1x, ./img/coffee-catalog-1@2x.webp 2x">
+                <img class="catalog__product" src="./img/coffee-catalog-1.png" srcset="./img/coffee-catalog-1@2x.png" alt="">
+              </picture>
+              <h3 class="catalog__product-title">
+                Декаф Флэт Уайт
+              </h3>
+            </a>
+            <p class="catalog__product-description">
+              Кофе без кофеина из Эфиопии <br>
+              с натуральным фермерским
+              молоком
+            </p>
+            <div class="catalog__product-buy">
+              <span class="catalog__product-cost">225₽</span>
+              <button class="catalog__product-button" type="button">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
+                </svg>
+                В корзину
+              </button>
+            </div>
+          </li>
+          <li class="catalog__product-item">
+            <a href="">
+              <picture>
+                <source media="(min-width: 320px)" srcset="./img/coffee-catalog-2.webp 1x, ./img/coffee-catalog-2@2x.webp 2x">
+                <img class="catalog__product" src="./img/coffee-catalog-2.png" srcset="./img/coffee-catalog-2@2x.png" alt="">
+              </picture>
+              <h3 class="catalog__product-title">
+                Декаф Флэт Уайт
+              </h3>
+            </a>
+            <p class="catalog__product-description">
+              Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским
+              молоком
+            </p>
+            <div class="catalog__product-buy">
+              <span class="catalog__product-cost">225₽</span>
+              <button class="catalog__product-button" type="button">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
+                </svg>
+                В корзину
+              </button>
+            </div>
+          </li>
+          <li class="catalog__product-item">
+            <a href="">
+              <picture>
+                <source media="(min-width: 320px)" srcset="./img/coffee-catalog-3.webp 1x, ./img/coffee-catalog-3@2x.webp 2x">
+                <img class="catalog__product" src="./img/coffee-catalog-3.png" srcset="./img/coffee-catalog-3@2x.png" alt="">
+              </picture>
+              <h3 class="catalog__product-title">
+                Декаф Флэт Уайт
+              </h3>
+            </a>
+            <p class="catalog__product-description">
+              Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским
+              молоком
+            </p>
+            <div class="catalog__product-buy">
+              <span class="catalog__product-cost">225₽</span>
+              <button class="catalog__product-button" type="button">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
+                </svg>
+                В корзину
+              </button>
+            </div>
+          </li>
+          <li class="catalog__product-item">
+            <a href="">
+              <picture>
+                <source media="(min-width: 320px)" srcset="./img/coffee-catalog-4.webp 1x, ./img/coffee-catalog-4@2x.webp 2x">
+                <img class="catalog__product" src="./img/coffee-catalog-4.png" srcset="./img/coffee-catalog-4@2x.png" alt="">
+              </picture>
+              <h3 class="catalog__product-title">
+                Декаф Флэт Уайт
+              </h3>
+            </a>
+            <p class="catalog__product-description">
+              Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским
+              молоком
+            </p>
+            <div class="catalog__product-buy">
+              <span class="catalog__product-cost">225₽</span>
+              <button class="catalog__product-button" type="button">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
+                </svg>
+                В корзину
+              </button>
+            </div>
+          </li>
+          <li class="catalog__product-item">
+            <a href="">
+              <picture>
+                <source media="(min-width: 320px)" srcset="./img/coffee-catalog-5.webp 1x, ./img/coffee-catalog-5@2x.webp 2x">
+                <img class="catalog__product" src="./img/coffee-catalog-5.png" srcset="./img/coffee-catalog-5@2x.png" alt="">
+              </picture>
+              <h3 class="catalog__product-title">
+                Декаф Флэт Уайт
+              </h3>
+            </a>
+            <p class="catalog__product-description">
+              Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским
+              молоком
+            </p>
+            <div class="catalog__product-buy">
+              <span class="catalog__product-cost">225₽</span>
+              <button class="catalog__product-button" type="button">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
+                </svg>
+                В корзину
+              </button>
+            </div>
+          </li>
+          <li class="catalog__product-item">
+            <a href="">
+              <picture>
+                <source media="(min-width: 320px)" srcset="./img/coffee-catalog-6.webp 1x, ./img/coffee-catalog-6@2x.webp 2x">
+                <img class="catalog__product" src="./img/coffee-catalog-6.png" srcset="./img/coffee-catalog-6@2x.png" alt="">
+              </picture>
+              <h3 class="catalog__product-title">
+                Декаф Флэт Уайт
+              </h3>
+            </a>
+            <p class="catalog__product-description">
+              Кофе без кофеина из Эфиопии<br>
+              с натуральным фермерским
+              молоком
+            </p>
+            <div class="catalog__product-buy">
+              <span class="catalog__product-cost">225₽</span>
+              <button class="catalog__product-button" type="button">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
+                </svg>
+                В корзину
+              </button>
+            </div>
+          </li>
+        </ul>
+        <div class="catalog__pagination">
+          <ul class="catalog__pagination-list">
+            <li class="catalog__pagination-item catalog__pagination-item--tablet">
+              <button class="catalog__button-prev">
+                <svg width="6" height="10" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.80847 -5.20835e-08L6 1.23899L2.38306 5L6 8.76101L4.80847 10L-2.18557e-07 5L4.80847 -5.20835e-08Z"/>
+                </svg>
+                <span>Назад</span>
+              </button>
+            </li>
+            <li class="catalog__pagination-item">
+              1
+            </li>
+            <li class="catalog__pagination-item catalog__pagination-item--current">
+              2
+            </li>
+            <li class="catalog__pagination-item">
+              3
+            </li>
+            <li class="catalog__pagination-item catalog__pagination-item--next">
+              <button class="catalog__button-next">
+                <svg width="6" height="10" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.19153 -5.20835e-08L5.41581e-08 1.23899L3.61694 5L3.82956e-07 8.76101L1.19153 10L6 5L1.19153 -5.20835e-08Z"/>
+                </svg>
+                <span>Вперёд</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="map" id="map">
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__socials">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/Logo-Drink2Go-desktop.svg">
+          <img class="footer__img" src="./img/Logo-Drink2Go-footer-mobile.png" alt="">
+        </picture>
+        <p>Интернет-магазин кофейных напитков</p>
+        <ul class="footer__socials-list">
+          <li class="footer__socials-item">
+            <a class="footer__socials-links" href="">
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.40589 1.40589C0 2.81177 0 5.0745 0 9.6V10.4C0 14.9255 0 17.1882 1.40589 18.5941C2.81177 20 5.0745 20 9.6 20H10.4C14.9255 20 17.1882 20 18.5941 18.5941C20 17.1882 20 14.9255 20 10.4V9.6C20 5.0745 20 2.81177 18.5941 1.40589C17.1882 0 14.9255 0 10.4 0H9.6C5.0745 0 2.81177 0 1.40589 1.40589ZM3.37505 6.08337C3.48338 11.2834 6.08337 14.4084 10.6417 14.4084H10.9001V11.4334C12.5751 11.6 13.8417 12.825 14.35 14.4084H16.7167C16.0667 12.0417 14.3583 10.7334 13.2916 10.2334C14.3583 9.61671 15.8583 8.11671 16.2166 6.08337H14.0666C13.5999 7.73337 12.2168 9.23337 10.9001 9.37504V6.08337H8.75V11.85C7.41667 11.5167 5.73338 9.90004 5.65837 6.08337H3.37505Z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a class="footer__socials-links" href="">
+              <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 8.96454e-05C4.92488 8.96454e-05 0 4.92497 0 11C0 15.6602 2.8994 19.644 6.99129 21.2467C6.89517 20.3764 6.80825 19.0379 7.02943 18.0878C7.22934 17.2293 8.31931 12.6201 8.31931 12.6201C8.31931 12.6201 7.99028 11.9612 7.99028 10.987C7.99028 9.45743 8.87682 8.31552 9.98068 8.31552C10.9192 8.31552 11.3724 9.0201 11.3724 9.86499C11.3724 10.8088 10.7716 12.2199 10.4615 13.5275C10.2023 14.6223 11.0105 15.5152 12.0904 15.5152C14.0454 15.5152 15.5483 13.4537 15.5483 10.4781C15.5483 7.84429 13.6558 6.00285 10.9535 6.00285C7.82365 6.00285 5.98653 8.35042 5.98653 10.7765C5.98653 11.7219 6.35073 12.7357 6.80518 13.2868C6.89508 13.3958 6.90824 13.4912 6.88146 13.6023C6.79797 13.9498 6.6124 14.6969 6.57597 14.8498C6.528 15.0512 6.41655 15.0939 6.20808 14.9969C4.83426 14.3574 3.9753 12.3488 3.9753 10.7355C3.9753 7.26559 6.49644 4.07891 11.2434 4.07891C15.0593 4.07891 18.0247 6.79806 18.0247 10.432C18.0247 14.223 15.6344 17.2739 12.3167 17.2739C11.202 17.2739 10.1542 16.6949 9.79547 16.0109C9.79547 16.0109 9.2439 18.1111 9.11018 18.6258C8.86186 19.5812 8.19145 20.7788 7.74303 21.5095C8.77223 21.8281 9.86598 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92497 17.0751 8.96454e-05 11 8.96454e-05Z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a class="footer__socials-links" href="">
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4C3.33786e-06 2.812 3.35195e-06 5.074 3.35195e-06 9.6V10.4L1.66545e-06 10.5136C-9.77702e-05 14.97 -0.00014782 17.2117 1.4 18.6C2.812 20 5.074 20 9.6 20H10.4H10.5131C14.9698 20.0001 17.2117 20.0001 18.6 18.6C20 17.188 20 14.926 20 10.4V9.6V9.48685C20.0001 5.03015 20.0001 2.7883 18.6 1.4C17.188 3.33786e-06 14.926 3.35195e-06 10.4 3.35195e-06H9.6L9.48639 1.66545e-06C5.03 -9.77702e-05 2.78825 -0.00014782 1.4 1.4ZM10.0194 10.1972C11.6876 10.1972 13.0477 8.83717 13.0477 7.16889C13.0477 5.50061 11.6876 4.14061 10.0194 4.14061C8.33296 4.14061 6.97295 5.50061 6.97295 7.16889C6.97295 8.83717 8.33296 10.1972 10.0194 10.1972ZM10.0194 5.91768C10.7084 5.91768 11.2706 6.47982 11.2706 7.16889C11.2706 7.85796 10.7084 8.4201 10.0194 8.4201C9.3303 8.4201 8.76816 7.85796 8.76816 7.16889C8.75003 6.47982 9.31216 5.91768 10.0194 5.91768ZM11.2343 12.6815C11.8509 12.5364 12.4493 12.3007 12.9933 11.9561C13.4103 11.7023 13.5372 11.1401 13.2653 10.7231C13.0114 10.306 12.4493 10.1791 12.0322 10.4511C10.7991 11.2308 9.18524 11.2308 7.95216 10.4511C7.53509 10.1972 6.99109 10.306 6.71909 10.7231C6.48336 11.1401 6.61029 11.6841 7.02736 11.938C7.57137 12.2825 8.16977 12.5183 8.7863 12.6634L7.0999 14.3498C6.75536 14.6943 6.75536 15.2565 7.0999 15.601C7.28123 15.7823 7.49883 15.8548 7.73456 15.8548C7.9703 15.8548 8.1879 15.7641 8.36923 15.601L10.0375 13.9327L11.7058 15.601C12.0503 15.9455 12.6124 15.9455 12.957 15.601C13.3015 15.2565 13.3015 14.6943 12.957 14.3498L11.2343 12.6815Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__shop">
+        <h3 class="footer__shop-title">
+          Интернет-магазин
+        </h3>
+        <ul class="footer__shop-list">
+          <li class="footer__shop-item">
+            <a href="">Каталог</a>
+          </li>
+          <li class="footer__shop-item">
+            <a href="">Доставка</a>
+          </li>
+          <li class="footer__shop-item">
+            <a href="">Способы оплаты</a>
+          </li>
+          <li class="footer__shop-item">
+            <a href="">О нас</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__media">
+        <h3 class="footer__media-title">
+          Медиа
+        </h3>
+        <ul class="footer__media-list">
+          <li class="footer__media-item">
+            <a href="">Блог</a>
+          </li>
+          <li class="footer__media-item">
+            <a href="">Информация для СМИ</a>
+          </li>
+          <li class="footer__media-item">
+            <a href="">Правовая информация</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h3 class="footer__contact-title">
+          Контакты
+        </h3>
+          <ul class="footer__addres-list">
+            <li class="footer__addres-item">
+              <svg width="16" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8 6.5C11.8 8.83027 10.4332 10.9174 8.8884 12.5109C8.13169 13.2915 7.37106 13.9131 6.79878 14.3393C6.6918 14.419 6.59177 14.4916 6.5 14.5569C6.40823 14.4916 6.3082 14.419 6.20122 14.3393C5.62894 13.9131 4.86831 13.2915 4.1116 12.5109C2.56678 10.9174 1.2 8.83027 1.2 6.5C1.2 3.57289 3.57289 1.2 6.5 1.2C9.42711 1.2 11.8 3.57289 11.8 6.5ZM13 6.5C13 12.0899 6.5 16 6.5 16C6.5 16 0 12.0899 0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5ZM8.8 6.5C8.8 7.77026 7.77026 8.8 6.5 8.8C5.22974 8.8 4.2 7.77026 4.2 6.5C4.2 5.22974 5.22974 4.2 6.5 4.2C7.77026 4.2 8.8 5.22974 8.8 6.5ZM10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5Z" fill="#7859CF"/>
+              </svg>
+              <p class="footer__addres-location">
+                Санкт-Петербург,<br> набережная реки <br class="footer__addres-br"> Карповки,дом 5
+              </p>
+            </li>
+            <li class="footer__addres-item">
+              <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.47771 1.49035C0.407036 2.09016 -0.173009 3.23613 0.0457595 4.31941L0.404071 6.09367C1.3302 9.21701 2.90461 11.863 5.22921 14.2029L6.63362 15.3911C7.49109 16.1166 8.80393 16.2022 9.8746 15.6024L12.1043 14.3533C12.9766 13.8646 13.2662 12.8186 12.7298 12.0941L10.7951 9.48096C10.2793 8.7842 9.20705 8.66949 8.42947 9.22787L7.05383 10.2157C5.82614 9.33632 5.0461 8.02537 4.87507 6.55403L6.44457 5.89198C7.33172 5.51776 7.76545 4.55939 7.4015 3.77755L6.03652 0.845267C5.65806 0.0322596 4.57968 -0.247395 3.7074 0.241264L1.47771 1.49035ZM1.2824 4.01819C1.16306 3.42725 1.47948 2.80211 2.06354 2.47492L4.29323 1.22582C4.5113 1.10366 4.78089 1.17357 4.87551 1.37683L6.24049 4.30911C6.33147 4.50457 6.22304 4.74416 6.00126 4.83771L3.57088 5.8629L3.58692 6.27871C3.66894 8.40504 4.79869 10.3037 6.65548 11.4358L7.01858 11.6572L9.14878 10.1275C9.34317 9.98792 9.61123 10.0166 9.74019 10.1908L11.6748 12.8039C11.8089 12.9851 11.7365 13.2466 11.5185 13.3687L9.28877 14.6178C8.70471 14.945 7.98854 14.8983 7.52079 14.5026L6.11637 13.3144C4.3893 11.6193 2.29008 8.09128 1.64071 5.79245L1.2824 4.01819Z" fill="#7859CF"/>
+              </svg>
+              <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </li>
+          </ul>
+      </div>
+      <div class="footer__comercial">
+        Разработано в
+        <a class="footer__comercial-link" href=""> HTML Academy
+          <svg width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.2151 5.75392L5.97184 2.49957V2.49875L5.97121 2.49916L5.97058 2.49875V2.49957L0.784854 5.75013V1.40658L6.00008 0.830884L11.2151 1.40658V5.75392ZM11.211 6.32987L9.12557 7.62344L5.98451 5.65607L5.97935 6.22863L8.66414 7.9096L8.20107 8.19683L5.98451 6.80853L5.97935 7.3811L7.72892 8.47648L7.31607 8.76717L7.30606 8.77351L5.98451 7.95383L5.97935 8.52631L6.8465 9.06404L5.96315 9.62244L0.796198 6.3886L5.97058 3.1139V3.11448L11.211 6.32987ZM11.2151 11.7713L6 15.0384L0.784854 11.7713V7.02542L5.97763 10.2796L5.98631 10.8693L2.42396 8.63702L2.41871 9.20959L5.99523 11.4728L6.00407 12.0782L2.42873 9.83883L2.42356 10.4113L6 12.6745L9.60624 10.4026V7.95712L11.2151 6.94552V11.7713ZM5.99984 -3.17891e-07L0 0.662267V12.2411L6 16L12 12.2411V0.662267L5.99984 -3.17891e-07Z"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/script.js" defer></script>
+    <!-- <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+      const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      });
+    </script> -->
   </body>
 </html>

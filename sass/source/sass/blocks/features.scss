@@ -1,0 +1,277 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  width: 320px;
+}
+
+.features__title {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7859cf;
+  margin: 0;
+}
+
+.features__heading {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #333333;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 34px;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  gap: 32px;
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  svg {
+    padding: 0 114px;
+    padding-bottom: 13px;
+  }
+}
+
+.features__title-item {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: #333333;
+  margin: 0;
+}
+
+
+.features__description {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #333333;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .features {
+    padding-top: 60px;
+    width: 768px;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    padding-left: 20px;
+  }
+
+  .features__heading {
+    font-size: 42px;
+    line-height: 64px;
+    padding-bottom: 60px;
+  }
+
+  .features__item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 45px 1fr;
+    text-align: start;
+
+
+    & .features__eco {
+      display: block;
+      padding: 0;
+      padding-top: 20px;
+      padding-left: 2px;
+    }
+
+    & .features__stamina {
+      display: block;
+      padding: 0;
+      padding-top: 18px;
+      padding-left: 16px;
+    }
+
+    & .features__comfort {
+      display: block;
+      padding: 0;
+    }
+
+    & .features__speed {
+      display: block;
+      padding: 0;
+      padding-top: 3px;
+      padding-left: 11px;
+    }
+  }
+
+  .features__description {
+    grid-column: 2/3;
+    text-align: start;
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .features__title-item {
+    text-align: start;
+    margin: 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .features__title-item--eco {
+    padding-left: 23px;
+    padding-top: 18px;
+  }
+
+  .features__description--eco {
+    padding-left: 24px;
+    padding-top: 20px;
+  }
+
+  .features__title-item--comfort {
+    padding-left: 20px;
+  }
+
+  .features__description--comfort {
+    padding-left: 20px;
+    padding-top: 1px;
+  }
+
+  .features__title-item--speed {
+    padding-left: 23px;
+    padding-top: 0;
+  }
+
+  .features__description--speed {
+    padding-left: 22px;
+    padding-top: 1px;
+  }
+
+  .features__title-item--stamina {
+    padding-left: 24px;
+    padding-top: 18px;
+  }
+
+  .features__description--stamina {
+    padding-left: 24px;
+    padding-top: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .features {
+    padding: 100px 40px 90px;
+    width: 1440px;
+  }
+
+  .features__heading {
+    padding-bottom: 80px;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: 317px 317px 317px 317px;
+    gap: 30px;
+    padding: 0;
+
+    & .features__eco {
+      display: block;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    & .features__stamina {
+      display: block;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    & .features__comfort {
+      display: block;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    & .features__speed {
+      display: block;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .features__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    & .features__description {
+      text-align: center;
+    }
+
+    & br {
+      display: none;
+    }
+  }
+
+  .features__title-item--eco {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .features__description--eco {
+    padding: 0;
+  }
+
+  .features__title-item--comfort {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .features__description--comfort {
+    padding: 0;
+  }
+
+  .features__title-item--speed {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .features__description--speed {
+    padding: 0;
+  }
+
+  .features__title-item--stamina {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .features__description--stamina {
+    padding: 0;
+  }
+}
