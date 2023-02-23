@@ -328,16 +328,16 @@
   border-radius: 50%;
 }
 
-.catalog__milk-input:disabled + .catalog__milk-radio::before {
+.catalog__milk-input:disabled+.catalog__milk-radio::before {
   background-color: $background-grey;
   border: 2px solid $light-grey;
 }
 
-.catalog__milk-input:disabled + .catalog__milk-radio {
+.catalog__milk-input:disabled+.catalog__milk-radio {
   color: $base-grey;
 }
 
-.catalog__milk-input:checked + .catalog__milk-radio::after {
+.catalog__milk-input:checked+.catalog__milk-radio::after {
   position: absolute;
   content: "";
   width: 16px;
@@ -350,8 +350,8 @@
   outline-offset: 2px;
 }
 
-.catalog__milk-input:disabled + .catalog__milk-radio:hover::after,
-.catalog__milk-input:disabled + .catalog__milk-radio:focus::after {
+.catalog__milk-input:disabled+.catalog__milk-radio:hover::after,
+.catalog__milk-input:disabled+.catalog__milk-radio:focus::after {
   position: absolute;
   content: "";
   width: 16px;
@@ -362,7 +362,7 @@
   border-radius: 50%;
 }
 
-.catalog__milk-input:checked:disabled + .catalog__milk-radio::after {
+.catalog__milk-input:checked:disabled+.catalog__milk-radio::after {
   background-color: $light-grey;
   outline: 2px solid $light-grey;
 }
@@ -411,32 +411,32 @@
   transform: translateX(0);
 }
 
-.catalog__origin-input:checked + .catalog__origin-check::after {
+.catalog__origin-input:checked+.catalog__origin-check::after {
   transform: translateX(calc(100% - 2px));
 }
 
-.catalog__origin-input:checked + .catalog__origin-check::before {
+.catalog__origin-input:checked+.catalog__origin-check::before {
   background-color: $base-purple;
 }
 
-.catalog__origin-input:disabled + .catalog__origin-check::before {
+.catalog__origin-input:disabled+.catalog__origin-check::before {
   background-color: $light-grey;
 }
 
-.catalog__origin-input:disabled + .catalog__origin-check::after {
+.catalog__origin-input:disabled+.catalog__origin-check::after {
   background-color: $background-grey;
 }
 
-.catalog__origin-input:disabled + .catalog__origin-check {
+.catalog__origin-input:disabled+.catalog__origin-check {
   color: $base-grey;
 }
 
-.catalog__origin-input:disabled + .catalog__origin-check:hover::before,
-.catalog__origin-input:disabled + .catalog__origin-check:focus::before {
+.catalog__origin-input:disabled+.catalog__origin-check:hover::before,
+.catalog__origin-input:disabled+.catalog__origin-check:focus::before {
   border: 2px solid $light-grey;
 }
 
-.catalog__origin-input:checked:disabled + .catalog__origin-check::after {
+.catalog__origin-input:checked:disabled+.catalog__origin-check::after {
   background-color: $base-grey;
 }
 

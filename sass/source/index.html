@@ -5,6 +5,7 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -14,35 +15,35 @@
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper">
-        <div class="header-logo">
-          <a class="header-logo__link" href="#">
+        <div class="header__logo">
+          <a class="header__logo-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/d2g-logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/d2g-logo-tablet.svg">
-              <img class="header-logo__svg" src="img/d2g-logo-mobile.svg" alt="Drink2Go лого">
+              <img class="header__logo-svg" src="img/d2g-logo-mobile.svg" alt="Drink2Go логотип">
             </picture>
           </a>
           <span class="header__info">Интернет-магазин кофейных напитков</span>
         </div>
-        <nav class="header-nav user-nav">
+        <nav class="header__user-nav user-nav">
           <ul class="user-nav__list">
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <svg width="16" height="16" aria-label="Пользователь">
+                <svg width="16" height="16" aria-label="Пользователь.">
                   <use href="img/icons/stack.svg#user-icon"></use>
                 </svg>
                 <span class="user-nav__name">Войти</span></a>
             </li>
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <svg width="16" height="16" aria-label="Корзина">
+                <svg width="16" height="16" aria-label="Корзина.">
                   <use href="img/icons/stack.svg#cart-icon"></use>
                 </svg>
                 <span class="user-nav__name">Корзина</span></a>
             </li>
           </ul>
         </nav>
-        <nav class="header-nav menu-nav menu-nav--closed menu-nav--nojs">
+        <nav class="header__menu-nav menu-nav menu-nav--closed menu-nav--nojs">
           <button class="menu-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="menu-nav__list">
             <li class="menu-nav__item menu-nav__item--main">
@@ -167,7 +168,7 @@
           <div class="advantages__bottom">
             <ul class="advantages__list">
               <li class="advantages__item">
-                <svg width="52" height="56" aria-label="Скорость">
+                <svg width="52" height="56" aria-label="Скорость.">
                   <use href="img/icons/stack.svg#speed-icon"></use>
                 </svg>
                 <div class="advantages__description">
@@ -176,7 +177,7 @@
                 </div>
               </li>
               <li class="advantages__item">
-                <svg width="52" height="56" aria-label="Удобство">
+                <svg width="52" height="56" aria-label="Удобство.">
                   <use href="img/icons/stack.svg#comfort-icon"></use>
                 </svg>
                 <div class="advantages__description">
@@ -186,7 +187,7 @@
                 </div>
               </li>
               <li class="advantages__item">
-                <svg width="52" height="56" aria-label="Бодрость">
+                <svg width="52" height="56" aria-label="Бодрость.">
                   <use href="img/icons/stack.svg#energy-icon"></use>
                 </svg>
                 <div class="advantages__description">
@@ -195,7 +196,7 @@
                 </div>
               </li>
               <li class="advantages__item">
-                <svg width="52" height="56" aria-label="Экологичность">
+                <svg width="52" height="56" aria-label="Экологичность.">
                   <use href="img/icons/stack.svg#ecology-icon"></use>
                 </svg>
                 <div class="advantages__description">
@@ -279,7 +280,7 @@
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-1.webp 1x, img/coffee-can-1@2x.webp 2x">
-                        <img class="container__image" src="img/coffee-can-1.png" srcset="img/coffee-can-1@2x.png 2x" alt="белая банка">
+                        <img class="container__image" src="img/coffee-can-1.png" srcset="img/coffee-can-1@2x.png 2x" alt="Белая банка">
                       </picture>
                     </a>
                     <div class="container__description">
@@ -290,7 +291,7 @@
                     <div class="container__product-order">
                       <span class="container__product-price">225&#8381;</span>
                       <a class="container__product-add" href="#">
-                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину.">
                           <use href="img/icons/stack.svg#cart-plus-icon"></use>
                         </svg>
                         <span class="container__add-to-cart">В корзину</span>
@@ -301,7 +302,7 @@
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-2.webp 1x, img/coffee-can-2@2x.webp 2x">
-                        <img class="container__image" src="img/coffee-can-2.png" srcset="img/coffee-can-2@2x.png 2x" alt="фиолет банка">
+                        <img class="container__image" src="img/coffee-can-2.png" srcset="img/coffee-can-2@2x.png 2x" alt="Фиолетовая банка">
                       </picture>
                     </a>
                     <div class="container__description">
@@ -312,7 +313,7 @@
                     <div class="container__product-order">
                       <span class="container__product-price">225&#8381;</span>
                       <a class="container__product-add" href="#">
-                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину.">
                           <use href="img/icons/stack.svg#cart-plus-icon"></use>
                         </svg>
                         <span class="container__add-to-cart">В корзину</span>
@@ -323,7 +324,7 @@
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-3.webp 1x, img/coffee-can-3@2x.webp 2x">
-                        <img class="container__image" src="img/coffee-can-3.png" srcset="img/coffee-can-3@2x.png 2x" alt="черная банка">
+                        <img class="container__image" src="img/coffee-can-3.png" srcset="img/coffee-can-3@2x.png 2x" alt="Черная банка">
                       </picture>
                     </a>
                     <div class="container__description">
@@ -334,7 +335,7 @@
                     <div class="container__product-order">
                       <span class="container__product-price">225&#8381;</span>
                       <a class="container__product-add" href="#">
-                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину.">
                           <use href="img/icons/stack.svg#cart-plus-icon"></use>
                         </svg>
                         <span class="container__add-to-cart">В корзину</span>
@@ -345,7 +346,7 @@
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-4.webp 1x, img/coffee-can-4@2x.webp 2x">
-                        <img class="container__image" src="img/coffee-can-4.png" srcset="img/coffee-can-4@2x.png 2x" alt="розовая банка">
+                        <img class="container__image" src="img/coffee-can-4.png" srcset="img/coffee-can-4@2x.png 2x" alt="Розовая банка">
                       </picture>
                     </a>
                     <div class="container__description">
@@ -356,7 +357,7 @@
                     <div class="container__product-order">
                       <span class="container__product-price">225&#8381;</span>
                       <a class="container__product-add" href="#">
-                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину.">
                           <use href="img/icons/stack.svg#cart-plus-icon"></use>
                         </svg>
                         <span class="container__add-to-cart">В корзину</span>
@@ -367,7 +368,7 @@
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-5.webp 1x, img/coffee-can-5@2x.webp 2x">
-                        <img class="container__image" src="img/coffee-can-5.png" srcset="img/coffee-can-5@2x.png 2x" alt="коричневая банка">
+                        <img class="container__image" src="img/coffee-can-5.png" srcset="img/coffee-can-5@2x.png 2x" alt="Коричневая банка">
                       </picture>
                     </a>
                     <div class="container__description">
@@ -378,7 +379,7 @@
                     <div class="container__product-order">
                       <span class="container__product-price">225&#8381;</span>
                       <a class="container__product-add" href="#">
-                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину.">
                           <use href="img/icons/stack.svg#cart-plus-icon"></use>
                         </svg>
                         <span class="container__add-to-cart">В корзину</span>
@@ -389,7 +390,7 @@
                     <a class="container__image-link" href="#">
                       <picture>
                         <source type="image/webp" srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x">
-                        <img class="container__image" src="img/coffee-can-6.png" srcset="img/coffee-can-6@2x.png 2x" alt="ваниловая банка">
+                        <img class="container__image" src="img/coffee-can-6.png" srcset="img/coffee-can-6@2x.png 2x" alt="Ваниловая банка">
                       </picture>
                     </a>
                     <div class="container__description">
@@ -400,7 +401,7 @@
                     <div class="container__product-order">
                       <span class="container__product-price">225&#8381;</span>
                       <a class="container__product-add" href="#">
-                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину">
+                        <svg class="container__product-svg" width="16" height="16" aria-label="Добавить в корзину.">
                           <use href="img/icons/stack.svg#cart-plus-icon"></use>
                         </svg>
                         <span class="container__add-to-cart">В корзину</span>
@@ -415,7 +416,7 @@
                     <a class="pagination__button pagination__prev-button" href="#"><span class="pagination__button-name">Назад</span></a>
                   </li>
                   <li class="pagination__item">
-                    <a class="pagination__button" href="#" disabled>1</a>
+                    <a class="pagination__button" href="#">1</a>
                   </li>
                   <li class="pagination__item">
                     <a class="pagination__button pagination__button--current" href="#">2</a>
@@ -433,7 +434,8 @@
         </div>
       </section>
       <section class="map">
-        <h2 class="visually-hidden">Карта Drink2Go</h2>
+        <h2 class="visually-hidden">Карта</h2>
+        <div class="map__location map__nojs" id="map"></div>
       </section>
     </main>
     <footer class="footer">
@@ -442,27 +444,27 @@
         <div class="footer__top-wrapper">
           <picture>
             <source media="(min-width: 768px)" srcset="img/d2g-logo-desktop.svg">
-            <img class="footer__logo-svg" src="img/d2g-logo-tablet.svg" alt="Drink2Go лого">
+            <img class="footer__logo-svg" src="img/d2g-logo-tablet.svg" alt="Drink2Go логотип">
           </picture>
           <span class="footer__info">Интернет-магазин кофейных напитков</span>
           <ul class="footer__socials-list">
             <li class="footer__socials-item">
               <a class="footer__socials-link">
-                <svg class="footer__socials-svg" width="20" height="20" aria-label="VK">
+                <svg class="footer__socials-svg" width="20" height="20" aria-label="Вконтакте.">
                   <use href="img/icons/stack.svg#vk-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a class="footer__socials-link">
-                <svg class="footer__socials-svg" width="22" height="22" aria-label="Pinterest">
+                <svg class="footer__socials-svg" width="22" height="22" aria-label="Pinterest.">
                   <use href="img/icons/stack.svg#pinterest-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
               <a class="footer__socials-link">
-                <svg class="footer__socials-svg" width="20" height="20" aria-label="OK">
+                <svg class="footer__socials-svg" width="20" height="20" aria-label="Однокласники.">
                   <use href="img/icons/stack.svg#ok-icon"></use>
                 </svg>
               </a>
@@ -510,13 +512,13 @@
           <div class="footer__contacts-wrapper">
             <h2 class="footer__title">Контакты</h2>
             <div class="footer__address">
-              <svg class="footer__address-svg" width="13" height="16" aria-label="Адрес">
+              <svg class="footer__address-svg" width="13" height="16" aria-label="Адрес.">
                 <use href="img/icons/stack.svg#address-icon"></use>
               </svg>
               <p class="footer__address-name">Санкт-Петербург, набережная реки Карповки, дом 5</p>
             </div>
             <div class="footer__phone">
-              <svg class="footer__phone-svg" width="13" height="16" aria-label="Телефон">
+              <svg class="footer__phone-svg" width="13" height="16" aria-label="Телефон.">
                 <use href="img/icons/stack.svg#phone-icon"></use>
               </svg>
               <a class="footer__phone-number" href="tel:+79999999999">+7 (999) 999-99-99</a>
@@ -527,7 +529,7 @@
       <div class="footer__html-academy">
         <a class="footer__html-academy-link" href="https://htmlacademy.ru/intensive/adaptive">
           <span>Разработанно в HTML Academy</span>
-          <svg class="footer__html-svg" width="12" height="16" aria-label="HTML Academy">
+          <svg class="footer__html-svg" width="12" height="16" aria-label="HTML Academy.">
             <use href="img/icons/stack.svg#html-academy-icon"></use>
           </svg>
         </a>
@@ -535,6 +537,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
