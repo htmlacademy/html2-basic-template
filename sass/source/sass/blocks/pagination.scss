@@ -8,12 +8,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 44px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     justify-content: end;
     gap: 20px;
     padding-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 120px;
   }
 }
 

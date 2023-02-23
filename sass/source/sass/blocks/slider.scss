@@ -24,11 +24,11 @@
   @media (min-width: $tablet-width) {
     content: "";
     position: absolute;
-    height: 188px;
+    height: 190px;
     background-color: $white;
     left: 0;
     right: 0;
-    bottom: -1px;
+    bottom: 0;
     background-position: bottom;
     display: block;
     z-index: -1;
@@ -49,15 +49,16 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 60px;
+    padding-top: 53px;
     padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1260px;
+    width: 1255px;
     flex-direction: row;
     padding-top: 30px;
-    padding-bottom: 84px;
+    padding-bottom: 77px;
+    padding-left: 25px;
   }
 }
 
@@ -77,13 +78,13 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    width: 600px;
+    width: 608px;
     order: -1;
   }
 
   @media (min-width: $desktop-width) {
     width: 625px;
-    padding-top: 150px;
+    padding-top: 143px;
     margin-left: 30px;
     text-align: start;
     order: 1;
@@ -110,6 +111,11 @@
   @media (min-width: $tablet-width) {
     font-size: $font-size-tablet;
     line-height: $line-height-tablet;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 3px;
   }
 }
 

@@ -8,11 +8,11 @@
   margin: 0;
   display: block;
   box-sizing: border-box;
-  margin-bottom: 60px;
+  margin-bottom: 63px;
 
   @media (min-width: $tablet-width) {
     min-width: 768px;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
@@ -51,7 +51,11 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 60px;
+    padding-top: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
   }
 }
 
@@ -59,7 +63,7 @@
   font-size: $font-size-normal;
   line-height: $line-height-big;
   font-weight: $font-weight-bold;
-  padding-top: 4px;
+  padding-top: 6px;
   margin: 0;
   margin-bottom: 4px;
 
@@ -68,11 +72,19 @@
     line-height: $line-height-huge;
     margin-bottom: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 78px;
+  }
 }
 
 .advantages__bottom {
   @media (min-width: $tablet-width) {
     padding: 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -127,12 +139,14 @@
   line-height: $line-height-tall;
   font-weight: $font-weight-bold;
   margin: 0;
+  padding-top: 5px;
   margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     font-size: $font-size-normal;
     line-height: $line-height-big;
     text-align: start;
+    padding-top: 0;
     margin-bottom: 10px;
   }
 

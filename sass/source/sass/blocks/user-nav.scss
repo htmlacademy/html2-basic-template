@@ -6,7 +6,7 @@
   top: -6px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 55px;
+    margin-left: 65px;
     top: 0;
     order: 2;
   }
@@ -23,10 +23,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
 }
 
 .user-nav__link {
-  padding: 21px;
+  padding: 22px;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
@@ -37,7 +41,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 2px;
   }
 }
 

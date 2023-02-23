@@ -89,6 +89,10 @@
     width: 100%;
     border: none;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
 }
 
 .menu-nav__link {

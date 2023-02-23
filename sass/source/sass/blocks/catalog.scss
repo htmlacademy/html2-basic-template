@@ -40,6 +40,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 80px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
 }
 
 .catalog__subtitle {
@@ -97,7 +101,7 @@
 }
 
 .catalog__form-price {
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -112,7 +116,26 @@
   font-size: $font-size-mini;
   line-height: $line-height-normal;
   font-weight: $font-weight-semibold;
-  padding-bottom: 22px;
+}
+
+.catalog__title-price {
+  padding-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 30px;
+  }
+}
+
+.catalog__title-milk {
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 21px;
+  }
+}
+
+.catalog__title-origin {
+  padding-bottom: 18px;
 }
 
 .catalog__form-range {
@@ -129,11 +152,12 @@
   position: relative;
   width: 280px;
   height: 2px;
-  margin-bottom: 25px;
+  margin-bottom: 36px;
   background-color: $light-grey;
 
   @media (min-width: $tablet-width) {
     width: 219px;
+    margin-bottom: 33px;
   }
 
   @media (min-width: $desktop-width) {
@@ -205,10 +229,14 @@
 }
 
 .catalog__button-toggle-max {
-  right: -11px;
+  right: -5px;
 
   @media (min-width: $tablet-width) {
     right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -11px;
   }
 }
 
@@ -241,11 +269,13 @@
   padding: 7px 10px;
 
   @media (min-width: $tablet-width) {
-    width: 88px;
+    width: 90px;
+    padding: 6px 11px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 114px;
+    width: 134px;
+    padding: 7px 10px;
   }
 }
 
@@ -258,18 +288,18 @@
 .catalog__range-input-dash::after {
   position: absolute;
   content: "";
-  width: 7px;
+  width: 9px;
   height: 2px;
   background-color: $base-grey;
   top: 20px;
-  left: 138px;
+  left: 135px;
 
   @media (min-width: $tablet-width) {
     left: 105px;
   }
 
   @media (min-width: $desktop-width) {
-    left: 160px;
+    left: 155px;
   }
 }
 
@@ -282,6 +312,7 @@
   @media (min-width: $desktop-width) {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 9px;
   }
 }
 
@@ -290,13 +321,17 @@
   font-size: $font-size-mini;
   line-height: $line-height-normal;
   font-weight: $font-weight-regular;
-  margin-bottom: 22px;
   position: relative;
   cursor: pointer;
 }
 
 .catalog__milk-radio {
   padding-left: 34px;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .catalog__milk-radio::before {
@@ -328,16 +363,16 @@
   border-radius: 50%;
 }
 
-.catalog__milk-input:disabled+.catalog__milk-radio::before {
+.catalog__milk-input:disabled + .catalog__milk-radio::before {
   background-color: $background-grey;
   border: 2px solid $light-grey;
 }
 
-.catalog__milk-input:disabled+.catalog__milk-radio {
+.catalog__milk-input:disabled + .catalog__milk-radio {
   color: $base-grey;
 }
 
-.catalog__milk-input:checked+.catalog__milk-radio::after {
+.catalog__milk-input:checked + .catalog__milk-radio::after {
   position: absolute;
   content: "";
   width: 16px;
@@ -350,8 +385,8 @@
   outline-offset: 2px;
 }
 
-.catalog__milk-input:disabled+.catalog__milk-radio:hover::after,
-.catalog__milk-input:disabled+.catalog__milk-radio:focus::after {
+.catalog__milk-input:disabled + .catalog__milk-radio:hover::after,
+.catalog__milk-input:disabled + .catalog__milk-radio:focus::after {
   position: absolute;
   content: "";
   width: 16px;
@@ -362,14 +397,24 @@
   border-radius: 50%;
 }
 
-.catalog__milk-input:checked:disabled+.catalog__milk-radio::after {
+.catalog__milk-input:checked:disabled + .catalog__milk-radio::after {
   background-color: $light-grey;
   outline: 2px solid $light-grey;
 }
 
 .catalog__form-origin {
+  margin-bottom: 14px;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+  }
+}
+
+.catalog__origin-check {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 21px;
   }
 }
 
@@ -387,6 +432,10 @@
   outline: none;
   cursor: pointer;
   appearance: none;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
 }
 
 .catalog__origin-check:hover::before,
@@ -411,32 +460,32 @@
   transform: translateX(0);
 }
 
-.catalog__origin-input:checked+.catalog__origin-check::after {
+.catalog__origin-input:checked + .catalog__origin-check::after {
   transform: translateX(calc(100% - 2px));
 }
 
-.catalog__origin-input:checked+.catalog__origin-check::before {
+.catalog__origin-input:checked + .catalog__origin-check::before {
   background-color: $base-purple;
 }
 
-.catalog__origin-input:disabled+.catalog__origin-check::before {
+.catalog__origin-input:disabled + .catalog__origin-check::before {
   background-color: $light-grey;
 }
 
-.catalog__origin-input:disabled+.catalog__origin-check::after {
+.catalog__origin-input:disabled + .catalog__origin-check::after {
   background-color: $background-grey;
 }
 
-.catalog__origin-input:disabled+.catalog__origin-check {
+.catalog__origin-input:disabled + .catalog__origin-check {
   color: $base-grey;
 }
 
-.catalog__origin-input:disabled+.catalog__origin-check:hover::before,
-.catalog__origin-input:disabled+.catalog__origin-check:focus::before {
+.catalog__origin-input:disabled + .catalog__origin-check:hover::before,
+.catalog__origin-input:disabled + .catalog__origin-check:focus::before {
   border: 2px solid $light-grey;
 }
 
-.catalog__origin-input:checked:disabled+.catalog__origin-check::after {
+.catalog__origin-input:checked:disabled + .catalog__origin-check::after {
   background-color: $base-grey;
 }
 
@@ -450,7 +499,8 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     gap: 30px;
-    margin-left: 160px;
+    margin-left: 180px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: $desktop-width) {
@@ -472,10 +522,12 @@
   text-decoration: none;
   width: 160px;
   padding: 11px 0;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
+    width: 147px;
+    padding: 8px 0;
     margin-bottom: 0;
   }
 
@@ -511,6 +563,11 @@
   width: 160px;
   padding: 11px 0;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 138px;
+    padding: 9px 0;
+  }
 
   @media (min-width: $desktop-width) {
     width: 150px;
