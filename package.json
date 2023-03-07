@@ -10,25 +10,24 @@
     "gulp": "4.0.2",
     "gulp-html-bemlinter": "2.1.2",
     "gulp-if": "3.0.0",
+    "gulp-less": "5.0.0",
     "gulp-libsquoosh": "1.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
-    "gulp-sass": "5.1.0",
     "gulp-stacksvg": "1.0.6",
     "gulp-svgmin": "4.1.0",
     "gulp-terser": "2.1.0",
     "gulp-w3c-html-validator": "5.1.3",
     "postcss": "8.4.19",
     "postcss-csso": "6.0.1",
-    "postcss-scss": "4.0.5",
+    "postcss-less": "6.0.0",
     "postcss-url": "10.1.3",
-    "sass": "1.56.1",
     "stylelint": "14.15.0",
     "stylelint-config-htmlacademy": "1.1.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
+    "stylelint": "stylelint \\\"source/less/**/*.less\\\" --custom-syntax postcss-less",
     "w3c": "gulp validateMarkup --silent",
     "bemlinter": "gulp lintBem --silent",
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
@@ -48,7 +47,7 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/sass/**/*.scss"
+    "source/less/**/*.less"
   ],
   "engines": {
     "node": ">=16.13.0"
