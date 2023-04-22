@@ -51,8 +51,8 @@
     "source/img/**/*.svg",
     "source/sass/**/*.scss"
   ],
-  "engines": {
-    "node": ">=16.13.0"
-  },
-  "type": "module"
+  "type": "module",
+  "volta": {
+    "node": "18.16.0"
+  }
 }
