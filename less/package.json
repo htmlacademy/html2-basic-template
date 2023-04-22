@@ -8,12 +8,12 @@
     "browser-sync": "2.27.10",
     "del": "7.0.0",
     "gulp": "4.0.2",
+    "gulp-cache": "1.1.3",
     "gulp-html-bemlinter": "2.1.2",
-    "gulp-if": "3.0.0",
     "gulp-less": "5.0.0",
-    "gulp-libsquoosh": "1.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
+    "gulp-sharp-responsive": "0.4.0",
     "gulp-stacksvg": "1.0.6",
     "gulp-svgmin": "4.1.0",
     "gulp-terser": "2.1.0",
@@ -33,7 +33,8 @@
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
     "start": "gulp runDev",
     "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer"
+    "preview": "gulp buildProd && gulp startServer",
+    "cache:clear": "gulp clearCache"
   },
   "browserslist": [
     "last 2 versions",
@@ -49,8 +50,8 @@
     "source/img/**/*.svg",
     "source/less/**/*.less"
   ],
-  "engines": {
-    "node": ">=16.13.0"
-  },
-  "type": "module"
+  "type": "module",
+  "volta": {
+    "node": "18.16.0"
+  }
 }

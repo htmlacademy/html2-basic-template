@@ -1,19 +1,19 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
-import gulpIf from 'gulp-if';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import terser from 'gulp-terser';
-import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from "gulp-stacksvg";
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
+import cache from "gulp-cache";
+import { optimizeImages } from './tasks/images.mjs';
 
 let isDevelopment = true;
 
@@ -51,20 +51,6 @@ export function processScripts () {
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
-}
-
-export function optimizeImages () {
-  return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(gulpIf(!isDevelopment, squoosh()))
-    .pipe(gulp.dest('build/img'))
-}
-
-export function createWebp () {
-  return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(squoosh({
-      webp: {}
-    }))
-    .pipe(gulp.dest('build/img'))
 }
 
 export function optimizeVector () {
@@ -122,8 +108,7 @@ function compileProject (done) {
     optimizeVector,
     createStack,
     copyAssets,
-    optimizeImages,
-    createWebp
+    optimizeImages
   )(done);
 }
 
@@ -147,3 +132,5 @@ export function runDev (done) {
     watchFiles
   )(done);
 }
+
+export const clearCache = cache.clearAll;
