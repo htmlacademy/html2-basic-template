@@ -80,7 +80,7 @@ function watchFiles () {
   watchSVG();
 }
 
-const compileProject= gulp.series(gulp.parallel(
+const compileProject = gulp.series(gulp.parallel(
   processMarkup,
   processStyles,
   processScripts,
