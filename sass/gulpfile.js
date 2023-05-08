@@ -7,14 +7,13 @@ import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import terser from 'gulp-terser';
-import svgo from 'gulp-svgmin';
-import { stacksvg } from "gulp-stacksvg";
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
-import cache from "gulp-cache";
-import { optimizeImages } from './tasks/images.mjs';
+import { optimizeImages, watchImages } from './tasks/images.mjs';
+import { copyAssets, watchAssets } from './tasks/assets.mjs';
+import { createStack, optimizeVector, watchSVG } from './tasks/vectors.mjs';
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
@@ -55,30 +54,6 @@ export function processScripts () {
     .pipe(browser.stream());
 }
 
-export function optimizeVector () {
-  return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
-    .pipe(svgo())
-    .pipe(gulp.dest('build/img'));
-}
-
-export function createStack () {
-  return gulp.src('source/img/icons/**/*.svg')
-    .pipe(svgo())
-    .pipe(stacksvg())
-    .pipe(gulp.dest('build/img/icons'));
-}
-
-export function copyAssets () {
-  return gulp.src([
-    'source/fonts/**/*.{woff2,woff}',
-    'source/*.ico',
-    'source/*.webmanifest',
-  ], {
-    base: 'source'
-  })
-    .pipe(gulp.dest('build'));
-}
-
 export function startServer (done) {
   browser.init({
     server: {
@@ -100,19 +75,20 @@ function watchFiles () {
   gulp.watch('source/sass/**/*.scss', gulp.series(processStyles));
   gulp.watch('source/js/script.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
+  watchImages();
+  watchAssets();
+  watchSVG();
 }
 
-function compileProject (done) {
-  gulp.parallel(
-    processMarkup,
-    processStyles,
-    processScripts,
-    optimizeVector,
-    createStack,
-    copyAssets,
-    optimizeImages
-  )(done);
-}
+const compileProject= gulp.series(gulp.parallel(
+  processMarkup,
+  processStyles,
+  processScripts,
+  optimizeVector,
+  createStack,
+  optimizeImages
+), copyAssets)
+
 
 function deleteBuild () {
   return deleteAsync('build');
@@ -134,5 +110,3 @@ export function runDev (done) {
     watchFiles
   )(done);
 }
-
-export const clearCache = cache.clearAll;

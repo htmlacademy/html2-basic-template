@@ -8,7 +8,6 @@
     "browser-sync": "2.27.10",
     "del": "7.0.0",
     "gulp": "4.0.2",
-    "gulp-cache": "1.1.3",
     "gulp-html-bemlinter": "2.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
@@ -34,8 +33,7 @@
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
     "start": "gulp runDev",
     "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer",
-    "cache:clear": "gulp clearCache"
+    "preview": "gulp buildProd && gulp startServer"
   },
   "browserslist": [
     "last 2 versions",

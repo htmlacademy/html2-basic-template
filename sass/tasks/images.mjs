@@ -1,9 +1,11 @@
 import gulp from "gulp";
 import sharpResponsive from "gulp-sharp-responsive";
-import cache from "gulp-cache";
 
+const IMAGE_PATH = ".raw/**/*.{png,jpg}";
+/** Значение `undefined` не меняет расширение входной картинки */
+const TARGET_FORMATS = [undefined, "avif", "webp"]
 /**
- * @typedef {({width: number}) => number} ResizeFn
+ * @typedef {(imageInfo: {width: number}) => number} ResizeFn функция для получение новой ширины картинки
  * @type {ResizeFn[]} **/
 const RE_SIZERS = [({ width }) => width, ({ width }) => Math.ceil(width / 2)];
 const RENAME_OPTIONS = { suffix: "@2x" };
@@ -12,7 +14,7 @@ const OPTIONS = createOptionsFormat();
 function createOptionsFormat() {
   const formats = [];
 
-  for (const format of [undefined, "avif", "webp"]) {
+  for (const format of TARGET_FORMATS) {
     formats.push(
       {
         width: RE_SIZERS[0],
@@ -26,9 +28,11 @@ function createOptionsFormat() {
   return { formats };
 }
 
-export function optimizeImages() {
-  return gulp
-    .src("source/img/**/*.{png,jpg}")
-    .pipe(cache(sharpResponsive(OPTIONS)))
-    .pipe(gulp.dest("build/img"));
-}
+const optimizeImages = () =>
+  gulp
+    .src(IMAGE_PATH)
+    .pipe(sharpResponsive(OPTIONS))
+    .pipe(gulp.dest("source/public/img"));
+
+const watchImages = () => gulp.watch(IMAGE_PATH, optimizeImages);
+export { optimizeImages, watchImages };

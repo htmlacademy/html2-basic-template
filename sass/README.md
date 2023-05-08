@@ -2,7 +2,7 @@
 
 1. [Установить Volta](https://docs.volta.sh/guide/getting-started). Она автоматически будет использовать зафиксированную в проекте версию Node.js.
 2. Пользуйтесь:
-  ```bash
+  ```shell
   npm ci # Установить зависимости
   npm start # Запустить сборку
   npm run lint # Проверить на ошибки
