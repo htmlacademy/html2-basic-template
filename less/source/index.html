@@ -1,14 +1,199 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
 
-    <script src="./js/script.js" defer></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-regular.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-bold.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-medium.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Drink2Go</title>
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <h1 class="visually-hidden">Drink2Go</h1>
+    <nav class="header__nav main-nav">
+      <div class="main-nav__logo-group">
+        <svg class="main-nav__logo-image main-nav__logo-image--mobile" width="32" height="36">
+          <use xlink:href="./img/icons/stack.svg#logo-mobile.svg"></use>
+        </svg>
+
+        <svg class="main-nav__logo-image main-nav__logo-image--tablet" width="82" height="36">
+          <use xlink:href="./img/icons/stack.svg#logo-tablet.svg"></use>
+        </svg>
+
+        <svg class="main-nav__logo-image main-nav__logo-image--desktop" width="170" height="36">
+          <use xlink:href="./img/icons/stack.svg#logo-desktop.svg"></use>
+        </svg>
+        <p class="main-nav__logo-text">Интернет-магазин<br> кофейных напитков</p>
+      </div>
+      <ul class="main-nav__menu"><!--main-nav__menu--hidden-->
+        <li class="main-nav__menu-item">
+          <a class="main-nav__menu-link main-nav__menu-link--current" href="#">Главная</a>
+        </li>
+        <li class="main-nav__menu-item"><a class="main-nav__menu-link" href="#">Каталог</a></li>
+        <li class="main-nav__menu-item"><a class="main-nav__menu-link" href="#">Доставка</a></li>
+        <li class="main-nav__menu-item"><a class="main-nav__menu-link" href="#">О нас</a></li>
+      </ul>
+      <ul class="main-nav__user-menu">
+        <li class="main-nav__user-menu-item">
+          <a class="main-nav__user-menu-link" href="#">
+            <svg class="main-nav__user-menu-icon" width="16" height="16">
+              <use xlink:href="./img/icons/stack.svg#nav-user.svg"></use>
+            </svg>
+            <span class="main-nav__user-menu-text">Войти</span>
+          </a>
+        </li>
+        <li class="main-nav__user-menu-item">
+          <a class="main-nav__user-menu-link" href="#">
+            <svg class="main-nav__user-menu-icon" width="16" height="16">
+              <use xlink:href="./img/icons/stack.svg#nav-basket.svg"></use>
+            </svg>
+            <span class="main-nav__user-menu-text">Корзина</span>
+          </a>
+        </li>
+      </ul>
+      <button class="main-nav__button main-nav__button--open">
+        <svg width="16" height="16">
+          <use xlink:href="./img/icons/stack.svg#nav-burger.svg"></use>
+        </svg>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <button class="main-nav__button main-nav__button--close main-nav__button--hidden">
+        <svg width="16" height="16">
+          <use xlink:href="./img/icons/stack.svg#nav-close"></use>
+        </svg>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="page-main__slider slider slider--nojs">
+      <h2 class="visually-hidden">Новинки в ассортименте</h2>
+      <div class="slider__content">
+        <div class="slider__container swiper-container swiper">
+          <div class="slider__wrapper swiper__wrapper">
+
+            <div class="slider__slide slider__slide--one swiper__slide">
+              <div class="slider__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/slider/desktop/slider-1-coffee-flat@1x.png.png 1x, img/slider/desktop/slider-1-coffee-flat@x2.png.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/slider/tablet/slider-1-coffee-can@1x.png.png 1x, img/slider/tablet/slider-1-coffee-can@2x.png.png 2x">
+                  <img class="slider__img" src="img/slider/mobile/slider-1-coffee-can@1x.png.png 1x"
+                    srcset="img/slider/mobile/slider-1-coffee-can@2x.png.png 2x" alt="Декаф флэт уайт" loading="lazy">
+                </picture>
+              </div>
+              <div class="slider__text-wrapper">
+                <small class="slider__tag">Новинка!</small>
+                <h3 class="slider__title">Декаф Флэт Уайт</h3>
+                <p class="slider__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
+                  то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                <div class="slider__price-wrapper">
+                  <span class="slider__old-price">295₽</span>
+                  <span class="slider__new-price">225₽</span>
+                  <button class="slider__buy-button" type="button">Заказать</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider__slide slider__slide--two swiper__slide">
+              <div class="slider__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/slider/desktop/slider-2-coffee-lavender@1x.png.png 1x, img/slider/desktop/slider-2-coffee-lavender@2x.png.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/slider/tablet/slider-2-coffee-lavender@1x.png.png 1x, img/slider/tablet/slider-2-coffee-lavender@2x.png.png 2x">
+                  <img class="slider__img" src="img/slider/mobile/slider-2-coffee-lavender@1x.png.png 1x"
+                    srcset="img/slider/mobile/slider-2-coffee-lavender@2x.png.png 2x" alt="Лавандовый латте"
+                    loading="lazy">
+                </picture>
+              </div>
+              <div class="slider__text-wrapper">
+                <small class="slider__tag">Новинка!</small>
+                <h3 class="slider__title">Лавандовый латте</h3>
+                <p class="slider__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                  лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                <div class="slider__price-wrapper">
+                  <span class="slider__old-price">285₽</span>
+                  <span class="slider__new-price">265₽</span>
+                  <button class="slider__buy-button" type="button">Заказать</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider__slide slider__slide--three swiper__slide">
+              <div class="slider__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/slider/desktop/slider-3-coffee-triple@1x.png.png 1x, img/slider/desktop/slider-3-coffee-triple@2x.png.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/slider/tablet/slider-3-coffee-triple@1x.png.png 1x, img/slider/tablet/slider-3-coffee-triple@2x.png.png 2x">
+                  <img class="slider__img" src="img/slider/mobile/slider-3-coffee-triple@1x.png.png 1x"
+                    srcset="img/slider/mobile/slider-3-coffee-triple@2x.png.png 2x" alt="Тройной эспрессо"
+                    loading="lazy">
+                </picture>
+              </div>
+              <div class="slider__text-wrapper">
+                <small class="slider__tag">Новинка!</small>
+                <h3 class="slider__title">Тройной эспрессо</h3>
+                <p class="slider__text">
+                  Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что
+                  такое настоящая бодрость
+                </p>
+                <div class="slider__price-wrapper">
+                  <span class="slider__old-price">285₽</span>
+                  <span class="slider__new-price">265₽</span>
+                  <button class="slider__buy-button" type="button">Заказать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="slider__pagination swiper-pagination">
+          <li class="slider__pagination-item slider__pagination-item-current">
+            <button class="slider__pagination-button slider__pagination-button--current" type="button">
+              <span class="visually-hidden">1 фото</span>
+            </button>
+          </li>
+          <li class="slider__pagination-item">
+            <button class="slider__pagination-button" type="button">
+              <span class="visually-hidden">2 фото</span>
+            </button>
+          </li>
+          <li class="slider__pagination-item">
+            <button class="slider__pagination-button" type="button">
+              <span class="visually-hidden">3 фото</span>
+            </button>
+          </li>
+        </ol>
+      </div>
+      <div class="slider__controls">
+        <button class="slider__button slider__button--prev" type="button">
+          <svg class="slider__button-icon" width="20" height="20">
+            <use xlink:href="./img/icons/stack.svg#slider-arrow-back"></use>
+          </svg>
+        </button>
+        <button class="slider__button slider__button--next" type="button">
+          <svg class="slider__button-icon" width="20" height="20">
+            <use xlink:href="./img/icons/stack.svg#slider-arrow-forward"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <section class="advantages">
+      <h2 class="advantages__header">Главные причины выбрать Drink2Go</h2>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="js/script.js" defer></script>
+</body>
+
 </html>
