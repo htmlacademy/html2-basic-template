@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "@htmlacademy/editorconfig-cli": "2.0.4",
     "autoprefixer": "10.4.13",
     "browser-sync": "2.27.10",
     "del": "7.0.0",
@@ -40,14 +40,6 @@
     "not dead",
     "not op_mini all",
     "not < 0.25%"
-  ],
-  "editorconfig-cli": [
-    "*.json",
-    "*.js",
-    "source/*.html",
-    "source/js/**/*.js",
-    "source/img/**/*.svg",
-    "source/less/**/*.less"
   ],
   "engines": {
     "node": "^16.20.0 || ^18.16.0"
