@@ -13,7 +13,6 @@ import { stacksvg } from "gulp-stacksvg";
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
-import { htmlValidator } from "gulp-w3c-html-validator";
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
@@ -26,12 +25,6 @@ export function processMarkup () {
 export function lintBem () {
   return gulp.src('source/*.html')
     .pipe(bemlinter());
-}
-
-export function validateMarkup () {
-  return gulp.src('source/*.html')
-		.pipe(htmlValidator.analyzer())
-		.pipe(htmlValidator.reporter({ throwErrors: true }));
 }
 
 export function processStyles () {
