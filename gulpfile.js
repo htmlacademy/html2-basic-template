@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
-import gulpIf from 'gulp-if';
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
 import postcss from 'gulp-postcss';
@@ -8,7 +7,7 @@ import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import terser from 'gulp-terser';
-import squoosh from 'gulp-libsquoosh';
+import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from "gulp-stacksvg";
 import { deleteAsync } from 'del';
@@ -57,16 +56,31 @@ export function processScripts () {
 
 export function optimizeImages () {
   return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(gulpIf(!isDevelopment, squoosh()))
-    .pipe(gulp.dest('build/img'))
-}
-
-export function createWebp () {
-  return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(squoosh({
-      webp: {}
+    .pipe(sharp(isDevelopment ? {
+      includeOriginalFile: true,
+      formats: [
+        { format: 'webp' }
+      ]
+    } : {
+      formats: [
+        {
+          jpegOptions: {
+            progressive: true,
+            mozjpeg: true
+          },
+          pngOptions: {
+            palette: true
+          }
+        },
+        {
+          format: 'webp',
+          webpOptions: {
+            effort: 6
+          }
+        }
+      ]
     }))
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'));
 }
 
 export function optimizeVector () {
@@ -124,8 +138,7 @@ function compileProject (done) {
     optimizeVector,
     createStack,
     copyAssets,
-    optimizeImages,
-    createWebp
+    optimizeImages
   )(done);
 }
 

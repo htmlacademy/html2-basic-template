@@ -9,11 +9,10 @@
     "del": "7.0.0",
     "gulp": "4.0.2",
     "gulp-html-bemlinter": "2.1.2",
-    "gulp-if": "3.0.0",
-    "gulp-libsquoosh": "1.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
     "gulp-sass": "5.1.0",
+    "gulp-sharp-responsive": "0.4.1",
     "gulp-stacksvg": "1.0.6",
     "gulp-svgmin": "4.1.0",
     "gulp-terser": "2.1.0",
@@ -51,7 +50,7 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": ">=16.13.0"
+    "node": "^16.20.0 || ^18.16.0"
   },
   "type": "module"
 }
