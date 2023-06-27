@@ -1,67 +1,194 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Drink2Go</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-  <body class="page__body nojs">
+<body class="page__body nojs">
 
-    <header class="header">
-      <!-- main-nav--opened / main-nav--closed -->
-      <nav class="main-nav main-nav--closed">
-        <div class="main-nav__wrapper">
-          <a class="main-nav__logo">
-            <picture>
-              <source media="(min-width:1440px)" srcset="img/svg/logo-desktop.svg" width="170" height="36">
-              <source media="(min-width:768px)" srcset="img/svg/logo-tablet.svg" width="82" height="36">
-              <img src="./img/logo.svg" width="32" height="36" alt="Лого Drink2Go.">
-            </picture>
-          </a>
-          <h1 class="main-nav__text">Интернет-магазин кофейных напитков</h1>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">
-                <svg class="user-list__link-icon" width="16" height="16">
-                  <use href="#user"></use>
-                </svg>
-                <span class="user-list__link-text">Войти</span>
-              </a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">
-                <svg class="user-list__link-icon" width="16" height="16">
-                  <use href="#basket"></use>
-                </svg>
-                <span class="user-list__link-text">Корзина</span>
-              </a>
-            </li>
-          </ul>
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </div>
-        <ul class="main-nav__list nav-point">
-          <li class="nav-point__item">
-            <a class="nav-point__link nav-point__link--active" href="#">Главная</a>
+  <header class="header">
+    <!-- main-nav--opened / main-nav--closed -->
+    <nav class="main-nav main-nav--closed">
+      <div class="main-nav__wrapper">
+        <a class="main-nav__logo">
+          <picture>
+            <source media="(min-width:1440px)" srcset="img/svg/logo-desktop.svg" width="170" height="36">
+            <source media="(min-width:768px)" srcset="img/svg/logo-tablet.svg" width="82" height="36">
+            <img src="./img/logo.svg" width="32" height="36" alt="Лого Drink2Go.">
+          </picture>
+        </a>
+        <h1 class="main-nav__text">Интернет-магазин кофейных напитков</h1>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <svg class="user-list__link-icon" width="16" height="16">
+                <use href="#user"></use>
+              </svg>
+              <span class="user-list__link-text">Войти</span>
+            </a>
           </li>
-          <li class="nav-point__item">
-            <a class="nav-point__link" href="#">Каталог</a>
-          </li>
-          <li class="nav-point__item">
-            <a class="nav-point__link" href="#">Доставка</a>
-          </li>
-          <li class="nav-point__item">
-            <a class="nav-point__link" href="#">О нас</a>
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <svg class="user-list__link-icon" width="16" height="16">
+                <use href="#basket"></use>
+              </svg>
+              <span class="user-list__link-text">Корзина</span>
+            </a>
           </li>
         </ul>
-      </nav>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+      <ul class="main-nav__list nav-point">
+        <li class="nav-point__item">
+          <a class="nav-point__link nav-point__link--active" href="#">Главная</a>
+        </li>
+        <li class="nav-point__item">
+          <a class="nav-point__link" href="#">Каталог</a>
+        </li>
+        <li class="nav-point__item">
+          <a class="nav-point__link" href="#">Доставка</a>
+        </li>
+        <li class="nav-point__item">
+          <a class="nav-point__link" href="#">О нас</a>
+        </li>
+      </ul>
+    </nav>
 
-    </header>
+  </header>
 
-    <script src="./js/script.js" defer></script>
-  </body>
+  <div class="wrapper">
+    <main class="main">
+      <section class="promo">
+        <h2 class="visually-hidden">Новинки</h2>
+        <ul class="slider__list">
+          <li class="slider__item">
+            <div class="slider__item-inner">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/black-desktop.webp 1x,
+                    img/slider/black-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/black-tablet.webp 1x,
+                    img/slider/black-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/slider/black-mobile.webp 1x,
+                    img/slider/black-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" srcset="img/slider/black-desktop.png 1x,
+                    img/slider/black-desktop.png 2x">
+                <source media="(min-width: 768px)" srcset="img/slider/black-tablet.png 1x,
+                    img/slider/black-tablet.png 2x">
+                <img class="slider__item-img" src="./Drink2Go_files/black-mobile.png"
+                  srcset="img/slider/black-mobile@2x.png 2x" alt="Фото кофе." width="280" height="280">
+              </picture>
+              <div class="slider__description-wrapper">
+                <span class="slider__badge">Новинка!</span>
+                <h2 class="slider__heading">Тройной Эспрессо</h2>
+                <p class="slider__description">
+                  Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что
+                  такое настоящая бодрость
+                </p>
+                <div class="slider__buy">
+                  <div class="slider__price-wrapper">
+                    <span class="slider__old-price">395₽</span>
+                    <span class="slider__price">375₽</span>
+                  </div>
+                  <!--slider__button--disabled-->
+                  <a class="slider__button" href="#">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slider__item">
+            <div class="slider__item-inner">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/white-desktop.webp 1x,
+                    img/slider/white-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/white-tablet.webp 1x,
+                    img/slider/white-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/slider/white-mobile.webp 1x,
+                    img/slider/white-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" srcset="img/slider/white-desktop.png 1x,
+                    img/slider/white-desktop.png 2x">
+                <source media="(min-width: 768px)" srcset="img/slider/white-tablet.png 1x,
+                    img/slider/white-tablet.png 2x">
+                <img class="slider__item-img" src="./Drink2Go_files/white-mobile.png"
+                  srcset="img/slider/white-mobile@2x.png 2x" alt="Фото кофе." width="280" height="280">
+              </picture>
+              <div class="slider__description-wrapper">
+                <span class="slider__badge">Новинка!</span>
+                <h2 class="slider__heading">Декаф Флэт Уайт</h2>
+                <p class="slider__description">
+                  Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для
+                  расслабления после тяжёлого рабочего дня
+                </p>
+                <div class="slider__buy">
+                  <div class="slider__price-wrapper">
+                    <span class="slider__old-price">295₽</span>
+                    <span class="slider__price">225₽</span>
+                  </div>
+                  <!--slider__button--disabled-->
+                  <a class="slider__button" href="#">Заказать</a>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li class="slider__item">
+            <div class="slider__item-inner">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/violet-desktop.webp 1x,
+                    img/slider/violet-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/violet-tablet.webp 1x,
+                    img/slider/violet-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/slider/violet-mobile.webp 1x,
+                    img/slider/violet-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" srcset="img/slider/violet-desktop.png 1x,
+                    img/slider/violet-desktop.png 2x">
+                <source media="(min-width: 768px)" srcset="img/slider/violet-tablet.png 1x,
+                    img/slider/violet-tablet.png 2x">
+                <img class="slider__item-img" src="./Drink2Go_files/violet-mobile.png"
+                  srcset="img/slider/violet-mobile@2x.png 2x" alt="Фото кофе." width="280" height="280">
+              </picture>
+              <div class="slider__description-wrapper">
+                <span class="slider__badge">Новинка!</span>
+                <h2 class="slider__heading">Лавандовый Латте</h2>
+                <p class="slider__description">
+                  Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас
+                  прямо на вершину Радужных гор
+                </p>
+                <div class="slider__buy">
+                  <div class="slider__price-wrapper">
+                    <span class="slider__old-price">285₽</span>
+                    <span class="slider__price">265₽</span>
+                  </div>
+                  <!-- slider__button--disabled -->
+                  <a class="slider__button" href="#">Заказать</a>
+                </div>
+              </div>
+            </div>
+
+        </ul>
+        <div class="slider__arrows">
+          <button class="slider__arrow slider__arrow--left" type="button"></button>
+          <button class="slider__arrow slider__arrow--right" type="button"></button>
+        </div>
+        <div class="slider__steps">
+          <button type="button" class="slider__steps--active"></button>
+          <button type="button" class="slider__steps--disable"></button>
+          <button type="button" class="slider__steps--disable"></button>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+  <script src="./js/script.js" defer></script>
+</body>
+
 </html>
