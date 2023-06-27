@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
   <head>
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
+
+  <body class="page__body nojs">
+
+    <header class="header">
+      <!-- main-nav--opened / main-nav--closed -->
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__wrapper">
+          <a class="main-nav__logo">
+            <picture>
+              <source media="(min-width:1440px)" srcset="img/svg/logo-desktop.svg" width="170" height="36">
+              <source media="(min-width:768px)" srcset="img/svg/logo-tablet.svg" width="82" height="36">
+              <img src="./img/logo.svg" width="32" height="36" alt="Лого Drink2Go.">
+            </picture>
+          </a>
+          <h1 class="main-nav__text">Интернет-магазин кофейных напитков</h1>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">
+                <svg class="user-list__link-icon" width="16" height="16">
+                  <use href="#user"></use>
+                </svg>
+                <span class="user-list__link-text">Войти</span>
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">
+                <svg class="user-list__link-icon" width="16" height="16">
+                  <use href="#basket"></use>
+                </svg>
+                <span class="user-list__link-text">Корзина</span>
+              </a>
+            </li>
+          </ul>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <ul class="main-nav__list nav-link">
+          <li class="nav-link__item">
+            <a class="nav-link__link nav-link__link--active" href="#">Главная</a>
+          </li>
+          <li class="nav-link__item">
+            <a class="nav-link__link" href="https://rookheaven.github.io/Drink2Go/#">Каталог</a>
+          </li>
+          <li class="nav-link__item">
+            <a class="nav-link__link" href="https://rookheaven.github.io/Drink2Go/#">Доставка</a>
+          </li>
+          <li class="nav-link__item">
+            <a class="nav-link__link" href="https://rookheaven.github.io/Drink2Go/#">О нас</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
 
     <script src="./js/script.js" defer></script>
   </body>
