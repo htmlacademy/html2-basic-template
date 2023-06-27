@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/android-icon-192x192.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
@@ -14,7 +17,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header container">
+  <header class="header container">
     <nav class="main-nav main-nav--closed">
       <div class="main-nav__container">
         <a class="main-nav__logo">
@@ -57,7 +60,7 @@
       </div>
     </nav>
   </header>
-  <main class="main-container">
+  <main class="main-container container">
     <section class="promotion">
       <h2 class="visually-hidden">Новинки.</h2>
       <section class="slider">
@@ -155,7 +158,7 @@
           </ul>
         </div>
       </section>
-      <section class="catalog">
+      <section class="catalog container">
         <div class="catalog__wrapper">
           <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="get">
             <h2 class="catalog__wrapper">Каталог</h2>
@@ -248,7 +251,7 @@
           </form>
         </div>
       </section>
-      <section class="sorting">
+      <section class="sorting container">
         <h2 class="sorting__title">Сортировка:</h2>
         <select class="sorting-control sorting-control-arrow" aria-label="Сортировка">
           <option value="cheap">по умолчанию</option>

@@ -1,0 +1,16 @@
+.container {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-weight: 400;
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 40px
+  }
+}
