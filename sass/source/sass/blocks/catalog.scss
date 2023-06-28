@@ -1,0 +1,101 @@
+.catalog {
+  background-color: #f8f8f8;
+  padding-top: 50px;
+  padding-bottom: 45px;
+}
+
+.catalog__title {
+  font-family: $montserrat-bold;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #7859cf;
+  padding-bottom: 5px;
+  text-align: center;
+  margin: 0;
+}
+
+.catalog__description {
+  font-family: $montserrat-bold;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 21px;
+  text-align: center;
+  margin: 0;
+}
+
+.catalog__price {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__price-text {
+  font-family: $montserrat-regular;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__range {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 31px 0;
+}
+
+.catalog__range-scale {
+  height: 2px;
+  background-color: $light-grey;
+}
+
+.catalog__range-bar {
+  position: absolute;
+  height: 4px;
+  right: 0;
+  left: 0;
+  width: 241px;
+  background-color: #9070ec;
+}
+
+.catalog__range-toggles {
+  position: relative;
+}
+
+.catalog__range-toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: 0;
+}
+
+.catalog__range-toggle::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.catalog__range-toggle--min {
+  left: 0;
+  top: -11px;
+}
+
+.catalog__range-toggle--max {
+  right: 20px;
+  top: -11px;
+}

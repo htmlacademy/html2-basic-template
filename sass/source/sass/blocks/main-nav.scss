@@ -1,0 +1,71 @@
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__list a {
+  color: $black
+}
+
+.main-nav__logo {
+margin-left: 20px;
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: contents;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  min-width: 60px;
+  min-height: 60px;
+  background-color: $white;
+  background-image: url("img/svg/toggle_closed.svg");
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-color: #f0ebff;
+  background-image: url("img/svg/toggle_open.svg");
+  background-repeat: no-repeat;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 60px;
+  border: 0;
+  cursor: pointer;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+
+.main-nav--closed .navigation-list__item {
+  @media (max-width: 767px) {
+    display: none;}
+}
+
+.main-nav--opened .main-nav__inner {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    z-index: 10;
+    width: 320px;
+    padding: 0;
+  }
+}

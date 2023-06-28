@@ -1,0 +1,30 @@
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-list__item {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #f0ebff;
+}
+
+.navigation-list__link {
+  display: block;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.navigation-list a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $white;
+}

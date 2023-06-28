@@ -1,0 +1,17 @@
+.user-list {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  margin: 0 0 0 auto;
+  list-style: none;
+  margin-left: 88px;
+}
+
+
+.user-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 60px;
+}
