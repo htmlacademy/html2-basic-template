@@ -3,6 +3,26 @@
   font-weight: 500;
   line-height: 16px;
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: stretch;
+    width: 768px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-height: 80px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      display: contents;
+    }
+  }
+
   &__text {
     display: none;
 
@@ -15,7 +35,31 @@
 
   &__list {
     list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $mobile-width-only) {
+    }
+
+    @media (min-width: $tablet-width) {
+      order: 1;
+    }
   }
 
+  &__toggle {
+    display: none;
+
+    @media (max-width: $mobile-width-only) {
+      display: inline-block;
+      padding: 22px;
+      position: relative;
+    }
+
+    &::before {
+      position: absolute;
+
+    }
+  }
 
 }

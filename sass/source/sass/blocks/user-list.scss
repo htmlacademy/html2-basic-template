@@ -1,2 +1,22 @@
 .user-list {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+
+  &__link-icon {
+    padding: 22px;
+    background-color: $base-black;
+
+    @media (min-width: $tablet-width) {
+      padding: 32px 22px;
+    }
+  }
+
+  &__link-text {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+    }
+  }
 }

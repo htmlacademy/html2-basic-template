@@ -1,0 +1,11 @@
+.nav-point {
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+  }
+
+  align-items: center;
+
+  &__item {
+    padding: 20px 0;
+  }
+}
