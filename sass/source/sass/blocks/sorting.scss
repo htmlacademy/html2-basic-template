@@ -1,0 +1,82 @@
+.sorting {
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  padding-top: 50px;
+  padding-bottom: 45px;
+}
+
+.sorting__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 38px;
+}
+
+.sorting__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  margin: 14px 0 0;
+  list-style: none;
+  padding: 0;
+}
+
+.sorting__item {
+  background-color: $white;
+  padding: 20px;
+}
+
+.sorting__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.sorting__title {
+  font-family: $montserrat-bold;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+}
+.sorting__title h3 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.sorting__description {
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0 0 15px;
+}
+
+.sorting__buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sorting__price {
+  font-family: $montserrat-bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.sorting__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  min-height: 36px;
+  padding: 8px 20px;
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  background-color: $purple;
+  border-radius: 4px;
+}

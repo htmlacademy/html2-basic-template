@@ -3,11 +3,11 @@
   font-size: 14px;
   font-family: $montserrat-regular;
   line-height: 20px;
+  box-sizing: border-box;
 }
 
 .page__body {
   min-height: 100%;
   background-color: $white;
   margin: 0 auto;
-  box-sizing: border-box;
 }
