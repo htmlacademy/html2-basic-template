@@ -1,0 +1,21 @@
+.main-nav {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 16px;
+
+  &__text {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+      font-weight: 400;
+      text-transform: none;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+
+}

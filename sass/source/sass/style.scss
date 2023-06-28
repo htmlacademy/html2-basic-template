@@ -1,7 +1,22 @@
 /* GLOBAL */
-@import "./global/variables";
-@import "./global/global";
-@import "./global/fonts";
+@import "./global/variables.scss";
+@import "./global/global.scss";
+@import "./global/fonts.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/user-list.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/features.scss";
+@import "./blocks/filter.scss";
+@import "./blocks/available-list.scss";
+@import "./blocks/country-list.scss";
+@import "./blocks/card.scss";
+@import "./blocks/pagination-list.scss";
+@import "./blocks/social-list.scss";
+@import "./blocks/footer-nav.scss";
+@import "./blocks/contacts-list.scss";
+@import "./blocks/copyright.scss";
 
 /* BLOCKS */
-@import "./blocks/header";
+@import "./blocks/header.scss";

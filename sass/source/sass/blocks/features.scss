@@ -1,0 +1,23 @@
+.features {
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  &__item {
+    list-style-type: none;
+    }
+
+  &__heading {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

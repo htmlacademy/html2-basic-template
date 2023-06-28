@@ -1,0 +1,15 @@
+.footer-nav {
+  &__badge {
+    color: $base-primary;
+  }
+
+  &__list {
+    list-style-type: none;
+
+    &-item {
+      font-weight: 500;
+      line-height: 16px;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.slider {
+  text-align: center;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__old-price {
+    color: $base-primary;
+    font-size: 16px;
+    line-height: 32px;
+    text-decoration-line: line-through;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
+  &__button {
+  }
+}
+

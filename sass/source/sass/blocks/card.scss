@@ -1,0 +1,20 @@
+.card {
+  list-style-type: none;
+
+  &__tittle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &____description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+}

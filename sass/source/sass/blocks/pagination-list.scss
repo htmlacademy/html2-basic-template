@@ -1,0 +1,22 @@
+.pagination-list {
+  list-style-type: none;
+
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+
+    &--current {
+      font-weight: 600;
+    }
+  }
+
+
+
+  &__link {
+    color: $base-primary;
+
+    &--current {
+      color: $base-black;
+    }
+  }
+}
