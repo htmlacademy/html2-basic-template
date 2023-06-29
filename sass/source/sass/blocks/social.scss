@@ -1,0 +1,51 @@
+.social__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+  flex-grow: 1;
+}
+
+.social__item {
+  list-style-type: none;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: $base-grey;
+
+  &:active {
+    background-color: $purple;
+    opacity: 0.25;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #f0ebff;
+    color: $purple;
+  }
+
+}
+
+.social__link-icon {
+  width: 20px;
+  height: auto;
+  fill: $base-grey;
+
+
+  &:hover {
+    fill: $purple;
+  }
+}

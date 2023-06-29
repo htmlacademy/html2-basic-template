@@ -1,3 +1,11 @@
 .main-footer__inner {
   box-sizing: border-box;
 }
+
+.main-footer__social {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  padding: 20px 0;
+}

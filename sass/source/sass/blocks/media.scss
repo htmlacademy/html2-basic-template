@@ -1,0 +1,31 @@
+.media__title {
+  font-family: $montserrat-bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: $purple;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.media__list {
+  font-family: $montserrat-medium;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  margin: 0;
+  padding: 0;
+}
+
+.media__item {
+  list-style-type: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.media__link {
+  text-decoration: none;
+  color: $black;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+}

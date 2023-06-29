@@ -33,13 +33,13 @@
     max-width: 100%;
     width: unset;
     border-top: none;
-}
+  }
 }
 
 .navigation-list__item:not(:last-child) {
   @media (min-width: $desktop-width) {
     margin-right: 20px;
-}
+  }
 }
 
 .navigation-list__link {
@@ -50,7 +50,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 30px 20px;
-}
+  }
 }
 
 .navigation-list a {
@@ -62,5 +62,7 @@
 }
 
 .navigation-list__link--current {
-  border-bottom: 2px solid $purple;
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $purple;
+  }
 }

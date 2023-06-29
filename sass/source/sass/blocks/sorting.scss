@@ -17,6 +17,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    justify-content: flex-end;
   }
 }
 
@@ -45,6 +46,12 @@
 .sorting__item {
   background-color: $white;
   padding: 20px;
+
+  &--shadow {
+    @media (min-width: $desktop-width) {
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
 }
 
 .sorting__link {
@@ -105,7 +112,7 @@
 }
 
 .sorting__control {
-  width: 100%;
+  width: 165px;
   font-family: $montserrat-regular;
   font-weight: 600;
   font-size: 16px;
@@ -117,4 +124,5 @@
   text-align: center;
   cursor: pointer;
   appearance: none;
+  background-color: #f8f8f8;
 }

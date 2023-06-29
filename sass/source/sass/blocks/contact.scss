@@ -1,0 +1,43 @@
+.contact__inner {
+  margin-bottom: 20px;
+}
+
+.contact__title {
+  font-family: $montserrat-bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: $purple;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.contact__list {
+  font-family: $montserrat-regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black;
+  padding: 0;
+  margin: 0;
+}
+
+.contact__item {
+  list-style-type: none;
+  padding-bottom: 3px;
+  text-transform: none;
+  display: flex;
+  gap: 6px;
+  list-style: none;
+
+  &--adress {
+    margin-bottom: 16px;
+  }
+}
+
+.contact__icon {
+  margin-right: 6px;
+}
+
+.contact__wrapper-desk {
+  text-decoration: none;
+  color: $black;
+}
