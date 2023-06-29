@@ -1,7 +1,7 @@
 .main-nav {
+  line-height: 16px;
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 16px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -10,6 +10,11 @@
     padding: 0 20px;
     margin: 0 auto;
     min-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 40px;
   }
 
   &__wrapper {
@@ -23,13 +28,25 @@
     }
   }
 
+  &__logo {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+      padding-right: 20px;
+    }
+  }
+
   &__text {
     display: none;
 
     @media (min-width: $desktop-width) {
-      display: inline-block;
+      display: flex;
       font-weight: 400;
       text-transform: none;
+      align-items: center;
+      margin: 0;
+      font-size: 12px;
+      line-height: 16px;
     }
   }
 
@@ -39,8 +56,7 @@
     margin: 0;
     padding: 0;
 
-    @media (max-width: $mobile-width-only) {
-    }
+    @media (max-width: $mobile-width-only) {}
 
     @media (min-width: $tablet-width) {
       order: 1;
@@ -49,17 +65,33 @@
 
   &__toggle {
     display: none;
+    position: relative;
+    top: -2px;
+    left: 0;
+    background-color: transparent;
+    background-position: center;
+    min-width: 60px;
+    min-height: 60px;
 
     @media (max-width: $mobile-width-only) {
-      display: inline-block;
+      display: block;
       padding: 22px;
-      position: relative;
+      border: none;
     }
+  }
 
-    &::before {
-      position: absolute;
+  &--closed &__toggle {
+    background-image: url(../../img/svg/burger.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 12px;
+  }
 
-    }
+  &--open &__toggle {
+    background-image: url(../../img/svg/close.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 12px;
   }
 
 }

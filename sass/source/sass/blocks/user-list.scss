@@ -1,14 +1,30 @@
 .user-list {
+
+@media (max-width: $mobile-width-only) {
+  margin-left: auto;
+  }
+
   @media (min-width: $tablet-width) {
     order: 2;
   }
 
+  &__link {
+    @media (min-width: $desktop-width) {
+      padding: 32px 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
   &__link-icon {
     padding: 22px;
-    background-color: $base-black;
 
     @media (min-width: $tablet-width) {
       padding: 32px 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
     }
   }
 
@@ -17,6 +33,7 @@
 
     @media (min-width: $desktop-width) {
       display: inline-block;
+      padding-left: 8px;
     }
   }
 }
