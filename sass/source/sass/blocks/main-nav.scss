@@ -2,13 +2,15 @@
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 500;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: stretch;
     width: 768px;
     padding: 0 20px;
-    margin: 0 auto;
     min-height: 80px;
   }
 

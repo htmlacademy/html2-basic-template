@@ -1,5 +1,21 @@
 .slider {
   text-align: center;
+  position: relative;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 20px;
+    max-width: 320px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+  }
 
   &__list {
     margin: 0;
@@ -8,17 +24,110 @@
 
   &__item {
     list-style-type: none;
+
+    &--white {
+      background-color: $flat-white;
+    }
+
+    &-inner {
+
+      @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+    }
+
+    &-img {
+      @media (min-width: $tablet-width) {
+        position: absolute;
+        top: 51%;
+        left: 19%;
+      }
+
+      @media (min-width: $desktop-width) {
+        position: static;
+      }
+    }
   }
 
   &__heading {
     font-weight: 700;
     font-size: 36px;
-    line-height: 48px;
+    line-height: 80px;
+    margin: 0;
+    padding-top: 4px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 56px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 30px;
+    }
+  }
+
+  &__description-wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 10px 0 60px;
+      max-width: 320px;
+    }
+
+    @media (min-width: $tablet-width) {
+      max-width: 768px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 180px 0 0;
+      text-align: left;
+    }
+  }
+
+  &__badge {
+    @media (min-width: $desktop-width) {
+      padding-left: 30px;
+    }
   }
 
   &__description {
     font-size: 14px;
     line-height: 20px;
+    margin: 0;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 10px 25px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 32px;
+      padding: 16px 80px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 16px 60px 0 30px;
+    }
+
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 10px 45px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 20px 269px 294px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 40px 50px 50px 30px;
+      justify-content: start;
+    }
   }
 
   &__old-price {
@@ -26,6 +135,14 @@
     font-size: 16px;
     line-height: 32px;
     text-decoration-line: line-through;
+
+    @media (max-width: $mobile-width-only) {
+      padding-right: 6px;
+    }
+  }
+
+  &__price-wrapper {
+    padding-right: 20px;
   }
 
   &__price {
@@ -34,7 +151,83 @@
     line-height: 32px;
   }
 
-  &__button {
+  &__arrow {
+    background-color: transparent;
+    background-image: url(../../img/svg/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      top: 0;
+      min-height: 656px;
+      width: 20px;
+      padding: 0;
+      margin: 0;
+      border: none;
+
+      &--right {
+        right: 0;
+        transform: rotate(180deg);
+      }
+
+      &--left {
+        left: 0;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 0;
+      min-height: 620px;
+      width: 60px;
+      padding: 0;
+      margin: 0;
+      border: none;
+
+      &--right {
+        right: 0;
+        transform: rotate(180deg);
+      }
+
+      &--left {
+        left: 0;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 694px;
+      width: 60px;
+    }
+  }
+
+  &__steps {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      display: flex;
+      bottom: 64px;
+      left: 44%;
+    }
+  }
+
+  &__step {
+    width: 62px;
+    height: 4px;
+    border: none;
+
+    &:nth-child(2n) {
+      margin: 0 8px;
+    }
+
+
+    &--active {
+      background-color: $base-primary;
+    }
+
+    &--disable {
+      background-color: $base-white;
+    }
   }
 }
-
