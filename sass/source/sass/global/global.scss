@@ -21,3 +21,8 @@ img {
   border-style: none;
   object-fit: contain;
 }
+
+
+*,::after,::before {
+   box-sizing:border-box;
+}

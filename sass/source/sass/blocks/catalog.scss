@@ -1,12 +1,17 @@
 .catalog {
+  box-sizing: border-box;
   background-color: #f8f8f8;
-  padding-top: 50px;
-  padding-bottom: 45px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 }
 
 .catalog__wrapper {
-  box-sizing: border-box;
+  padding-top: 50px;
 }
+
 
 .catalog__title {
   font-family: $montserrat-bold;
@@ -29,6 +34,13 @@
   padding-bottom: 21px;
   text-align: center;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .catalog__price {
@@ -65,6 +77,14 @@
   left: 0;
   width: 241px;
   background-color: #9070ec;
+
+  @media (min-width: $tablet-width) {
+    width: 188px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+  }
 }
 
 .catalog__range-toggles {
@@ -114,6 +134,14 @@
   border-radius: 4px;
   padding: 5px 6px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
 }
 
 .catalog__range-input--min {
@@ -127,9 +155,10 @@
   justify-content: space-between;
   padding-top: 7px;
 
-  margin-bottom: 24px;
+  @media (min-width: $desktop-width) {
+    padding-top: 3px;
+  }
 }
-
 
 .catalog__range-wrapper-inputs::after {
   position: absolute;
@@ -149,12 +178,17 @@
   flex-direction: column;
   align-items: center;
   margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-.catalog__filter-wrapper {
-  display: flex;
-  flex-direction: column;
-}
 
 .catalog__button {
   font-family: $montserrat-regular;
@@ -164,15 +198,50 @@
   border-radius: 4px;
   border: 0;
   width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 149px;
+    margin-bottom: 0;
+  }
 }
 
 .catalog__button--apply {
   color: $white;
   background-color: $purple;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
 }
 
 .catalog__button--reset {
   color: $purple;
   background-color: $white;
+}
+
+.catalog__form {
+  margin: 0;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 318px;
+  }
+}
+
+.catalog__wrapper-section {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 8px;
+  }
 }

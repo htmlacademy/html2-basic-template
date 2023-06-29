@@ -5,8 +5,16 @@
   margin: 0 0 0 auto;
   list-style: none;
   margin-left: 88px;
-}
 
+  @media (min-width: $tablet-width) {
+    order: 1;
+    margin: 0 20px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 40px 0 0;
+  }
+}
 
 .user-list__link {
   display: flex;
@@ -14,4 +22,27 @@
   justify-content: center;
   min-width: 60px;
   min-height: 60px;
+  text-decoration: none;
+
+  @media (min-width: $desktop-width) {
+    min-width: 112px;
+    min-height: 80px;
+}
+  }
+
+.user-list__link-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-left: 8px;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+.user-list__item:not(:last-child) {
+  @media (min-width: $desktop-width) {
+    margin-right: 23px;
+  }
 }

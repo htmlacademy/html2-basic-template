@@ -22,12 +22,12 @@
       <div class="main-nav__wrapper">
         <a class="main-nav__logo">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/svg/logo_desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/svg/logo_tablet.svg">
+            <source media="(min-width: 1440px)" srcset="img/svg/logo_desktop.svg" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="img/svg/logo_tablet.svg" width="82" height="36">
             <img src="img/svg/logo_mobile.svg" width="32" height="36" alt="логотип Drink2Go.">
           </picture>
         </a>
-        <h1 class="visually-hidden">Интернет-магазин кофейных напитков.</h1>
+        <h1 class="main-nav__name">Интернет-магазин кофейных напитков</h1>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
             <a class="user-list__link" href="#">
@@ -36,7 +36,7 @@
                   d="M10.667 4a2.667 2.667 0 1 1-5.334 0 2.667 2.667 0 0 1 5.334 0ZM12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-8.803 8.31C4.437 11.277 6.16 10.667 8 10.667s3.564.61 4.803 1.643c1.232 1.027 1.864 2.362 1.864 3.69H16c0-1.768-.843-3.464-2.343-4.714-1.5-1.25-3.535-1.953-5.657-1.953s-4.157.703-5.657 1.953S0 14.232 0 16h1.333c0-1.328.632-2.663 1.864-3.69Z"
                   clip-rule="evenodd" />
               </svg>
-              <span class="visually-hidden">Войти.</span>
+              <span class="user-list__link-text">Войти</span>
             </a>
           </li>
           <li class="user-list__item">
@@ -46,17 +46,16 @@
                   d="m5.66 3.875.234 2.792h4.213l.232-2.792a2.347 2.347 0 1 0-4.678 0Zm5.784 2.792.224-2.68a3.68 3.68 0 1 0-7.336 0l.224 2.68H0L.19 8l.816 5.71A2.667 2.667 0 0 0 3.646 16h8.708a2.667 2.667 0 0 0 2.64-2.29L15.81 8 16 6.667h-4.556ZM11.334 8h-.054l-.222 2.667h3.024L14.462 8h-3.129ZM9.941 8H6.058l.222 2.667h3.44L9.942 8ZM4.72 8H1.537l.381 2.667h3.024L4.72 8Zm1.893 6.667L6.391 12H9.61l-.222 2.667H6.613ZM10.947 12l-.222 2.667h1.629c.663 0 1.226-.488 1.32-1.145L13.89 12h-2.944Zm-5.894 0 .222 2.667H3.646a1.333 1.333 0 0 1-1.32-1.145L2.11 12h2.944Z"
                   clip-rule="evenodd" />
               </svg>
-              <span class="visually-hidden">Корзина.</span>
+              <span class="user-list__link-text">Корзина</span>
             </a>
           </li>
         </ul>
-
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню.</span></button>
       </div>
       <div class="main-nav__inner">
         <ul class="main-nav__list navigation-list">
           <li class="navigation-list__item">
-            <a class="navigation-list__link" href="index.html"> Главная </a>
+            <a class="navigation-list__link navigation-list__link--current" href="index.html"> Главная </a>
           </li>
           <li class="navigation-list__item">
             <a class="navigation-list__link" href="#nowhere"> Каталог </a>
@@ -74,7 +73,7 @@
   <main class="main-container">
     <section class="promotion">
       <h2 class="visually-hidden">Новинки.</h2>
-      <section class="slider">
+      <div class="slider">
         <div class="slider__wrapper">
           <ul class="slider__list">
             <li class="slider__item slider__item--white">
@@ -146,7 +145,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </div>
     </section>
     <section class="advantage">
       <div class="advantage__wrapper container">
@@ -222,246 +221,277 @@
         </ul>
       </div>
     </section>
-    <section class="catalog">
-      <div class="catalog__wrapper container">
-        <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="get">
-
-          <h2 class="catalog__title">Каталог</h2>
-          <p class="catalog__description">Каталог кофейных напитков</p>
-          <fieldset class="catalog__price">
-            <legend class="catalog__price-text">Цена</legend>
-            <div class="catalog__range">
-              <div class="catalog__range-scale">
-                <div class="catalog__range-bar"></div>
-              </div>
-              <div class="catalog__range-toggles">
-                <div class="catalog__range-toggle catalog__range-toggle--min">
-                  <span class="visually-hidden">Изменить минимальную цену.</span>
+    <section class="catalog  container">
+      <div class="catalog__inner">
+        <h2 class="catalog__title">Каталог</h2>
+        <p class="catalog__description">Каталог кофейных напитков</p>
+        <div class="catalog__wrapper-section">
+          <section class="catalog__wrapper">
+            <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="get">
+              <fieldset class="catalog__price">
+                <legend class="catalog__price-text">Цена</legend>
+                <div class="catalog__range">
+                  <div class="catalog__range-scale">
+                    <div class="catalog__range-bar"></div>
+                  </div>
+                  <div class="catalog__range-toggles">
+                    <div class="catalog__range-toggle catalog__range-toggle--min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </div>
+                    <div class="catalog__range-toggle catalog__range-toggle--max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="catalog__range-toggle catalog__range-toggle--max">
-                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                <div class="catalog__range-wrapper-inputs">
+                  <label class="catalog__label catalog__filter--right">
+                    <input class="catalog__range-input catalog__range-input--min" type="number" value="0"
+                      name="min-price" min="0" max="999999">
+                  </label>
+                  <label class="catalog__label catalog__filter--left">
+                    <input class="catalog__range-input" type="number" value="900" name="max-price" min="0" max="999999">
+                  </label>
+                </div>
+              </fieldset>
+              <div class="compound">
+                <fieldset class="compound__wrapper">
+                  <h3 class="compound__title">Наличие молока</h3>
+                  <ul class="compound__list">
+                    <li class="compound__item">
+                      <input class="visually-hidden compound__input" type="radio" name="option" value="no" id="no"
+                        checked="checked">
+                      <label class="compound__label" for="no">Неважно</label>
+                    </li>
+                    <li class="compound__item">
+                      <input class="visually-hidden compound__input" type="radio" name="option" value="animal-only"
+                        id="animal-only">
+                      <label class="compound__label" for="animal-only">Только животное</label>
+                    </li>
+                    <li class="compound__item">
+                      <input class="visually-hidden compound__input" type="radio" name="option" value="only-vegetable"
+                        id="only-vegetable">
+                      <label class="compound__label" for="only-vegetable">Только растительное</label>
+                    </li>
+                    <li class="compound__item">
+                      <input class="visually-hidden compound__input" type="radio" name="option" value="without-milk"
+                        id="without-milk">
+                      <label class="compound__label" for="without-milk">Без молока</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="country">
+                <fieldset class="country__wrapper">
+                  <h3 class="country__title">Страна произрастания</h3>
+                  <ul class="country__list">
+                    <li class="country__item">
+                      <input class="visually-hidden country__input" type="checkbox" name="country" value="brazil"
+                        id="brazil" checked="checked">
+                      <label class="country__label" for="brazil">Бразилия</label>
+                    </li>
+                    <li class="country__item">
+                      <input class="visually-hidden country__input" type="checkbox" name="country" value="ethiopia"
+                        id="ethiopia">
+                      <label class="country__label" for="ethiopia">Эфиопия</label>
+                    </li>
+                    <li class="country__item">
+                      <input class="visually-hidden country__input" type="checkbox" name="country" value="colombia"
+                        id="colombia">
+                      <label class="country__label" for="colombia">Колумбия</label>
+                    </li>
+                    <li class="country__item">
+                      <input class="visually-hidden country__input" type="checkbox" name="country" value="costa-rica"
+                        id="costa-rica">
+                      <label class="country__label" for="costa-rica">Коста-Рика</label>
+                    </li>
+                    <li class="country__item">
+                      <input class="visually-hidden country__input" type="checkbox" name="country" value="peru"
+                        id="peru">
+                      <label class="country__label" for="peru">Перу</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="catalog__filter">
+                <div class="catalog__filter-wrapper">
+                  <button class="catalog__button catalog__button--apply" type="submit">Применить</button>
+                  <button class="catalog__button catalog__button--reset" type="reset">Сбросить</button>
                 </div>
               </div>
+            </form>
+          </section>
+          <section class="sorting">
+            <div class="sorting__wrapper">
+              <h2 class="sorting__title">Сортировка:</h2>
+              <select class="sorting__control sorting-control-arrow" name="sorting-values" id="sorting-values"
+                aria-label="Сортировка">
+                <option class="sorting__control-value" value="default">по умолчанию</option>
+                <option class="sorting__control-value" value="expensive">сначала дорогие</option>
+                <option class="sorting__control-value" value="cheap">сначала дешёвые</option>
+                <option class="sorting__control-value" value="high-rating">высокий рейтинг</option>
+              </select>
             </div>
-            <div class="catalog__range-wrapper-inputs">
-              <label class="catalog__label catalog__filter--right">
-                <input class="catalog__range-input catalog__range-input--min" type="number" value="0" name="min-price"
-                  min="0" max="999999">
-              </label>
-              <label class="catalog__label catalog__filter--left">
-                <input class="catalog__range-input" type="number" value="900" name="max-price" min="0" max="999999">
-              </label>
-            </div>
-          </fieldset>
-          <div class="compound">
-            <fieldset class="compound__wrapper">
-              <h3 class="compound__title">Наличие молока</h3>
-              <ul class="compound__list">
-                <li class="compound__item">
-                  <input class="visually-hidden compound__input" type="radio" name="option" value="no" id="no"
-                    checked="checked">
-                  <label class="compound__label" for="no">Неважно</label>
-                </li>
-                <li class="compound__item">
-                  <input class="visually-hidden compound__input" type="radio" name="option" value="animal-only"
-                    id="animal-only">
-                  <label class="compound__label" for="animal-only">Только животное</label>
-                </li>
-                <li class="compound__item">
-                  <input class="visually-hidden compound__input" type="radio" name="option" value="only-vegetable"
-                    id="only-vegetable">
-                  <label class="compound__label" for="only-vegetable">Только растительное</label>
-                </li>
-                <li class="compound__item">
-                  <input class="visually-hidden compound__input" type="radio" name="option" value="without-milk"
-                    id="without-milk">
-                  <label class="compound__label" for="without-milk">Без молока</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <div class="country">
-            <fieldset class="country__wrapper">
-              <h3 class="country__title">Страна произрастания</h3>
-              <ul class="country__list">
-                <li class="country__item">
-                  <input class="visually-hidden country__input" type="checkbox" name="country" value="brazil" id="brazil"
-                    checked="checked">
-                  <label class="country__label" for="brazil">Бразилия</label>
-                </li>
-                <li class="country__item">
-                  <input class="visually-hidden country__input" type="checkbox" name="country" value="ethiopia"
-                    id="ethiopia">
-                  <label class="country__label" for="ethiopia">Эфиопия</label>
-                </li>
-                <li class="country__item">
-                  <input class="visually-hidden country__input" type="checkbox" name="country" value="colombia"
-                    id="colombia">
-                  <label class="country__label" for="colombia">Колумбия</label>
-                </li>
-                <li class="country__item">
-                  <input class="visually-hidden country__input" type="checkbox" name="country" value="costa-rica"
-                    id="costa-rica">
-                  <label class="country__label" for="costa-rica">Коста-Рика</label>
-                </li>
-                <li class="country__item">
-                  <input class="visually-hidden country__input" type="checkbox" name="country" value="peru" id="peru">
-                  <label class="country__label" for="peru">Перу</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <div class="catalog__filter">
-            <div class="catalog__filter-wrapper">
-              <button class="catalog__button catalog__button--apply" type="submit">Применить</button>
-              <button class="catalog__button catalog__button--reset" type="reset">Сбросить</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-    <section class="sorting container">
-      <div class="sorting__wrapper">
-      <h2 class="sorting__title">Сортировка:</h2>
-      <select class="sorting-control sorting-control-arrow" aria-label="Сортировка">
-        <option value="cheap">по умолчанию</option>
-      </select>
-      </div>
-      <ul class="sorting__list">
-        <li class="sorting__item">
-          <a class="sorting__link" href="#nowhere">
-              <img src="img/catalog/coffee_white.png" srcset="img/catalog/coffee_white@2x.png 2x" alt="Декаф Флэт Уайт" width="130" height="188">
-              </a>
-          <a class="sorting__title" href="#nowhere">
-            <h3>Декаф Флэт Уайт</h3>
-          </a>
-          <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="sorting__buy">
-            <span class="sorting__price">225₽</span>
-            <a class="sorting__button" href="#">
-              <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
-              </svg>
-              В корзину
-            </a>
-          </div>
-        </li>
-        <li class="sorting__item">
-          <a class="sorting__link" href="#nowhere">
-            <img src="img/catalog/coffee_purple.png" srcset="img/catalog/coffee_purple@2x.png" alt="Декаф Флэт Уайт" width="130" height="188">
-          </a>
-          <a class="sorting__title" href="#nowhere">
-            <h3>Декаф Флэт Уайт</h3>
-          </a>
-          <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="sorting__buy">
-            <span class="sorting__price">225₽</span>
-            <a class="sorting__button" href="#">
-              <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
-              </svg>
-              В корзину
-            </a>
-          </div>
-        </li>
-        <li class="sorting__item">
-          <a class="sorting__link" href="#nowhere">
-            <img src="img/catalog/coffee_black.png" srcset="img/catalog/coffee_black@2x.png" alt="Декаф Флэт Уайт" width="130" height="188">
-          </a>
-          <a class="sorting__title" href="#nowhere">
-            <h3>Декаф Флэт Уайт</h3>
-          </a>
-          <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="sorting__buy">
-            <span class="sorting__price">225₽</span>
-            <a class="sorting__button" href="#">
-              <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
-              </svg>
-              В корзину
-            </a>
-          </div>
-        </li>
-        <li class="sorting__item">
-          <a class="sorting__link" href="#nowhere">
-            <img src="img/catalog/coffee_pink.png" srcset="img/catalog/coffee_pink@2x.png" alt="Декаф Флэт Уайт" width="130" height="188">
-          </a>
-          <a class="sorting__title" href="#nowhere">
-            <h3>Декаф Флэт Уайт</h3>
-          </a>
-          <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="sorting__buy">
-            <span class="sorting__price">225₽</span>
-            <a class="sorting__button" href="#">
-              <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
-              </svg>
-              В корзину
-            </a>
-          </div>
-        </li>
-        <li class="sorting__item">
-          <a class="sorting__link" href="#nowhere">
-            <img src="img/catalog/coffee_brown.png" srcset="img/catalog/coffee_brown@2x.png" alt="Декаф Флэт Уайт" width="130" height="188">
-          </a>
-          <a class="sorting__title" href="#nowhere">
-            <h3>Декаф Флэт Уайт</h3>
-          </a>
-          <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="sorting__buy">
-            <span class="sorting__price">225₽</span>
-            <a class="sorting__button" href="#">
-              <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
-              </svg>
-              В корзину
-            </a>
-          </div>
-        </li>
-        <li class="sorting__item">
-          <a class="sorting__link" href="#nowhere">
-            <img src="img/catalog/coffee_vanile.png" srcset="img/catalog/coffee_vanile@2x.png" alt="Декаф Флэт Уайт" width="130" height="188">
-          </a>
-          <a class="sorting__title" href="#nowhere">
-            <h3>Декаф Флэт Уайт</h3>
-          </a>
-          <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="sorting__buy">
-            <span class="sorting__price">225₽</span>
-            <a class="sorting__button" href="#nowhere">
-              <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z" fill="white"/>
-                </svg>
-              В корзину
-            </a>
-          </div>
-        </li>
-      </ul>
-      <ul class="pagination">
-        <li class="pagination__item pagination__item--back">
-          <a class="pagination__link pagination__link--back">
-            <svg class="pagination__link-icon" width="6" height="10">
-            </svg>
-            <span class="visually-hidden">Назад</span>
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#nowhere">1</a>
-        </li>
-        <li class="pagination__item pagination__item--current">
-          <a class="pagination__link">2</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#nowhere">3</a>
-        </li>
-        <li class="pagination__item  pagination__item--next">
-          <a class="pagination__link pagination__link--next">
-            <svg class="pagination__link-icon" width="6" height="10">
-            </svg>
-            <span class="visually-hidden">Вперёд</span>
-          </a>
-        </li>
-      </ul>
+            <ul class="sorting__list">
+              <li class="sorting__item">
+                <a class="sorting__link" href="#nowhere">
+                  <img src="img/catalog/coffee_white.png" srcset="img/catalog/coffee_white@2x.png 2x"
+                    alt="Декаф Флэт Уайт" width="130" height="188">
+                </a>
+                <a class="sorting__title" href="#nowhere">
+                  <h3>Декаф Флэт Уайт</h3>
+                </a>
+                <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <div class="sorting__buy">
+                  <span class="sorting__price">225₽</span>
+                  <a class="sorting__button" href="#">
+                    <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"
+                        fill="white" />
+                    </svg>
+                    <span class="sorting__button-basket">В корзину</span>
+                  </a>
+                </div>
+              </li>
+              <li class="sorting__item">
+                <a class="sorting__link" href="#nowhere">
+                  <img src="img/catalog/coffee_purple.png" srcset="img/catalog/coffee_purple@2x.png"
+                    alt="Декаф Флэт Уайт" width="130" height="188">
+                </a>
+                <a class="sorting__title" href="#nowhere">
+                  <h3>Декаф Флэт Уайт</h3>
+                </a>
+                <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <div class="sorting__buy">
+                  <span class="sorting__price">225₽</span>
+                  <a class="sorting__button" href="#">
+                    <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"
+                        fill="white" />
+                    </svg>
+                    <span class="sorting__button-basket">В корзину</span>
+                  </a>
+                </div>
+              </li>
+              <li class="sorting__item">
+                <a class="sorting__link" href="#nowhere">
+                  <img src="img/catalog/coffee_black.png" srcset="img/catalog/coffee_black@2x.png" alt="Декаф Флэт Уайт"
+                    width="130" height="188">
+                </a>
+                <a class="sorting__title" href="#nowhere">
+                  <h3>Декаф Флэт Уайт</h3>
+                </a>
+                <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <div class="sorting__buy">
+                  <span class="sorting__price">225₽</span>
+                  <a class="sorting__button" href="#">
+                    <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"
+                        fill="white" />
+                    </svg>
+                    <span class="sorting__button-basket">В корзину</span>
+                  </a>
+                </div>
+              </li>
+              <li class="sorting__item">
+                <a class="sorting__link" href="#nowhere">
+                  <img src="img/catalog/coffee_pink.png" srcset="img/catalog/coffee_pink@2x.png" alt="Декаф Флэт Уайт"
+                    width="130" height="188">
+                </a>
+                <a class="sorting__title" href="#nowhere">
+                  <h3>Декаф Флэт Уайт</h3>
+                </a>
+                <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <div class="sorting__buy">
+                  <span class="sorting__price">225₽</span>
+                  <a class="sorting__button" href="#">
+                    <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"
+                        fill="white" />
+                    </svg>
+                    <span class="sorting__button-basket">В корзину</span>
+                  </a>
+                </div>
+              </li>
+              <li class="sorting__item">
+                <a class="sorting__link" href="#nowhere">
+                  <img src="img/catalog/coffee_brown.png" srcset="img/catalog/coffee_brown@2x.png" alt="Декаф Флэт Уайт"
+                    width="130" height="188">
+                </a>
+                <a class="sorting__title" href="#nowhere">
+                  <h3>Декаф Флэт Уайт</h3>
+                </a>
+                <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <div class="sorting__buy">
+                  <span class="sorting__price">225₽</span>
+                  <a class="sorting__button" href="#">
+                    <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"
+                        fill="white" />
+                    </svg>
+                    <span class="sorting__button-basket">В корзину</span>
+                  </a>
+                </div>
+              </li>
+              <li class="sorting__item">
+                <a class="sorting__link" href="#nowhere">
+                  <img src="img/catalog/coffee_vanile.png" srcset="img/catalog/coffee_vanile@2x.png"
+                    alt="Декаф Флэт Уайт" width="130" height="188">
+                </a>
+                <a class="sorting__title" href="#nowhere">
+                  <h3>Декаф Флэт Уайт</h3>
+                </a>
+                <p class="sorting__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <div class="sorting__buy">
+                  <span class="sorting__price">225₽</span>
+                  <a class="sorting__button" href="#nowhere">
+                    <svg class="sorting__button-icon" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"
+                        fill="white" />
+                    </svg>
+                    <span class="sorting__button-basket">В корзину</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <ul class="pagination">
+              <li class="pagination__item pagination__item--back">
+                <a class="pagination__link pagination__link--back">
+                  <svg class="pagination__link-icon" width="6" height="10">
+                  </svg>
+                  <span class="visually-hidden">Назад</span>
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#nowhere">1</a>
+              </li>
+              <li class="pagination__item pagination__item--current">
+                <a class="pagination__link">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#nowhere">3</a>
+              </li>
+              <li class="pagination__item  pagination__item--next">
+                <a class="pagination__link pagination__link--next">
+                  <svg class="pagination__link-icon" width="6" height="10">
+                  </svg>
+                  <span class="visually-hidden">Вперёд</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта.</h2>
