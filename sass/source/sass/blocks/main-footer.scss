@@ -1,5 +1,10 @@
 .main-footer__inner {
   box-sizing: border-box;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
 }
 
 .main-footer__social {
@@ -8,4 +13,36 @@
   align-items: center;
   min-height: 80px;
   padding: 20px 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+  }
+}
+
+.main-footer__logo {
+  text-decoration: none;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.main-footer__desk {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-family: $montserrat-regular;
+    font-size: 14px;
+    color: $black;
+    line-height: 20px;
+    margin: 0 0 50px;
+  }
 }

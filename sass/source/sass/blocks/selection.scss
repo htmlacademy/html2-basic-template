@@ -1,3 +1,18 @@
+.selection {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+    margin-left: 63px;
+  }
+}
+
 .selection__title {
   font-family: $montserrat-bold;
   font-size: 14px;
