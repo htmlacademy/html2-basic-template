@@ -16,6 +16,15 @@
   }
 }
 
+.user-list__link-icon {
+  fill: $black;
+
+  &:focus,
+  &:hover {
+    fill: $purple;
+  }
+}
+
 .user-list__link {
   display: flex;
   align-items: center;
@@ -24,14 +33,29 @@
   min-height: 60px;
   text-decoration: none;
 
+  &:active {
+    background-color: #f0ebff;
+  }
+
+
   @media (min-width: $desktop-width) {
     min-width: 112px;
     min-height: 80px;
-}
   }
+
+}
 
 .user-list__link-text {
   display: none;
+
+  &:focus,
+  &:hover {
+    color: #9070ec;
+  }
+
+  &:active {
+    color: #593cac;
+  }
 
   @media (min-width: $desktop-width) {
     display: block;

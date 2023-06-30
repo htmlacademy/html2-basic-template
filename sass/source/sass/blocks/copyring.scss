@@ -16,3 +16,15 @@
 .copyring__link {
   display: flex;
 }
+
+.copyring__link-icon {
+  fill: $base-grey;
+
+  &:hover,
+  &:focus {
+    fill: #7859CF;
+  }
+  &:active {
+    fill: #593CAC;
+  }
+}

@@ -50,6 +50,17 @@
   @media (min-width: $tablet-width) {
     padding: 30px 20px;
   }
+
+
+  &:focus,
+  &:hover {
+    color: $purple;
+  }
+
+  &:active {
+    color: $black;
+    background-color: #f0ebff;
+  }
 }
 
 .navigation-list a {

@@ -65,6 +65,15 @@
   padding: 20px 0;
 }
 
+.sorting__title-desk {
+  font-family: $montserrat-bold;
+  font-size: 16px;
+  line-height: 32px;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
 .sorting__title {
   font-family: $montserrat-bold;
   font-size: 18px;
@@ -113,10 +122,25 @@
   background-color: $purple;
   border-radius: 4px;
   text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: $white;
+    background-color: #9070EC;
+  }
+
+  &:active {
+    background-color: #593CAC;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
 }
 
 .sorting__control {
   width: 165px;
+  min-height: 32px;
   font-family: $montserrat-regular;
   font-weight: 600;
   font-size: 16px;
@@ -124,9 +148,15 @@
   color: $purple;
   border: none;
   outline: 0;
-  padding: 10px 22px 10px 10px;
   text-align: center;
   cursor: pointer;
   appearance: none;
   background-color: #f8f8f8;
+  border: 0;
+  border-radius: 4px;
+
+  &:focus,
+  &:hover {
+    background-color: #f0ebff;
+  }
 }
