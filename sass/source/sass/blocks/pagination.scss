@@ -6,6 +6,15 @@
   justify-content: space-between;
   padding: 40px 0 0;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    padding-top: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+  }
 }
 
 .pagination__item {
@@ -19,6 +28,10 @@
   border-radius: 4px;
   list-style: none;
   position: relative;
+}
+
+.pagination__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .pagination__link {
@@ -46,6 +59,10 @@
 
 .pagination__link span {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .pagination__item--current {
@@ -53,4 +70,19 @@
   background-color: #f8f8f8;
   color: $black;
   cursor: default;
+}
+
+
+.pagination__link--back,
+.pagination__link--next {
+  @media (min-width: $tablet-width) {
+    padding: 5px 20px;
+  }
+}
+
+
+.pagination__link-icon {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

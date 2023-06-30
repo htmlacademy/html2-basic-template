@@ -3,6 +3,10 @@
   background-color: #f8f8f8;
   padding-top: 50px;
   padding-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .sorting__wrapper {

@@ -25,12 +25,11 @@
 
 .navigation-list__item {
   list-style: none;
-  width: 100%;
+  width: 320px;
   text-align: center;
   border-top: 1px solid #f0ebff;
 
   @media (min-width: $tablet-width) {
-    max-width: 100%;
     width: unset;
     border-top: none;
   }

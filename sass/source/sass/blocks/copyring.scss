@@ -1,7 +1,6 @@
 .copyring {
   font-family: $montserrat-regular;
   font-size: 12px;
-  line-height: 16;
   color: $base-grey;
   display: flex;
   justify-content: center;
@@ -12,4 +11,8 @@
 
 .copyring__text {
   margin: 0;
+}
+
+.copyring__link {
+  display: flex;
 }

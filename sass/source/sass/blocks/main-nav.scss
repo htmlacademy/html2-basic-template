@@ -1,9 +1,16 @@
 .main-nav {
+  width: 320px;
+  margin: 0 auto;
+
   @media (min-width: $tablet-width) {
-    width: 100%;
+    width: 768px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
   }
 }
 
@@ -57,7 +64,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
   margin: 0 auto;
   padding: 0;
 
@@ -70,8 +76,9 @@
   min-width: 60px;
   min-height: 60px;
   background-color: $white;
-  background-image: url("img/svg/toggle_closed.svg");
+  background-image: url("../../img/svg/toggle_closed.svg");
   background-repeat: no-repeat;
+  background-position: 22px 22px;
   border: none;
   cursor: pointer;
 
@@ -81,8 +88,9 @@
 }
 
 .main-nav--opened .main-nav__toggle {
+  background-position: 22px 22px;
   background-color: #f0ebff;
-  background-image: url("img/svg/toggle_open.svg");
+  background-image: url("../../img/svg/toggle_open.svg");
   background-repeat: no-repeat;
   justify-content: center;
   min-width: 60px;
