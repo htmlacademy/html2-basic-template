@@ -1,32 +1,57 @@
-.slider {
+.promo__item {
+  padding: 20px 20px 60px;
   box-sizing: border-box;
-  margin: 0 auto;
-}
+  min-height: 656px;
 
-.slider__item {
-  list-style-type: none;
-  padding: 18px 0 59px;
-
-  &--white {
-    background-color: #f3ebe1;
+  @media (min-width: $tablet-width) {
+    padding: 0;
   }
 
-  &--purple {
+  @media (min-width: $desktop-width) {
+    padding: 30px 20px 60px;
+  }
+}
+
+.promo__item--white {
+  background-color: #f3ebe1;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, #f3ebe1 77%, transparent 50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: #f3ebe1;
+  }
+}
+
+.promo__item--purple {
+  background-color: #eae6fc;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, #eae6fc 77%, transparent 50%);
+  }
+
+  @media (min-width: $desktop-width) {
     background-color: #eae6fc;
   }
 
-  &--black {
+}
+
+.promo__item--black {
+  background-color: #e5e6e8;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, #e5e6e8 77%, transparent 50%);
+  }
+
+  @media (min-width: $desktop-width) {
     background-color: #e5e6e8;
   }
-}
 
-.slider__list {
-  padding: 0;
-  margin: 0;
 }
 
 
-.slider__item-wrapper {
+.promo__item-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,13 +68,12 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 600px 1fr;
-    gap: 30px;
     padding-bottom: 79px;
     justify-items: flex-start;
   }
 }
 
-.slider__description-wrapper {
+.promo__description-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +92,7 @@
   }
 }
 
-.slider__promo {
+.promo__promo {
   font-family: $montserrat-bold;
   font-size: 12px;
   line-height: 16px;
@@ -85,7 +109,7 @@
   }
 }
 
-.slider__title {
+.promo__title {
   font-family: $montserrat-bold;
   font-size: 36px;
   line-height: 48px;
@@ -104,7 +128,7 @@
   }
 }
 
-.slider__description {
+.promo__description {
   font-family: $montserrat-regular;
   font-size: 14px;
   line-height: 20px;
@@ -123,17 +147,17 @@
   @media (min-width: $desktop-width) {
     padding: 0;
     text-align: left;
-    margin-bottom: 40px
+    margin-bottom: 40px;
   }
 }
 
-.slider__button {
+.promo__button {
   display: flex;
   justify-content: space-between;
   width: 230px;
 }
 
-.slider__old-price {
+.promo__old-price {
   font-family: $montserrat-regular;
   font-size: 16px;
   line-height: 32px;
@@ -142,13 +166,13 @@
   padding-right: 10px;
 }
 
-.slider__new-price {
+.promo__new-price {
   font-family: $montserrat-semi-bold;
   font-size: 20px;
   line-height: 32px;
 }
 
-.slider__button-buy {
+.promo__button-buy {
   font-family: $montserrat-regular;
   font-size: 16px;
   line-height: 24px;
@@ -169,7 +193,7 @@
   }
 }
 
-.slider__item-img {
+.promo__item-img {
   @media (min-width: $tablet-width) {
     width: 476px;
   }
