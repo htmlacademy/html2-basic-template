@@ -79,7 +79,7 @@
   background-color: #9070ec;
 
   &:disabled {
-    background-color: #bdbdbd;
+    background-color: $base-grey;
   }
 
   @media (min-width: $tablet-width) {
@@ -90,8 +90,6 @@
     width: 274px;
   }
 }
-
-
 
 .catalog__range-toggles {
   position: relative;
@@ -186,7 +184,7 @@
 }
 
 .catalog__range-input--min {
-  color: #bdbdbd;
+  color: $base-grey;
 
 }
 
@@ -210,7 +208,7 @@
   content: "";
   width: 8px;
   height: 2px;
-  background-color: #bdbdbd;
+  background-color: $base-grey;
   margin: auto;
 }
 
@@ -304,4 +302,10 @@
     grid-template-columns: 340px 1fr;
     gap: 8px;
   }
+}
+
+.catalog__filter-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

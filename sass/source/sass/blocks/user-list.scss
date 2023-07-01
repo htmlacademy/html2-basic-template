@@ -37,6 +37,10 @@
     background-color: #f0ebff;
   }
 
+  &:hover,
+  &:focus {
+    color: $purple;
+  }
 
   @media (min-width: $desktop-width) {
     min-width: 112px;
