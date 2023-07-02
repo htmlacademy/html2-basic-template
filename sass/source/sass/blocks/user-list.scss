@@ -1,7 +1,13 @@
 .user-list {
 
-@media (max-width: $mobile-width-only) {
-  margin-left: auto;
+  &__item {
+    &:active {
+      background-color: $alt-grey;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: auto;
   }
 
   @media (min-width: $tablet-width) {
@@ -9,6 +15,19 @@
   }
 
   &__link {
+
+    &:active {
+      color: $alt-primary;
+    }
+
+    @media (min-width: $tablet-width) {
+
+      &:hover,
+      &:focus {
+        color: $alt-primary;
+      }
+    }
+
     @media (min-width: $desktop-width) {
       padding: 32px 20px;
       display: flex;
