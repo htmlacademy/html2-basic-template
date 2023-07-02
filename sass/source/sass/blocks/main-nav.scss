@@ -82,12 +82,14 @@
 
   &--opened {
     & .nav-point {
-      display: block;
+      display: flex;
     }
 
-    & .nav-point__item::before,
-    & .nav-point__item:last-child::after {
-      display: inline;
+    @media (max-width: $mobile-width-only) {
+      & .nav-point__item::before,
+      & .nav-point__item:last-child::after {
+        display: inline;
+      }
     }
   }
 
@@ -96,6 +98,10 @@
     background-repeat: no-repeat;
     width: 16px;
     height: 12px;
+
+    &:active {
+      background-color: $alt-grey;
+    }
   }
 
   &--opened &__toggle {

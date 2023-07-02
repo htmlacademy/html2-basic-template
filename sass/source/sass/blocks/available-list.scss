@@ -15,13 +15,25 @@
 
   &__radio {
     position: absolute;
-    top: -2px;
-    left: 0;
+    top: -4px;
     width: 24px;
     height: 24px;
-    background-image: url(../../img/svg/radio-disable.svg);
-    background-repeat: no-repeat;
+    background: $base-white;
+    border: 3px solid $alt-primary;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: 0;
 
+    &:hover,
+    &:focus {
+
+      box-shadow: inset 0 0 0 3px $base-white, inset 0 0 0 12px rgba(120, 89, 207, 0.25);
+    }
+
+    &:hover,
+    &:focus {
+
+    }
   }
 
   &__text {
@@ -29,10 +41,14 @@
   }
 
   &__input:checked+&__radio {
-    background-image: url(../../img/svg/radio-active.svg);
+    box-shadow: inset 0 0 0 3px $base-white, inset 0 0 0 12px $alt-primary;
   }
 
   &__input:disabled~&__text {
     color: $base-grey;
+  }
+
+  &__input:disabled~&__radio {
+    border: 3px solid $base-grey;
   }
 }

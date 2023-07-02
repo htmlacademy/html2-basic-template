@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="img/favicons/favicon.svg">
@@ -53,8 +54,8 @@
         </button>
       </div>
       <ul class="main-nav__list nav-point">
-        <li class="nav-point__item">
-          <a class="nav-point__link nav-point__link--active" href="#">Главная</a>
+        <li class="nav-point__item nav-point__item--active">
+          <a class="nav-point__link" href="#">Главная</a>
         </li>
         <li class="nav-point__item">
           <a class="nav-point__link" href="#">Каталог</a>
@@ -71,10 +72,10 @@
 
   <div class="wrapper">
     <main class="main">
-      <section class="slider">
+      <section class="slider swiper">
         <h2 class="visually-hidden">Новинки</h2>
-        <ul class="slider__list">
-          <li class="slider__item slider__item--white">
+        <ul class="slider__list swiper-wrapper">
+          <li class="slider__item slider__item--white swiper-slide">
             <div class="slider__item-inner">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/white-desktop.webp 1x,
@@ -109,8 +110,7 @@
               </div>
             </div>
           </li>
-          <!-- Удалить hidden -->
-          <li class="slider__item slider__item--latte visually-hidden">
+          <li class="slider__item slider__item--latte swiper-slide">
             <div class="slider__item-inner">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/latte-desktop.webp 1x,
@@ -145,8 +145,7 @@
               </div>
             </div>
           </li>
-          <!-- Удалить hidden -->
-          <li class="slider__item slider__item--espresso visually-hidden">
+          <li class="slider__item slider__item--espresso swiper-slide">
             <div class="slider__item-inner">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/espresso-desktop.webp 1x,
@@ -185,13 +184,15 @@
           </li>
         </ul>
         <div class="slider__arrows">
-          <button class="slider__arrow slider__arrow--left" type="button"></button>
-          <button class="slider__arrow slider__arrow--right" type="button"></button>
+          <button class="slider__arrow slider__arrow--left swiper-button-prev" type="button"></button>
+          <button class="slider__arrow slider__arrow--right swiper-button-next" type="button"></button>
         </div>
-        <div class="slider__steps">
-          <button type="button" class="slider__step slider__step--active"></button>
-          <button type="button" class="slider__step slider__step--disable"></button>
-          <button type="button" class="slider__step slider__step--disable"></button>
+        <div class="slider__steps-wrapper">
+          <div class="slider__steps swiper-pagination">
+            <button type="button" class="slider__step swiper-pagination-bullet-active"></button>
+            <button type="button" class="slider__step swiper-pagination-bullet"></button>
+            <button type="button" class="slider__step swiper-pagination-bullet"></button>
+          </div>
         </div>
       </section>
       <section class="features">
@@ -251,6 +252,7 @@
 
                 <div class="filter__price">
                   <p class="filter__heading">Цена</p>
+                  <!-- filter__range--disabled -->
                   <div class="filter__range">
                     <div class="filter__range-controls">
                       <div class="filter__range-scale">
@@ -265,6 +267,7 @@
                       <input class="filter__price-control filter__price-control--min" type="text" value="0">
                       <span class="filter__price-control-separator"></span>
                       <input class="filter__price-control filter__price-control--max" type="text" value="900">
+                      <input class="filter__price-control filter__price-control--max-mobile" type="text" value="123">
                     </div>
                   </div>
                 </div>
@@ -535,7 +538,7 @@
                   </a>
                 </li>
                 <li class="pagination-list__item">
-                  <a class="pagination-list__link pagination-list__link">1</a>
+                  <a class="pagination-list__link">1</a>
                 </li>
                 <li class="pagination-list__item pagination-list__item--current">
                   <a class="pagination-list__link pagination-list__link--current" href="#">2</a>
@@ -668,7 +671,7 @@
                 <svg class="contacts-list__phone-icon" width="13" height="16">
                   <use href="img/icons/stack.svg#phone"></use>
                 </svg>
-                +7 (999) 999-99-99
+                <a href="tel:+79999999999">+7 (999) 999-99-99</a>
               </li>
             </ul>
           </div>
@@ -689,6 +692,7 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./js/script.js" defer></script>
 </body>
 

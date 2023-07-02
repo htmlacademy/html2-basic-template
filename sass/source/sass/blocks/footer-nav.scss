@@ -64,8 +64,15 @@
       text-transform: uppercase;
       padding-top: 20px;
 
-      @media (max-width: $mobile-width-only) {
-      }
+
+    &:hover,
+    &:focus {
+      color: $alt-primary;
+    }
+
+    &:active {
+      color: $base-primary;
+    }
     }
   }
 }

@@ -1,0 +1,34 @@
+.swiper {
+
+  &-button-prev::after,
+  &-button-next::after {
+    content: "";
+  }
+
+  // &-pagination-bullets {
+  //   display: none;
+
+
+  //   @media (min-width: $desktop-width) {
+  //     display: flex;
+  //     gap: 8px;
+  //     flex-direction: row;
+  //     position: absolute;
+  //     bottom: 64px;
+  //     left: 44%;
+  //   }
+  // }
+
+  // &-pagination-bullet {
+  //   width: 40px;
+  //   border-radius: 0;
+  //   width: 62px;
+  //   height: 4px;
+  //   border: none;
+  //   background-color: $base-white;
+
+  //   &-active {
+  //     background-color: $base-primary;
+  //   }
+  // }
+}

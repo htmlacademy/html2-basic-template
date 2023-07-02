@@ -10,3 +10,22 @@ navToggle.addEventListener('click', () => {
     mainNav.classList.remove('main-nav--opened');
   }
 });
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    loop: true,
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.slider__arrow--left',
+    prevEl: '.slider__arrow--right',
+  },
+});

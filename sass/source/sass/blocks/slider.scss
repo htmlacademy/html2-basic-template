@@ -9,10 +9,12 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
+    padding-bottom: 160px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   &__list {
@@ -59,6 +61,7 @@
       @media (min-width: $desktop-width) {
         position: static;
         transform: translateX(0);
+        padding-bottom: 84px;
       }
     }
   }
@@ -112,6 +115,7 @@
 
     @media (max-width: $mobile-width-only) {
       padding: 10px 25px 0;
+      min-height: 100px;
     }
 
     @media (min-width: $tablet-width) {
@@ -171,11 +175,35 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
 
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: 3;
+      background-image: none;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      top: 0;
+      left: 0;
+      min-height: 656px;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background-image: linear-gradient(90deg, $base-white 0%, rgba(255, 255, 255, 0.00) 100%);
+    }
+
+    &:active {
+      background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+    }
+
     @media (max-width: $mobile-width-only) {
+      &::before {
+        width: 20px;
+      }
+
       position: absolute;
       top: 0;
       min-height: 656px;
-      width: 20px;
       padding: 0;
       margin: 0;
       border: none;
@@ -191,6 +219,10 @@
     }
 
     @media (min-width: $tablet-width) {
+      &::before {
+        width: 60px;
+      }
+
       position: absolute;
       top: 0;
       min-height: 620px;
@@ -215,33 +247,37 @@
     }
   }
 
-  &__steps {
+  &__steps.swiper-pagination-bullets {
     display: none;
 
     @media (min-width: $desktop-width) {
-      position: absolute;
       display: flex;
+      gap: 8px;
+      flex-direction: row;
+      position: absolute;
       bottom: 64px;
       left: 44%;
     }
   }
 
-  &__step {
+  &__steps .swiper-pagination-bullet {
+    gap: 0;
+    width: 40px;
+    border-radius: 0;
     width: 62px;
     height: 4px;
     border: none;
+    background-color: $base-white;
+    opacity: 1;
 
-    &:nth-child(2n) {
-      margin: 0 8px;
-    }
-
-
-    &--active {
+    &-active {
       background-color: $base-primary;
     }
 
-    &--disable {
-      background-color: $base-white;
+    &:hover,
+    &:focus {
+      background-color: $alt-primary;
+      opacity: 0.25;
     }
   }
 }

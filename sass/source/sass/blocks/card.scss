@@ -6,6 +6,15 @@
     margin: 10px 0;
   }
 
+  @media (min-width: $tablet-width) {
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+
   @media (min-width: $desktop-width) {
     width: 317px;
   }

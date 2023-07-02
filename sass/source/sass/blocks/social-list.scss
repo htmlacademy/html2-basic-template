@@ -1,8 +1,23 @@
 .social-list {
   list-style-type: none;
+  color: $base-grey;
 
   &__item {
     padding: 9px;
+
+    &:hover,
+    &:focus {
+      border-radius: 4px;
+      color: $base-primary;
+      background-color: $alt-grey;
+    }
+
+    &:active {
+      border-radius: 4px;
+      color: $base-primary;
+      background-color: rgba(120, 89, 207, 0.25);
+
+    }
   }
 }
 

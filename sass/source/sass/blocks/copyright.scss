@@ -2,9 +2,7 @@
   color: $base-grey;
 
   &__text {
-    @media (max-width: $mobile-width-only) {
-      padding-right: 6px;
-    }
+    padding-right: 6px;
   }
 
   &__link {
@@ -14,6 +12,15 @@
     align-items: center;
     line-height: 16px;
     padding-right: 16px;
+
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:active {
+      color: $dark-primary;
+    }
 
     &-icon {
       position: absolute;

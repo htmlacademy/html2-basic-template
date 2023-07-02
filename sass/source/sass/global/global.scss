@@ -27,6 +27,19 @@ a {
   padding: 8px 20px;
   font-family: "montserrat", "Arial", sans-serif;
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: $alt-primary;
+  }
+
+  &:active {
+    background-color: $dark-primary;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
 }
 
 fieldset {

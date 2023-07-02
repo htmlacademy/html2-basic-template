@@ -39,7 +39,6 @@
       @media (min-width: $tablet-width) {
         width: auto;
       }
-
     }
 
     &--next {
@@ -59,11 +58,24 @@
       }
     }
 
-    @media (min-width: $tablet-width) {}
-
-
     &--current {
       font-weight: 600;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $base-primary;
+    }
+
+    &:active {
+      background-color: $dark-primary;
+    }
+
+    &:hover .pagination-list__link,
+    &:focus .pagination-list__link,
+    &:active .pagination-list__link,
+    &:disabled {
+      color: $base-white;
     }
   }
 

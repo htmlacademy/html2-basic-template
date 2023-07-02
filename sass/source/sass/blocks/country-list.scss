@@ -11,6 +11,12 @@
 
   &__label {
     position: relative;
+
+
+    &:hover .country-list__checkbox,
+    &:focus .country-list__checkbox {
+      box-shadow: 0 0 0 2px $alt-primary;
+    }
   }
 
   &__checkbox {
@@ -19,9 +25,21 @@
     left: 0;
     width: 42px;
     height: 24px;
-    background-image: url(../../img/svg/checkbox-disable.svg);
-    background-repeat: no-repeat;
+    border-radius: 12px;
+    background-color: $base-grey;
 
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 1px;
+      top: 1px;
+      width: 19px;
+      height: 19px;
+      border: 2px solid $base-grey;
+      border-radius: 14px;
+      background-color: $base-white;
+    }
   }
 
   &__text {
@@ -29,7 +47,13 @@
   }
 
   &__input:checked+&__checkbox {
-    background-image: url(../../img/svg/checkbox-active.svg);
+    background-color: $base-primary;
+  }
+
+  &__input:checked+&__checkbox::before {
+    right: 0;
+    left: auto;
+    border-color: $base-primary;
   }
 
   &__input:disabled~&__text {

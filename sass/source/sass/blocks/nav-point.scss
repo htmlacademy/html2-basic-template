@@ -7,12 +7,46 @@
     flex-direction: column;
     position: absolute;
     width: 320px;
-    z-index: 1;
+    z-index: 2;
     background-color: $base-white;
+    left: 0;
+    width: 100%;
   }
 
   &__item {
-    padding: 20px 20px;
+    padding: 20px 100%;
+    position: relative;
+    white-space: nowrap;
+
+    @media (max-width: $mobile-width-only) {
+      &:active {
+        background-color: $alt-grey;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 32px 20px;
+
+      &--active .nav-point__link::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $base-primary;
+        bottom: 0;
+        transform: translateX(-79%);
+      }
+
+      &:hover,
+      &:focus {
+        color: $base-primary;
+      }
+
+      &:active {
+        color: $base-primary;
+        background-color: $alt-grey;
+      }
+    }
 
     &::before,
     &:last-child::after {

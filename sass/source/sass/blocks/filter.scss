@@ -1,5 +1,4 @@
 .filter {
-
   &__form {
     @media (min-width: $tablet-width) {
       display: flex;
@@ -46,6 +45,16 @@
     @media (min-width: $desktop-width) {
       padding-top: 40px;
     }
+  }
+
+  &__range--disabled {
+    & .filter__range-bar {
+      background-color: $base-grey;
+    }
+
+    & .filter__range-toggle {
+      border: 2px solid $base-grey;
+    }
 
   }
 
@@ -90,10 +99,20 @@
     width: 24px;
     height: 24px;
     background: $base-white;
-    border: 2px solid $alt-primary;
+    border: 3px solid $alt-primary;
     border-radius: 50%;
     cursor: pointer;
     outline: 0;
+
+    &:hover,
+    &:focus {
+
+      box-shadow: inset 0 0 0 3px $base-white, inset 0 0 0 12px rgba(120, 89, 207, 0.25);
+    }
+
+    &:active {
+      box-shadow: inset 0 0 0 3px $base-white, inset 0 0 0 12px $alt-primary;
+    }
 
     @media (max-width: $mobile-width-only) {
       &--min {
@@ -143,21 +162,44 @@
     font-weight: 500;
     box-sizing: border-box;
 
+    &:focus,
+    &:active {
+      border-color: $dark-primary;
+      outline: none;
+    }
+
+    &:disabled {
+      border-color: $base-grey;
+      outline: none;
+    }
+
     &--min {
       color: $base-grey;
     }
 
     @media (max-width: $mobile-width-only) {
       width: 118px;
+
+      &--max {
+        display: none;
+      }
     }
 
     @media (min-width: $tablet-width) {
-      width: 67px;
+      width: 80px;
+
+      &--max-mobile {
+        display: none;
+      }
     }
 
     @media (min-width: $desktop-width) {
       display: flex;
       width: 44%;
+
+      &--max-mobile {
+        display: none;
+      }
     }
 
     &-separator {
@@ -215,6 +257,12 @@
     &--reset {
       background-color: $base-white;
       color: $base-primary;
+
+      &:hover,
+      &:focus,
+      &:disabled {
+        color: $base-white;
+      }
 
       @media (max-width: $mobile-width-only) {
         margin-top: 20px;
