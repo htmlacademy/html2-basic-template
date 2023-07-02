@@ -1,5 +1,7 @@
 .contact__inner {
-  margin-bottom: 40px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .contact__title {

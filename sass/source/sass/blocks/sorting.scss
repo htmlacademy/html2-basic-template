@@ -17,11 +17,13 @@
   @media (min-width: $tablet-width) {
     margin-top: 41px;
     justify-content: flex-end;
+    margin-right: 10px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
     justify-content: flex-end;
+    margin-right: 10px;
   }
 }
 
@@ -184,7 +186,7 @@
   background-image: url(../../img/svg/arrow_down.svg);
   background-repeat: no-repeat;
   background-size: 10px 6px;
-  background-position: center right 7px;
+  background-position: center right 0;
 
   &:focus,
   &:hover {

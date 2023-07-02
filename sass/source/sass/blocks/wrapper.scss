@@ -19,5 +19,15 @@
       display: none;
     }
   }
+  @media (min-width: $tablet-width) {
+  margin-bottom: 10px;
+  }
 
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.wrapper--contact {
+  padding-bottom: 16px;
 }

@@ -130,7 +130,7 @@
     line-height: 24px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-column: 1/2;
     grid-row: 3/4;

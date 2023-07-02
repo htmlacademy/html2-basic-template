@@ -12,7 +12,11 @@
   padding-top: 29px;
 
   @media (min-width: $tablet-width) {
-  padding-top: 21px;
+    padding-top: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 21px;
   }
 }
 
@@ -53,11 +57,11 @@
   content: "";
 }
 
-.compound__input:checked + .compound__label::before {
+.compound__input:checked+.compound__label::before {
   border-color: $purple;
 }
 
-.compound__input:checked + .compound__label::after {
+.compound__input:checked+.compound__label::after {
   position: absolute;
   left: 4px;
   bottom: 0;
@@ -73,4 +77,3 @@
   margin-top: auto;
   margin-bottom: auto;
 }
-

@@ -24,6 +24,7 @@
 
   @media (min-width: $desktop-width) {
     background-image: url(../../img/map/map_desktop.jpg);
+    min-height: 540px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/map/map_desktop@2x.jpg");

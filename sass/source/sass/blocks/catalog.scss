@@ -39,6 +39,10 @@
     font-size: 42px;
     line-height: 64px;
     padding-bottom: 0;
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 37px;
   }
 }
@@ -230,8 +234,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
     flex-direction: row;
+    margin-top: 12px;
   }
 }
 
@@ -257,24 +261,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 137px;
-    min-height: 40px;
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    color: hsl(0deg,0%,100%);
-    font-family: "Montserrat","Arial",sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    background-color: hsl(256deg,55%,58%);
-    border: 0;
-    border-radius: 4px;
-    outline: 0;
-    cursor: pointer;
+    padding: 8px 4px;
   }
 }
 
@@ -289,23 +276,39 @@
   }
 
   @media (min-width: $tablet-width) {
+    font-size: 14px;
+    width: 137px;
     margin-bottom: 0;
-    margin-right: 20px;
-    margin-left: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
   }
 }
 
 .catalog__button--reset {
   color: $purple;
   background-color: $white;
+  width: 138px;
 
   &:disabled {
     background-color: $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    width: 120px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
   }
 }
 
 .catalog__form {
   margin: 0;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -333,4 +336,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    gap: 18px;
+  }
 }
