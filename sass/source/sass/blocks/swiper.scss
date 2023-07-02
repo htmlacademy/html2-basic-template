@@ -1,15 +1,15 @@
 .swiper {
-  width: 320px;
+  min-width: 320px;
   height: 656px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
+    min-width: 768px;
     height: 828px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
+    min-width: 1440px;
     height: 714px;
   }
 }
@@ -59,7 +59,7 @@
   }
 }
 
-.swiper-button-next :focus-visible,
+.swiper-button-next:focus-visible,
 .swiper-button-next:hover {
   background-image: linear-gradient(-90deg, #ffffff 0, rgba(255, 255, 255, 0) 100%);
 }

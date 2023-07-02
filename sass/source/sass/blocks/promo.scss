@@ -4,11 +4,16 @@
   min-height: 656px;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+     padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 20px 60px;
+    margin: 0;
+    flex-direction: row;
+    padding: 30px 80px 84px 105px;
   }
 }
 
@@ -36,6 +41,7 @@
   }
 
 }
+
 
 .promo__item--black {
   background-color: #e5e6e8;
@@ -134,7 +140,7 @@
   line-height: 20px;
   text-align: center;
   margin: 0;
-  padding: 10px 23px 20px;
+  padding: 10px 6px 20px;
   max-width: 320px;
 
   @media (min-width: $tablet-width) {
@@ -161,9 +167,9 @@
   font-family: $montserrat-regular;
   font-size: 16px;
   line-height: 32px;
-  color: $purple;
   text-decoration: line-through;
-  padding-right: 10px;
+  color: $purple;
+  padding-right: 7px;
 }
 
 .promo__new-price {

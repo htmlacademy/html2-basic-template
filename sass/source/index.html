@@ -14,8 +14,8 @@
   <link rel="icon" href="img/favicons/android-icon-192x192.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css">
 </head>
 
 <body class="page__body">
@@ -69,134 +69,130 @@
     </nav>
   </header>
   <main class="main-container">
-    <section class="promotion">
-      <h2 class="visually-hidden">Новинки.</h2>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide  promo">
-            <div class="promo__item promo__item--white">
-              <div class="promo__item-wrapper">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/desktop_promo_white.webp 1x,
+    <h2 class="visually-hidden">Новинки.</h2>
+    <div class="swiper promo">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="promo__item promo__item--white">
+            <div class="promo__item-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/desktop_promo_white.webp 1x,
                   img/promo/desktop_promo_white@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/flat_white_tablet.webp 1x,
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/flat_white_tablet.webp 1x,
                   img/promo/flat_white_tablet@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 320px)" srcset="img/promo/promo_mobile_white.webp 1x,
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/promo/promo_mobile_white.webp 1x,
                   img/promo/promo_mobile_white@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)"
-                    srcset="img/promo/desktop_promo_white.png 1x, img/promo/desktop_promo_white@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/promo/flat_white_tablet.png 1x, img/promo/flat_white_tablet@2x.png 2x">
-                  <img class="promo__item-img" src="img/promo/promo_mobile_white.png"
-                    srcset="img/promo/promo_mobile_white@2x.png 2x" alt="Декаф Флэт Уайт" width="280" height="280">
-                </picture>
-                <div class="promo__description-wrapper">
-                  <span class="promo__promo">Новинка!</span>
-                  <h3 class="promo__title">Декаф Флэт Уайт</h3>
-                  <p class="promo__description">
-                    Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для
-                    расслабления после тяжёлого рабочего дня
-                  </p>
-                  <div class="promo__button">
-                    <div class="promo__price-wrapper">
-                      <span class="promo__old-price">295₽</span>
-                      <span class="promo__new-price">225₽</span>
-                    </div>
-                    <a class="promo__button-buy" href="#catalog">Заказать</a>
+                <source media="(min-width: 1440px)"
+                  srcset="img/promo/desktop_promo_white.png 1x, img/promo/desktop_promo_white@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/promo/flat_white_tablet.png 1x, img/promo/flat_white_tablet@2x.png 2x">
+                <img class="promo__item-img" src="img/promo/promo_mobile_white.png"
+                  srcset="img/promo/promo_mobile_white@2x.png 2x" alt="Декаф Флэт Уайт" width="280" height="280">
+              </picture>
+              <div class="promo__description-wrapper">
+                <span class="promo__promo">Новинка!</span>
+                <h3 class="promo__title">Декаф Флэт Уайт</h3>
+                <p class="promo__description">
+                  Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для
+                  расслабления после тяжёлого рабочего дня
+                </p>
+                <div class="promo__button">
+                  <div class="promo__price-wrapper">
+                    <span class="promo__old-price">295₽</span>
+                    <span class="promo__new-price">225₽</span>
                   </div>
+                  <a class="promo__button-buy" href="#catalog">Заказать</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide promo">
-            <div class="promo__item promo__item--purple">
-              <div class="promo__item-wrapper">
-                <picture>
+        </div>
+        <div class="swiper-slide promo">
+          <div class="promo__item promo__item--purple">
+            <div class="promo__item-wrapper">
+              <picture>
 
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/desktop_promo_purple.webp 1x,
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/desktop_promo_purple.webp 1x,
                   img/promo/desktop_promo_purple@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/tablet_promo_purple.webp 1x,
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/tablet_promo_purple.webp 1x,
                   img/promo/tablet_promo_purple@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 320px)" srcset="img/promo/mobile_promo_purple.webp 1x,
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/promo/mobile_promo_purple.webp 1x,
                   img/promo/mobile_promo_purple@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)"
-                    srcset="img/promo/desktop_promo_purple.png 1x, img/promo/desktop_promo_purple@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/promo/tablet_promo_purple.png 1x, img/promo/tablet_promo_purple@2x.png 2x">
-                  <img class="promo__item-img" src="img/promo/mobile_promo_purple.png"
-                    srcset="img/promo/mobile_promo_purple@2x.png 2x" alt="Лавандовый Латте" width="280" height="280">
-                </picture>
-                <div class="promo__description-wrapper">
-                  <span class="promo__promo">Новинка!</span>
-                  <h3 class="promo__title">Лавандовый Латте</h3>
-                  <p class="promo__description">
-                    Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас
-                    прямо на вершину Радужных гор
-                  </p>
-                  <div class="promo__button">
-                    <div class="promo__price-wrapper">
-                      <span class="promo__old-price">285₽</span>
-                      <span class="promo__new-price">265₽</span>
-                    </div>
-                    <a class="promo__button-buy" href="#catalog">Заказать</a>
+                <source media="(min-width: 1440px)"
+                  srcset="img/promo/desktop_promo_purple.png 1x, img/promo/desktop_promo_purple@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/promo/tablet_promo_purple.png 1x, img/promo/tablet_promo_purple@2x.png 2x">
+                <img class="promo__item-img" src="img/promo/mobile_promo_purple.png"
+                  srcset="img/promo/mobile_promo_purple@2x.png 2x" alt="Лавандовый Латте" width="280" height="280">
+              </picture>
+              <div class="promo__description-wrapper">
+                <span class="promo__promo">Новинка!</span>
+                <h3 class="promo__title">Лавандовый Латте</h3>
+                <p class="promo__description">
+                  Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас
+                  прямо на вершину Радужных гор
+                </p>
+                <div class="promo__button">
+                  <div class="promo__price-wrapper">
+                    <span class="promo__old-price">285₽</span>
+                    <span class="promo__new-price">265₽</span>
                   </div>
+                  <a class="promo__button-buy" href="#catalog">Заказать</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide promo">
-            <div class="promo__item promo__item--black">
-              <div class="promo__item-wrapper">
-                <picture>
+        </div>
+        <div class="swiper-slide promo">
+          <div class="promo__item promo__item--black">
+            <div class="promo__item-wrapper">
+              <picture>
 
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/desktop_promo_coffe.webp 1x,
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo/desktop_promo_coffe.webp 1x,
                   img/promo/desktop_promo_coffe@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/tablet_promo_coffe.webp 1x,
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/promo/tablet_promo_coffe.webp 1x,
                   img/promo/tablet_promo_coffe@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 320px)" srcset="img/promo/mobile_promo_coffe.webp 1x,
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/promo/mobile_promo_coffe.webp 1x,
                   img/promo/mobile_promo_coffe@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)"
-                    srcset="img/promo/desktop_promo_coffe.png 1x, img/promo/desktop_promo_coffe@2x.png 2x">
-                  <source media="(min-width: 768px)"
-                    srcset="img/promo/tablet_promo_coffe.png 1x, img/promo/tablet_promo_coffe@2x.png 2x">
-                  <img class="promo__item-img" src="img/promo/mobile_promo_coffe.png"
-                    srcset="img/promo/mobile_promo_coffe@2x.png 2x" alt="Тройной Эспрессо" width="280" height="280">
+                <source media="(min-width: 1440px)"
+                  srcset="img/promo/desktop_promo_coffe.png 1x, img/promo/desktop_promo_coffe@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/promo/tablet_promo_coffe.png 1x, img/promo/tablet_promo_coffe@2x.png 2x">
+                <img class="promo__item-img" src="img/promo/mobile_promo_coffe.png"
+                  srcset="img/promo/mobile_promo_coffe@2x.png 2x" alt="Тройной Эспрессо" width="280" height="280">
 
-                </picture>
-                <div class="promo__description-wrapper">
-                  <span class="promo__promo">Новинка!</span>
-                  <h3 class="promo__title">Тройной Эспрессо</h3>
-                  <p class="promo__description">
-                    Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам,
-                    что такое настоящая бодрость
-                  </p>
-                  <div class="promo__button">
-                    <div class="promo__price-wrapper">
-                      <span class="promo__old-price">395₽</span>
-                      <span class="promo__new-price">375₽</span>
-                    </div>
-                    <a class="promo__button-buy" href="#catalog">Заказать</a>
+              </picture>
+              <div class="promo__description-wrapper">
+                <span class="promo__promo">Новинка!</span>
+                <h3 class="promo__title">Тройной Эспрессо</h3>
+                <p class="promo__description">
+                  Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам,
+                  что такое настоящая бодрость
+                </p>
+                <div class="promo__button">
+                  <div class="promo__price-wrapper">
+                    <span class="promo__old-price">395₽</span>
+                    <span class="promo__new-price">375₽</span>
                   </div>
+                  <a class="promo__button-buy" href="#catalog">Заказать</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="swiper-button-prev">
-        </div>
-        <div class="swiper-button-next">
-        </div>
-        <div class="swiper-pagination">
-          <div class="swiper-pagination-bullet swiper-pagination-bullet-active"></div>
-          <div class="swiper-pagination-bullet"></div>
-          <div class="swiper-pagination-bullet"></div>
-        </div>
       </div>
-    </section>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination">
+        <div class="swiper-pagination-bullet swiper-pagination-bullet-active"></div>
+        <div class="swiper-pagination-bullet"></div>
+        <div class="swiper-pagination-bullet"></div>
+      </div>
+    </div>
 
     <section class="advantage">
       <div class="advantage__wrapper container">
@@ -658,7 +654,7 @@
   </footer>
   <script src="./js/script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
 </body>
 
 </html>
