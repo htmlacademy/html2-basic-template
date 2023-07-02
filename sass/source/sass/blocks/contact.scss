@@ -1,5 +1,5 @@
 .contact__inner {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .contact__title {
@@ -7,8 +7,8 @@
   font-size: 14px;
   line-height: 20px;
   color: $purple;
-  margin: 0;
-  padding: 20px 0;
+  margin: 0 0 7px;
+  padding-bottom: 10px;
 }
 
 .contact__list {
@@ -22,10 +22,8 @@
 
 .contact__item {
   list-style-type: none;
-  padding-bottom: 3px;
   text-transform: none;
   display: flex;
-  gap: 6px;
   list-style: none;
 
   &--adress {

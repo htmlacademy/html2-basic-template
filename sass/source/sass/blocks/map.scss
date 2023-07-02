@@ -15,7 +15,7 @@
 
   @media (min-width: $tablet-width) {
     background-image: url(../../img/map/map_tablet.jpg);
-
+    min-height: 480px;
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/map/map_tablet@2x.jpg");
     }

@@ -4,7 +4,6 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
-    margin-top: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -18,8 +17,9 @@
   font-size: 14px;
   line-height: 20px;
   color: $purple;
-  margin: 0;
-  padding: 20px 0;
+  padding: 0;
+  margin: 0 0 18px;
+  letter-spacing: 0.24px;
 }
 
 .selection__list {
@@ -28,10 +28,10 @@
   letter-spacing: 0.24px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
-.selection__item {
-  list-style-type: none;
+.selection__item:not(:last-child) {
   margin: 0 0 16px;
   padding: 0;
 }

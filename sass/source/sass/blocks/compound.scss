@@ -9,7 +9,11 @@
   font-size: 16px;
   line-height: 24px;
   margin: 0;
-  padding: 0;
+  padding-top: 29px;
+
+  @media (min-width: $tablet-width) {
+  padding-top: 21px;
+  }
 }
 
 .compound__list {
@@ -20,12 +24,13 @@
 
 .compound__item {
   font-family: $montserrat-regular;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .compound__label {
   font-family: $montserrat-regular;
   font-size: 16px;
+  letter-spacing: 0.24px;
   position: relative;
   cursor: pointer;
   padding-left: 34px;

@@ -7,13 +7,13 @@
     min-height: 640px;
     display: flex;
     flex-direction: column;
-     padding: 0;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
     flex-direction: row;
-    padding: 30px 80px 84px 105px;
+    padding: 29px 80px 84px 105px;
   }
 }
 
@@ -71,7 +71,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 1255px;
-    margin: 0 auto;
+    margin: 0;
     display: grid;
     grid-template-columns: 600px 1fr;
     padding-bottom: 79px;
@@ -89,12 +89,13 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
     width: 600px;
     align-items: flex-start;
     justify-content: center;
     padding-bottom: 0;
-    margin-left: 21px;
-    margin-top: 18px;
+    margin-left: 30px;
+    padding: 0;
   }
 }
 
@@ -105,6 +106,8 @@
   color: $purple;
   text-transform: uppercase;
   padding-top: 7px;
+  letter-spacing: .04em;
+  color: $purple;
 
   @media (min-width: $tablet-width) {
     padding-top: 60px;
@@ -112,6 +115,8 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    display: block;
+    margin-top: -10px;
   }
 }
 
@@ -119,6 +124,7 @@
   font-family: $montserrat-bold;
   font-size: 36px;
   line-height: 48px;
+  letter-spacing: 1.12px;
   text-align: center;
   margin: 0;
   padding-top: 4px;
@@ -147,7 +153,7 @@
     max-width: 768px;
     font-size: 20px;
     line-height: 32px;
-    padding: 15px 0 20px;
+    padding: 18px 0 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -175,7 +181,7 @@
 .promo__new-price {
   font-family: $montserrat-semi-bold;
   font-size: 20px;
-  line-height: 32px;
+  line-height: 36px;
 }
 
 .promo__button-buy {
@@ -207,6 +213,5 @@
   @media (min-width: $desktop-width) {
     width: 600px;
     height: 600px;
-    margin: 29 0 0 21px;
   }
 }

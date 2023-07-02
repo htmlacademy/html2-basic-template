@@ -7,8 +7,12 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding-top: 57px;
+    padding-top: 62px;
     padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 97px;
   }
 }
 
@@ -69,8 +73,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4,1fr);
-    padding: 80px 0 119px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 72px 0 119px;
   }
 }
 
@@ -89,6 +93,9 @@
   @media (min-width: $tablet-width) {
     padding-left: 21px;
   }
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
 }
 
 .advantage__title {
@@ -102,13 +109,17 @@
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 36px;
-    padding: 5px 0 10px;
+    padding: 5px 0 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0 11px;
   }
 }
 
 
 .advantage__text {
-  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-family: $montserrat-regular;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -117,5 +128,12 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: center;
   }
 }

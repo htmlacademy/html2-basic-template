@@ -3,6 +3,7 @@
   height: 656px;
   box-sizing: border-box;
 
+
   @media (min-width: $tablet-width) {
     min-width: 768px;
     height: 828px;
@@ -51,6 +52,7 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
+  content: "";
   color: $purple;
   font-weight: 700;
 
@@ -131,3 +133,4 @@
     background-color: $purple;
   }
 }
+

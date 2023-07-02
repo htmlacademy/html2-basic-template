@@ -9,11 +9,15 @@
   font-size: 16px;
   line-height: 24px;
   margin: 0;
-  padding: 0;
+  padding-top: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 1px;
+  }
 }
 
 .country__item {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .country__list {
@@ -39,7 +43,7 @@
   border: 0;
   margin-top: auto;
   margin-bottom: auto;
-  left: 0;
+  left: 3px;
   width: 42px;
   height: 24px;
   background-color: $base-grey;
@@ -49,7 +53,7 @@
 
 .country__label::before {
   position: absolute;
-  left: 3px;
+  left: 6px;
   width: 20px;
   height: 20px;
   background-color: $white ;
@@ -68,7 +72,7 @@
 }
 
 .country__input:checked+.country__label::before {
-  left: 19px;
+  left: 22px;
   z-index: 2;
 }
 
