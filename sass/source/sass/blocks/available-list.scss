@@ -2,4 +2,37 @@
   list-style-type: none;
   font-size: 16px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding-top: 20px;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__radio {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../img/svg/radio-disable.svg);
+    background-repeat: no-repeat;
+
+  }
+
+  &__text {
+    padding-left: 34px;
+  }
+
+  &__input:checked+&__radio {
+    background-image: url(../../img/svg/radio-active.svg);
+  }
+
+  &__input:disabled~&__text {
+    color: $base-grey;
+  }
 }

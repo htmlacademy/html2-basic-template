@@ -1,19 +1,91 @@
 .pagination-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  @media (max-width: $mobile-width-only) {
+    justify-content: space-between;
+    padding: 40px 0 44px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 70px 0 90px;
+    justify-content: end;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 0 120px;
+  }
+
 
   &__item {
     font-size: 16px;
     line-height: 24px;
+    background-color: $base-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+
+    &--current {
+      background-color: inherit;
+    }
+
+    &--prev {
+      @media (min-width: $tablet-width) {
+        width: auto;
+      }
+
+    }
+
+    &--next {
+      @media (max-width: $mobile-width-only) {
+        transform: rotate(180deg);
+      }
+
+      @media (min-width: $tablet-width) {
+        width: auto;
+      }
+    }
+
+    &--prev span,
+    &--next span {
+      @media (max-width: $mobile-width-only) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $tablet-width) {}
+
 
     &--current {
       font-weight: 600;
     }
   }
 
-
-
   &__link {
     color: $base-primary;
+
+    &--prev,
+    &--next {
+      @media (min-width: $tablet-width) {
+        padding: 8px 20px;
+      }
+    }
+
+    &-icon {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
+    }
 
     &--current {
       color: $base-black;

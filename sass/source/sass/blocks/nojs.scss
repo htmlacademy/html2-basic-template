@@ -1,0 +1,20 @@
+.nojs {
+
+  & .main-nav__toggle {
+    display: none;
+  }
+
+  & .nav-point {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    @media (max-width: $mobile-width-only) {
+      position: static;
+      & .nav-point__item::before,
+      & .nav-point__item:last-child::after {
+        display: inline;
+      }
+    }
+  }
+}

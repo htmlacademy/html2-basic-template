@@ -3,11 +3,32 @@
   margin: 0 auto;
 
   @media (max-width: $mobile-width-only) {
+    display: none;
     flex-direction: column;
+    position: absolute;
+    width: 320px;
+    z-index: 1;
+    background-color: $base-white;
   }
-
 
   &__item {
     padding: 20px 20px;
+
+    &::before,
+    &:last-child::after {
+      display: none;
+      position: absolute;
+      content: "";
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $alt-grey;
+      margin-top: -20px;
+    }
+
+    &:last-child::after {
+      margin-top: 35px;
+    }
+
   }
 }

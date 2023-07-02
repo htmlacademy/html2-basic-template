@@ -1,7 +1,23 @@
 .copyright {
   color: $base-grey;
 
+  &__text {
+    @media (max-width: $mobile-width-only) {
+      padding-right: 6px;
+    }
+  }
+
   &__link {
+    position: relative;
     color: $base-grey;
+    display: flex;
+    align-items: center;
+    line-height: 16px;
+    padding-right: 16px;
+
+    &-icon {
+      position: absolute;
+      right: 0;
+    }
   }
 }

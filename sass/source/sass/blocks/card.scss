@@ -1,5 +1,19 @@
 .card {
   list-style-type: none;
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-width-only) {
+    margin: 10px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+  }
 
   &__tittle {
     font-size: 18px;
@@ -12,9 +26,22 @@
     line-height: 20px;
   }
 
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $desktop-width) {}
+  }
+
   &__price {
     font-size: 20px;
     font-weight: 600;
     line-height: 32px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
   }
 }

@@ -1,0 +1,37 @@
+.sorting {
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 40px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 20px;
+    }
+  }
+
+  &__select {
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+}

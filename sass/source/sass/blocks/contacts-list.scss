@@ -1,4 +1,28 @@
 .contacts-list {
   font-size: 14px;
   line-height: 20px;
+
+  &__item {
+    display: flex;
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 16px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 16px;
+    }
+
+  }
+
+  &__adress-icon {
+    padding-right: 6px;
+    flex-shrink: 0;
+    transform: translateY(12%);
+  }
+
+  &__phone-icon {
+    padding-right: 6px;
+    transform: translateY(12%);
+  }
 }

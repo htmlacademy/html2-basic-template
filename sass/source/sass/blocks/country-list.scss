@@ -2,4 +2,37 @@
   list-style-type: none;
   font-size: 16px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding-top: 20px;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 42px;
+    height: 24px;
+    background-image: url(../../img/svg/checkbox-disable.svg);
+    background-repeat: no-repeat;
+
+  }
+
+  &__text {
+    padding-left: 52px;
+  }
+
+  &__input:checked+&__checkbox {
+    background-image: url(../../img/svg/checkbox-active.svg);
+  }
+
+  &__input:disabled~&__text {
+    color: $base-grey;
+  }
 }

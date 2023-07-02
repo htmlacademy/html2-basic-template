@@ -1,0 +1,36 @@
+.product-list {
+  margin: 0;
+  padding: 0;
+
+@media (max-width: $mobile-width-only) {
+  padding-top: 6px;
+}
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    padding-top: 26px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    padding-top: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    background-color: $base-white;
+    padding: 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 30px;
+    }
+  }
+}

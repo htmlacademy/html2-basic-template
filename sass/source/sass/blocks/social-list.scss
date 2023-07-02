@@ -1,5 +1,9 @@
 .social-list {
   list-style-type: none;
+
+  &__item {
+    padding: 9px;
+  }
 }
 
 

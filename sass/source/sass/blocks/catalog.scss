@@ -1,10 +1,66 @@
 .catalog {
+  background-color: $bacground-color;
 
-  &__tittle {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
+  &__wrapper {
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
   }
 
-  &__description {}
+  & .container {
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @media (max-width: $mobile-width-only) {
+      max-width: 320px;
+    }
+
+    @media (min-width: $tablet-width) {
+      max-width: 768px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      padding: 0 40px;
+    }
+  }
+
+  &__badge {
+    margin: 0;
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 50px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 100px;
+      text-align: center;
+    }
+  }
+
+  &__tittle {
+    font-weight: 700;
+    margin: 0;
+    padding-top: 4px;
+
+    @media (max-width: $mobile-width-only) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 42px;
+      line-height: 64px;
+    }
+
+
+    @media (min-width: $desktop-width) {
+      text-align: center;
+    }
+  }
 }
