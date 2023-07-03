@@ -122,6 +122,10 @@
     @media (max-width: $mobile-width-only) {
       padding: 6px 25px 0;
       min-height: 100px;
+
+      & br {
+        display: none;
+      }
     }
 
     @media (min-width: $tablet-width) {
@@ -191,7 +195,11 @@
     background-color: transparent;
     background-image: url(../../img/svg/arrow.svg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 35px 50%;
+
+    @media (max-width: $mobile-width-only) {
+      background-position: 4px 50%;
+    }
 
     &::before {
       position: absolute;
@@ -203,6 +211,14 @@
       top: 0;
       left: 0;
       min-height: 656px;
+
+      @media (min-width: $tablet-width) {
+        min-height: 640px;
+      }
+
+      @media (min-width: $desktop-width) {
+        min-height: 714px;
+      }
     }
 
     &:hover::before,
@@ -210,7 +226,7 @@
       background-image: linear-gradient(90deg, $base-white 0%, rgba(255, 255, 255, 0.00) 100%);
     }
 
-    &:active {
+    &:active::before {
       background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
     }
 
@@ -243,7 +259,7 @@
 
       position: absolute;
       top: 0;
-      min-height: 620px;
+      min-height: 640px;
       width: 60px;
       padding: 0;
       margin: 0;
@@ -260,8 +276,16 @@
     }
 
     @media (min-width: $desktop-width) {
-      min-height: 694px;
+      min-height: 714px;
       width: 60px;
+
+      &--right {
+        right: 0;
+      }
+
+      &--left {
+        left: 0;
+      }
     }
   }
 
@@ -271,9 +295,9 @@
     @media (min-width: $desktop-width) {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       position: absolute;
       bottom: 69px;
-      left: 44%;
     }
   }
 

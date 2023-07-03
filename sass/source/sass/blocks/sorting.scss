@@ -3,7 +3,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row-reverse;
-    padding-top: 44px;
+    padding-top: 34px;
+    padding-right: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -13,6 +14,7 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @media (max-width: $mobile-width-only) {
       padding-top: 40px;

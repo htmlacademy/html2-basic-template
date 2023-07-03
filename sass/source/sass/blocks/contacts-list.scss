@@ -2,11 +2,20 @@
   font-size: 14px;
   line-height: 20px;
 
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 23px;
+    padding-top: 7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 2px;
+  }
+
   &__item {
     display: flex;
 
     @media (max-width: $mobile-width-only) {
-      padding-top: 16px;
+      padding-top: 17px;
     }
 
     @media (min-width: $tablet-width) {

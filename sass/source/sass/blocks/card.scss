@@ -3,7 +3,11 @@
   box-sizing: border-box;
 
   @media (max-width: $mobile-width-only) {
-    margin: 10px 0;
+    margin: 20px 0;
+
+    &:first-child {
+      margin: 0;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -22,22 +26,60 @@
   &__link {
     display: flex;
     justify-content: center;
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 19px;
+    }
   }
 
   &__tittle {
+    margin: 0;
     font-size: 18px;
     font-weight: 700;
     line-height: 32px;
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      padding-top: 30px;
+    }
   }
 
-  &____description {
+  &__description {
+    margin: 0;
     font-size: 14px;
     line-height: 20px;
+
+    @media (max-width: $mobile-width-only) {
+      max-width: 238px;
+      padding-top: 2px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 10px;
+      max-width: 288px;
+    }
   }
 
   &__buy {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 15px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 18px;
+    }
 
     @media (min-width: $desktop-width) {}
   }
@@ -52,5 +94,6 @@
     display: flex;
     justify-content: space-between;
     width: 140px;
+    font-size: 14px;
   }
 }

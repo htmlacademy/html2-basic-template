@@ -4,6 +4,7 @@
   &__wrapper {
     @media (min-width: $desktop-width) {
       display: flex;
+      gap: 20px;
     }
   }
 
@@ -30,16 +31,17 @@
     margin: 0;
 
     @media (max-width: $mobile-width-only) {
+      text-align: center;
       padding-top: 50px;
     }
 
     @media (min-width: $tablet-width) {
+      text-align: center;
       padding-top: 80px;
     }
 
     @media (min-width: $desktop-width) {
       padding-top: 100px;
-      text-align: center;
     }
   }
 
@@ -51,16 +53,25 @@
     @media (max-width: $mobile-width-only) {
       font-size: 24px;
       line-height: 36px;
+      text-align: center;
     }
 
     @media (min-width: $tablet-width) {
       font-size: 42px;
       line-height: 64px;
+      text-align: center;
     }
-
 
     @media (min-width: $desktop-width) {
       text-align: center;
+    }
+  }
+
+  &__filter {
+    padding-left: 2px;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
     }
   }
 }

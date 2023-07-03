@@ -3,15 +3,14 @@
   padding: 0;
 
 @media (max-width: $mobile-width-only) {
-  padding-top: 6px;
+  padding-top: 20px;
 }
 
   @media (min-width: $tablet-width) {
     display: grid;
-    padding-top: 26px;
+    padding-top: 30px;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-
   }
 
   @media (min-width: $desktop-width) {

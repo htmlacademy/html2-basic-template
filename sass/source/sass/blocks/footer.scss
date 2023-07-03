@@ -18,26 +18,27 @@
       display: flex;
       flex-wrap: wrap;
     }
-
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @media (max-width: $mobile-width-only) {
-      padding: 20px 20px 0;
+      padding: 16px 20px 0;
     }
 
     @media (min-width: $tablet-width) {
-      padding: 42px 20px 0;
+      padding: 34px 20px 0;
     }
 
     @media (min-width: $desktop-width) {
       flex-direction: column;
       justify-content: start;
-      padding: 40px 0 0 40px;
+      padding: 37px 0 0 40px;
       min-width: 318px;
+      align-items: start;
     }
   }
 
@@ -47,7 +48,8 @@
 
     @media (min-width: $desktop-width) {
       display: block;
-      padding-top: 10px;
+      font-size: 14px;
+      padding-top: 9px;
     }
   }
 
@@ -75,7 +77,11 @@
     }
 
     @media (min-width: $tablet-width) {
-      padding: 30px 0 40px;
+      padding: 40px 0 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 25px 0 40px;
     }
   }
 }
