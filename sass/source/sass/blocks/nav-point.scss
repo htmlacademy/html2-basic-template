@@ -13,6 +13,15 @@
     width: 100%;
   }
 
+  @media (min-width: $tablet-width) {
+    gap: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 22px;
+  }
+
+
   &__item {
     padding: 20px 100%;
     position: relative;
@@ -20,7 +29,7 @@
 
     @media (max-width: $mobile-width-only) {
       &:active {
-        background-color: $alt-grey;
+        background-color: $lite-primary;
       }
     }
 
@@ -44,7 +53,7 @@
 
       &:active {
         color: $base-primary;
-        background-color: $alt-grey;
+        background-color: $lite-primary;
       }
     }
 
@@ -56,12 +65,12 @@
       right: 0;
       width: 100%;
       height: 1px;
-      background-color: $alt-grey;
+      background-color: $lite-primary;
       margin-top: -20px;
     }
 
     &:last-child::after {
-      margin-top: 35px;
+      margin-top: 32px;
     }
 
   }

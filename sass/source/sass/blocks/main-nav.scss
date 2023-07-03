@@ -6,6 +6,10 @@
   width: 320px;
   margin: 0 auto;
 
+  @media (max-width: $mobile-width-only) {
+  line-height: 12px;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: stretch;
@@ -23,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 0 0 20px;
 
     @media (min-width: $tablet-width) {
       display: contents;
@@ -34,6 +38,10 @@
     @media (min-width: $tablet-width) {
       display: flex;
       align-items: center;
+      padding-right: 6px;
+    }
+
+    @media (min-width: $desktop-width) {
       padding-right: 20px;
     }
   }
@@ -100,7 +108,7 @@
     height: 12px;
 
     &:active {
-      background-color: $alt-grey;
+      background-color: $lite-primary;
     }
   }
 

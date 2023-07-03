@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 96px;
+    padding-bottom: 121px;
   }
 
   &__wrapper {
@@ -45,6 +45,7 @@
 
     @media (min-width: $desktop-width) {
       padding-top: 100px;
+      letter-spacing: 0.6px;
     }
   }
 
@@ -67,14 +68,20 @@
     padding: 0;
     box-sizing: border-box;
 
+    @media (max-width: $mobile-width-only) {
+      padding-top: 4px;
+    }
+
     @media (min-width: $tablet-width) {
+      padding-top: 12px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      gap: 0 30px;
     }
 
     @media (min-width: $desktop-width) {
       grid-template-columns: repeat(4, 1fr);
+      padding-top: 0;
     }
 
   }
@@ -82,8 +89,28 @@
   &__item {
     list-style-type: none;
 
+    &--usable {
+      @media (max-width: $mobile-width-only) {
+        padding: 0 45px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 80px 30px 0;
+      }
+    }
+
+    &--energy {
+      @media (max-width: $mobile-width-only) {
+        padding: 0 35px;
+      }
+    }
+
+    &--ecology {
+      @media (max-width: $mobile-width-only) {}
+    }
+
     @media (max-width: $mobile-width-only) {
-      padding-top: 32px;
+      padding-top: 29px;
     }
 
     @media (min-width: $tablet-width) {

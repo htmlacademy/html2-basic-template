@@ -1,8 +1,12 @@
 .user-list {
 
+  @media (min-width: $desktop-width) {
+    gap: 23px;
+  }
+
   &__item {
     &:active {
-      background-color: $alt-grey;
+      background-color: $lite-primary;
     }
   }
 
