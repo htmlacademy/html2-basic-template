@@ -77,3 +77,14 @@
   z-index: 2;
 }
 
+
+.country__label--disabled {
+  cursor: default;
+  color: $base-grey;
+}
+
+.country__input:disabled {
+  pointer-events: none;
+  cursor: default;
+
+}

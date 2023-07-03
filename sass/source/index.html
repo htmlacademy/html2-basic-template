@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title>Drink2Go </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
@@ -16,6 +15,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -94,8 +94,8 @@
                 <span class="promo__promo">Новинка!</span>
                 <h3 class="promo__title">Декаф Флэт Уайт</h3>
                 <p class="promo__description">
-                  Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для
-                  расслабления после тяжёлого рабочего дня
+                  Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно
+                  для&nbsp;расслабления после тяжёлого рабочего дня
                 </p>
                 <div class="promo__button">
                   <div class="promo__price-wrapper">
@@ -196,7 +196,7 @@
 
     </div>
 
-    <section class="advantage" >
+    <section class="advantage">
       <div class="advantage__wrapper container">
         <h2 class="advantage__heading">Преимущества</h2>
         <p class="advantage__description">Главные причины выбрать Drink2Go</p>
@@ -248,8 +248,8 @@
         </ul>
       </div>
     </section>
-    <section class="catalog  container">
-      <div class="catalog__inner">
+    <section class="catalog">
+      <div class="catalog__inner  container">
         <h2 class="catalog__title">Каталог</h2>
         <p class="catalog__description">Каталог кофейных напитков</p>
         <div class="catalog__wrapper-section">
@@ -286,7 +286,7 @@
                   <ul class="compound__list">
                     <li class="compound__item">
                       <input class="visually-hidden compound__input" type="radio" name="option" value="no" id="no"
-                        checked="checked" disabled>
+                        checked="checked">
                       <label class="compound__label compound__label--radio" for="no">Неважно</label>
                     </li>
                     <li class="compound__item">
@@ -301,9 +301,9 @@
                         растительное</label>
                     </li>
                     <li class="compound__item">
-                      <input class="visually-hidden compound__input" type="radio" name="option" value="without-milk"
-                        id="without-milk">
-                      <label class="compound__label compound__label--radio" for="without-milk">Без молока</label>
+                      <input class="visually-hidden compound__input " type="radio" name="option" value="without-milk"
+                        id="without-milk"  disabled>
+                      <label class="compound__label compound__label--radio compound__label--disabled" for="without-milk">Без молока</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -315,27 +315,27 @@
                     <li class="country__item">
                       <input class="visually-hidden country__input" type="checkbox" name="country" value="brazil"
                         id="brazil" checked="checked">
-                      <label class="country__label country__label--state" for="brazil">Бразилия</label>
+                      <label class="country__label country__label--checkbox" for="brazil">Бразилия</label>
                     </li>
                     <li class="country__item">
                       <input class="visually-hidden country__input" type="checkbox" name="country" value="ethiopia"
                         id="ethiopia">
-                      <label class="country__label country__label--state" for="ethiopia">Эфиопия</label>
+                      <label class="country__label country__label--checkbox" for="ethiopia">Эфиопия</label>
                     </li>
                     <li class="country__item">
                       <input class="visually-hidden country__input" type="checkbox" name="country" value="colombia"
                         id="colombia">
-                      <label class="country__label country__label--state" for="colombia">Колумбия</label>
+                      <label class="country__label country__label--checkbox" for="colombia">Колумбия</label>
                     </li>
                     <li class="country__item">
                       <input class="visually-hidden country__input" type="checkbox" name="country" value="costa-rica"
                         id="costa-rica">
-                      <label class="country__label country__label--state" for="costa-rica">Коста-Рика</label>
+                      <label class="country__label country__label--checkbox" for="costa-rica">Коста-Рика</label>
                     </li>
                     <li class="country__item">
                       <input class="visually-hidden country__input" type="checkbox" name="country" value="peru"
-                        id="peru">
-                      <label class="country__label country__label--checkbox" for="peru">Перу</label>
+                        id="peru"  disabled>
+                      <label class="country__label country__label--disabled" for="peru">Перу</label>
                     </li>
                   </ul>
                 </fieldset>

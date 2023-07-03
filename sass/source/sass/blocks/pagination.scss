@@ -55,6 +55,12 @@
     background-color: #9070EC;
     color: $white;
   }
+
+  &:disabled {
+    background-color: $light-grey;
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 

@@ -93,6 +93,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 21px;
   }
+
   @media (min-width: $desktop-width) {
     padding-left: 0;
   }
@@ -116,7 +117,6 @@
     padding: 23px 0 11px;
   }
 }
-
 
 .advantage__text {
   font-family: $montserrat-regular;

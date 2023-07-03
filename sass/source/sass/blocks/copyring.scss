@@ -23,8 +23,9 @@
 
   &:hover,
   &:focus {
-    fill: #7859CF;
+    fill: $purple;
   }
+
   &:active {
     fill: #593CAC;
   }

@@ -30,7 +30,7 @@
 }
 
 .promo__item--purple {
-  background-color: #eae6fc;
+  background-color: $light-grey;
 
   @media (min-width: $tablet-width) {
     background: linear-gradient(180deg, #eae6fc 77%, transparent 50%);
@@ -53,9 +53,7 @@
   @media (min-width: $desktop-width) {
     background-color: #e5e6e8;
   }
-
 }
-
 
 .promo__item-wrapper {
   display: flex;
@@ -71,11 +69,12 @@
 
   @media (min-width: $desktop-width) {
     max-width: 1255px;
-    margin: 0;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 600px 1fr;
     padding-bottom: 79px;
     justify-items: flex-start;
+    align-items: center;
   }
 }
 
@@ -90,7 +89,6 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    width: 600px;
     align-items: flex-start;
     justify-content: center;
     padding-bottom: 0;

@@ -77,4 +77,10 @@
   box-sizing: border-box;
   margin-top: auto;
   margin-bottom: auto;
+
+}
+
+.compound__label--disabled {
+  cursor: default;
+  color: $base-grey;
 }
