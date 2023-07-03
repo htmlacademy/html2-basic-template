@@ -25,24 +25,30 @@
     margin: 0;
   }
 }
+// Г16. В CSS отсутствует !important
 
+// Допускается использование !important при обосновании его необходимости в комментарии.
+// комментарий:"не смогла своими стилями, перебить стили библиотеки свайпера
+// читала по этому поводу много информации, перепробовала много методов,
+// в т.ч. накладывание своего класса поверх класса библиотеки для повышения специфичности ничего не вышло"
 .swiper-button-next,
 .swiper-button-prev {
-  top: 0;
-  right: 0;
-  margin: 0;
+  top: 0!important;
+  right: 0!important;
+  margin-top: 0!important;
+  bottom: 0;
   outline: 0;
   min-width: 20px;
-  height: 100%;
+  height: 656px!important;
 
 
   @media (min-width: $tablet-width) {
     min-width: 80px;
-    height: calc(100% - 188px);
+    height: 640px!important;
   }
 
   @media (min-width: $desktop-width) {
-    height: 100%;
+    height: 714px!important;
   }
 }
 
@@ -54,6 +60,7 @@
 .swiper-button-prev::after {
   content: "";
   color: $purple;
+  font-size: 20px!important;
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
@@ -71,7 +78,7 @@
 }
 
 .swiper-button-prev {
-  left: 0;
+  left: 0!important;
 }
 
 .swiper-button-prev::after {

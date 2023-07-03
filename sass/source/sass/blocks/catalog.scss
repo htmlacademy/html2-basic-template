@@ -247,7 +247,7 @@
   padding: 7px 9px;
   border-radius: 4px;
   border: 0;
-  width: 280px;
+  min-width: 280px;
 
 
   &:focus,
@@ -277,19 +277,19 @@
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
-    width: 137px;
+    min-width: 137px;
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 150px;
+    min-width: 150px;
   }
 }
 
 .catalog__button--reset {
   color: $purple;
   background-color: $white;
-  width: 138px;
+  min-width: 280px;
 
   &:disabled {
     background-color: $light-grey;
@@ -297,12 +297,12 @@
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
-    width: 120px;
+    min-width: 120px;
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 150px;
+    min-width: 150px;
   }
 }
 

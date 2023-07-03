@@ -18,11 +18,12 @@ const swiper = new Swiper('.promo', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  clickable: true,
 
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    loop: true,
+    clickable: true,
   },
 
   // Navigation arrows

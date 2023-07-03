@@ -33,15 +33,20 @@
 
 .main-nav__logo {
   margin-left: 20px;
+  max-width: 30px;
 
   @media (min-width: $tablet-width) {
     order: 0;
     display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
     align-items: center;
     cursor: pointer;
   }
 
   @media (min-width: $desktop-width) {
+    flex-wrap: wrap;
+    max-width: 300px;
     margin-right: 20px;
     margin-left: 40px;
   }

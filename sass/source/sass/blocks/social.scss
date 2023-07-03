@@ -6,6 +6,11 @@
   align-items: center;
   justify-content: end;
   flex-grow: 1;
+
+  @media (min-width: $desktop-width) {
+
+  justify-content: start;
+  }
 }
 
 .social__item {
