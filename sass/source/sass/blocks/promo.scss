@@ -39,9 +39,7 @@
   @media (min-width: $desktop-width) {
     background-color: #eae6fc;
   }
-
 }
-
 
 .promo__item--black {
   background-color: #e5e6e8;
@@ -91,7 +89,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-bottom: 0;
     margin-left: 30px;
     padding: 0;
   }
@@ -101,10 +98,9 @@
   font-family: $montserrat-bold;
   font-size: 12px;
   line-height: 16px;
-  color: $purple;
   text-transform: uppercase;
   padding-top: 7px;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   color: $purple;
 
   @media (min-width: $tablet-width) {

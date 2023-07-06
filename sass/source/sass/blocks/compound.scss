@@ -55,14 +55,13 @@
   outline: 0;
   border: 2px solid $base-grey;
   border-radius: 50%;
-  content: "";
 }
 
-.compound__input:checked+.compound__label::before {
+.compound__input:checked + .compound__label::before {
   border-color: $purple;
 }
 
-.compound__input:checked+.compound__label::after {
+.compound__input:checked + .compound__label::after {
   position: absolute;
   left: 4px;
   bottom: 0;
@@ -77,7 +76,6 @@
   box-sizing: border-box;
   margin-top: auto;
   margin-bottom: auto;
-
 }
 
 .compound__label--disabled {

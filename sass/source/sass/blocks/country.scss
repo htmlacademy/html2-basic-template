@@ -57,7 +57,7 @@
   left: 6px;
   width: 20px;
   height: 20px;
-  background-color: $white ;
+  background-color: $white;
   border-radius: 50%;
   z-index: 2;
   bottom: 0;
@@ -68,15 +68,14 @@
   margin-bottom: auto;
 }
 
-.country__input:checked+.country__label::after {
+.country__input:checked + .country__label::after {
   background-color: $purple;
 }
 
-.country__input:checked+.country__label::before {
+.country__input:checked + .country__label::before {
   left: 22px;
   z-index: 2;
 }
-
 
 .country__label--disabled {
   cursor: default;
@@ -86,5 +85,4 @@
 .country__input:disabled {
   pointer-events: none;
   cursor: default;
-
 }

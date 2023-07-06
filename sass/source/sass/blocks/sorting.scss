@@ -55,13 +55,13 @@
 
   &--shadow {
     @media (min-width: $desktop-width) {
-      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }
 
   &:hover,
   &:focus {
-    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   }
 
   @media (min-width: $tablet-width) {
@@ -155,11 +155,11 @@
   &:focus,
   &:hover {
     color: $white;
-    background-color: #9070EC;
+    background-color: #9070ec;
   }
 
   &:active {
-    background-color: #593CAC;
+    background-color: #593cac;
   }
 
   &:disabled {
@@ -175,7 +175,6 @@
   font-size: 16px;
   line-height: 24px;
   color: $purple;
-  border: none;
   outline: 0;
   text-align: center;
   cursor: pointer;
@@ -183,7 +182,7 @@
   background-color: #f8f8f8;
   border: 0;
   border-radius: 4px;
-  background-image: url(../../img/svg/arrow_down.svg);
+  background-image: url("../../img/svg/arrow_down.svg");
   background-repeat: no-repeat;
   background-size: 10px 6px;
   background-position: center right 0;
@@ -203,5 +202,4 @@
     margin-bottom: 29px;
     outline: 0;
   }
-
 }

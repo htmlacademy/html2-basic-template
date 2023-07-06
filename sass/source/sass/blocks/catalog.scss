@@ -18,7 +18,7 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $purple;
   padding-bottom: 5px;
@@ -120,7 +120,6 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-
 }
 
 .catalog__range-toggle:hover::after {
@@ -190,7 +189,6 @@
 
 .catalog__range-input--min {
   color: $base-grey;
-
 }
 
 .catalog__range-wrapper-inputs {
@@ -199,7 +197,6 @@
   justify-content: space-between;
   padding-top: 7px;
 
-
   @media (min-width: $tablet-width) {
     padding-top: 1px;
   }
@@ -207,7 +204,6 @@
   @media (min-width: $desktop-width) {
     padding-top: 3px;
   }
-
 }
 
 .catalog__range-wrapper-inputs::after {
@@ -239,7 +235,6 @@
   }
 }
 
-
 .catalog__button {
   font-family: $montserrat-regular;
   font-size: 16px;
@@ -253,97 +248,97 @@
   &:focus,
   &:hover {
     color: $white;
-    background-color: #9070EC;
+    background-color: #9070ec;
   }
 
   &:active {
-    background-color: #593CAC;
-    }
-
-    @media (min-width: $tablet-width) {
-      padding: 8px 4px;
-    }
+    background-color: #593cac;
   }
 
-  .catalog__button--apply {
-    color: $white;
-    background-color: $purple;
-    margin-bottom: 25px;
+  @media (min-width: $tablet-width) {
+    padding: 8px 4px;
+  }
+}
+
+.catalog__button--apply {
+  color: $white;
+  background-color: $purple;
+  margin-bottom: 25px;
 
 
-    &:disabled {
-      background-color: $base-grey;
-    }
-
-    @media (min-width: $tablet-width) {
-      font-size: 14px;
-      min-width: 137px;
-      margin-bottom: 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      min-width: 150px;
-    }
+  &:disabled {
+    background-color: $base-grey;
   }
 
-  .catalog__button--reset {
-    color: $purple;
-    background-color: $white;
-    min-width: 280px;
-
-    &:disabled {
-      background-color: $light-grey;
-    }
-
-    @media (min-width: $tablet-width) {
-      font-size: 14px;
-      min-width: 120px;
-      margin-bottom: 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      min-width: 150px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    min-width: 137px;
+    margin-bottom: 0;
   }
 
-  .catalog__form {
-    margin: 0;
+  @media (min-width: $desktop-width) {
+    min-width: 150px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 30px;
-      row-gap: 10px;
-    }
+.catalog__button--reset {
+  color: $purple;
+  background-color: $white;
+  min-width: 280px;
 
-    @media (min-width: $desktop-width) {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: 318px;
-    }
+  &:disabled {
+    background-color: $light-grey;
   }
 
-  .catalog__wrapper-section {
-    @media (min-width: $desktop-width) {
-      display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 8px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    min-width: 120px;
+    margin-bottom: 0;
   }
 
-  .catalog__filter-wrapper {
+  @media (min-width: $desktop-width) {
+    min-width: 150px;
+  }
+}
+
+.catalog__form {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    width: 318px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      flex-direction: row;
-      gap: 20px;
-    }
+.catalog__wrapper-section {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 8px;
+  }
+}
 
-    @media (min-width: $desktop-width) {
-      margin: 0;
-      gap: 18px;
+.catalog__filter-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    gap: 18px;
   }
 }
