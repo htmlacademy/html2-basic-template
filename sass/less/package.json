@@ -1,0 +1,49 @@
+{
+  "name": "htmlacademy-gulp-template",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "2.0.4",
+    "autoprefixer": "10.4.14",
+    "browser-sync": "2.29.3",
+    "del": "7.0.0",
+    "gulp": "4.0.2",
+    "gulp-html-bemlinter": "2.1.4",
+    "gulp-if": "3.0.0",
+    "gulp-less": "5.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-sharp-responsive": "0.4.1",
+    "gulp-stacksvg": "2.0.2",
+    "gulp-svgmin": "4.1.0",
+    "gulp-terser": "2.1.0",
+    "postcss": "8.4.24",
+    "postcss-csso": "6.0.1",
+    "postcss-less": "6.0.0",
+    "postcss-url": "10.1.3",
+    "stylelint": "15.8.0",
+    "stylelint-config-htmlacademy": "1.1.5",
+    "w3c-html-validator": "1.4.0"
+  },
+  "scripts": {
+    "lint:spaces": "editorconfig-cli",
+    "lint:styles": "stylelint \"source/less/**/*.less\" --custom-syntax postcss-less",
+    "lint:markup": "cd build && html-validator --quiet",
+    "lint:bem": "gulp lintBem --silent",
+    "prelint": "gulp processMarkup --silent",
+    "lint": "npm run lint:spaces && npm run lint:styles && npm run lint:markup && npm run lint:bem",
+    "start": "gulp runDev",
+    "build": "gulp buildProd",
+    "preview": "gulp buildProd && gulp startServer"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "engines": {
+    "node": "^16.20.0 || ^18.16.0"
+  },
+  "type": "module"
+}
