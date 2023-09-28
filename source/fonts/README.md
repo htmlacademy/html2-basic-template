@@ -15,4 +15,3 @@ font/
     tt-norms-regular.woff2
     tt-norms-regular.woff
 ```
-
