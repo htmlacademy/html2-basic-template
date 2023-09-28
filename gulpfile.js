@@ -48,7 +48,7 @@ export function processScripts () {
 }
 
 export function optimizeImages () {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/images/**/*.{png,jpg}')
     .pipe(sharp(isDevelopment ? {
       includeOriginalFile: true,
       formats: [
@@ -73,20 +73,20 @@ export function optimizeImages () {
         }
       ]
     }))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/images'));
 }
 
 export function optimizeVector () {
-  return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
+  return gulp.src(['source/images/**/*.svg', '!source/images/icons/**/*.svg'])
     .pipe(svgo())
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/images'));
 }
 
 export function createStack () {
-  return gulp.src('source/img/icons/**/*.svg')
+  return gulp.src('source/images/icons/**/*.svg')
     .pipe(svgo())
     .pipe(stacksvg())
-    .pipe(gulp.dest('build/img/icons'));
+    .pipe(gulp.dest('build/images/icons'));
 }
 
 export function copyAssets () {
