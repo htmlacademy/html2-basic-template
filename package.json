@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "2.0.5",
+    "@linthtml/linthtml": "0.9.5",
     "autoprefixer": "10.4.16",
     "browser-sync": "2.29.3",
     "del": "7.1.0",
@@ -16,6 +17,7 @@
     "gulp-stacksvg": "2.0.2",
     "gulp-svgmin": "4.1.0",
     "gulp-terser": "2.1.0",
+    "linthtml-config-htmlacademy": "1.0.12",
     "postcss": "8.4.30",
     "postcss-csso": "6.0.1",
     "postcss-scss": "4.0.8",
@@ -29,6 +31,7 @@
     "lint:spaces": "editorconfig-cli",
     "lint:styles": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
     "lint:markup": "cd build && html-validator --quiet",
+    "lint:linthtml" : "linthtml source/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
     "prelint": "gulp processMarkup --silent",
     "lint": "npm run lint:spaces && npm run lint:styles && npm run lint:markup && npm run lint:bem",
