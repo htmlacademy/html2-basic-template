@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-Обновляе    "@htmlacademy/editorconfig-cli": "2.0.5",
+    "@htmlacademy/editorconfig-cli": "2.0.5",
     "autoprefixer": "10.4.16",
     "browser-sync": "2.29.3",
     "del": "7.1.0",
