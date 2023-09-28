@@ -34,17 +34,13 @@ v18.18.0
 ### SASS
 1. Клонируйте репозиторий `git clone git@github.com:htmlacademy/html2-basic-template.git`
 2. Установите зависимости проекта `npm ci`
-3. Начните работу `npm start`
+3. Начните работу `npm start` // должен запуститься браузер
 
 ### Less
 1. Клонируйте репозиторий `git clone git@github.com:htmlacademy/html2-basic-template.git`
 2. Перейдите в ветку с Less-препроцессором `git switch less`
 3. Установите зависимости проекта `npm ci`
-4. Начните работу `npm start`
-
-## Основные команды
-- `npm start` - запускает сборку с сервером для разработки проекта
-- `npm run build` - создаёт папку `build` с оптимизированными файлами
+4. Начните работу `npm start` // должен запуститься браузер
 
 ## Структура папок
 В каждой папке есть Readme.md файл, который имеет более полное описание по работе с папкой
@@ -63,7 +59,7 @@ v18.18.0
 │   ├── sass|less/                # Папка для препроцессорных файлов sass или less
 │   │   └── blocks/               # Стили БЭМ-блоков
 │   │       └── header.scss       # Стили для конкретного БЭМ-блока
-│   │   ├── global                # Файл для подключения стилей библиотек из папки vendor
+│   │   └── global                # Файл для подключения стилей библиотек из папки vendor
 │   │       ├── fonts.scss        # Подключение шрифтов к проекту
 │   │       ├── global.scss       # Глобальные стили, которые каса.тся всего проекта
 │   │       └── variables.scss    # Переменные для всего проекта
@@ -77,5 +73,122 @@ v18.18.0
 └── README.md                     # Документация
 ```
 
+## Основные команды
+- `npm start` - запускает сборку с сервером для разработки проекта
+- `npm run build` - создаёт папку `build` с оптимизированными файлами для продакшена
+
 ## Дополнительные команды
-- `npm `
+- `npm run preview` - посмотреть результат работы prod-версии сборки
+- `npm run lint` - запустить все проверки. Занимает длительное время
+- `npm run lint:bem` - проверить правильно использования БЭМ
+- `npm run lint:markup` - проверить HTML-разметку через W3C-валидатор
+- `npm run lint:styles` - проверить проект на совместимость с stylelint
+- `npm run lint:spaces` - проверить отступы с помощью editorConfig
+
+## Работа с разметкой
+Все HTML-файлы с разметкой кладите в папке `/source`.
+
+```bash
+├── source/
+│   ├──  index.html
+│   ├──  catalog.html
+│   └──  form.html
+```
+
+из папки `source/` сборка переносит файлы в папку `build/`.
+
+```bash
+├── build/
+│   ├──  index.html
+│   ├──  catalog.html
+│   └──  form.html
+```
+
+## Работа со стилями
+Все стили находится в папке `source/sass`.
+
+```bash
+├── source/
+│   ├── sass
+│   │   └── blocks/
+│   │       └── header.scss
+│   │   └── global
+│   │       ├── fonts.scss
+│   │       ├── global.scss
+│   │       └── variables.scss
+```
+
+Все БЭМ-блоки и остальные препроцессорные файлы подключайте в `source/sass/styles.scss`.
+
+_styles.scss_
+```scss
+/* GLOBAL */
+@import "global/variables";
+@import "global/global";
+@import "global/fonts";
+
+/* BLOCKS */
+@import "blocks/header";
+```
+
+БЭМ-блоки импортируйте в секцию `/* BLOCKS */`.
+
+Все препроцессорные файлы сборка обработает и превратит в `styles.css`. Файл `styles.css` сборка перенесёт в
+
+```bash
+├── build/
+│   └──  styles/
+│        └──  styles.css
+```
+
+## Работа с графикой
+Абсолютно всю графику складывайте в `source/img`.
+
+Векторную графику для спрайта складывайте в `source/img/icons/`. Автоматизация создаст из иконок файл `stack.svg`.
+
+```bash
+├── source/
+│   ├── img/
+│   │   └── icons/
+```
+
+Всю графику автоматизация перенесёт в `build/img/`.
+
+```bash
+├── build/
+│   └──  img/
+│        ├──  stack.svg // спрайт
+│        ├── bg.jpg
+│        ├──  hero.png
+│        └──  burger.svg
+```
+
+## Работа со шрифтами
+Все шрифтовые файлы лежат в `source/fonts/`. Сборка переносит их в `build/fonts/`.
+
+```bash
+├── build/
+│   └──  fonts/
+│        ├──  open-sans.woff2
+│        ├──  open-sans.woff
+│        ├──  open-sans-bold.woff
+│        └──  open-sans-bold.woff
+
+```
+## Работа со скриптами
+Все скрипты лежат в `source/script/`.
+
+```bash
+├── source/
+│   ├── js
+│   │   ├── script.js
+│   │   └── modal.js
+```
+
+Сборка переносит их в `build/script/`.
+```bash
+├── build/
+│   ├── js
+│   │   ├── script.js
+│   │   └── modal.js
+```
