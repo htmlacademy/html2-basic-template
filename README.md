@@ -84,6 +84,7 @@ v18.18.0
 - `npm run lint:markup` - проверить HTML-разметку через W3C-валидатор
 - `npm run lint:styles` - проверить проект на совместимость с stylelint
 - `npm run lint:spaces` - проверить отступы с помощью editorConfig
+- `npm run lint:html` - проверить разметку по правилам linthtml
 
 ## Работа с разметкой
 Все HTML-файлы с разметкой кладите в папке `/source`.
