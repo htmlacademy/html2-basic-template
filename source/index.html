@@ -76,22 +76,39 @@
 
     <section class="slider-image">
       <h2 class="visually-hidden">Промо свайпер</h2>
-        <div class="slider-image__container">
-          <div class="slider-image__list">
-            <div class="slider-image__item">
-              <img src="images/1.png" width="600" height="400" alt="Белый пушистый кот">
+      <div class="slider-image__container">
+        <div class="slider-image__list">
+          <div class="slider-image__item slider-image__item--decaf">
+            <div class="slider-image__imag-wrapper">
+              <img class="slider-image__image" src="images/slider-image/decaf-mobile.png" width="280" height="280"
+                alt="Промо Decaf Flat White">
             </div>
-            <div class="slider-image__item">
+            <div class="slider-image__info-wrapper">
+              <span class="slider-image__new">новинка</span>
+              <h3 class="slider-image__title">Декаф Флэт Уайт</h3>
+              <p class="slider-image__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
+                молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <div class="slider-image__price">
+                <div class="slider-image__price-wrapper">
+                  <del class="slider-image__old-price">295₽</del>
+                  <span class="slider-image__new-price">225₽</span>
+                </div>
+                <button class="button slider-image__button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--<div class="slider-image__item">
               <img src="images/2.png" width="600" height="400" alt="Рыжий пушистый кот">
             </div>
             <div class="slider-image__item">
               <img src="images/3.png" width="600" height="400" alt="Рыжий пушистый кот с белой грудкой">
             </div>
-          </div>
+          </div>-->
           <button class="slider-image__prev-button" type="button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
           <button class="slider-image__next-button" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
         </div>
     </section>
+
     <section class="advantages">
       <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
       <span class="advantages__text">Преимущества</span>
@@ -248,8 +265,8 @@
                 <picture>
                   <source type="image/webp"
                     srcset="images/catalog/white-coffee.webp 1x, images/catalog/white-coffee@2x.webp 2x">
-                  <img class="catalog__img" loading="lazy" src="images/catalog/white-coffee.png" width="130" height="188"
-                    srcset="images/catalog/white-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
+                  <img class="catalog__img" loading="lazy" src="images/catalog/white-coffee.png" width="130"
+                    height="188" srcset="images/catalog/white-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
                 </picture>
               </a>
               <p class="catalog__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
@@ -264,8 +281,8 @@
                 <picture>
                   <source type="image/webp"
                     srcset="images/catalog/violet-coffee.webp 1x, images/catalog/violet-coffee@2x.webp 2x">
-                  <img class="catalog__img" loading="lazy" src="images/catalog/violet-coffee.png" width="130" height="188"
-                    srcset="images/catalog/violet-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
+                  <img class="catalog__img" loading="lazy" src="images/catalog/violet-coffee.png" width="130"
+                    height="188" srcset="images/catalog/violet-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
                 </picture>
               </a>
               <p class="catalog__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
@@ -280,8 +297,8 @@
                 <picture>
                   <source type="image/webp"
                     srcset="images/catalog/black-coffee.webp 1x, images/catalog/black-coffee@2x.webp 2x">
-                  <img class="catalog__img" loading="lazy" src="images/catalog/black-coffee.png" width="130" height="188"
-                    srcset="images/catalog/black-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
+                  <img class="catalog__img" loading="lazy" src="images/catalog/black-coffee.png" width="130"
+                    height="188" srcset="images/catalog/black-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
                 </picture>
               </a>
               <p class="catalog__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
@@ -296,8 +313,8 @@
                 <picture>
                   <source type="image/webp"
                     srcset="images/catalog/purple-coffee.webp 1x, images/catalog/purple-coffee@2x.webp 2x">
-                  <img class="catalog__img" loading="lazy" src="images/catalog/purple-coffee.png" width="130" height="188"
-                    srcset="images/catalog/purple-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
+                  <img class="catalog__img" loading="lazy" src="images/catalog/purple-coffee.png" width="130"
+                    height="188" srcset="images/catalog/purple-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
                 </picture>
               </a>
               <p class="catalog__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
@@ -312,8 +329,8 @@
                 <picture>
                   <source type="image/webp"
                     srcset="images/catalog/brown-coffee.webp 1x, images/catalog/brown-coffee@2x.webp 2x">
-                  <img class="catalog__img" loading="lazy" src="images/catalog/brown-coffee.png" width="130" height="188"
-                    srcset="images/catalog/brown-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
+                  <img class="catalog__img" loading="lazy" src="images/catalog/brown-coffee.png" width="130"
+                    height="188" srcset="images/catalog/brown-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
                 </picture>
               </a>
               <p class="catalog__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
@@ -328,8 +345,8 @@
                 <picture>
                   <source type="image/webp"
                     srcset="images/catalog/beige-coffee.webp 1x, images/catalog/beige-coffee@2x.webp 2x">
-                  <img class="catalog__img" loading="lazy" src="images/catalog/beige-coffee.png" width="130" height="188"
-                    srcset="images/catalog/beige-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
+                  <img class="catalog__img" loading="lazy" src="images/catalog/beige-coffee.png" width="130"
+                    height="188" srcset="images/catalog/beige-coffee@2x.png 2x" alt="Изображение кофе Декаф Флэт Уайт">
                 </picture>
               </a>
               <p class="catalog__description">Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком</p>
@@ -383,8 +400,8 @@
               <a class="logo-bar__logo-link" href="index.html">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./images/footer/footer-logo-tablet.svg">
-                  <img class="logo-bar__logo-image" loading="lazy" src="./images/footer/footer-logo-mobile.svg" width="82"
-                    height="36" alt="Лого мазазина DrinkGo».">
+                  <img class="logo-bar__logo-image" loading="lazy" src="./images/footer/footer-logo-mobile.svg"
+                    width="82" height="36" alt="Лого мазазина DrinkGo».">
                 </picture>
               </a>
               <span class="logo-bar__logo-text">Интернет-магазин кофейных напитков</span>
