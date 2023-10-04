@@ -1,0 +1,65 @@
+@import "../global/variables.scss";
+@import "../global/global.scss";
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 222px 222px 222px;
+    column-gap: 30px;
+    max-width: 728px;
+    margin: 0 auto 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    margin-top: 2px;
+  }
+}
+
+.form__item {
+  border: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 auto;
+  min-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 222px;
+    margin: 0;
+    min-width: 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    min-width: 318px;
+  }
+}
+
+.form__item-title {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  &--price {
+    margin-bottom: 29px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
+}

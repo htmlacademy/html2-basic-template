@@ -1,0 +1,14 @@
+@import "../global/variables.scss";
+@import "../global/global.scss";
+
+.logo-image {
+  @media (min-width: $tablet-width) {
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    height: 36px;
+  }
+}

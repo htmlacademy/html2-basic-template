@@ -1,0 +1,111 @@
+@import "../global/variables.scss";
+@import "../global/global.scss";
+
+.nav-site__list {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+.nav-site__item {
+  list-style-type: none;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  border-bottom: 1px solid #f0ebff;
+  transition: opacity 0.2s;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px 32px 22px;
+    font-family: "Monserrat", "Arial", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    border-bottom: none;
+    letter-spacing: 0.25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 32px 18px 32px 23px;
+  }
+}
+
+.nav-site__item--active .nav-site__link {
+  @media (min-width: $tablet-width) {
+    color: #7859cf;
+  }
+}
+
+.nav-site__item--active {
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+.nav-site__item--active::before {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #7859cf;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.nav-site__item:hover {
+  opacity: 0.6;
+
+  @media (min-width: $tablet-width) {
+    color: #7859cf;
+    opacity: 1;
+  }
+}
+
+.nav-site__item:hover .nav-site__link {
+  @media (min-width: $tablet-width) {
+    color: #7859cf;
+  }
+}
+
+.nav-site__item:focus-within .nav-site__link {
+  @media (min-width: $tablet-width) {
+    outline: none;
+    color: #7859cf;
+  }
+}
+
+.nav-site__item:active {
+  background-color: #f0ebff;
+  color: #333333;
+
+  @media (min-width: $tablet-width) {
+    opacity: 1;
+    background-color: #f0ebff;
+  }
+}
+
+.nav-site__link {
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 0.54px;
+
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.68px;
+  }
+}

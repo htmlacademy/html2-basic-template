@@ -1,0 +1,31 @@
+@import "../global/variables.scss";
+@import "../global/global.scss";
+
+.main-footer__container {
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 41px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding: 40px;
+  }
+}
+
+.main-footer__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 318px auto;
+    gap: 30px;
+  }
+}
+
+.main-footer__sub-wrapper {
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid #f0ebff;
+  }
+}

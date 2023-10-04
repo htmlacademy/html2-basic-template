@@ -1,0 +1,73 @@
+@import "../global/variables.scss";
+@import "../global/global.scss";
+
+.developer {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 4px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.developer__text {
+  color: #bdbdbd;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.developer__link {
+  color: #bdbdbd;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+  display: flex;
+  gap: 4px;
+}
+
+.developer__image {
+  fill: #bdbdbd;
+}
+
+.developer__link:hover .developer__image {
+  fill: #7859cf;
+}
+
+.developer__link:hover {
+  color: #7859cf;
+}
+
+.developer__link:focus {
+  outline: none;
+  color: #7859cf;
+}
+
+.developer__link:focus .developer__image {
+  outline: none;
+  fill: #7859cf;
+}
+
+.developer__link:active .developer__image {
+  fill: #593cac;
+}
+
+.developer__link:active {
+  color: #593cac;
+}

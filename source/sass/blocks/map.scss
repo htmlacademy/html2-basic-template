@@ -1,0 +1,33 @@
+@import "../global/variables.scss";
+@import "../global/global.scss";
+
+.map-container {
+  height: 420px;
+  background-color: #f8f8f8;
+  background-image: url("../../img/map/map-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map/map-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 480px;
+    background-image: url("../../img/map/map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 540px;
+    background-image: url("../../img/map/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map-desktop@2x.png");
+    }
+  }
+}

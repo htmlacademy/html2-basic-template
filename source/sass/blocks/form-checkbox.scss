@@ -1,0 +1,110 @@
+@import "../global/variables.scss";
+@import "../global/global.scss";
+
+.form-checkbox__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 22px;
+}
+
+.form-checkbox__name {
+  max-width: 100%;
+  word-wrap: break-word;
+  padding-left: 45px;
+  padding-top: 3px;
+}
+
+/* Стили контейнера */
+.form-checkbox__switch {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Скрыть стандартное оформление */
+.form-checkbox__input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+/* Cлайдер */
+.form-checkbox__slider {
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #bdbdbd;
+  border-radius: 34px;
+  transition: 0.2s ease-in-out;
+  border: 2px solid #bdbdbd;
+}
+
+.form-checkbox__slider::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+/* Cтили при фокусе на компанент */
+.form-checkbox__input:focus + .form-checkbox__slider {
+  background-color: rgba(120, 89, 207, 0.25);
+  border: 2px solid #9070ec;
+}
+
+/* Cтили при hover на компанент */
+.form-checkbox__input:hover + .form-checkbox__slider {
+  border: 2px solid #9070ec;
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+/* Стили при выборе флага компонента */
+.form-checkbox__input:checked + .form-checkbox__slider {
+  background-color: #9070ec;
+  border: 2px solid #9070ec;
+}
+
+.form-checkbox__input:checked + .form-checkbox__slider::before {
+  transform: translateX(20px);
+}
+
+/* Стили при disabled */
+
+.form-checkbox__input:disabled + .form-checkbox__slider {
+  border: 2px solid #e2e2e2;
+  background-color: #e2e2e2;
+}
+
+.form-checkbox__input:disabled + .form-checkbox__slider::before {
+  background-color: #f8f8f8;
+  cursor: default;
+}
+
+.form-checkbox__input:disabled:checked + .form-checkbox__slider::before {
+  background-color: #bdbdbd;
+}
+
+.form-checkbox__switch input:disabled {
+  cursor: default;
+}
+
+.form-checkbox__switch input:disabled ~ * {
+  cursor: default;
+}

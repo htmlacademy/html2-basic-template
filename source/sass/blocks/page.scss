@@ -1,0 +1,18 @@
+@import "../global/variables.scss";
+@import "../global/global.scss";
+
+.page {
+  background-color: #ffffff;
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+}
