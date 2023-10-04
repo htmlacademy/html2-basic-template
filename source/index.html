@@ -111,20 +111,64 @@
             </div>
           </li>
 
-          <li class="slider-image__item">
+          <li class="slider-image__item slider-image__item--lavender">
             <div class="slider-image__imag-wrapper">
-              <img class="slider-image__image" src="images/slider-image/decaf-mobile.png" width="280" height="280"
-                alt="Промо Decaf Flat White">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/slider-image/lavender-desktop.webp 1x,
+                images/slider-image/lavender-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 769px)" srcset="images/slider-image/lavender-tablet.webp 1x,
+                images/slider-image/lavender-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="images/slider-image/lavender-mobile.webp 1x,
+                images/slider-image/lavender-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="images/slider-image/lavender-desktop.png 1x, images/slider-image/lavender-desktop@2x.png 2x">
+                <source media="(min-width: 769px)"
+                  srcset="images/slider-image/lavender-tablet.png 1x, images/slider-image/lavender-tablet@2x.png 2x">
+                <img class="slider-image__image" src="images/slider-image/lavender-mobile.png" width="280" height="280"
+                  srcset="images/slider-image/lavender-mobile@2x.png 2x" alt="Промо Lavender Latte">
+              </picture>
             </div>
             <div class="slider-image__info-wrapper">
               <span class="slider-image__new">новинка</span>
-              <h3 class="slider-image__title">Декаф Флэт Уайт</h3>
-              <p class="slider-image__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
-                молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <h3 class="slider-image__title">Лавандовый Латте</h3>
+              <p class="slider-image__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы
+                и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
               <div class="slider-image__price">
                 <div class="slider-image__price-wrapper">
-                  <del class="slider-image__old-price">295₽</del>
-                  <span class="slider-image__new-price">225₽</span>
+                  <del class="slider-image__old-price">285₽</del>
+                  <span class="slider-image__new-price">265₽</span>
+                </div>
+                <button class="button slider-image__button" type="submit">Заказать</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="slider-image__item slider-image__item--triple">
+            <div class="slider-image__imag-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/slider-image/triple-desktop.webp 1x,
+                images/slider-image/triple-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 769px)" srcset="images/slider-image/triple-tablet.webp 1x,
+                images/slider-image/triple-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="images/slider-image/triple-mobile.webp 1x,
+                images/slider-image/triple-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="images/slider-image/triple-desktop.png 1x, images/slider-image/triple-desktop@2x.png 2x">
+                <source media="(min-width: 769px)"
+                  srcset="images/slider-image/triple-tablet.png 1x, images/slider-image/triple-tablet@2x.png 2x">
+                <img class="slider-image__image" src="images/slider-image/triple-mobile.png" width="280" height="280"
+                  srcset="images/slider-image/triple-mobile@2x.png 2x" alt="Промо Triple Espresso">
+              </picture>
+            </div>
+            <div class="slider-image__info-wrapper">
+              <span class="slider-image__new">новинка</span>
+              <h3 class="slider-image__title">Тройной Эспрессо</h3>
+              <p class="slider-image__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
+                эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <div class="slider-image__price">
+                <div class="slider-image__price-wrapper">
+                  <del class="slider-image__old-price">395₽</del>
+                  <span class="slider-image__new-price">375₽</span>
                 </div>
                 <button class="button slider-image__button" type="submit">Заказать</button>
               </div>
@@ -132,8 +176,16 @@
           </li>
         </ul>
 
-        <button class="slider-image__prev-button" type="button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
-        <button class="slider-image__next-button" type="button" aria-label="Посмотреть следующий слайд">&gt;</button>
+        <button class="slider-image__prev-button" type="button" aria-label="Посмотреть предыдущий слайд">
+          <svg class="logo-bar__social-image" width="11" height="20" role="img">
+            <use xlink:href="images/icons/stack.svg#prev-slide"></use>
+          </svg>
+        </button>
+        <button class="slider-image__next-button" type="button" aria-label="Посмотреть следующий слайд">
+          <svg class="logo-bar__social-image" width="11" height="20" role="img">
+            <use xlink:href="images/icons/stack.svg#next-slide"></use>
+          </svg>
+        </button>
 
     </section>
 
