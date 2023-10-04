@@ -45,6 +45,11 @@
 
 .slider-image__item {
   flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
   &--decaf {
     background-color: #f3ebe1;
   }
@@ -74,6 +79,8 @@
   letter-spacing: 0.72px;
   padding: 0;
   margin: 0;
+  width: 280px;
+  align-self: center;
 }
 
 .slider-image__description {
@@ -81,6 +88,17 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  width: 280px;
+  align-self: center;
+}
+
+.slider-image__price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 230px;
+  align-self: center;
+  justify-content: space-between;
 }
 
 .slider-image__old-price {
@@ -107,7 +125,13 @@
   line-height: 24px;
 }
 
-
+.slider-image__info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
 
 
 

@@ -81,8 +81,24 @@
 
           <li class="slider-image__item slider-image__item--decaf">
             <div class="slider-image__imag-wrapper">
+
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/chicken1000-desktop.webp 1x,
+                img/catalog/chicken1000-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 769px)" srcset="img/catalog/chicken1000-tablet.webp 1x,
+                img/catalog/chicken1000-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/chicken1000-mobile.webp 1x,
+                img/catalog/chicken1000-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="img/catalog/chicken1000-desktop.png 1x, img/catalog/chicken1000-desktop@2x.png 2x">
+                <source media="(min-width: 769px)"
+                  srcset="img/catalog/chicken1000-tablet.png 1x, img/catalog/chicken1000-tablet@2x.png 2x">
+                <img class="slider-image__image" src="images/slider-image/decaf-mobile.png" width="280" height="280"
+                srcset="images/slider-image/decaf-mobile@2x.png 2x" alt="Промо Decaf Flat White">
+              </picture>
+
               <img class="slider-image__image" src="images/slider-image/decaf-mobile.png" width="280" height="280"
-                alt="Промо Decaf Flat White">
+                srcset="images/slider-image/decaf-mobile@2x.png 2x" alt="Промо Decaf Flat White">
             </div>
             <div class="slider-image__info-wrapper">
               <span class="slider-image__new">новинка</span>
