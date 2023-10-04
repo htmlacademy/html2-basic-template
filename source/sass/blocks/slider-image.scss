@@ -1,7 +1,7 @@
 .slider-image__container {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   overflow: hidden;
 }
 
@@ -9,6 +9,9 @@
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .slider-image__list .slider-image__item {
@@ -23,24 +26,25 @@
   top: 50%;
   transform: translateY(-50%);
   width: 50px;
-  height: 50px;
+  height: 100%;
   background-color: transparent;
   border: none;
   font-size: 24px;
   color: #ffffff;
+  padding: 0;
 }
 
 .slider-image__prev-button {
-  left: 10px;
+  left: 0;
 }
 
 .slider-image__next-button {
-  right: 10px;
+  right: 0
 }
 
 
 .slider-image__item {
-
+  flex-shrink: 0;
   &--decaf {
     background-color: #f3ebe1;
   }
@@ -88,12 +92,23 @@
 }
 
 .slider-image__new-price {
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
-
 }
+
+.slider-image__button {
+  padding: 8px 20px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+
+
 
 /**/
