@@ -115,15 +115,16 @@ if (sliderWrapper.classList.contains('slider__wrapper--disabled')) {
 /** Swiper */
 nextButton.addEventListener('click', () => {
   updateActiveSlide();
-  slideIndex++;
+  slideIndex = (slideIndex + 1) % slides.length;
   slide();
 });
 
 prevButton.addEventListener('click', () => {
   updateActiveSlide();
-  slideIndex--;
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
   slide();
 });
+
 
 const updateActiveSlide = () => {
   slides.forEach((slide, index) => {
