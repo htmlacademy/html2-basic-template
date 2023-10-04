@@ -54,7 +54,7 @@
   justify-content: center;
 
   &--prev {
-    background-image: url("../../img/icons/stack.svg#page-prev");
+    background-image: url("../../images/icons/stack.svg#page-prev");
     background-size: 12px 12px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@
   }
 
   &--next {
-    background-image: url("../../img/icons/stack.svg#page-next");
+    background-image: url("../../images/icons/stack.svg#page-next");
     background-size: 12px 12px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -90,7 +90,7 @@
 }
 
 .pagination__link--prev:hover {
-  background-image: url("../../img/icons/stack.svg#page-prev-white");
+  background-image: url("../../images/icons/stack.svg#page-prev-white");
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -98,7 +98,7 @@
 }
 
 .pagination__link--next:hover {
-  background-image: url("../../img/icons/stack.svg#page-next-white");
+  background-image: url("../../images/icons/stack.svg#page-next-white");
   background-position: 50% 49%;
   transform: rotate(180deg);
 
@@ -109,7 +109,7 @@
 }
 
 .pagination__link--prev:focus-visible {
-  background-image: url("../../img/icons/stack.svg#page-prev-white");
+  background-image: url("../../images/icons/stack.svg#page-prev-white");
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -117,7 +117,7 @@
 }
 
 .pagination__link--next:focus-visible {
-  background-image: url("../../img/icons/stack.svg#page-next-white");
+  background-image: url("../../images/icons/stack.svg#page-next-white");
   background-position: 50% 49%;
   transform: rotate(180deg);
 
@@ -129,7 +129,7 @@
 
 .pagination__link.pagination__link--prev.pagination__link--disabled {
   background-color: #e2e2e2;
-  background-image: url("../../img/icons/stack.svg#page-prev-white");
+  background-image: url("../../images/icons/stack.svg#page-prev-white");
   cursor: default;
 
   @media (min-width: $tablet-width) {
@@ -139,7 +139,7 @@
 
 .pagination__link.pagination__link--next.pagination__link--disabled {
   background-color: #e2e2e2;
-  background-image: url("../../img/icons/stack.svg#page-next-white");
+  background-image: url("../../images/icons/stack.svg#page-next-white");
   background-position: 50% 49%;
   transform: rotate(180deg);
   cursor: default;
