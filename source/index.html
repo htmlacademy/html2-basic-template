@@ -92,7 +92,7 @@
 
       <!-- ADVANTAGES -->
       <section class="advantages">
-        <h4 class="category-name"></h4>
+        <h4 class="category-name">Преимущества</h4>
         <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -100,6 +100,124 @@
             <p class="advantages__text">Готовый напиток всегда под рукой — просто открой банку</p>
           </li>
         </ul>
+      </section>
+
+      <!-- CATALOG -->
+      <section class="catalog">
+        <h4 class="category-name">Каталог</h4>
+        <h2 class="catalog__title">Каталог кофейных напитков</h2>
+
+        <!-- FILTER -->
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+            <!-- <fieldset class="range-price">
+              <legend>Цена</legend>
+              <div class="input-price-wrapper">
+                <label class="input-min-wrapper input-price">
+                  <input class="input-price-field" type="number" name="min-price" min="0" value="0">
+                  <span class="visually-hidden">Минимальная цена</span>
+                </label>
+
+                <label class="input-max-wrapper input-price">
+                  <input class="input-price-field" type="number" name="max-price" max="1000" value="900">
+                  <span class="visually-hidden">Максимальная цена</span>
+                </label>
+              </div>
+
+              <div>
+                <div class="range-scale">
+                  <div class="range-bar" style="left:0; width:236px">
+                    <button class="range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </fieldset> -->
+            
+            <!-- RADIO INPUTS -->
+            <fieldset class="filter-control-field">
+              <legend>Наличие молока</legend>
+              <ul class="filter-list-content">
+                <li>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="whatever" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-title">Неважно</span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="animal">
+                    <span class="control-mark"></span>
+                    <span class="control-title">Только животное</span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="plant">
+                    <span class="control-mark"></span>
+                    <span class="control-title">Только растительное</span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="without" disabled>
+                    <span class="control-mark"></span>
+                    <span class="control-title">Без молока</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- <fieldset class="filter-control-field">  TOGGLES
+              <legend>Страна производителя</legend>
+              <ul class="filter-list-content">
+                <li>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-title"></span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-title"></span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-title"></span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="control">
+                    <input class="control-input visually-hidden" type="radio" name="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-title"></span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset> -->
+
+            <div class="filter__button-wrapper">
+              <button class="button" type="submit">Применить</button>
+              <button class="button button--reset">Сбросить</button>
+            </div>
+        </form>
       </section>
     </main>
 
