@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Название проекта</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="/fonts/montserrat.woff2" as="font">
-    <link rel="preload" href="/fonts/montserrat-bold.woff2" as="font">
+    <link rel="preload" href="/source/fonts/montserrat.woff2" as="font">
+    <link rel="preload" href="/source/fonts/montserratbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -13,12 +13,9 @@
     <header class="page-header">
       <a class="page-header__link" href="#">
         <picture>
-          <source type="image/webp" media="(width 1440px)" srcset="images/logo-desktop.webp 1x, images/logo-desktop@2x.webp 2x">
-          <source media="(width 1440px)" srcset="images/logo-desktop.jpg 1x, images/logo-desktop@2x.jpg 2x">
-          <source type="image/webp" media="(width 768px)" srcset="images/logo-tablet.webp 1x, images/logo-tablet@2x.webp 2x">
-          <source media="(width 768px)" srcset="images/logo-tablet.jpg 1x, images/logo-tablet@2x.jpg 2x">
-          <source type="image/webp" srcset="images/logo.webp 1x, imgages.webp 2x">
-          <img class="page-header__logo" src="images/logo" srcset="images/logo 2x" alt="" width="" height="">
+          <source media="(width 1440px)" srcset="images/logo-desktop.svg">
+          <source media="(width 768px)" srcset="images/logo-tablet.svg">
+          <img class="page-header__logo" src="images/logo.svg" alt="" width="" height="">
         </picture>
       </a>
       
@@ -76,12 +73,12 @@
 
         <div class="product-slider__wrapper">
           <picture>
-            <source type="image/webp" media="(width 1440px)" srcset="images/slider-1-desktop.webp 1x, images/slider-1-desktop@2x.webp 2x">
-            <source media="(width 1440px)" srcset="images/slider-1-desktop.jpg 1x, images/slider-1-desktop@2x.jpg 2x">
-            <source type="image/webp" media="(width 768px)" srcset="images/slider-1-tablet.webp 1x, images/slider-1-tablet@2x.webp 2x">
-            <source media="(width 768px)" srcset="images/slider-1-tablet.jpg 1x, images/slider-1-tablet@2x.jpg 2x">
-            <source type="image/webp" srcset="images/slider-1.webp 1x, imgages.webp 2x">
-            <img class="product-slider__image" src="images/slider-1" srcset="images/slider-1 2x" alt="" width="" height="">
+            <source type="image/webp" media="(width 1440px)" srcset="images/slider/slider-1-desktop.webp 1x, images/slider/slider-1-desktop@2x.webp 2x">
+            <source media="(width 1440px)" srcset="images/slider/slider-1-desktop.jpg 1x, images/slider/slider-1-desktop@2x.jpg 2x">
+            <source type="image/webp" media="(width 768px)" srcset="images/slider/slider-1-tablet.webp 1x, images/slider/slider-1-tablet@2x.webp 2x">
+            <source media="(width 768px)" srcset="images/slider/slider-1-tablet.jpg 1x, images/slider/slider-1-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="images/slider/slider-1.webp 1x, imgages.webp 2x">
+            <img class="product-slider__image" src="images/slider/slider-1" srcset="images/slider/slider-1 2x" alt="" width="" height="">
           </picture>
           <span class="product-slider__new">Новинка</span>
           <h2 class="product-slider__title">Декаф Флэт Уайт</h2>
