@@ -12,7 +12,14 @@
     <!-- PAGE HEADER -->
     <header class="page-header">
       <a class="page-header__link" href="#">
-        <img class="page-header__logo" src="" width="" height="" alt="">
+        <picture>
+          <source type="image/webp" media="(width 1440px)" srcset="images/logo-desktop.webp 1x, images/logo-desktop@2x.webp 2x">
+          <source media="(width 1440px)" srcset="images/logo-desktop.jpg 1x, images/logo-desktop@2x.jpg 2x">
+          <source type="image/webp" media="(width 768px)" srcset="images/logo-tablet.webp 1x, images/logo-tablet@2x.webp 2x">
+          <source media="(width 768px)" srcset="images/logo-tablet.jpg 1x, images/logo-tablet@2x.jpg 2x">
+          <source type="image/webp" srcset="images/logo.webp 1x, imgages.webp 2x">
+          <img class="page-header__logo" src="images/logo" srcset="images/logo 2x" alt="" width="" height="">
+        </picture>
       </a>
       
       <!-- NAVIGATION -->
@@ -68,7 +75,14 @@
         </button>
 
         <div class="product-slider__wrapper">
-          <img class="product-slider__image">
+          <picture>
+            <source type="image/webp" media="(width 1440px)" srcset="images/slider-1-desktop.webp 1x, images/slider-1-desktop@2x.webp 2x">
+            <source media="(width 1440px)" srcset="images/slider-1-desktop.jpg 1x, images/slider-1-desktop@2x.jpg 2x">
+            <source type="image/webp" media="(width 768px)" srcset="images/slider-1-tablet.webp 1x, images/slider-1-tablet@2x.webp 2x">
+            <source media="(width 768px)" srcset="images/slider-1-tablet.jpg 1x, images/slider-1-tablet@2x.jpg 2x">
+            <source type="image/webp" srcset="images/slider-1.webp 1x, imgages.webp 2x">
+            <img class="product-slider__image" src="images/slider-1" srcset="images/slider-1 2x" alt="" width="" height="">
+          </picture>
           <span class="product-slider__new">Новинка</span>
           <h2 class="product-slider__title">Декаф Флэт Уайт</h2>
           <p class="product-slider__text">
@@ -232,8 +246,11 @@
 
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a class="catalog__link" href="#">
-              <img class="catalog__image" src="" width="130" height="188" alt="">
+            <a class="catalog__link-image" href="#">
+              <picture>
+                <source type="image/webp" srcset="images/catalog/coffee-can-1.webp 1x, imgages.webp 2x">
+                <img class="catalog__image" src="images/catalog/coffee-can-1.jpg" srcset="images/catalog/coffee-can-1@2x.jpg 2x" alt="" width="130" height="188">
+              </picture>
             </a>
             <a class="catalog__link catalog__title" href="#">Декаф Флэт Уайт</a>
             <p class="catalog__text">
@@ -244,6 +261,93 @@
               <span>В корзину</span>
             </buton>
           </li>
+
+          <li class="catalog__item">
+            <a class="catalog__link-image" href="#">
+              <picture>
+                <source type="image/webp" srcset="images/catalog/coffee-can-2.webp 1x, imgages.webp 2x">
+                <img class="catalog__image" src="images/catalog/coffee-can-2.jpg" srcset="images/catalog/coffee-can-2@2x.jpg 2x" alt="" width="130" height="188">
+              </picture>
+            </a>
+            <a class="catalog__link catalog__title" href="#">Декаф Флэт Уайт</a>
+            <p class="catalog__text">
+              Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком</p>
+            <span class="catalog__price">225₽</span>
+            <buton class="button" type="buton">
+              <span>В корзину</span>
+            </buton>
+          </li>
+
+          <li class="catalog__item">
+            <a class="catalog__link-image" href="#">
+              <picture>
+                <source type="image/webp" srcset="images/catalog/coffee-can-3.webp 1x, imgages.webp 2x">
+                <img class="catalog__image" src="images/catalog/coffee-can-3.jpg" srcset="images/catalog/coffee-can-3@2x.jpg 2x" alt="" width="130" height="188">
+              </picture>
+            </a>
+            <a class="catalog__link catalog__title" href="#">Декаф Флэт Уайт</a>
+            <p class="catalog__text">
+              Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком</p>
+            <span class="catalog__price">225₽</span>
+            <buton class="button" type="buton">
+              <span>В корзину</span>
+            </buton>
+          </li>
+
+
+          <li class="catalog__item">
+            <a class="catalog__link-image" href="#">
+              <picture>
+                <source type="image/webp" srcset="images/catalog/coffee-can-4.webp 1x, imgages.webp 2x">
+                <img class="catalog__image" src="images/catalog/coffee-can-4.jpg" srcset="images/catalog/coffee-can-4@2x.jpg 2x" alt="" width="130" height="188">
+              </picture>
+            </a>
+            <a class="catalog__link catalog__title" href="#">Декаф Флэт Уайт</a>
+            <p class="catalog__text">
+              Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком</p>
+            <span class="catalog__price">225₽</span>
+            <buton class="button" type="buton">
+              <span>В корзину</span>
+            </buton>
+          </li>
+
+          <li class="catalog__item">
+            <a class="catalog__link-image" href="#">
+              <picture>
+                <source type="image/webp" srcset="images/catalog/coffee-can-5.webp 1x, imgages.webp 2x">
+                <img class="catalog__image" src="images/catalog/coffee-can-5.jpg" srcset="images/catalog/coffee-can-5@2x.jpg 2x" alt="" width="130" height="188">
+              </picture>
+            </a>
+            <a class="catalog__link catalog__title" href="#">Декаф Флэт Уайт</a>
+            <p class="catalog__text">
+              Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком</p>
+            <span class="catalog__price">225₽</span>
+            <buton class="button" type="buton">
+              <span>В корзину</span>
+            </buton>
+          </li>
+
+          <li class="catalog__item">
+            <a class="catalog__link-image" href="#">
+              <picture>
+                <source type="image/webp" srcset="images/catalog/coffee-can-6.webp 1x, imgages.webp 2x">
+                <img class="catalog__image" src="images/catalog/coffee-can-6.jpg" srcset="images/catalog/coffee-can-6@2x.jpg 2x" alt="" width="130" height="188">
+              </picture>
+            </a>
+            <a class="catalog__link catalog__title" href="#">Декаф Флэт Уайт</a>
+            <p class="catalog__text">
+              Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком</p>
+            <span class="catalog__price">225₽</span>
+            <buton class="button" type="buton">
+              <span>В корзину</span>
+            </buton>
+          </li>
+
         </ul>
 
         <div class="pagination">
@@ -262,7 +366,14 @@
       </section>
 
       <secton class="map-position">
-        <img class="map-position__image" src="" width="" height="" alt="">
+        <picture>
+          <source type="image/webp" media="(width 1440px)" srcset="images/map-desktop.webp 1x, images/map-desktop@2x.webp 2x">
+          <source media="(width 1440px)" srcset="images/map-desktop.jpg 1x, images/map-desktop@2x.jpg 2x">
+          <source type="image/webp" media="(width 768px)" srcset="images/map-tablet.webp 1x, images/map-tablet@2x.webp 2x">
+          <source media="(width 768px)" srcset="images/map-tablet.jpg 1x, images/map-tablet@2x.jpg 2x">
+          <source type="image/webp" srcset="images/map.webp 1x, imgages.webp 2x">
+          <img class="map-position__image" src="images/map" srcset="images/map 2x" alt="" width="" height="">
+        </picture>
       </secton>
     </main>
 
