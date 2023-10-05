@@ -218,6 +218,47 @@
               <button class="button button--reset">Сбросить</button>
             </div>
         </form>
+
+        <header class="catalog-header">
+          <span>Сортировка:</span> <!--МОЖЕТ ЗАГАЛОВОК?-->
+          <select class="sorting-select" name="sorting" aria-label="Сортировка">
+            <option value="descending" selected>по умолчанию</option>
+            <option value="descending">сначала дешевые</option>
+            <option value="ascending">сначала дорогие</option>
+            <option value="popular">сначала популярные</option>
+            <option value="rating">сначала с высоким рейтингом</option>
+          </select>
+        </header>
+
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <a class="catalog__link" href="#">
+              <img class="catalog__image" src="" width="130" height="188" alt="">
+            </a>
+            <a class="catalog__link catalog__title" href="#">Декаф Флэт Уайт</a>
+            <p class="catalog__text">
+              Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком</p>
+            <span class="catalog__price">225₽</span>
+            <buton class="button" type="buton">
+              <span>В корзину</span>
+            </buton>
+          </li>
+        </ul>
+
+        <div class="pagination">
+          <button class="button pagination__button pagination__button--prev" type="button">
+            <span class="visually-hidden">Предыдущая страница</span>
+          </button>
+      
+          <a class="pagination__link" href="#">1</a>
+          <a class="pagination__link" href="#">2</a>
+          <a class="pagination__link" href="#">3</a>
+
+          <button class="button pagination__button pagination__button--next" type="button">
+            <span class="visually-hidden">Следующая страница</span>
+          </button>
+        </div>
       </section>
     </main>
 
