@@ -1,2 +1,50 @@
 /* здесь используйте глобальные переменные */
 $main-font: "Montserrat", "Arial", sans-serif;
+$h1-mobile-size: 36px;
+$h1-mobile-line-height: 48px;
+$h1-tablet-size: 56px;
+$h1-tablet-line-height: 80px;
+
+$h2-mobile-size: 18px;
+$h2-mobile-line-height: 32px;
+$h2-tablet-size: 24px;
+$h2-tablet-line-height: 36px;
+
+$h3-mobile-size: 18px;
+$h3-mobile-line-height: 32px;
+$h3-tablet-size: 24px;
+$h3-tablet-line-height: 36px;
+$h4-size: 14px;
+$h4-line-height: 20px;
+
+$text-mobile-size: 14px;
+$text-mobile-line-height: 20px;
+$text-tablet-size: 20px;
+$text-tablet-line-height: 32px;
+
+// $badge-size: 12px;
+// $badge-line-height: 16px;
+// $price-size: 20px;
+// $old-price-size: 16px;
+// $price-line-height: 32px;
+// $label-size:16px;
+// $label-line-height: 24px;
+
+// BASE COLORS
+$base-white: #ffffff;
+$base-grey: #bdbdbd;
+$base-black: #333333;
+$base-primary: #7859cf;
+$base-secondary: #f0ebff;
+
+// ALT COLORS
+$primary-opacity: rgba(120, 89, 207, 0.25);
+$primary-lighter: #9070ec;
+$primary-darker: #593cac;
+$light-grey: #e2e2e2;
+
+// BACKGROUND COLORS
+$lightest-grey: #f8f8f8;
+$flat-white: #f3ebe1;
+$lavander-latte: #eae6fc;
+$espresso: #e5e6e8;
