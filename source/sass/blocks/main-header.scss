@@ -1,0 +1,128 @@
+@import "variables";
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #333333;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.main-header__logo {
+  display: flex;
+  min-height: 60px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 163px;
+  }
+}
+
+.main-header__logo-link {
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.main-header__logo-image {
+  padding: 12px 20px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 22px 67px 22px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding: 22px 20px 22px 40px;
+  }
+}
+
+.main-header__description {
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 24px;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.main-header__icons {
+  position: absolute;
+  display: flex;
+  left: 139px;
+
+  @media (min-width: $tablet-width) {
+    left: auto;
+    right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: auto;
+    right: 49px;
+    gap: 29px;
+  }
+}
+
+.main-header__icons-description {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;;
+  }
+}
+
+.main-header__icons-login,
+.main-header__icons-cart {
+  min-width: 60px;
+  min-height: 60px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  fill: #333333;
+
+
+    &:active {
+      background-color: #F0EBFF;
+    }
+
+
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 112px;
+
+    &:hover,
+    &:focus {
+      color: #7859CF;
+      fill: #7859CF;
+    }
+  }
+}

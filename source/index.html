@@ -7,33 +7,65 @@
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="prefetch" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo-link" href="#">
-      <picture>
-        <source media="(min-width: 1200px)" srcset="./images/logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="./images/logo-tablet.svg">
-        <img class="main-header__logo-image" src="./images/logo-mobile.svg" alt="Drink2Go.">
-      </picture>
-    </a>
-    <nav class="main-nav ">
+    <div class="main-header__logo">
+      <a class="main-header__logo-link" href="#">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./images/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./images/logo-tablet.svg">
+          <img class="main-header__logo-image" src="./images/logo-mobile.svg" alt="Drink2Go.">
+        </picture>
+      </a>
+      <span class="main-header__description">Интернет-магазин<br>
+        кофейных напитков</span>
+    </div>
+    <div class="main-header__icons">
+      <a class="main-header__icons-login">
+        <svg class="main-header__icons-login-image" width="16" height="16">
+          <use xlink:href="images/icons/stack.svg#user"></use>
+        </svg>
+        <span class="main-header__icons-description">войти</span>
+      </a>
+      <a class="main-header__icons-cart">
+        <svg class="main-header__icons-cart-image" width="16" height="16">
+          <use xlink:href="images/icons/stack.svg#union"></use>
+        </svg>
+        <span class="main-header__icons-description">корзина</span>
+      </a>
+    </div>
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <a class="main-nav__link main-nav__link--active" href="#">
-        главная
-      </a>
-      <a class="main-nav__link" href="#">
-        каталог
-      </a>
-      <a class="main-nav__link" href="#">
-        доставка
-      </a>
-      <a class="main-nav__link" href="#">
-        о нас
-      </a>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active" href="#">
+            главная
+          </a>
+        </li>
+        <li>
+          <a class="main-nav__link" href="#">
+            каталог
+          </a>
+        </li>
+        <li>
+          <a class="main-nav__link" href="#">
+            доставка
+          </a>
+        </li>
+        <li>
+          <a class="main-nav__link" href="#">
+            о нас
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main class="main-container">
@@ -43,9 +75,9 @@
         Наши новинки!
       </h2>
       <ul class="promo__slider slider">
-        <li class="slider__item slider__item--active">
+        <li class="slider__item slider__item-1 slider__item--active">
           <picture>
-            <source media="(min-width: 1200px)"
+            <source media="(min-width: 1440px)"
               srcset="images/hero/Hero-desktop@1x.png 1x, images/hero/Hero-desktop@2x.png 2x">
             <source media="(min-width: 768px)"
               srcset="images/hero/Hero-tablet@1x.png 1x, images/hero/Hero-tablet@2x.png 2x">
@@ -55,17 +87,17 @@
           <span class="slider__item-badge">Новинка!</span>
           <h3 class="slider__item-title">Декаф Флэт Уайт</h3>
           <p class="slider__item-description">Свежесваренный кофе без кофеина из Эфиопии
-            с натуральным фермерским молоком — то, что нужно
+            <br class="slider__item-description--tablet">с натуральным фермерским молоком — то, что нужно
             для расслабления после тяжёлого рабочего дня</p>
           <div class="slider__item-order">
             <p class="slider__item-order-old-price">295₽</p>
             <p class="slider__item-order-new-price">225₽</p>
-            <button class="slider__item-order-button" type="button">Заказать</button>
+            <button class="slider__item-order-button button button--primary" type="button">Заказать</button>
           </div>
         </li>
-        <li class="slider__item ">
+        <li class="slider__item slider__item-2">
           <picture>
-            <source media="(min-width: 1200px)"
+            <source media="(min-width: 1440px)"
               srcset="images/hero/Hero-desktop-2@1x.png 1x, images/hero/Hero-desktop-2@2x.png 2x">
             <source media="(min-width: 768px)"
               srcset="images/hero/Hero-tablet-2@1x.png 1x, images/hero/Hero-tablet-2@2x.png 2x">
@@ -79,12 +111,12 @@
           <div class="slider__item-order">
             <p class="slider__item-order-old-price">285₽</p>
             <p class="slider__item-order-new-price">265₽</p>
-            <button class="slider__item-order-button" type="button">Заказать</button>
+            <button class="slider__item-order-button  button button--primary" type="button">Заказать</button>
           </div>
         </li>
-        <li class="slider__item">
+        <li class="slider__item slider__item-3">
           <picture>
-            <source media="(min-width: 1200px)"
+            <source media="(min-width: 1440px)"
               srcset="images/hero/Hero-desktop-3@1x.png 1x, images/hero/Hero-desktop-3@2x.png 2x">
             <source media="(min-width: 768px)"
               srcset="images/hero/Hero-tablet-3@1x.png 1x, images/hero/Hero-tablet-3@2x.png 2x">
@@ -98,10 +130,31 @@
           <div class="slider__item-order">
             <p class="slider__item-order-old-price">395₽</p>
             <p class="slider__item-order-new-price">375₽</p>
-            <button class="slider__item-order-button" type="button">Заказать</button>
+            <button class="slider__item-order-button button button--primary" type="button">Заказать</button>
           </div>
         </li>
       </ul>
+      <button class="slider__arrow slider__arrow-left" type="button">
+        <svg class="slider__arrow-left-image" width="11" height="20">
+          <use xlink:href="images/icons/stack.svg#leftSlider"></use>
+        </svg>
+      </button>
+      <button class="slider__arrow slider__arrow-right" type="button">
+        <svg class="slider__arrow-right-image" width="11" height="20">
+          <use xlink:href="images/icons/stack.svg#rightSlider"></use>
+        </svg>
+      </button>
+      <div class="slider__pagination">
+      <button class="slider__button slider__button--active" type="button">
+        <span class="slider__button-bullet slider__button-bullet--active"></span>
+      </button>
+      <button class="slider__button slider__button" type="button">
+        <span  class="slider__button-bullet"></span>
+      </button>
+      <button class="slider__button slider__button" type="button">
+        <span  class="slider__button-bullet"></span>
+      </button>
+    </div>
     </section>
     <section class="features">
       <h2 class="features__title">Преимущества</h2>
@@ -217,8 +270,8 @@
           <ul class="goods__list">
             <li class="goods__card card">
               <picture>
-                <img class="card__image" src="./images/catalog/coffee-can-1@1x.png" srcset="./images/catalog/coffee-can-1@2x.png 2x"
-                  alt="Декаф Флэт Уайт.">
+                <img class="card__image" src="./images/catalog/coffee-can-1@1x.png"
+                  srcset="./images/catalog/coffee-can-1@2x.png 2x" alt="Декаф Флэт Уайт.">
               </picture>
               <h4 class="card__title">Декаф Флэт Уайт</h4>
               <p class="card__description">Кофе без кофеина из Эфиопии
@@ -233,8 +286,8 @@
             </li>
             <li class="goods__card card">
               <picture>
-                <img class="card__image" src="./images/catalog/coffee-can-6@1x.png" srcset="./images/catalog/coffee-can-6@2x.png 2x"
-                  alt="Декаф Флэт Уайт.">
+                <img class="card__image" src="./images/catalog/coffee-can-6@1x.png"
+                  srcset="./images/catalog/coffee-can-6@2x.png 2x" alt="Декаф Флэт Уайт.">
               </picture>
               <h4 class="card__title">Декаф Флэт Уайт</h4>
               <p class="card__description">Кофе без кофеина из Эфиопии
@@ -249,8 +302,8 @@
             </li>
             <li class="goods__card card">
               <picture>
-                <img class="card__image" src="./images/catalog/coffee-can-5@1x.png" srcset="./images/catalog/coffee-can-5@2x.png 2x"
-                  alt="Декаф Флэт Уайт.">
+                <img class="card__image" src="./images/catalog/coffee-can-5@1x.png"
+                  srcset="./images/catalog/coffee-can-5@2x.png 2x" alt="Декаф Флэт Уайт.">
               </picture>
               <h4 class="card__title">Декаф Флэт Уайт</h4>
               <p class="card__description">Кофе без кофеина из Эфиопии
@@ -265,8 +318,8 @@
             </li>
             <li class="goods__card card">
               <picture>
-                <img class="card__image" src="./images/catalog/coffee-can-4@1x.png" srcset="./images/catalog/coffee-can-4@2x.png 2x"
-                  alt="Декаф Флэт Уайт.">
+                <img class="card__image" src="./images/catalog/coffee-can-4@1x.png"
+                  srcset="./images/catalog/coffee-can-4@2x.png 2x" alt="Декаф Флэт Уайт.">
               </picture>
               <h4 class="card__title">Декаф Флэт Уайт</h4>
               <p class="card__description">Кофе без кофеина из Эфиопии
@@ -281,8 +334,8 @@
             </li>
             <li class="goods__card card">
               <picture>
-                <img class="card__image" src="./images/catalog/coffee-can-3@1x.png" srcset="./images/catalog/coffee-can-3@2x.png 2x"
-                  alt="Декаф Флэт Уайт.">
+                <img class="card__image" src="./images/catalog/coffee-can-3@1x.png"
+                  srcset="./images/catalog/coffee-can-3@2x.png 2x" alt="Декаф Флэт Уайт.">
               </picture>
               <h4 class="card__title">Декаф Флэт Уайт</h4>
               <p class="card__description">Кофе без кофеина из Эфиопии
@@ -297,8 +350,8 @@
             </li>
             <li class="goods__card card">
               <picture>
-                <img class="card__image" src="./images/catalog/coffee-can-2@1x.png" srcset="./images/catalog/coffee-can-2@2x.png 2x"
-                  alt="Декаф Флэт Уайт.">
+                <img class="card__image" src="./images/catalog/coffee-can-2@1x.png"
+                  srcset="./images/catalog/coffee-can-2@2x.png 2x" alt="Декаф Флэт Уайт.">
               </picture>
               <h4 class="card__title">Декаф Флэт Уайт</h4>
               <p class="card__description">Кофе без кофеина из Эфиопии
@@ -345,9 +398,9 @@
       </div>
     </section>
     <footer class="main-footer">
-      <div class="main-footer__map" >
+      <div class="main-footer__map">
         <picture>
-          <source media="(min-width: 1200px)"
+          <source media="(min-width: 1440px)"
             srcset="./images/map/map-desktop@1x.png 1x, ./images/map/map-desktop@2x.png 2x">
           <source media="(min-width: 768px)"
             srcset="./images/map/map-tablet@1x.png 1x, ./images/map/map-tablet@2x.png 2x">
@@ -365,87 +418,87 @@
         <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
           <svg class="social__link-image" width="20" height="20">
             <use xlink:href="images/icons/stack.svg#vk"></use>
-            </svg>
+          </svg>
           <span class="visually-hidden">VK</span>
         </a>
         <a class="social__link social__link--pinterest" href="https://vk.com/htmlacademy">
           <svg class="social__link-image" width="20" height="20">
             <use xlink:href="images/icons/stack.svg#pinterest"></use>
-            </svg>
+          </svg>
           <span class="visually-hidden">Pinterest</span>
         </a>
         <a class="social__link social__link--ok" href="https://vk.com/htmlacademy">
           <svg class="social__link-image" width="20" height="20">
             <use xlink:href="images/icons/stack.svg#ok"></use>
-            </svg>
+          </svg>
           <span class="visually-hidden">OK</span>
         </a>
       </div>
       <div class="main-footer__navigation navigation">
-          <h3>Интернет-магазин</h3>
-          <ul class="navigation__list">
-            <li class="navigation__item">
-          <a class="navigation__link" href="#">
-            главная
-          </a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">
-            каталог
-          </a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">
-            доставка
-          </a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">
-            о нас
-          </a>
-        </li>
+        <h3>Интернет-магазин</h3>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">
+              главная
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">
+              каталог
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">
+              доставка
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">
+              о нас
+            </a>
+          </li>
         </ul>
       </div>
       <div class="main-footer__media media">
         <h3>Интернет-магазин</h3>
         <ul class="media__list">
           <li class="media__item">
-        <a class="media__link" href="#">
-          блог
+            <a class="media__link" href="#">
+              блог
+            </a>
+          </li>
+          <li class="media__item">
+            <a class="media__link" href="#">
+              информация для сми
+            </a>
+          </li>
+          <li class="media__item">
+            <a class="media__link" href="#">
+              правовая информация
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__contacts contacts">
+        <a href="https://yandex.ru/maps/-/CDUtZK~q" class="contacts__address">
+          <svg class="contacts__address-image" width="13" height="16">
+            <use xlink:href="images/icons/stack.svg#address"></use>
+          </svg>
+          Санкт-Петербург, набережная реки Карповки, дом 5
         </a>
-      </li>
-      <li class="media__item">
-        <a class="media__link" href="#">
-          информация для сми
+        <a href="tel:+79999999999" class="contacts__phone">
+          <svg class="contacts__phone-image" width="13" height="16">
+            <use xlink:href="images/icons/stack.svg#phone"></use>
+          </svg>
+          +7 (999) 999-99-99
         </a>
-      </li>
-      <li class="media__item">
-        <a class="media__link" href="#">
-          правовая информация
-        </a>
-      </li>
-      </ul>
-    </div>
-    <div class="main-footer__contacts contacts">
-      <a href="https://yandex.ru/maps/-/CDUtZK~q" class="contacts__address">
-        <svg class="contacts__address-image" width="13" height="16">
-          <use xlink:href="images/icons/stack.svg#address"></use>
+      </div>
+      <div class="main-footer__copyright copyright">
+        <span class="copyright__text">Разработано в HTML Academy</span>
+        <svg class="copyright__image" width="12" height="16">
+          <use xlink:href="images/icons/stack.svg#logo-academy"></use>
         </svg>
-        Санкт-Петербург, набережная реки Карповки, дом 5
-      </a>
-      <a href="tel:+79999999999" class="contacts__phone">
-        <svg class="contacts__phone-image" width="13" height="16">
-          <use xlink:href="images/icons/stack.svg#phone"></use>
-        </svg>
-        +7 (999) 999-99-99
-      </a>
-    </div>
-    <div class="main-footer__copyright copyright">
-      <span class="copyright__text">Разработано в HTML Academy</span>
-      <svg class="copyright__image" width="12" height="16">
-        <use xlink:href="images/icons/stack.svg#logo-academy"></use>
-      </svg>
-    </div>
+      </div>
     </footer>
   </main>
   <script src="js/script.js" defer></script>
