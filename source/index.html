@@ -6,9 +6,195 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
+  <body class="page-body">
 
+
+    <div class="page-container">
+    <header class="header">
+      <nav class="navigation navigation--open navigation--close">
+        <a class="navigation-logo" href="index.html">
+          <img class="navigation-logo__image" src="" width="" height="" alt="Логотип Drink2go">
+        </a>
+        <p class="navigation-text">Интернет-магазин кофейных напитков</p>
+        <ul class="navigation__list">
+          <li class="navigation-item">
+            <a class="navigation-item__link" href="">
+              <img class="navigation-item__image" src="" alt="Войти в свой профиль">
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-item__link" href="">
+              <img class="navigation-item__image" src="" alt="Просмотр корзины">
+            </a>
+          </li>
+          <li class="navigation__item">
+            <button class="navigation-toggel" href="">
+              <img class="navigation-toggel__image" src="" alt="Просмотр меню">
+            </button>
+          </li>
+        </ul>
+        <div class="navigation-menu">
+        <ul class="navigation-menu__list">
+          <li class="navigation-menu__item">
+           <a class="navigation-menu__link" href="">Главная</a>
+          </li>
+          <li class="navigation-menu__item">
+           <a class="navigation-menu__link" href="">Каталог</a>
+          </li>
+          <li class="navigation-menu__item">
+           <a class="navigation-menu__link" href="">Доставка</a>
+          </li>
+          <li class="navigation-menu__item">
+           <a class="navigation-menu__link" href="">О нас</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="main-container">
+       <h1 class="visually-hidden">Уникальное предложение</h1>
+       <picture>
+        <img class="main-container__image" href="" alt="Продукт со скидкой">
+       </picture>
+       <p class="main-container__text">Новинка!</p>
+       <h2 class="main-titel">Декаф Флэт Уайт</h2>
+       <div class="special-price">
+       <p class="special-price__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным
+         фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+         <p class="special-price__old-price">295₽</p>
+         <p class="special-price__discount">225₽</p>
+         <button class="special-price__button">Заказать</button>
+       </div>
+      </section>
+      <section class="advantage">
+        <h2 class="advantage__titel">Главные причины выбрать Drink2Go</h2>
+        <p class="advantage__text">Преимущества</p>
+        <div class="advantage-container">
+          <ul class="advantage-container__lits">
+            <li class="advantage-container__item">
+              <svg class="advantage-container-image"></svg>
+              <h3 class="advantage-container__titel">Скорость</h3>
+              <p class="advantage-container__text">Готовый напиток всегда под рукой — просто открой банку</p>
+            </li>
+            <li class="advantage-container__item">
+              <svg class="advantage-container-image"></svg>
+              <h3 class="advantage-container__titel">Удобство</h3>
+              <p class="advantage-container__text">Легко помещается и в карман,
+                и в маленькую сумочку</p>
+            </li>
+            <li class="advantage-container__item">
+              <svg class="advantage-container-image"></svg>
+              <h3 class="advantage-container__titel">Бодрость</h3>
+              <p class="advantage-container__text">Сбалансированная доза кофеина даст мощный
+                 заряд энергии</p>
+            </li>
+            <li class="advantage-container__item">
+              <svg class="advantage-container-image"></svg>
+              <h3 class="advantage-container__titel">Экологичность</h3>
+              <p class="advantage-container__text">Вся упаковка сделана
+                из перерабатываемых материалов</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <h2 class="catalog__titel">Каталог кофейных напитков</h2>
+        <p class="catalog__text">Каталог</p>
+        <div class="filter-price">
+          <p class="filter-price__text">Цена</p>
+          <p class="filter-price__text">Наличие молока</p>
+          <p class="filter-price__text">Страна произрастания</p>
+          <button class="filter-price__button-use">Применить</button>
+          <button class="filter-price__button-reset">Сбросить</button>
+          <p class="filter-price__sorting">Сортировка:</p>
+        </div>
+      </section>
+
+      <section class="geolocation-map">
+        <h2 class="visually-hidden">Геолокация</h2>
+        <img class="geolocation-map__image" href="" width="" height="">
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__countainer">
+      <div class="social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <a class="footer-logo" href="">
+         <svg class="footer-logo__image"></svg>
+        </a>
+        <p class="footer-logo__text">Интернет-магазин кофейных напитков</p>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link">
+              <svg class="social__image"></svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link">
+              <svg class="social__image"></svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link">
+              <svg class="social__image"></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-menu">
+        <h2 class="footer-menu__titel">Интернет-магазин</h2>
+        <ul class="footer-menu-list">
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="">Каталог</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="">Доставка</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="">Способы оплаты</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="">О нас</a>
+          </li>
+        </ul>
+      </div>
+        <div class="footer-media">
+          <h2 class="footer-media__titel">Медиа</h2>
+          <ul class="footer-media__list">
+            <li class="footer-media__item">
+              <a class="footer-media__link" href="">Блог</a>
+            </li>
+            <li class="footer-media__item">
+              <a class="footer-media__link" href="">Информация для СМИ</a>
+            </li>
+            <li class="footer-media__item">
+              <a class="footer-media__link" href="">Правовая информация</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contacts">
+          <h2 class="footer-contacts-titel">Контакты</h2>
+          <ul class="footer-contacts__list">
+            <li class="footer-contacts__item">
+              <a class="footer-contacts__link" href="">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+            </li>
+            <li class="footer-contacts__item">
+              <a class="footer-contacts__link" href="tel:+7 (999) 999-99-99">+7 (999) 999-99-99</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-developed">
+          <h2 class="footer-developed__titel">Разработано в</h2>
+            <a class="footer-developed__link" href="https://htmlacademy.ru">HTML Academy
+              <svg class="footer-developed__image"></svg>
+            </a>
+        </div>
+      </div>
+    </footer>
+    </div>
     <script src="js/script.js" defer></script>
   </body>
 </html>
