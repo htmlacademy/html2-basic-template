@@ -34,7 +34,7 @@
     "lint:html" : "linthtml source/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
     "prelint": "gulp processMarkup --silent",
-    "lint": "npm run lint:spaces && npm run lint:styles && npm run lint:markup && npm run lint:bem && lint:html",
+    "lint": "npm run lint:spaces && npm run lint:styles && npm run lint:markup && npm run lint:bem && npm run lint:html",
     "start": "gulp runDev",
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer"
