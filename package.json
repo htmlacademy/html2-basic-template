@@ -30,7 +30,7 @@
   "scripts": {
     "lint:spaces": "editorconfig-cli",
     "lint:styles": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
-    "lint:markup": "cd build && html-validator --quiet",
+    "lint:markup": "cd build && html-validator --quiet --continue",
     "lint:html" : "linthtml source/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
     "prelint": "gulp processMarkup --silent",
