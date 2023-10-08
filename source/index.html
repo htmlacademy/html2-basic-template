@@ -13,23 +13,23 @@
     <header class="header">
       <nav class="navigation navigation--open navigation--close">
         <a class="navigation-logo" href="index.html">
-          <img class="navigation-logo__image" src="" width="" height="" alt="Логотип Drink2go">
+          <img class="navigation-logo__image" src="" width="" height="" width="" height="" alt="Логотип Drink2go">
         </a>
         <p class="navigation-text">Интернет-магазин кофейных напитков</p>
         <ul class="navigation__list">
           <li class="navigation-item">
             <a class="navigation-item__link" href="">
-              <img class="navigation-item__image" src="" alt="Войти в свой профиль">
+              <img class="navigation-item__image" src="" width="" height="" alt="Войти в свой профиль">
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-item__link" href="">
-              <img class="navigation-item__image" src="" alt="Просмотр корзины">
+              <img class="navigation-item__image" src="" width="" height="" alt="Просмотр корзины">
             </a>
           </li>
           <li class="navigation__item">
             <button class="navigation-toggel" href="">
-              <img class="navigation-toggel__image" src="" alt="Просмотр меню">
+              <img class="navigation-toggel__image" src="" width="" height="" alt="Просмотр меню">
             </button>
           </li>
         </ul>
@@ -55,7 +55,7 @@
       <section class="main-container">
        <h1 class="visually-hidden">Уникальное предложение</h1>
        <picture>
-        <img class="main-container__image" href="" alt="Продукт со скидкой">
+        <img class="main-container__image" src="" width="" height="" alt="Продукт со скидкой">
        </picture>
        <p class="main-container__text">Новинка!</p>
        <h2 class="main-titel">Декаф Флэт Уайт</h2>
@@ -102,19 +102,160 @@
       <section class="catalog">
         <h2 class="catalog__titel">Каталог кофейных напитков</h2>
         <p class="catalog__text">Каталог</p>
-        <div class="filter-price">
-          <p class="filter-price__text">Цена</p>
-          <p class="filter-price__text">Наличие молока</p>
-          <p class="filter-price__text">Страна произрастания</p>
-          <button class="filter-price__button-use">Применить</button>
-          <button class="filter-price__button-reset">Сбросить</button>
-          <p class="filter-price__sorting">Сортировка:</p>
-        </div>
+        <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+
+          <div class="filter-block">
+            <b class="filter-price__titel">Цена</b>
+            <label class="filter-block__price-min">
+              <input class="filter-block__input" type="number" value="0" name="min-price">
+            </label>
+            <label class="filter-block__price-max">
+              <input class="filter-block__input" type="number" value="900" name="max-price">
+            </label>
+          </div>
+
+          <div class="filter-block">
+              <b class="filter-block__titel">Наличие молока</b>
+              <ul class="filter-block__list">
+                <li class="filter-block__item">
+                  <label class="filter-block__radio">
+                    <input class="filter-block__input-radio" type="radio" name="Наличие молока" value="Неважно">
+                    <span class="control-mark control-mark--radio"></span>
+                    <span class="control-lable">Неважно</span>
+                  </label>
+                </li>
+                <li class="filter-block__item">
+                  <label class="filter-block__radio">
+                    <input class="filter-block__input-radio" type="radio" name="Наличие молока" value="Только животное">
+                    <span class="control-mark control-mark--radio"></span>
+                    <span class="control-lable">Только животное</span>
+                  </label>
+                </li>
+                <li class="filter-block__item">
+                  <label class="filter-block__radio">
+                    <input class="filter-block__input-radio" type="radio" name="Наличие молока" value="Только растительное">
+                    <span class="control-mark control-mark--radio"></span>
+                    <span class="control-lable">Только растительное</span>
+                  </label>
+                </li>
+                <li class="filter-block__item">
+                  <label class="filter-block__radio">
+                    <input class="filter-block__input-radio" type="radio" name="Наличие молока" value="Без молока">
+                    <span class="control-mark control-mark--radio"></span>
+                    <span class="control-lable">Без молока</span>
+                  </label>
+                </li>
+              </ul>
+
+            <div class="filter-block">
+              <b class="filter-block__titel">Страна произрастания</b>
+              <ul class="filter-block__list">
+                <li class="filter-block__item">
+                  <label class="filter-block__checkbox">
+                    <input class="filter-block__input-checkbox" type="checkbox" name="Страна произрастания" value="Бразилия">
+                    <span class="control-mark control-mark--checkbox"></span>
+                    <span class="control-lable">Бразилия</span>
+                  </label>
+                </li>
+                <li class="filter-block__item">
+                  <label class="filter-block__checkbox">
+                    <input class="filter-block__input-checkbox" type="checkbox" name="Страна произрастания" value="Эфиопия">
+                    <span class="control-mark control-mark--checkbox"></span>
+                    <span class="control-lable">Эфиопия</span>
+                  </label>
+                </li>
+                <li class="filter-block__item">
+                  <label class="filter-block__checkbox">
+                    <input class="filter-block__input-checkbox" type="checkbox" name="Страна произрастания" value="Колумбия">
+                    <span class="control-mark control-mark--checkbox"></span>
+                    <span class="control-lable">Колумбия</span>
+                  </label>
+                </li>
+                <li class="filter-block__item">
+                  <label class="filter-block__checkbox">
+                    <input class="filter-block__input-checkbox" type="checkbox" name="Страна произрастания" value="Коста-Рика">
+                    <span class="control-mark control-mark--checkbox"></span>
+                    <span class="control-lable">Коста-Рика</span>
+                  </label>
+                </li>
+                <li class="filter-block__item">
+                  <label class="filter-block__checkbox">
+                    <input class="filter-block__input-checkbox" type="checkbox" name="Страна произрастания" value="Перу">
+                    <span class="control-mark control-mark--checkbox"></span>
+                    <span class="control-lable">Перу</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button class="button-use" type="submit">Применить</button>
+          <button class="button-reset" type="reset">Сбросить</button>
+
+          <div class="filter-block">
+          <b class="filter-block__titel">Сортировка:</b>
+          <select class="control-select">
+            <option class="control-select__sorting">по умолчанию</option>
+          </select>
+           <div class="filter-product">
+            <ul class="filter-product__list">
+              <li class="filter-product__item">
+                <img class="filter-product__image" src="" width="" height="" alt="">
+                <b class="filter-product__titel">Декаф Флэт Уайт</b>
+                <p class="filter-product__text">Кофе без кофеина из Эфиопии
+                  с натуральным фермерским молоком</p>
+                <b class="filter-product__price">225₽</b>
+                <a class="filter-product__button" href="#">В корзину</a>
+              </li>
+              <li class="filter-product__item">
+                <img class="filter-product__image" src="" width="" height="" alt="">
+                <b class="filter-product__titel">Декаф Флэт Уайт</b>
+                <p class="filter-product__text">Кофе без кофеина из Эфиопии
+                  с натуральным фермерским молоком</p>
+                <b class="filter-product__price">225₽</b>
+                <a class="filter-product__button" href="#"></a>
+              </li>
+              <li class="filter-product__item">
+                <img class="filter-product__image" src="" width="" height="" alt="">
+                <b class="filter-product__titel">Декаф Флэт Уайт</b>
+                <p class="filter-product__text">Кофе без кофеина из Эфиопии
+                  с натуральным фермерским молоком</p>
+                <b class="filter-product__price">225₽</b>
+                <a class="filter-product__button" href="#">В корзину</a>
+              </li>
+              <li class="filter-product__item">
+                <img class="filter-product__image" src="" width="" height="" alt="">
+                <b class="filter-product__titel">Декаф Флэт Уайт</b>
+                <p class="filter-product__text">Кофе без кофеина из Эфиопии
+                  с натуральным фермерским молоком</p>
+                <b class="filter-product__price">225₽</b>
+                <a class="filter-product__button" href="#">В корзину</a>
+              </li>
+              <li class="filter-product__item">
+                <img class="filter-product__image" src="" width="" height="" alt="">
+                <b class="filter-product__titel">Декаф Флэт Уайт</b>
+                <p class="filter-product__text">Кофе без кофеина из Эфиопии
+                  с натуральным фермерским молоком</p>
+                <b class="filter-product__price">225₽</b>
+                <a class="filter-product__button" href="#">В корзину</a>
+              </li>
+              <li class="filter-product__item">
+                <img class="filter-product__image" src="" width="" height="" alt="">
+                <b class="filter-product__titel">Декаф Флэт Уайт</b>
+                <p class="filter-product__text">Кофе без кофеина из Эфиопии
+                  с натуральным фермерским молоком</p>
+                <b class="filter-product__price">225₽</b>
+                <a class="filter-product__button" href="#">В корзину</a>
+              </li>
+            </ul>
+           </div>
+          </div>
+        </form>
       </section>
 
       <section class="geolocation-map">
         <h2 class="visually-hidden">Геолокация</h2>
-        <img class="geolocation-map__image" href="" width="" height="">
+        <img class="geolocation-map__image" src="" width="" height="" alt="">
       </section>
     </main>
 
@@ -144,6 +285,7 @@
           </li>
         </ul>
       </div>
+
       <div class="footer-menu">
         <h2 class="footer-menu__titel">Интернет-магазин</h2>
         <ul class="footer-menu-list">
@@ -161,6 +303,7 @@
           </li>
         </ul>
       </div>
+
         <div class="footer-media">
           <h2 class="footer-media__titel">Медиа</h2>
           <ul class="footer-media__list">
@@ -175,6 +318,7 @@
             </li>
           </ul>
         </div>
+
         <div class="footer-contacts">
           <h2 class="footer-contacts-titel">Контакты</h2>
           <ul class="footer-contacts__list">
@@ -186,12 +330,14 @@
             </li>
           </ul>
         </div>
+
         <div class="footer-developed">
           <h2 class="footer-developed__titel">Разработано в</h2>
             <a class="footer-developed__link" href="https://htmlacademy.ru">HTML Academy
               <svg class="footer-developed__image"></svg>
             </a>
         </div>
+
       </div>
     </footer>
     </div>
