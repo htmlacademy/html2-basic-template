@@ -138,7 +138,7 @@ _styles.scss_
 
 ```bash
 ├── build/
-│   └──  styles/
+│   └──  css/
 │        └──  styles.css
 ```
 
@@ -158,7 +158,8 @@ _styles.scss_
 ```bash
 ├── build/
 │   └──  images/
-│        ├── stack.svg // спрайт
+│        └── icons       # папка для спрайта
+│            └── stack.svg # спрайт
 │        ├── bg.jpg
 │        ├── hero.png
 │        └── burger.svg
