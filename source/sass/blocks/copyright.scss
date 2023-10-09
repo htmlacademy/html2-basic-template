@@ -1,0 +1,16 @@
+.copyright {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #BDBDBD;
+  fill: #BDBDBD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
+}
+

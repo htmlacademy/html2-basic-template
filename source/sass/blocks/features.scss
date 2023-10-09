@@ -1,0 +1,137 @@
+.features {
+  padding: 50px 20px 60px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 30px 100px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px 40px;
+  }
+}
+
+.features__title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #7859CF;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.features__sabtitle {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+  }
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 339px;
+    flex-direction: row;
+    text-align: start;
+    align-items: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.features__item-image {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 21px;
+    margin-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.features__item:nth-child(2) .features__item-image,
+.features__item:nth-child(3) .features__item-image {
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.features__item-wrapper {
+  @media (min-width: $tablet-width) {
+    width: 79%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.features__item-title {
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.features__item-description {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

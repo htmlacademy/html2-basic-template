@@ -1,0 +1,20 @@
+.map {
+  position: relative;
+}
+
+.map__pin {
+  position: absolute;
+  z-index: 1;
+  top: 185px;
+  left: 156px;
+
+  @media (min-width: $tablet-width) {
+    top: 215px;
+    left: 380px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 245px;
+    left: 716px;
+  }
+}

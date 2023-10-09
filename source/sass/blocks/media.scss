@@ -1,9 +1,9 @@
-.navigation {
+.media {
   position: relative;
   margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -11,7 +11,7 @@
   }
 }
 
-.navigation::after {
+.media::after {
   content: "";
   height: 1px;
   width: 320px;
@@ -25,7 +25,7 @@
   }
 }
 
-.navigation__title {
+.media__title {
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -35,17 +35,17 @@
   margin-bottom: 10px;
 }
 
-.navigation__list {
+.media__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.navigation__item {
+.media__item {
   padding: 8px 0;
 }
 
-.navigation__link {
+.media__link {
   text-decoration: none;
   font-size: 12px;
   font-weight: 500;

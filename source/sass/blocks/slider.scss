@@ -116,7 +116,7 @@
 .slider__arrow-right {
   position: absolute;
   padding: 0;
-  right: -1px;
+  right: 0;
   top: 0;
 
   &:hover,
@@ -242,7 +242,7 @@
   text-align: center;
 }
 
-.slider__item-description--tablet {
+.slider__item-br--tablet {
   @media (max-width: $mobile-width-only) {
     display: none;
 

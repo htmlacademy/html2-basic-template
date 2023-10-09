@@ -10,7 +10,7 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
   }
 });
-
+//Слайдер===============================================
 const sliderImages = document.querySelectorAll('.slider__item'),
     sliderLine = document.querySelector('.slider__list'),
     sliderBullet = document.querySelectorAll('.slider__button'),
@@ -24,11 +24,8 @@ const sliderImages = document.querySelectorAll('.slider__item'),
     sliderBtnNext.addEventListener('click', nextSlide);
     sliderBtnPrev.addEventListener('click', prevSlide);
 
-// Адаптивность слайдера
 window.addEventListener('resize', showSlide);
-// Кнопки листания слайдов вперед и назад
-// Функции ==================
-// Задает нужную ширину картинки и sliderLine
+
 function showSlide() {
     sliderWidth = document.querySelector('.slider').offsetWidth;
     sliderLine.style.width = sliderWidth * sliderImages.length + 'px';
@@ -38,7 +35,6 @@ function showSlide() {
 }
 showSlide();
 
-// Перелистывает слайд вперед
 function nextSlide() {
     sliderBtnPrev.disabled = false;
     sliderCount++;
@@ -49,7 +45,6 @@ function nextSlide() {
     }
 
 
-// Перелистывает слайд назад
 function prevSlide() {
     sliderBtnNext.disabled = false;
     sliderCount--;
@@ -60,7 +55,6 @@ function prevSlide() {
 }
 
 
-// Задает шаг перемещения слайдов
 function rollSlider() {
     sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
 }

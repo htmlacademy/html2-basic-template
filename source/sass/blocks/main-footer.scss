@@ -1,0 +1,29 @@
+.main-footer {
+  padding: 14px 20px 30px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 34px 20px 39px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 32px 40px 40px 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 18px 30px;
+  }
+}
+
+.main-footer__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70%;
+    padding: 12px 0 0 3px;
+    gap: 90px;
+  }
+}
