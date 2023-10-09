@@ -79,7 +79,7 @@ v18.18.0
 - `npm run lint:html` - проверить разметку по правилам linthtml
 
 ## Работа с разметкой
-Все HTML-файлы с разметкой кладите в папке `/source`.
+Все HTML-файлы с разметкой складывайте в папку `source/`.
 
 ```bash
 ├── source/
@@ -98,7 +98,7 @@ v18.18.0
 ```
 
 ## Работа со стилями
-Все стили находятся в папке `source/sass`.
+Все стили находятся в папке `source/sass/`.
 
 ```bash
 ├── source/
@@ -130,7 +130,7 @@ _styles.scss_
 
 ```bash
 ├── build/
-│   └──  styles/
+│   └──  css/
 │        └──  styles.css
 ```
 
@@ -150,10 +150,11 @@ _styles.scss_
 ```bash
 ├── build/
 │   └──  images/
-│        ├──  stack.svg // спрайт
+│        └── icons       # папка для спрайта
+│            └── stack.svg # спрайт
 │        ├── bg.jpg
-│        ├──  hero.png
-│        └──  burger.svg
+│        ├── hero.png
+│        └── burger.svg
 ```
 
 ## Работа со шрифтами
