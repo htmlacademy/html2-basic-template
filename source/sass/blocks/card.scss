@@ -1,5 +1,5 @@
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 40px 20px 20px 20px;
 
   @media (min-width: $tablet-width) {
@@ -9,7 +9,7 @@
   @media (min-width: $desktop-width) {
     &:hover,
     &:focus {
-      box-shadow: 0px 5px 15px 0px #00000026;
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -55,6 +55,7 @@
 
 .card__order {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 50px;
 
@@ -75,6 +76,7 @@
 
 .card__order .card__order-button {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -85,14 +87,14 @@
 
   &:hover,
   &:focus {
-    background-color: #9070EC;
+    background-color: #9070ec;
   }
 
   &:active {
-    background-color: #593CAC;
+    background-color: #593cac;
   }
 
   &:disabled {
-    background-color: #BDBDBD;
+    background-color: #bdbdbd;
   }
 }

@@ -1,5 +1,6 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -27,7 +28,7 @@
   width: 320px;
   position: absolute;
   bottom: -18px;
-  background-color: #F0EBFF;
+  background-color: #f0ebff;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -43,33 +44,34 @@
 }
 
 .social__wrapper {
-  display:flex;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 20px;
 }
 
 .social__link {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   min-width: 40px;
   min-height: 40px;
-  fill: #BDBDBD;
+  fill: #bdbdbd;
   border-radius: 4px;
 
   &:hover,
   &:focus {
-    background-color: #F0EBFF;
-    fill: #7859CF;
+    background-color: #f0ebff;
+    fill: #7859cf;
     border-radius: 4px;
   }
 
   &:active {
-    background-color: #7859CF40;
-    fill: #7859CF;
+    background-color: rgba(120, 89, 207, 0.25);
+    fill: #7859cf;
     border-radius: 4px;
   }
-
 }
 
 .social__text {

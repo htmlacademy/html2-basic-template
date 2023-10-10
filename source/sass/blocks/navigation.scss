@@ -18,7 +18,7 @@
   position: absolute;
   bottom: -19px;
   left: -20px;
-  background-color: #F0EBFF;
+  background-color: #f0ebff;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -30,7 +30,7 @@
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #7859CF;
+  color: #7859cf;
   margin: 0;
   margin-bottom: 10px;
 }
@@ -58,10 +58,10 @@
 
   &:hover,
   &:focus {
-    color: #9070EC;
+    color: #9070ec;
   }
 
   &:active {
-    color: #593CAC;
+    color: #593cac;
   }
 }

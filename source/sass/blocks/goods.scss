@@ -4,9 +4,14 @@
   font-weight: 600;
   font-family: "Montserrat", "Arial", sans-serif;
   border: none;
-  color: #7859CF;
-  background-color: #F8F8F8;
+  color: #7859cf;
+  background-color: #f8f8f8;
   min-width: 153px;
+
+  &:hover,
+  &:focus {
+    background-color: #f0ebff;
+  }
 }
 
 .goods__select-text {

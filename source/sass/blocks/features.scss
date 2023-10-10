@@ -16,7 +16,7 @@
   line-height: 16px;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #7859CF;
+  color: #7859cf;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 4px;
@@ -98,7 +98,6 @@
 
 .features__item:nth-child(2) .features__item-image,
 .features__item:nth-child(3) .features__item-image {
-
   @media (min-width: $tablet-width) {
     margin-top: 0;
   }

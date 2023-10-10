@@ -15,6 +15,7 @@
     width: 1440px;
   }
   min-width: 320px;
+  overflow: scroll;
   font-size: 14px;
   line-height: 20px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -36,24 +37,23 @@
 .button--primary {
   display: block;
   text-align: center;
-  background-color: #7859CF;
+  background-color: #7859cf;
   color: #ffffff;
   cursor: pointer;
   padding: 10.5px 20px;
 
   &:hover,
   &:focus {
-    background-color: #9070EC;
+    background-color: #9070ec;
   }
 
   &:active {
-    background-color: #593CAC;
+    background-color: #593cac;
   }
 
   &:disabled {
-    background-color: #BDBDBD;
+    background-color: #bdbdbd;
   }
-
 }
 
 .visually-hidden {

@@ -100,6 +100,18 @@ export function copyAssets () {
     .pipe(gulp.dest('build'));
 }
 
+export function noiusliderJs () {
+  return gulp.src('source/vendor/*.js')
+  .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
+
+export function noiusliderCss () {
+  return gulp.src('source/vendor/*.css')
+  .pipe(gulp.dest('build/css'))
+    .pipe(browser.stream());
+}
+
 export function startServer (done) {
   browser.init({
     server: {
@@ -131,7 +143,9 @@ function compileProject (done) {
     optimizeVector,
     createStack,
     copyAssets,
-    optimizeImages
+    optimizeImages,
+    noiusliderJs,
+    noiusliderCss
   )(done);
 }
 

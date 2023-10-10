@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -27,30 +27,30 @@
   text-decoration: none;
   font-size: 16px;
   line-height: 24px;
-  color: #7859CF;
+  color: #7859cf;
   min-width: 40px;
   min-height: 40px;
   border-radius: 4px;
 
   &:hover,
   &:focus {
-    background-color: #9070EC;
-    color: #FFFFFF;
+    background-color: #9070ec;
+    color: #ffffff;
   }
 
   &:active {
-    background-color: #593CAC;
-    color: #FFFFFF;
+    background-color: #593cac;
+    color: #ffffff;
   }
 
   &:disabled {
-    background-color: #E2E2E2;
-    color: #FFFFFF;
+    background-color: #e2e2e2;
+    color: #ffffff;
   }
 }
 
 .pagination__item--active {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 
 .pagination__item--active .pagination__link {

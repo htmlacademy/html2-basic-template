@@ -2,15 +2,30 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  color: #BDBDBD;
-  fill: #BDBDBD;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
   }
+}
+
+.copyright__link {
+  cursor: pointer;
+  color: #bdbdbd;
+  fill: #bdbdbd;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.copyright__image:hover,
+.copyright__image:focus {
+  fill: #7859cf;
+}
+
+.copyright__image:active {
+  fill: #593cac;
 }
 

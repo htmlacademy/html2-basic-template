@@ -35,3 +35,12 @@ if (rangeSlider) {
 		});
 	});
 }
+
+const reset = () => {
+  const buttonReset = document.querySelector('.form__button-reset');
+
+  buttonReset.addEventListener('click', function() {
+    rangeSlider.noUiSlider.reset();
+  })
+}
+reset()

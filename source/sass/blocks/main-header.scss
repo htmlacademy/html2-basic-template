@@ -50,7 +50,6 @@
 
   @media (max-width: $mobile-width-only) {
     display: none;
-
   }
 
   @media (min-width: $tablet-width) {
@@ -63,6 +62,7 @@
 }
 
 .main-header__icons {
+  font-weight: 500;
   position: absolute;
   display: flex;
   left: 139px;
@@ -89,7 +89,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: block;;
+    display: block;
   }
 }
 
@@ -105,10 +105,9 @@
   fill: #333333;
 
 
-    &:active {
-      background-color: #F0EBFF;
-    }
-
+  &:active {
+    background-color: #f0ebff;
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 80px;
@@ -119,8 +118,8 @@
 
     &:hover,
     &:focus {
-      color: #7859CF;
-      fill: #7859CF;
+      color: #7859cf;
+      fill: #7859cf;
     }
   }
 }

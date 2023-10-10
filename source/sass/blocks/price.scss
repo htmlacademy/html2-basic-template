@@ -1,9 +1,9 @@
 .noUi-connect {
-  background-color: #9070EC;
+  background-color: #9070ec;
 }
 
 .noUi-target {
-  background-color: #E2E2E2;
+  background-color: #e2e2e2;
   border: none;
   border-radius: 50%;
   box-shadow: none;
@@ -18,8 +18,20 @@
 .noUi-handle {
   box-shadow: none;
   border-radius: 100%;
-  background-color: #FFFFFF;
-  border: 2px solid #9070EC;
+  background-color: #ffffff;
+  border: 2px solid #9070ec;
+
+  &:hover,
+  &:focus {
+    background-color: #eae6fc;
+    z-index: 1;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1) inset;
+  }
+
+  &:active {
+    background-color: #7859cf;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1) inset;
+  }
 }
 
 .noUi-horizontal .noUi-handle {
@@ -48,7 +60,7 @@
 .price__range-hyphen {
   width: 8px;
   height: 2px;
-  background-color: #BDBDBD;
+  background-color: #bdbdbd;
   display: block;
 
   @media (min-width: $desktop-width) {
@@ -61,7 +73,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  border: 2px solid #9070EC;
+  border: 2px solid #9070ec;
   border-radius: 4px;
   padding: 6px 8px;
   text-align: center;
