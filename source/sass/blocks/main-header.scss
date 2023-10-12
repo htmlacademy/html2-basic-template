@@ -86,6 +86,8 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+    max-width: 100px;
+    overflow-wrap: break-word;
   }
 
   @media (min-width: $desktop-width) {

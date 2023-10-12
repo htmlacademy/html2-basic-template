@@ -43,6 +43,8 @@
 
 .navigation__item {
   padding: 8px 0;
+  overflow-wrap: break-word;
+  max-width: 250px;
 }
 
 .navigation__link {

@@ -6,7 +6,8 @@
   border: none;
   color: #7859cf;
   background-color: #f8f8f8;
-  min-width: 153px;
+  border-radius: 4px;
+  padding: 5px 9px;
 
   &:hover,
   &:focus {
@@ -23,13 +24,14 @@
 
 .goods__select-wrapper {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 9px;
+  margin-bottom: 16px;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     justify-content: end;
-    padding-right: 9px;
-    margin-bottom: 29px;
+    padding-right: 5px;
+    margin-bottom: 26px;
   }
 }
 

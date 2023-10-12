@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    max-width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 600px;
+  }
 }
 
 .main-nav__list {

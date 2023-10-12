@@ -15,7 +15,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header" data-test="header">
     <div class="main-header__logo">
       <a class="main-header__logo-link" href="#">
         <picture>
@@ -42,7 +42,7 @@
       </a>
     </div>
     <nav class="main-nav main-nav--closed">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle js-toggle-button" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list">
@@ -71,7 +71,7 @@
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Drink2Go - все тот же кофе только без кофеина!</h1>
-    <section class="promo">
+    <section class="promo" data-test="hero">
       <h2 class="visually-hidden">
         Наши новинки!
       </h2>
@@ -85,9 +85,9 @@
                 srcset="images/hero/Hero-tablet@1x.webp 1x, images/hero/Hero-tablet@2x.webp 2x">
               <source type="image/webp" srcset="images/hero/Hero-mobile@1x.webp 1x, images/hero/Hero-mobile@2x.webp 2x">
 
-              <source media="(min-width: 1440px)"
+              <source type="image/png" media="(min-width: 1440px)"
                 srcset="images/hero/Hero-desktop@1x.png 1x, images/hero/Hero-desktop@2x.png 2x">
-              <source media="(min-width: 768px)"
+              <source type="image/png" media="(min-width: 768px)"
                 srcset="images/hero/Hero-tablet@1x.png 1x, images/hero/Hero-tablet@2x.png 2x">
               <img class="slider__item-image" src="images/hero/Hero-mobile@1x.png"
                 srcset="images/hero/Hero-mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
@@ -115,9 +115,9 @@
               <source type="image/webp"
                 srcset="images/hero/Hero-mobile-2@1x.webp 1x, images/hero/Hero-mobile-2@2x.webp 2x">
 
-              <source media="(min-width: 1440px)"
+              <source type="image/png" media="(min-width: 1440px)"
                 srcset="images/hero/Hero-desktop-2@1x.png 1x, images/hero/Hero-desktop-2@2x.png 2x">
-              <source media="(min-width: 768px)"
+              <source type="image/png" media="(min-width: 768px)"
                 srcset="images/hero/Hero-tablet-2@1x.png 1x, images/hero/Hero-tablet-2@2x.png 2x">
               <img class="slider__item-image" src="images/hero/Hero-mobile-2@1x.png "
                 srcset="images/hero/Hero-mobile-2@2x.png 2x" alt="Декаф Флэт Уайт.">
@@ -143,9 +143,9 @@
               <source type="image/webp"
                 srcset="images/hero/Hero-mobile-3@1x.webp 1x, images/hero/Hero-mobile-3@2x.webp 2x">
 
-              <source media="(min-width: 1440px)"
+              <source type="image/png" media="(min-width: 1440px)"
                 srcset="images/hero/Hero-desktop-3@1x.png 1x, images/hero/Hero-desktop-3@2x.png 2x">
-              <source media="(min-width: 768px)"
+              <source type="image/png" media="(min-width: 768px)"
                 srcset="images/hero/Hero-tablet-3@1x.png 1x, images/hero/Hero-tablet-3@2x.png 2x">
               <img class="slider__item-image" src="images/hero/Hero-mobile-3@1x.png"
                 srcset="images/hero/Hero-mobile-3@2x.png 2x" alt="Декаф Флэт Уайт.">
@@ -164,17 +164,17 @@
             </div>
           </li>
         </ul>
-        <button class="slider__arrow slider__arrow-left" type="button" disabled>
+        <button class="slider__arrow slider__arrow-left slider-button-prev" type="button" disabled>
           <svg class="slider__arrow-left-image" width="11" height="20">
             <use xlink:href="images/icons/stack.svg#leftSlider"></use>
           </svg>
         </button>
-        <button class="slider__arrow slider__arrow-right" type="button">
+        <button class="slider__arrow slider__arrow-right slider-button-next" type="button">
           <svg class="slider__arrow-right-image" width="11" height="20">
             <use xlink:href="images/icons/stack.svg#rightSlider"></use>
           </svg>
         </button>
-        <div class="slider__pagination">
+        <div class="slider__pagination slider-pagination">
           <button class="slider__button slider__button--active" type="button">
             <span class="slider__button-bullet slider__button-bullet--active"></span>
           </button>
@@ -187,7 +187,7 @@
         </div>
       </div>
     </section>
-    <section class="features">
+    <section class="features" data-test="features">
       <h2 class="features__title">Преимущества</h2>
       <h3 class="features__sabtitle">Главные причины выбрать Drink2Go</h3>
       <ul class="features__list">
@@ -231,7 +231,7 @@
         </li>
       </ul>
     </section>
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <h2 class="catalog__title">Каталог</h2>
       <h3 class="catalog__sabtitle">Каталог кофейных напитков</h3>
       <div class="catalog__wrapper">
@@ -472,7 +472,7 @@
         </ul>
       </div>
     </section>
-    <section class="map">
+    <section class="map" data-test="map">
       <h2 class="map__title visually-hidden">Наш адрес на карте</h2>
       <svg class="map__pin" width="38" height="50">
         <use xlink:href="images/icons/stack.svg#map-pin"></use>
@@ -492,7 +492,7 @@
           alt="Расположение на карте.">
       </picture>
     </section>
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
       <div class="main-footer__social social">
         <a>
           <picture>
@@ -508,13 +508,13 @@
             </svg>
             <span class="visually-hidden">VK</span>
           </a>
-          <a class="social__link social__link--pinterest" href="https://vk.com/htmlacademy">
+          <a class="social__link social__link--pinterest" href="https://ru.pinterest.com/keks_is_html_academy/">
             <svg class="social__link-image" width="20" height="20">
               <use xlink:href="images/icons/stack.svg#pinterest"></use>
             </svg>
             <span class="visually-hidden">Pinterest</span>
           </a>
-          <a class="social__link social__link--ok" href="https://vk.com/htmlacademy">
+          <a class="social__link social__link--ok" href="https://ok.ru/">
             <svg class="social__link-image" width="20" height="20">
               <use xlink:href="images/icons/stack.svg#ok"></use>
             </svg>
@@ -588,7 +588,7 @@
         </div>
       </div>
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="htmlacademy.ru">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">Разработано в HTML Academy</span>
           <svg class="copyright__image" width="12" height="16">
             <use xlink:href="images/icons/stack.svg#logo-academy"></use>

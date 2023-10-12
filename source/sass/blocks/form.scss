@@ -1,8 +1,8 @@
 .form {
-  margin-bottom: 43px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 41px;
   }
 }
 
@@ -19,6 +19,7 @@
 
   @media (min-width: $desktop-width) {
     gap: 0;
+    margin-top: 4px;
   }
 }
 
@@ -81,6 +82,8 @@
 
   @media (min-width: $desktop-width) {
     min-width: 200px;
+    max-width: 240px;
+    overflow-wrap: break-word;
   }
 }
 
