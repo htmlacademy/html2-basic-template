@@ -38,6 +38,7 @@
     "lint:js": "eslint source/js",
     "prelint": "gulp processMarkup --silent",
     "lint": "npm run lint:spaces && npm run lint:styles && npm run lint:markup && npm run lint:bem && npm run lint:html && npm run lint:js",
+    "optimizeImages": "gulp optimizeImages",
     "start": "gulp runDev",
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer"
