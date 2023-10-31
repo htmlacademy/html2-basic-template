@@ -48,7 +48,7 @@ export function processScripts () {
 }
 
 export function optimizeImages () {
-  return gulp.src('source/images/**/*.{png,jpg}')
+  return gulp.src('source/.raw/**/*.{png,jpg}')
     .pipe(sharp(isDevelopment ? {
       includeOriginalFile: true,
       formats: [
@@ -73,7 +73,7 @@ export function optimizeImages () {
         }
       ]
     }))
-    .pipe(gulp.dest('build/images'));
+    .pipe(gulp.dest('source/images'));
 }
 
 export function optimizeVector () {
@@ -94,7 +94,10 @@ export function copyAssets () {
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
-    'source/vendor/**/*'
+    'source/vendor/**/*',
+    'source/images/**/*',
+    '!source/images/icons/**/*',
+    '!source/**/README.md',
   ], {
     base: 'source'
   })
@@ -132,7 +135,6 @@ function compileProject (done) {
     optimizeVector,
     createStack,
     copyAssets,
-    optimizeImages
   )(done);
 }
 
