@@ -66,7 +66,7 @@
 ├── .github/                      # Специальная папка для github
 │   └── workflows/                # Автоматизация для github actions
 │       ├── check.yml             # Запускает линтеры на Гитхабе
-│       └──  gh-pages.yml         # Публикует проект и создаёт ссылку на проект
+│       └── gh-pages.yml          # Публикует проект и создаёт ссылку на проект
 ├── source/                       # Исходники проекта
 │   ├── fonts/                    # Папка для шрифтов
 │   ├── images/                   # Папка для хранения картинок
@@ -74,20 +74,22 @@
 │   ├── js                        # Скрипты
 │   │   └── script.js             # Главный скрипт
 │   ├── styles/                   # Папка для препроцессорных файлов sass
-│   │   └── blocks/               # Стили БЭМ-блоков
-│   │       └── header.scss       # Стили для конкретного БЭМ-блока
-│   │   └── global                # Файл для подключения стилей библиотек из папки
-│   │       ├── fonts.scss        # Подключение шрифтов к проекту
-│   │       ├── global.scss       # Глобальные стили, которые касаются всего проекта
-│   │       └── variables.scss    # Переменные для всего проекта
+│   │   ├── blocks/               # Стили БЭМ-блоков
+│   │   │   └── header.scss       # Стили для конкретного БЭМ-блока
+│   │   ├── global                # Файл для подключения стилей библиотек из папки
+│   │   │   ├── fonts.scss        # Подключение шрифтов к проекту
+│   │   │   ├── global.scss       # Глобальные стили, которые касаются всего проекта
+│   │   │   └── variables.scss    # Переменные для всего проекта
+│   │   └── index.scss            # Основной стилевой файл с импортами всех остальных
 │   ├── vendor                    # Папка для сторонних бибилотек
-│   └──  index.html               # HTML-файл для главной страницы
-└── .editorconfig                 # Настройки форматирования текстовых файлов
-└── .gitignore                    # Настройки игнорирования файлов для git
-└── .stylelintrc                  # Правила для stylelint
-└── gulpfile.js                   # Автоматизация для Gulp
-└── package.json                  # Зависимости проекта, скрипты, настройки проекта
-└── package-lock.json             # Зависимости проекта
+│   └── index.html                # HTML-файл для главной страницы
+├── .editorconfig                 # Настройки форматирования текстовых файлов
+├── .eslintrc                     # Правила для eslint
+├── .gitignore                    # Настройки игнорирования файлов для git
+├── .stylelintrc                  # Правила для stylelint
+├── gulpfile.js                   # Автоматизация для Gulp
+├── package.json                  # Зависимости проекта, скрипты, настройки проекта
+├── package-lock.json             # Зависимости проекта
 └── README.md                     # Документация
 ```
 
@@ -113,19 +115,19 @@
 Все HTML-файлы с разметкой складывайте в папку `source/`.
 
 ```shell
-├── source/
-│   ├──  index.html
-│   ├──  catalog.html
-│   └──  form.html
+└── source/
+    ├──  index.html
+    ├──  catalog.html
+    └──  form.html
 ```
 
 Из папки `source/` сборка переносит файлы в папку `build/`.
 
 ```shell
-├── build/
-│   ├──  index.html
-│   ├──  catalog.html
-│   └──  form.html
+└── build/
+    ├──  index.html
+    ├──  catalog.html
+    └──  form.html
 ```
 
 ## Работа со стилями
@@ -133,14 +135,15 @@
 Все стили находятся в папке `source/styles/`.
 
 ```shell
-├── source/
-│   ├── styles/
-│   │   └── blocks/
-│   │       └── header.scss
-│   │   └── global
-│   │       ├── fonts.scss
-│   │       ├── global.scss
-│   │       └── variables.scss
+└── source/
+    └── styles/
+        ├── blocks/
+        │   └── header.scss
+        ├── global
+        │   ├── fonts.scss
+        │   ├── global.scss
+        │   └── variables.scss
+        └── index.scss
 ```
 
 Все БЭМ-блоки и остальные препроцессорные файлы подключайте в `source/styles/index.scss`.
@@ -160,9 +163,9 @@
 Все препроцессорные файлы сборка обработает и превратит в `index.css`. Файл `index.css` сборка перенесёт в
 
 ```shell
-├── build/
-│   └──  styles/
-│        └── index.css
+└── build/
+    └── styles/
+        └── index.css
 ```
 
 ## Работа с графикой
@@ -176,24 +179,24 @@
 Векторную графику для спрайта складывайте в `source/images/icons/`. Автоматизация создаст из иконок файл `stack.svg`.
 
 ```shell
-├── source/
-│   ├── .raw/
-│   ├── images/
-│   │   └── icons/
+└── source/
+    ├── .raw/
+    └── images/
+        └── icons/
 ```
 
 Всю графику автоматизация перенесёт в `build/images/`.
 
 ```shell
-├── build/
-│   └──  images/
-│        └── icons                # папка для спрайта
-│            └── stack.svg        # спрайт
-│        ├── bg.jpg
-│        ├── bg.webp
-│        ├── hero.png
-│        ├── hero.webp
-│        └── burger.svg
+└── build/
+    └── images/
+        ├── icons                 # папка для спрайта
+        │   └── stack.svg         # спрайт
+        ├── bg.jpg
+        ├── bg.webp
+        ├── hero.png
+        ├── hero.webp
+        └── burger.svg
 ```
 
 ## Работа со шрифтами
@@ -201,12 +204,12 @@
 Все шрифтовые файлы лежат в `source/fonts/`. Сборка переносит их в `build/fonts/`.
 
 ```shell
-├── build/
-│   └──  fonts/
-│        ├──  open-sans.woff2
-│        ├──  open-sans.woff
-│        ├──  open-sans-bold.woff
-│        └──  open-sans-bold.woff
+└── build/
+    └── fonts/
+        ├──  open-sans.woff2
+        ├──  open-sans.woff
+        ├──  open-sans-bold.woff
+        └──  open-sans-bold.woff
 
 ```
 
@@ -215,19 +218,19 @@
 Все скрипты лежат в `source/script/`.
 
 ```shell
-├── source/
-│   ├── js
-│   │   ├── script.js
-│   │   └── modal.js
+└── source/
+    └── js
+        ├── script.js
+        └── modal.js
 ```
 
 Сборка переносит их в `build/script/`.
 
 ```shell
-├── build/
-│   ├── js
-│   │   ├── script.js
-│   │   └── modal.js
+└── build/
+    └── js
+        ├── script.js
+        └── modal.js
 ```
 
 ## Работа со сторонними библиотеками
@@ -239,30 +242,30 @@
 Положите файлы библиотеки в папку `source/vendor/`, как показано ниже:
 
 ```shell
-├── source/
-│   └── vendor/
-│        ├── library.css
-│        └── library.js
+└── source/
+    └── vendor/
+        ├── library.css
+        └── library.js
 ```
 
 Если у вас есть несколько библиотек с разными файлами, вы можете группировать файлы одной библиотеки в ее собственную подпапку. Например:
 
 ```shell
-├── source/
-│   └── vendor/
-│       └── library/
-│             ├── library.css
-│             └── library.js
+└── source/
+    └── vendor/
+        └── library/
+            ├── library.css
+            └── library.js
 ```
 
 При сборке вашего проекта, все файлы из папки `source/vendor/` будут включены в папку `build/vendor/`, сохраняя их структуру. Например:
 
 ```shell
-├── build/
-│   └── vendor/
-│        └── library/
-│             ├── library.css
-│             └── library.js
+└── build/
+    └── vendor/
+        └── library/
+            ├── library.css
+            └── library.js
 ```
 
 Таким образом, вы можете удобно организовать и внедрить сторонние библиотеки в ваш проект, сохраняя их структуру в папке `source/vendor/`.
