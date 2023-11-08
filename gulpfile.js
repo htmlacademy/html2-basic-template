@@ -48,32 +48,31 @@ export function processScripts () {
 }
 
 export function optimizeImages () {
-  return gulp.src('source/images/**/*.{png,jpg}')
-    .pipe(sharp(isDevelopment ? {
-      includeOriginalFile: true,
-      formats: [
-        { format: 'webp' }
-      ]
-    } : {
-      formats: [
-        {
-          jpegOptions: {
-            progressive: true,
-            mozjpeg: true
+  const RAW_DENSITY = 2;
+  const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
+
+  function createOptionsFormat() {
+    const formats = [];
+
+    for (const format of TARGET_FORMATS) {
+      for (let density = RAW_DENSITY; density > 0; density--) {
+        formats.push(
+          {
+            format,
+            rename: { suffix: `@${density}x` },
+            width: ({ width }) => Math.ceil(width * density / RAW_DENSITY),
+            jpegOptions: { progressive: true },
           },
-          pngOptions: {
-            palette: true
-          }
-        },
-        {
-          format: 'webp',
-          webpOptions: {
-            effort: 6
-          }
-        }
-      ]
-    }))
-    .pipe(gulp.dest('build/images'));
+        );
+      }
+    }
+
+    return { formats };
+  }
+
+  return gulp.src('source/.raw/**/*.{png,jpg,jpeg}')
+    .pipe(sharp(createOptionsFormat()))
+    .pipe(gulp.dest('source/images'));
 }
 
 export function optimizeVector () {
@@ -94,7 +93,10 @@ export function copyAssets () {
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
-    'source/vendor/**/*'
+    'source/vendor/**/*',
+    'source/images/**/*',
+    '!source/images/icons/**/*',
+    '!source/**/README.md',
   ], {
     base: 'source'
   })
@@ -132,7 +134,6 @@ function compileProject (done) {
     optimizeVector,
     createStack,
     copyAssets,
-    optimizeImages
   )(done);
 }
 

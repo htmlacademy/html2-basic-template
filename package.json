@@ -8,7 +8,7 @@
     "autoprefixer": "10.4.16",
     "browser-sync": "2.29.3",
     "del": "7.1.0",
-    "eslint": "8.51.0",
+    "eslint": "8.53.0",
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "4.0.2",
     "gulp-html-bemlinter": "2.1.4",
@@ -16,7 +16,7 @@
     "gulp-postcss": "9.0.1",
     "gulp-sass": "5.1.0",
     "gulp-sharp-responsive": "0.4.1",
-    "gulp-stacksvg": "2.0.2",
+    "gulp-stacksvg": "3.0.0",
     "gulp-svgmin": "4.1.0",
     "gulp-terser": "2.1.0",
     "linthtml-config-htmlacademy": "1.0.12",
@@ -27,7 +27,7 @@
     "sass": "1.69.5",
     "stylelint": "15.11.0",
     "stylelint-config-htmlacademy": "2.0.6",
-    "w3c-html-validator": "1.5.1"
+    "w3c-html-validator": "1.6.0"
   },
   "scripts": {
     "lint:spaces": "editorconfig-cli",
@@ -38,6 +38,7 @@
     "lint:js": "eslint source/js",
     "prelint": "gulp processMarkup --silent",
     "lint": "npm run lint:spaces && npm run lint:styles && npm run lint:markup && npm run lint:bem && npm run lint:html && npm run lint:js",
+    "optimizeImages": "gulp optimizeImages",
     "start": "gulp runDev",
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer"
@@ -49,7 +50,7 @@
     "not < 0.25%"
   ],
   "engines": {
-    "node": "^16.20.0 || ^18.16.0"
+    "node": "^18.18 || ^20.9"
   },
   "type": "module"
 }
