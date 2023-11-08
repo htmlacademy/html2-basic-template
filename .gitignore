@@ -3,5 +3,5 @@ node_modules
 build
 .idea
 .DS_Store
-source/.raw/**/*.png
-source/.raw/**/*.jpg
+source/.raw/
+!source/.raw/**/README.md
