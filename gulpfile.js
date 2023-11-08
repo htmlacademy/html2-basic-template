@@ -28,7 +28,7 @@ export function lintBem () {
 }
 
 export function processStyles () {
-  return gulp.src('source/sass/*.scss', { sourcemaps: isDevelopment })
+  return gulp.src('source/styles/*.scss', { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -36,14 +36,14 @@ export function processStyles () {
       autoprefixer(),
       csso()
     ]))
-    .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
+    .pipe(gulp.dest('build/styles', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
 
 export function processScripts () {
-  return gulp.src('source/js/**/*.js')
+  return gulp.src('source/scripts/**/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('build/scripts'))
     .pipe(browser.stream());
 }
 
@@ -121,8 +121,8 @@ function reloadServer (done) {
 }
 
 function watchFiles () {
-  gulp.watch('source/sass/**/*.scss', gulp.series(processStyles));
-  gulp.watch('source/js/script.js', gulp.series(processScripts));
+  gulp.watch('source/styles/**/*.scss', gulp.series(processStyles));
+  gulp.watch('source/scripts/**/*.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
 }
 

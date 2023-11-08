@@ -66,28 +66,30 @@
 ├── .github/                      # Специальная папка для github
 │   └── workflows/                # Автоматизация для github actions
 │       ├── check.yml             # Запускает линтеры на Гитхабе
-│       └──  gh-pages.yml         # Публикует проект и создаёт ссылку на проект
+│       └── gh-pages.yml          # Публикует проект и создаёт ссылку на проект
 ├── source/                       # Исходники проекта
 │   ├── fonts/                    # Папка для шрифтов
 │   ├── images/                   # Папка для хранения картинок
 │   │   └── icons/                # Специальная папка для преобразования svg в спрайт(stack)
-│   ├── js                        # Скрипты
-│   │   └── script.js             # Главный скрипт
-│   ├── sass/                     # Папка для препроцессорных файлов sass
-│   │   └── blocks/               # Стили БЭМ-блоков
-│   │       └── header.scss       # Стили для конкретного БЭМ-блока
-│   │   └── global                # Файл для подключения стилей библиотек из папки
-│   │       ├── fonts.scss        # Подключение шрифтов к проекту
-│   │       ├── global.scss       # Глобальные стили, которые касаются всего проекта
-│   │       └── variables.scss    # Переменные для всего проекта
+│   ├── scripts/                  # Скрипты
+│   │   └── index.js              # Главный скрипт
+│   ├── styles/                   # Папка для препроцессорных файлов sass
+│   │   ├── blocks/               # Стили БЭМ-блоков
+│   │   │   └── header.scss       # Стили для конкретного БЭМ-блока
+│   │   ├── global                # Файл для подключения стилей библиотек из папки
+│   │   │   ├── fonts.scss        # Подключение шрифтов к проекту
+│   │   │   ├── global.scss       # Глобальные стили, которые касаются всего проекта
+│   │   │   └── variables.scss    # Переменные для всего проекта
+│   │   └── styles.scss           # Основной стилевой файл с импортами всех остальных
 │   ├── vendor                    # Папка для сторонних бибилотек
-│   └──  index.html               # HTML-файл для главной страницы
-└── .editorconfig                 # Настройки форматирования текстовых файлов
-└── .gitignore                    # Настройки игнорирования файлов для git
-└── .stylelintrc                  # Правила для stylelint
-└── gulpfile.js                   # Автоматизация для Gulp
-└── package.json                  # Зависимости проекта, скрипты, настройки проекта
-└── package-lock.json             # Зависимости проекта
+│   └── index.html                # HTML-файл для главной страницы
+├── .editorconfig                 # Настройки форматирования текстовых файлов
+├── .eslintrc                     # Правила для eslint
+├── .gitignore                    # Настройки игнорирования файлов для git
+├── .stylelintrc                  # Правила для stylelint
+├── gulpfile.js                   # Автоматизация для Gulp
+├── package.json                  # Зависимости проекта, скрипты, настройки проекта
+├── package-lock.json             # Зависимости проекта
 └── README.md                     # Документация
 ```
 
@@ -106,53 +108,54 @@
 - `npm run lint:styles` - проверяет проект на совместимость с stylelint
 - `npm run lint:spaces` - проверяет отступы с помощью editorConfig
 - `npm run lint:html` - проверяет разметку по правилам linthtml
-- `npm run lint:js` - проверяет скрипты по правилам eslint
+- `npm run lint:scripts` - проверяет скрипты по правилам eslint
 
 ## Работа с разметкой
 
 Все HTML-файлы с разметкой складывайте в папку `source/`.
 
 ```shell
-├── source/
-│   ├──  index.html
-│   ├──  catalog.html
-│   └──  form.html
+└── source/
+    ├──  index.html
+    ├──  catalog.html
+    └──  form.html
 ```
 
 Из папки `source/` сборка переносит файлы в папку `build/`.
 
 ```shell
-├── build/
-│   ├──  index.html
-│   ├──  catalog.html
-│   └──  form.html
+└── build/
+    ├──  index.html
+    ├──  catalog.html
+    └──  form.html
 ```
 
 ## Работа со стилями
 
-Все стили находятся в папке `source/sass/`.
+Все стили находятся в папке `source/styles/`.
 
 ```shell
-├── source/
-│   ├── sass
-│   │   └── blocks/
-│   │       └── header.scss
-│   │   └── global
-│   │       ├── fonts.scss
-│   │       ├── global.scss
-│   │       └── variables.scss
+└── source/
+    └── styles/
+        ├── blocks/
+        │   └── header.scss
+        ├── global
+        │   ├── fonts.scss
+        │   ├── global.scss
+        │   └── variables.scss
+        └── styles.scss
 ```
 
-Все БЭМ-блоки и остальные препроцессорные файлы подключайте в `source/sass/styles.scss`.
+Все БЭМ-блоки и остальные препроцессорные файлы подключайте в `source/styles/styles.scss`.
 
 ```scss
 /* GLOBAL */
-@import "global/variables";
-@import "global/global";
-@import "global/fonts";
+@import "./global/variables.scss";
+@import "./global/global.scss";
+@import "./global/fonts.scss";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "./blocks/header.scss";
 ```
 
 БЭМ-блоки импортируйте в секцию `/* BLOCKS */`.
@@ -160,9 +163,9 @@
 Все препроцессорные файлы сборка обработает и превратит в `styles.css`. Файл `styles.css` сборка перенесёт в
 
 ```shell
-├── build/
-│   └──  css/
-│        └──  styles.css
+└── build/
+    └── styles/
+        └── styles.css
 ```
 
 ## Работа с графикой
@@ -176,24 +179,24 @@
 Векторную графику для спрайта складывайте в `source/images/icons/`. Автоматизация создаст из иконок файл `stack.svg`.
 
 ```shell
-├── source/
-│   ├── .raw/
-│   ├── images/
-│   │   └── icons/
+└── source/
+    ├── .raw/
+    └── images/
+        └── icons/
 ```
 
 Всю графику автоматизация перенесёт в `build/images/`.
 
 ```shell
-├── build/
-│   └──  images/
-│        └── icons                # папка для спрайта
-│            └── stack.svg        # спрайт
-│        ├── bg.jpg
-│        ├── bg.webp
-│        ├── hero.png
-│        ├── hero.webp
-│        └── burger.svg
+└── build/
+    └── images/
+        ├── icons                 # папка для спрайта
+        │   └── stack.svg         # спрайт
+        ├── bg.jpg
+        ├── bg.webp
+        ├── hero.png
+        ├── hero.webp
+        └── burger.svg
 ```
 
 ## Работа со шрифтами
@@ -201,12 +204,12 @@
 Все шрифтовые файлы лежат в `source/fonts/`. Сборка переносит их в `build/fonts/`.
 
 ```shell
-├── build/
-│   └──  fonts/
-│        ├──  open-sans.woff2
-│        ├──  open-sans.woff
-│        ├──  open-sans-bold.woff
-│        └──  open-sans-bold.woff
+└── build/
+    └── fonts/
+        ├──  open-sans.woff2
+        ├──  open-sans.woff
+        ├──  open-sans-bold.woff
+        └──  open-sans-bold.woff
 
 ```
 
@@ -215,19 +218,19 @@
 Все скрипты лежат в `source/script/`.
 
 ```shell
-├── source/
-│   ├── js
-│   │   ├── script.js
-│   │   └── modal.js
+└── source/
+    └── scripts/
+        ├── index.js
+        └── modal.js
 ```
 
 Сборка переносит их в `build/script/`.
 
 ```shell
-├── build/
-│   ├── js
-│   │   ├── script.js
-│   │   └── modal.js
+└── build/
+    └── scripts/
+        ├── index.js
+        └── modal.js
 ```
 
 ## Работа со сторонними библиотеками
@@ -239,30 +242,30 @@
 Положите файлы библиотеки в папку `source/vendor/`, как показано ниже:
 
 ```shell
-├── source/
-│   └── vendor/
-│        ├── library.css
-│        └── library.js
+└── source/
+    └── vendor/
+        ├── library.css
+        └── library.js
 ```
 
 Если у вас есть несколько библиотек с разными файлами, вы можете группировать файлы одной библиотеки в ее собственную подпапку. Например:
 
 ```shell
-├── source/
-│   └── vendor/
-│       └── library/
-│             ├── library.css
-│             └── library.js
+└── source/
+    └── vendor/
+        └── library/
+            ├── library.css
+            └── library.js
 ```
 
 При сборке вашего проекта, все файлы из папки `source/vendor/` будут включены в папку `build/vendor/`, сохраняя их структуру. Например:
 
 ```shell
-├── build/
-│   └── vendor/
-│        └── library/
-│             ├── library.css
-│             └── library.js
+└── build/
+    └── vendor/
+        └── library/
+            ├── library.css
+            └── library.js
 ```
 
 Таким образом, вы можете удобно организовать и внедрить сторонние библиотеки в ваш проект, сохраняя их структуру в папке `source/vendor/`.
