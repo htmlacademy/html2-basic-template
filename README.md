@@ -150,12 +150,12 @@
 
 ```scss
 /* GLOBAL */
-@import "global/variables";
-@import "global/global";
-@import "global/fonts";
+@import "./global/variables.scss";
+@import "./global/global.scss";
+@import "./global/fonts.scss";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "./blocks/header.scss";
 ```
 
 БЭМ-блоки импортируйте в секцию `/* BLOCKS */`.
