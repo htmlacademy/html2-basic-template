@@ -108,7 +108,7 @@
 - `npm run lint:styles` - проверяет проект на совместимость с stylelint
 - `npm run lint:spaces` - проверяет отступы с помощью editorConfig
 - `npm run lint:html` - проверяет разметку по правилам linthtml
-- `npm run lint:js` - проверяет скрипты по правилам eslint
+- `npm run lint:scripts` - проверяет скрипты по правилам eslint
 
 ## Работа с разметкой
 
