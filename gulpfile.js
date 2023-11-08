@@ -41,9 +41,9 @@ export function processStyles () {
 }
 
 export function processScripts () {
-  return gulp.src('source/js/**/*.js')
+  return gulp.src('source/scripts/**/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('build/scripts'))
     .pipe(browser.stream());
 }
 
@@ -122,7 +122,7 @@ function reloadServer (done) {
 
 function watchFiles () {
   gulp.watch('source/styles/**/*.scss', gulp.series(processStyles));
-  gulp.watch('source/js/script.js', gulp.series(processScripts));
+  gulp.watch('source/scripts/**/*.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
 }
 

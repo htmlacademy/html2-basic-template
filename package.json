@@ -34,7 +34,7 @@
     "lint:markup": "cd build && html-validator --quiet --continue",
     "lint:html": "linthtml source/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
-    "lint:js": "eslint source/js",
+    "lint:js": "eslint source/scripts",
     "prelint": "gulp processMarkup --silent",
     "lint": "npm run lint:spaces && npm run lint:styles && npm run lint:markup && npm run lint:bem && npm run lint:html && npm run lint:js",
     "optimizeImages": "gulp optimizeImages",
