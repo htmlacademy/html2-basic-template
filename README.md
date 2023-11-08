@@ -86,6 +86,7 @@
 ├── .editorconfig                 # Настройки форматирования текстовых файлов
 ├── .eslintrc                     # Правила для eslint
 ├── .gitignore                    # Настройки игнорирования файлов для git
+├── .linthtmlrc                   # Правила для linthtml
 ├── .stylelintrc                  # Правила для stylelint
 ├── gulpfile.js                   # Автоматизация для Gulp
 ├── package.json                  # Зависимости проекта, скрипты, настройки проекта
