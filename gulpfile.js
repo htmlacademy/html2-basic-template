@@ -76,9 +76,9 @@ export function optimizeRaster () {
 }
 
 export function optimizeVector () {
-  return gulp.src(['raw/images/**/*.svg'])
+  return gulp.src(['raw/**/*.svg'])
     .pipe(svgo())
-    .pipe(gulp.dest('source/images'));
+    .pipe(gulp.dest('source'));
 }
 
 export function optimizeImages (done) {
@@ -89,10 +89,9 @@ export function optimizeImages (done) {
 }
 
 export function createStack () {
-  return gulp.src('source/images/icons/**/*.svg')
-    .pipe(svgo())
+  return gulp.src('source/icons/**/*.svg')
     .pipe(stacksvg())
-    .pipe(gulp.dest('build/images/icons'));
+    .pipe(gulp.dest('build/icons'));
 }
 
 export function copyAssets () {
@@ -102,7 +101,6 @@ export function copyAssets () {
     'source/*.webmanifest',
     'source/vendor/**/*',
     'source/images/**/*',
-    '!source/images/icons/**/*',
     '!source/**/README.md',
   ], {
     base: 'source'
