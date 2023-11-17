@@ -16,20 +16,23 @@ import bemlinter from 'gulp-html-bemlinter';
 
 const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
+const PATH_TO_SOURCE = './source/';
+const PATH_TO_DIST = './build/';
+const PATH_TO_RAW = './raw/';
 let isDevelopment = true;
 
 export function processMarkup () {
-  return src('source/*.html')
-    .pipe(dest('build'));
+  return src(`${PATH_TO_SOURCE}*.html`)
+    .pipe(dest(PATH_TO_DIST));
 }
 
 export function lintBem () {
-  return src('source/*.html')
+  return src(`${PATH_TO_SOURCE}*.html`)
     .pipe(bemlinter());
 }
 
 export function processStyles () {
-  return src('source/styles/*.scss', { sourcemaps: isDevelopment })
+  return src(`${PATH_TO_SOURCE}styles/*.scss`, { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -37,14 +40,14 @@ export function processStyles () {
       autoprefixer(),
       csso()
     ]))
-    .pipe(dest('build/styles', { sourcemaps: isDevelopment }))
+    .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
 
 export function processScripts () {
-  return src('source/scripts/**/*.js')
+  return src(`${PATH_TO_SOURCE}scripts/**/*.js`)
     .pipe(terser())
-    .pipe(dest('build/scripts'))
+    .pipe(dest(`${PATH_TO_DIST}scripts`))
     .pipe(browser.stream());
 }
 
@@ -71,15 +74,15 @@ export function optimizeRaster () {
     return { formats };
   }
 
-  return src('raw/images/**/*.{png,jpg,jpeg}')
+  return src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`)
     .pipe(sharp(createOptionsFormat()))
-    .pipe(dest('source/images'));
+    .pipe(dest(`${PATH_TO_SOURCE}images`));
 }
 
 export function optimizeVector () {
-  return src(['raw/**/*.svg'])
+  return src([`${PATH_TO_RAW}**/*.svg`])
     .pipe(svgo())
-    .pipe(dest('source'));
+    .pipe(dest(PATH_TO_SOURCE));
 }
 
 export function optimizeImages (done) {
@@ -90,30 +93,30 @@ export function optimizeImages (done) {
 }
 
 export function createStack () {
-  return src('source/images/icons/**/*.svg')
+  return src(`${PATH_TO_SOURCE}images/icons/**/*.svg`)
     .pipe(stacksvg())
-    .pipe(dest('build/images/icons'));
+    .pipe(dest(`${PATH_TO_DIST}images/icons`));
 }
 
 export function copyAssets () {
   return src([
-    'source/fonts/**/*.{woff2,woff}',
-    'source/*.ico',
-    'source/*.webmanifest',
-    'source/vendor/**/*',
-    'source/images/**/*',
-    '!source/images/icons/**/*',
-    '!source/**/README.md',
+    `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
+    `${PATH_TO_SOURCE}*.ico`,
+    `${PATH_TO_SOURCE}*.webmanifest`,
+    `${PATH_TO_SOURCE}vendor/**/*`,
+    `${PATH_TO_SOURCE}images/**/*`,
+    `!${PATH_TO_SOURCE}images/icons/**/*`,
+    `!${PATH_TO_SOURCE}**/README.md`,
   ], {
-    base: 'source'
+    base: PATH_TO_SOURCE
   })
-    .pipe(dest('build'));
+    .pipe(dest(PATH_TO_DIST));
 }
 
 export function startServer (done) {
   browser.init({
     server: {
-      baseDir: 'build'
+      baseDir: PATH_TO_DIST
     },
     cors: true,
     notify: false,
@@ -128,9 +131,9 @@ function reloadServer (done) {
 }
 
 function watchFiles () {
-  watch('source/styles/**/*.scss', series(processStyles));
-  watch('source/scripts/**/*.js', series(processScripts));
-  watch('source/*.html', series(processMarkup, reloadServer));
+  watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
+  watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
+  watch(`${PATH_TO_SOURCE}*.html`, series(processMarkup, reloadServer));
 }
 
 function compileProject (done) {
@@ -144,7 +147,7 @@ function compileProject (done) {
 }
 
 function deleteBuild () {
-  return deleteAsync('build');
+  return deleteAsync(PATH_TO_DIST);
 }
 
 export function buildProd (done) {
