@@ -90,9 +90,9 @@ export function optimizeImages (done) {
 }
 
 export function createStack () {
-  return src('source/icons/**/*.svg')
+  return src('source/images/icons/**/*.svg')
     .pipe(stacksvg())
-    .pipe(dest('build/icons'));
+    .pipe(dest('build/images/icons'));
 }
 
 export function copyAssets () {
@@ -102,6 +102,7 @@ export function copyAssets () {
     'source/*.webmanifest',
     'source/vendor/**/*',
     'source/images/**/*',
+    '!source/images/icons/**/*',
     '!source/**/README.md',
   ], {
     base: 'source'
