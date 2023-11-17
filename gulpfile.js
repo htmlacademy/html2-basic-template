@@ -8,7 +8,8 @@ import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
-import terser from 'gulp-terser';
+import { createGulpEsbuild } from 'gulp-esbuild';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
 import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
@@ -26,7 +27,7 @@ let isDevelopment = true;
 export function processMarkup () {
   return src(`${PATH_TO_SOURCE}**/*.html`)
     .pipe(nunjucksCompile())
-		.pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
+    .pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
     .pipe(dest(PATH_TO_DIST))
     .pipe(server.stream());
 }
@@ -50,8 +51,18 @@ export function processStyles () {
 }
 
 export function processScripts () {
-  return src(`${PATH_TO_SOURCE}scripts/**/*.js`)
-    .pipe(terser())
+  const gulpEsbuild = createGulpEsbuild({ incremental: isDevelopment });
+
+  return src(`${PATH_TO_SOURCE}scripts/*.js`)
+    .pipe(gulpEsbuild({
+      bundle: true,
+      format: 'esm',
+      // splitting: true,
+      platform: 'browser',
+      minify: !isDevelopment,
+      sourcemap: isDevelopment,
+      target: browserslistToEsbuild(),
+    }))
     .pipe(dest(`${PATH_TO_DIST}scripts`))
     .pipe(server.stream());
 }
