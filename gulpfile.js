@@ -11,7 +11,7 @@ import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
 import { deleteAsync } from 'del';
-import browser from 'browser-sync';
+import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 
 const { src, dest, watch, series, parallel } = gulp;
@@ -41,14 +41,14 @@ export function processStyles () {
       csso()
     ]))
     .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
-    .pipe(browser.stream());
+    .pipe(server.stream());
 }
 
 export function processScripts () {
   return src(`${PATH_TO_SOURCE}scripts/**/*.js`)
     .pipe(terser())
     .pipe(dest(`${PATH_TO_DIST}scripts`))
-    .pipe(browser.stream());
+    .pipe(server.stream());
 }
 
 export function optimizeRaster () {
@@ -114,7 +114,7 @@ export function copyAssets () {
 }
 
 export function startServer (done) {
-  browser.init({
+  server.init({
     server: {
       baseDir: PATH_TO_DIST
     },
@@ -126,7 +126,7 @@ export function startServer (done) {
 }
 
 function reloadServer (done) {
-  browser.reload();
+  server.reload();
   done();
 }
 
