@@ -217,9 +217,7 @@
 └── build/
     └── fonts/
         ├──  open-sans.woff2
-        ├──  open-sans.woff
-        ├──  open-sans-bold.woff
-        └──  open-sans-bold.woff
+        └──  open-sans-bold.woff2
 
 ```
 
