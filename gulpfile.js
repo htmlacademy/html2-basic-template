@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
+import { nunjucksCompile } from 'gulp-nunjucks';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
@@ -22,8 +23,10 @@ const PATH_TO_RAW = './raw/';
 let isDevelopment = true;
 
 export function processMarkup () {
-  return src(`${PATH_TO_SOURCE}*.html`)
-    .pipe(dest(PATH_TO_DIST));
+  return src(`${PATH_TO_SOURCE}**/*.html`)
+    .pipe(nunjucksCompile())
+    .pipe(dest(PATH_TO_DIST))
+    .pipe(server.stream());
 }
 
 export function lintBem () {
@@ -133,7 +136,7 @@ function reloadServer (done) {
 function watchFiles () {
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
-  watch(`${PATH_TO_SOURCE}*.html`, series(processMarkup, reloadServer));
+  watch(`${PATH_TO_SOURCE}**/*.html`, series(processMarkup, reloadServer));
 }
 
 function compileProject (done) {
