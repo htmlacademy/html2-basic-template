@@ -12,6 +12,7 @@
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "4.0.2",
     "gulp-html-bemlinter": "2.1.4",
+    "gulp-htmlmin": "5.0.1",
     "gulp-nunjucks": "6.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
