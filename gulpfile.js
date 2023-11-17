@@ -47,7 +47,7 @@ export function processScripts () {
     .pipe(browser.stream());
 }
 
-export function optimizeImages () {
+export function optimizeRaster () {
   const RAW_DENSITY = 2;
   const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
 
@@ -70,15 +70,22 @@ export function optimizeImages () {
     return { formats };
   }
 
-  return gulp.src('source/.raw/**/*.{png,jpg,jpeg}')
+  return gulp.src('raw/images/**/*.{png,jpg,jpeg}')
     .pipe(sharp(createOptionsFormat()))
     .pipe(gulp.dest('source/images'));
 }
 
 export function optimizeVector () {
-  return gulp.src(['source/images/**/*.svg', '!source/images/icons/**/*.svg'])
+  return gulp.src(['raw/images/**/*.svg'])
     .pipe(svgo())
-    .pipe(gulp.dest('build/images'));
+    .pipe(gulp.dest('source/images'));
+}
+
+export function optimizeImages (done) {
+  gulp.parallel(
+    optimizeVector,
+    optimizeRaster
+  )(done);
 }
 
 export function createStack () {
@@ -131,7 +138,6 @@ function compileProject (done) {
     processMarkup,
     processStyles,
     processScripts,
-    optimizeVector,
     createStack,
     copyAssets,
   )(done);
