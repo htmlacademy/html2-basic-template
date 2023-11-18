@@ -245,7 +245,7 @@
 
 ## Работа со скриптами
 
-Все скрипты лежат в `source/script/`.
+Все скрипты лежат в `source/scripts/`.
 
 ```shell
 └── source/
@@ -254,7 +254,7 @@
         └── modal.js
 ```
 
-Сборка переносит их в `build/script/`.
+Сборка переносит их в `build/scripts/`.
 
 ```shell
 └── build/
