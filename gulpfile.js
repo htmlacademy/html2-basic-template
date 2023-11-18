@@ -129,7 +129,7 @@ export function copyAssets () {
     .pipe(dest(PATH_TO_DIST));
 }
 
-export function startServer (done) {
+export function startServer () {
   server.init({
     server: {
       baseDir: PATH_TO_DIST
@@ -138,18 +138,15 @@ export function startServer (done) {
     notify: false,
     ui: false,
   });
-  done();
+
+  watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
+  watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
+  watch(`${PATH_TO_SOURCE}**/*.html`, series(processMarkup, reloadServer));
 }
 
 function reloadServer (done) {
   server.reload();
   done();
-}
-
-function watchFiles () {
-  watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
-  watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
-  watch(`${PATH_TO_SOURCE}**/*.html`, series(processMarkup, reloadServer));
 }
 
 function compileProject (done) {
@@ -179,6 +176,5 @@ export function runDev (done) {
     deleteBuild,
     compileProject,
     startServer,
-    watchFiles
   )(done);
 }
