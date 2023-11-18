@@ -71,6 +71,7 @@
 │   └── images/                   # Папка для оригиналов картинок
 │       └── icons/                # Папка для оригиналов svg-иконок
 ├── source/                       # Исходники проекта
+│   ├── favicons/                 # Папка для фавиконок (кроме favicon.ico)
 │   ├── fonts/                    # Папка для шрифтов
 │   ├── images/                   # Папка для оптимизированных картинок
 │   │   └── icons/                # Папка для оптимизированных svg-иконок для преобразования их в спрайт (stack)
@@ -211,6 +212,23 @@
         ├── hero.png
         ├── hero.webp
         └── logo.svg
+```
+
+### Фавиконки
+
+Варианты фавиконок форматов PNG и SVG следует размещать в `source/favicons/`.
+
+Файлы `favicon.ico` и `manifest.webmanifest` — в `source/`:
+
+```shell
+└── source/
+    ├── favicons/
+    │   ├── 180.png
+    │   ├── 192.png
+    │   ├── 512.png
+    │   └── icon.svg
+    ├── favicon.ico
+    └── manifest.webmanifest
 ```
 
 ## Работа со шрифтами
