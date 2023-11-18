@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, rmSync } from 'node:fs';
 
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
@@ -15,7 +15,6 @@ import browserslistToEsbuild from 'browserslist-to-esbuild';
 import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
-import { deleteAsync } from 'del';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 
@@ -184,14 +183,18 @@ function reloadServer (done) {
   done();
 }
 
-function deleteBuild () {
-  return deleteAsync(PATH_TO_DIST);
+export function removeBuild (done) {
+  rmSync(PATH_TO_DIST, {
+    force: true,
+    recursive: true,
+  });
+  done();
 }
 
 export function buildProd (done) {
   isDevelopment = false;
   series(
-    deleteBuild,
+    removeBuild,
     parallel(
       processMarkup,
       processStyles,
@@ -204,7 +207,7 @@ export function buildProd (done) {
 
 export function runDev (done) {
   series(
-    deleteBuild,
+    removeBuild,
     parallel(
       processMarkup,
       processStyles,
