@@ -136,6 +136,32 @@ export function startServer () {
     server: {
       baseDir: PATH_TO_DIST
     },
+    serveStatic: [
+      {
+        route: '/fonts',
+        dir: `${PATH_TO_SOURCE}fonts`,
+      },
+      {
+        route: '/*.ico',
+        dir: `${PATH_TO_SOURCE}*.ico`,
+      },
+      {
+        route: '/*.webmanifest',
+        dir: `${PATH_TO_SOURCE}*.webmanifest`,
+      },
+      {
+        route: '/favicons',
+        dir: `${PATH_TO_SOURCE}favicons`,
+      },
+      {
+        route: '/vendor',
+        dir: `${PATH_TO_SOURCE}vendor`,
+      },
+      {
+        route: '/images',
+        dir: `${PATH_TO_SOURCE}images`,
+      },
+    ],
     cors: true,
     notify: false,
     ui: false,
@@ -158,16 +184,6 @@ function reloadServer (done) {
   done();
 }
 
-function compileProject (done) {
-  parallel(
-    processMarkup,
-    processStyles,
-    processScripts,
-    createStack,
-    copyAssets,
-  )(done);
-}
-
 function deleteBuild () {
   return deleteAsync(PATH_TO_DIST);
 }
@@ -176,14 +192,25 @@ export function buildProd (done) {
   isDevelopment = false;
   series(
     deleteBuild,
-    compileProject
+    parallel(
+      processMarkup,
+      processStyles,
+      processScripts,
+      createStack,
+      copyAssets,
+    ),
   )(done);
 }
 
 export function runDev (done) {
   series(
     deleteBuild,
-    compileProject,
+    parallel(
+      processMarkup,
+      processStyles,
+      processScripts,
+      createStack,
+    ),
     startServer,
   )(done);
 }
