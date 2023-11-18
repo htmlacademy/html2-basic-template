@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import { nunjucksCompile } from 'gulp-nunjucks';
@@ -137,6 +139,11 @@ export function startServer () {
     cors: true,
     notify: false,
     ui: false,
+  }, (err, bs) => {
+    bs.addMiddleware('*', (req, res) => {
+      res.write(readFileSync(`${PATH_TO_DIST}404.html`));
+      res.end();
+    });
   });
 
   watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));
