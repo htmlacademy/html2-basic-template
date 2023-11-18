@@ -1,30 +1,23 @@
-# Папка для изображений.
+# Папка для отимизированных изображений
 
-Все SVG-иконки предназначенных для спрайта кладите в `images/icons/`:
-```
-images/
-  icons/
-    vk.svg
-```
-
-Остальную векторную и растровую графику кладите непосредственно в папку `images/`:
-```
-images/
-  bg.jpg
-  hero.png
-  burger.svg
+```shell
+└── source/
+    └── images/
+        ├── bg.jpg
+        ├── bg.webp
+        ├── hero.png
+        ├── hero.webp
+        └── logo.svg
 ```
 
-Графику можно группировать папками в `images/`:
-```
-images/
-  catalog/
-    product-1.jpg
-    product-2.jpg
-  form/
-    check.jpg
-    uncheck.jpg
-  bg.jpg
-  hero.png
-  burger.svg
+Отсюда файлы изображений при сборке без изменений попадают в `build/images/`:
+
+```shell
+└── build/
+    └── images/
+        ├── bg.jpg
+        ├── bg.webp
+        ├── hero.png
+        ├── hero.webp
+        └── logo.svg
 ```
