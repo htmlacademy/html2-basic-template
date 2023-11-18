@@ -141,6 +141,7 @@ export function startServer () {
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
   watch(`${PATH_TO_SOURCE}**/*.html`, series(processMarkup, reloadServer));
+  watch(PATHS_TO_STATIC, series(copyAssets, reloadServer));
 }
 
 function reloadServer (done) {
