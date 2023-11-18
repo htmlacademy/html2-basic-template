@@ -22,6 +22,15 @@ const sass = gulpSass(dartSass);
 const PATH_TO_SOURCE = './source/';
 const PATH_TO_DIST = './build/';
 const PATH_TO_RAW = './raw/';
+const PATHS_TO_STATIC = [
+  `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
+  `${PATH_TO_SOURCE}*.ico`,
+  `${PATH_TO_SOURCE}*.webmanifest`,
+  `${PATH_TO_SOURCE}vendor/**/*`,
+  `${PATH_TO_SOURCE}images/**/*`,
+  `!${PATH_TO_SOURCE}images/icons/**/*`,
+  `!${PATH_TO_SOURCE}**/README.md`,
+];
 let isDevelopment = true;
 
 export function processMarkup () {
@@ -115,17 +124,7 @@ export function createStack () {
 }
 
 export function copyAssets () {
-  return src([
-    `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
-    `${PATH_TO_SOURCE}*.ico`,
-    `${PATH_TO_SOURCE}*.webmanifest`,
-    `${PATH_TO_SOURCE}vendor/**/*`,
-    `${PATH_TO_SOURCE}images/**/*`,
-    `!${PATH_TO_SOURCE}images/icons/**/*`,
-    `!${PATH_TO_SOURCE}**/README.md`,
-  ], {
-    base: PATH_TO_SOURCE
-  })
+  return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE })
     .pipe(dest(PATH_TO_DIST));
 }
 
