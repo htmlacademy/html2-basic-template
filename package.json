@@ -35,7 +35,7 @@
     "lint:spaces": "editorconfig-cli",
     "lint:styles": "stylelint \"source/styles/**/*.scss\"",
     "lint:markup": "cd build && html-validator --quiet --continue",
-    "lint:html": "linthtml source/**/*.html --config .linthtmlrc",
+    "lint:html": "linthtml build/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
     "lint:scripts": "eslint . --ignore-path .gitignore",
     "prelint": "gulp processMarkup --silent",
