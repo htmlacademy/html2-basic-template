@@ -192,7 +192,15 @@
     └── images/
 ```
 
-Векторную графику для спрайта (иконки) складывайте в `raw/images/icons/`. Запуск той же команды `npm run optimizeImages` поместит оптимизированные копии этих svg-файлов в `source/images/icons/`.
+Векторную графику для спрайта (иконки) складывайте в `raw/images/icons/`.
+
+```shell
+└── raw/
+    └── images/
+        └── icons/
+```
+
+Запуск той же команды `npm run optimizeImages` поместит оптимизированные копии этих svg-файлов в `source/images/icons/`.
 
 ```shell
 └── source/
