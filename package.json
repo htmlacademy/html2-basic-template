@@ -10,7 +10,8 @@
     "last 2 versions",
     "not dead",
     "not op_mini all",
-    "not < 0.25%"
+    "not and_uc > 0",
+    "not < 0.2%"
   ],
   "scripts": {
     "lint:spaces": "editorconfig-cli",
