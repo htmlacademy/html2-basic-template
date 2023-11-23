@@ -37,7 +37,7 @@
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "4.0.2",
     "gulp-esbuild": "0.12.0",
-    "gulp-html-bemlinter": "2.1.4",
+    "gulp-html-bemlinter": "3.0.0",
     "gulp-htmlmin": "5.0.1",
     "gulp-nunjucks": "6.0.0",
     "gulp-plumber": "1.2.1",
