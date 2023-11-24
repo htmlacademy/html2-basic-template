@@ -2,6 +2,31 @@
   "name": "htmlacademy-gulp-template",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^18.18 || ^20.9"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not op_mini all",
+    "not and_uc > 0",
+    "not < 0.2%"
+  ],
+  "scripts": {
+    "lint:spaces": "editorconfig-cli",
+    "lint:styles": "stylelint \"source/styles/**/*.scss\"",
+    "lint:markup": "cd build && html-validator --quiet",
+    "lint:html": "linthtml build/**/*.html --config .linthtmlrc",
+    "lint:bem": "gulp lintBem --silent",
+    "lint:scripts": "eslint . --ignore-path .gitignore",
+    "prelint": "gulp processMarkup --silent",
+    "lint": "npm-run-all -p lint:**",
+    "optimizeImages": "gulp optimizeImages",
+    "start": "gulp runDev",
+    "build": "gulp buildProd",
+    "preview": "gulp buildProd && gulp startServer"
+  },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "2.0.8",
     "@linthtml/linthtml": "0.9.5",
@@ -12,7 +37,7 @@
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "4.0.2",
     "gulp-esbuild": "0.12.0",
-    "gulp-html-bemlinter": "2.1.4",
+    "gulp-html-bemlinter": "3.0.0",
     "gulp-htmlmin": "5.0.1",
     "gulp-nunjucks": "6.0.0",
     "gulp-plumber": "1.2.1",
@@ -30,29 +55,5 @@
     "stylelint": "15.11.0",
     "stylelint-config-htmlacademy": "2.0.6",
     "w3c-html-validator": "1.6.1"
-  },
-  "scripts": {
-    "lint:spaces": "editorconfig-cli",
-    "lint:styles": "stylelint \"source/styles/**/*.scss\"",
-    "lint:markup": "cd build && html-validator --quiet --continue",
-    "lint:html": "linthtml build/**/*.html --config .linthtmlrc",
-    "lint:bem": "gulp lintBem --silent",
-    "lint:scripts": "eslint . --ignore-path .gitignore",
-    "prelint": "gulp processMarkup --silent",
-    "lint": "npm-run-all -p lint:**",
-    "optimizeImages": "gulp optimizeImages",
-    "start": "gulp runDev",
-    "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "not dead",
-    "not op_mini all",
-    "not < 0.25%"
-  ],
-  "engines": {
-    "node": "^18.18 || ^20.9"
-  },
-  "type": "module"
+  }
 }
