@@ -25,7 +25,9 @@
     "lint:bem": "gulp lintBem --silent",
     "lint:styles": "stylelint \"source/styles/**/*.scss\"",
     "lint:scripts": "eslint . --ignore-path .gitignore",
-    "optimizeImages": "gulp optimizeImages"
+    "optimize": "npm-run-all -p optimize:**",
+    "optimize:raster": "gulp optimizeRaster",
+    "optimize:vector": "gulp optimizeVector"
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "2.0.8",
