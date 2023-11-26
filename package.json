@@ -16,7 +16,7 @@
   "scripts": {
     "start": "gulp runDev",
     "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer",
+    "preview": "npm run build && browser-sync start -s build/ --cors --no-notify --no-ui",
     "prelint": "gulp processMarkup --silent",
     "lint": "npm-run-all -p lint:**",
     "lint:spaces": "editorconfig-cli",
