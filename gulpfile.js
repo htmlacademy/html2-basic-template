@@ -112,13 +112,6 @@ export function optimizeVector () {
     .pipe(dest(PATH_TO_SOURCE));
 }
 
-export function optimizeImages (done) {
-  parallel(
-    optimizeVector,
-    optimizeRaster
-  )(done);
-}
-
 export function createStack () {
   return src(`${PATH_TO_SOURCE}images/icons/**/*.svg`)
     .pipe(stacksvg())

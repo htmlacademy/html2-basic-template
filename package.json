@@ -14,18 +14,20 @@
     "not < 0.2%"
   ],
   "scripts": {
+    "start": "gulp runDev",
+    "build": "gulp buildProd",
+    "preview": "npm run build && browser-sync start -s build/ --cors --no-notify --no-ui",
+    "prelint": "gulp processMarkup --silent",
+    "lint": "npm-run-all -p lint:**",
     "lint:spaces": "editorconfig-cli",
-    "lint:styles": "stylelint \"source/styles/**/*.scss\"",
     "lint:markup": "cd build && html-validator --quiet",
     "lint:html": "linthtml build/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
+    "lint:styles": "stylelint \"source/styles/**/*.scss\"",
     "lint:scripts": "eslint . --ignore-path .gitignore",
-    "prelint": "gulp processMarkup --silent",
-    "lint": "npm-run-all -p lint:**",
-    "optimizeImages": "gulp optimizeImages",
-    "start": "gulp runDev",
-    "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer"
+    "optimize": "npm-run-all -p optimize:**",
+    "optimize:raster": "gulp optimizeRaster",
+    "optimize:vector": "gulp optimizeVector"
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "2.0.8",
