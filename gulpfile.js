@@ -118,7 +118,7 @@ export function createStack () {
     .pipe(dest(`${PATH_TO_DIST}images/icons`));
 }
 
-export function copyAssets () {
+export function copyStatic () {
   return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE })
     .pipe(dest(PATH_TO_DIST));
 }
@@ -193,7 +193,7 @@ export function buildProd (done) {
       processStyles,
       processScripts,
       createStack,
-      copyAssets,
+      copyStatic,
     ),
   )(done);
 }
