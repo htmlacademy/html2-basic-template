@@ -128,7 +128,7 @@ export function startServer () {
     .filter((path) => path.startsWith('!') === false)
     .map((path) => {
       const dir = path.replace(/\*\*(.*)/, '');
-      const route = dir.replace(PATH_TO_SOURCE, '/')
+      const route = dir.replace(PATH_TO_SOURCE, '/');
 
       return { route, dir };
     });
