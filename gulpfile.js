@@ -27,7 +27,7 @@ const PATHS_TO_STATIC = [
   `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
   `${PATH_TO_SOURCE}*.ico`,
   `${PATH_TO_SOURCE}*.webmanifest`,
-  `${PATH_TO_SOURCE}favicons/*.{png,svg}`,
+  `${PATH_TO_SOURCE}favicons/**/*.{png,svg}`,
   `${PATH_TO_SOURCE}vendor/**/*`,
   `${PATH_TO_SOURCE}images/**/*`,
   `!${PATH_TO_SOURCE}images/icons/**/*`,
@@ -118,42 +118,26 @@ export function createStack () {
     .pipe(dest(`${PATH_TO_DIST}images/icons`));
 }
 
-export function copyAssets () {
+export function copyStatic () {
   return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE })
     .pipe(dest(PATH_TO_DIST));
 }
 
 export function startServer () {
+  const serveStatic = PATHS_TO_STATIC
+    .filter((path) => path.startsWith('!') === false)
+    .map((path) => {
+      const dir = path.replace(/\*\*(.*)/, '');
+      const route = dir.replace(PATH_TO_SOURCE, '/');
+
+      return { route, dir };
+    });
+
   server.init({
     server: {
       baseDir: PATH_TO_DIST
     },
-    serveStatic: [
-      {
-        route: '/fonts',
-        dir: `${PATH_TO_SOURCE}fonts`,
-      },
-      {
-        route: '/*.ico',
-        dir: `${PATH_TO_SOURCE}*.ico`,
-      },
-      {
-        route: '/*.webmanifest',
-        dir: `${PATH_TO_SOURCE}*.webmanifest`,
-      },
-      {
-        route: '/favicons',
-        dir: `${PATH_TO_SOURCE}favicons`,
-      },
-      {
-        route: '/vendor',
-        dir: `${PATH_TO_SOURCE}vendor`,
-      },
-      {
-        route: '/images',
-        dir: `${PATH_TO_SOURCE}images`,
-      },
-    ],
+    serveStatic,
     cors: true,
     notify: false,
     ui: false,
@@ -168,7 +152,7 @@ export function startServer () {
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
   watch(`${PATH_TO_SOURCE}images/icons/**/*.svg`, series(createStack, reloadServer));
-  watch(PATHS_TO_STATIC, series(copyAssets, reloadServer));
+  watch(PATHS_TO_STATIC, series(reloadServer));
 }
 
 function reloadServer (done) {
@@ -193,7 +177,7 @@ export function buildProd (done) {
       processStyles,
       processScripts,
       createStack,
-      copyAssets,
+      copyStatic,
     ),
   )(done);
 }
