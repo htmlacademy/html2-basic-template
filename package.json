@@ -35,7 +35,7 @@
     "autoprefixer": "10.4.16",
     "browser-sync": "2.29.3",
     "browserslist-to-esbuild": "1.2.0",
-    "eslint": "8.55.0",
+    "eslint": "8.56.0",
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "4.0.2",
     "gulp-esbuild": "0.12.0",
