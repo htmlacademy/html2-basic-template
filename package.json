@@ -54,8 +54,8 @@
     "postcss-csso": "6.0.1",
     "postcss-url": "10.1.3",
     "sass": "1.69.5",
-    "stylelint": "16.0.2",
-    "stylelint-config-htmlacademy": "3.0.2",
-    "w3c-html-validator": "1.6.1"
+    "stylelint": "^16.1.0",
+    "stylelint-config-htmlacademy": "4.0.0",
+    "w3c-html-validator": "1.6.2"
   }
 }
