@@ -33,8 +33,8 @@
     "@htmlacademy/editorconfig-cli": "2.0.8",
     "@linthtml/linthtml": "0.9.5",
     "autoprefixer": "10.4.16",
-    "browser-sync": "2.29.3",
-    "browserslist-to-esbuild": "1.2.0",
+    "browser-sync": "3.0.2",
+    "browserslist-to-esbuild": "2.1.1",
     "eslint": "8.56.0",
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "4.0.2",
@@ -50,12 +50,12 @@
     "gulp-svgmin": "4.1.0",
     "linthtml-config-htmlacademy": "1.0.14",
     "npm-run-all": "4.1.5",
-    "postcss": "8.4.32",
+    "postcss": "8.4.33",
     "postcss-csso": "6.0.1",
     "postcss-url": "10.1.3",
-    "sass": "1.69.5",
+    "sass": "1.69.7",
     "stylelint": "16.1.0",
-    "stylelint-config-htmlacademy": "4.0.0",
-    "w3c-html-validator": "1.6.2"
+    "stylelint-config-htmlacademy": "4.0.1",
+    "w3c-html-validator": "1.6.4"
   }
 }
