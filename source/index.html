@@ -6,6 +6,10 @@
   <title>Ягоды</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./favicons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
   <link rel="preload" href="./fonts/Comfortaa/Comfortaa-400.woff2" as="font">
   <link rel="preload" href="./fonts/Raleway/Raleway-Regular.woff2" as="font">
@@ -52,11 +56,272 @@
       <ul class="hero__list">
         <li class="hero__item">Отборные ягоды</li>
         <li class="hero__item">Натуральный вкус сохранён методом шоковой заморозки</li>
-        <li class="hero__item">Отборные ягоды</li>
+        <li class="hero__item">Доставка по Санкт-Петербургу</li>
+      </ul>
+      <a class="hero__buttom" href="form.html">Заказать</a>
+    </section>
+    <section class="catalog">
+      <h2 class="catalog__title">Каталог</h2>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <a class="catalog__item-picture" href="#">
+            <picture class="catalog__item-picture">
+              <source type="image/webp" srcset="images/raspberries@1x.webp 1x, images/raspberries@2x.webp 2x"
+                media="(min-width: 1440px)">
+              <source type="image/webp" srcset="images/raspberries@1x.webp 1x, images/raspberries@2x.webp 2x"
+                media="(min-width: 768px)">
+              <source type="image/webp" srcset="images/raspberries@1x.webp 1x, images/raspberries@2x.webp 2x">
+              <source srcset="images/raspberries@1x.jpg 1x, images/raspberries@2x.jpg 2x" media="(min-width: 1150px)">
+              <source srcset="images/raspberries@1x.jpg 1x, images/raspberries@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="images/raspberries@1x.jpg" srcset="images/raspberries@2x.jpg 2x"
+                width="344" height="180" alt="Малина">
+            </picture>
+          </a>
+          <a class="catalog__item-title" href="#">Малина</a>
+          <dl class="catalog__item-price price">
+            <dt class="price__description price__description--rub">350 ₽</dt>
+            <dd class="price__description price__description--quantity">за 1 кг</dd>
+          </dl>
+          <a class="catalog__item-button" href="form.html">Заказать</a>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture" href="#">
+            <picture class="catalog__item-picture">
+              <source type="image/webp" srcset="images/blackberry@1x.jpg 1x, images/blackberry@2x.jpg 2x"
+                media="(min-width: 1440px)">
+              <source type="image/webp" srcset="images/blackberry@1x.jpg 1x, images/blackberry@2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source type="image/webp" srcset="images/blackberry@1x.webp 1x, images/blackberry@2x.webp 2x">
+              <source srcset="images/blackberry@1x.jpg 1x, images/blackberry@2x.jpg 2x" media="(min-width: 1150px)">
+              <source srcset="images/blackberry@1x.jpg 1x, images/blackberry@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="images/blackberry@1x.jpg" srcset="images/blackberry@2x.jpg 2x"
+                width="344" height="180" alt="Малина">
+            </picture>
+          </a>
+          <a class="catalog__item-title" href="#">Ежевика</a>
+          <dl class="catalog__item-price price">
+            <dt class="price__description price__description--rub">550 ₽</dt>
+            <dd class="price__description price__description--quantity">за 1 кг</dd>
+          </dl>
+          <a class="catalog__item-button" href="form.html">Заказать</a>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture" href="#">
+            <picture class="catalog__item-picture">
+              <source type="image/webp" srcset="images/cowberry@1x.jpg 1x, images/cowberry@2x.jpg 2x"
+                media="(min-width: 1440px)">
+              <source type="image/webp" srcset="images/cowberry@1x.jpg 1x, images/cowberry@2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source type="image/webp" srcset="images/cowberry@1x.webp 1x, images/cowberry@2x.webp 2x">
+              <source srcset="images/cowberry@1x.jpg 1x, images/cowberry@2x.jpg 2x" media="(min-width: 1150px)">
+              <source srcset="images/cowberry@1x.jpg 1x, images/cowberry@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="images/cowberry@1x.jpg" srcset="images/cowberry@2x.jpg 2x" width="344"
+                height="180" alt="Малина">
+            </picture>
+          </a>
+          <a class="catalog__item-title" href="#">Брусника</a>
+          <dl class="catalog__item-price price">
+            <dt class="price__description price__description--rub">390 ₽</dt>
+            <dd class="price__description price__description--quantity">за 1 кг</dd>
+          </dl>
+          <a class="catalog__item-button" href="form.html">Заказать</a>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture" href="#">
+            <picture class="catalog__item-picture">
+              <source type="image/webp" srcset="images/strawberry@1x.webp 1x, images/strawberry@2x.webp 2x"
+                media="(min-width: 1440px)">
+              <source type="image/webp" srcset="images/strawberry@1x.webp 1x, images/strawberry@2x.webp 2x"
+                media="(min-width: 768px)">
+              <source type="image/webp" srcset="images/strawberry@1x.webp 1x, images/strawberry@2x.webp 2x">
+              <source srcset="images/strawberry@1x.jpg 1x, images/strawberry@2x.jpg 2x" media="(min-width: 1150px)">
+              <source srcset="images/strawberry@1x.jpg 1x, images/strawberry@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="images/strawberry@1x.jpg" srcset="images/strawberry@2x.jpg 2x"
+                width="344" height="180" alt="Малина">
+            </picture>
+          </a>
+          <a class="catalog__item-title" href="#">Клубника</a>
+          <dl class="catalog__item-price price">
+            <dt class="price__description price__description--rub">450 ₽</dt>
+            <dd class="price__description price__description--quantity">за 1 кг</dd>
+          </dl>
+          <a class="catalog__item-button" href="form.html">Заказать</a>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture" href="#">
+            <picture class="catalog__item-picture">
+              <source type="image/webp" srcset="images/cherry@1x.jpg 1x, images/cherry@2x.jpg 2x"
+                media="(min-width: 1440px)">
+              <source type="image/webp" srcset="images/cherry@1x.jpg 1x, images/cherry@2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source type="image/webp" srcset="images/cherry@1x.webp 1x, images/cherry@2x.webp 2x">
+              <source srcset="images/cherry@1x.jpg 1x, images/cherry@2x.jpg 2x" media="(min-width: 1150px)">
+              <source srcset="images/cherry@1x.jpg 1x, images/cherry@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="images/cherry@1x.jpg" srcset="images/cherry@2x.jpg 2x" width="344"
+                height="180" alt="Малина">
+            </picture>
+          </a>
+          <a class="catalog__item-title" href="#">Вишня</a>
+          <dl class="catalog__item-price price">
+            <dt class="price__description price__description--rub">375 ₽</dt>
+            <dd class="price__description price__description--quantity">за 1 кг</dd>
+          </dl>
+          <a class="catalog__item-button" href="form.html">Заказать</a>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture" href="#">
+            <picture class="catalog__item-picture">
+              <source type="image/webp" srcset="images/gooseberry@1x.jpg 1x, images/gooseberry@2x.jpg 2x"
+                media="(min-width: 1440px)">
+              <source type="image/webp" srcset="images/gooseberry@1x.jpg 1x, images/gooseberry@2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source type="image/webp" srcset="images/gooseberry@1x.webp 1x, images/gooseberry@2x.webp 2x">
+              <source srcset="images/gooseberry@1x.jpg 1x, images/gooseberry@2x.jpg 2x" media="(min-width: 1150px)">
+              <source srcset="images/gooseberry@1x.jpg 1x, images/gooseberry@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="images/gooseberry@1x.jpg" srcset="images/gooseberry@2x.jpg 2x"
+                width="344" height="180" alt="Малина">
+            </picture>
+          </a>
+          <a class="catalog__item-title" href="#">Крыжовник</a>
+          <dl class="catalog__item-price price">
+            <dt class="price__description price__description--rub">300 ₽</dt>
+            <dd class="price__description price__description--quantity">за 1 кг</dd>
+          </dl>
+          <a class="catalog__item-button" href="form.html">Заказать</a>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture" href="#">
+            <picture class="catalog__item-picture">
+              <source type="image/webp" srcset="images/blueberry@1x.jpg 1x, images/blueberry@2x.jpg 2x"
+                media="(min-width: 1440px)">
+              <source type="image/webp" srcset="images/blueberry@1x.jpg 1x, images/blueberry@2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source type="image/webp" srcset="images/blueberry@1x.webp 1x, images/blueberry@2x.webp 2x">
+              <source srcset="images/blueberry@1x.jpg 1x, images/blueberry@2x.jpg 2x" media="(min-width: 1150px)">
+              <source srcset="images/blueberry@1x.jpg 1x, images/blueberry@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="images/blueberry@1x.jpg" srcset="images/blueberry@2x.jpg 2x"
+                width="344" height="180" alt="Малина">
+            </picture>
+          </a>
+          <a class="catalog__item-title" href="#">Голубика</a>
+          <dl class="catalog__item-price price">
+            <dt class="price__description price__description--rub">510 ₽</dt>
+            <dd class="price__description price__description--quantity">за 1 кг</dd>
+          </dl>
+          <a class="catalog__item-button" href="form.html">Заказать</a>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__item-picture" href="#">
+            <picture class="catalog__item-picture">
+              <source type="image/webp" srcset="images/cranberry@1x.jpg 1x, images/cranberry@2x.jpg 2x"
+                media="(min-width: 1440px)">
+              <source type="image/webp" srcset="images/cranberry@1x.jpg 1x, images/cranberry@2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source type="image/webp" srcset="images/cranberry@1x.webp 1x, images/cranberry@2x.webp 2x">
+              <source srcset="images/cranberry@1x.jpg 1x, images/cranberry@2x.jpg 2x" media="(min-width: 1150px)">
+              <source srcset="images/cranberry@1x.jpg 1x, images/cranberry@2x.jpg 2x" media="(min-width: 768px)">
+              <img class="catalog__item-img" src="images/cranberry@1x.jpg" srcset="images/cranberry@2x.jpg 2x"
+                width="344" height="180" alt="Малина">
+            </picture>
+          </a>
+          <a class="catalog__item-title" href="#">Клюква</a>
+          <dl class="catalog__item-price price">
+            <dt class="price__description price__description--rub">320 ₽</dt>
+            <dd class="price__description price__description--quantity">за 1 кг</dd>
+          </dl>
+          <a class="catalog__item-button" href="form.html">Заказать</a>
+        </li>
       </ul>
     </section>
+
+    <section class="new">
+      <h2 class="new__title">Что новенького?</h2>
+      <ul class="new__list">
+        <li class="new__item">
+          <h3 class="new__item-text new__item-text--title">Новый урожай клубники</h3>
+          <p class="new__item-text new__item-text--description">К нам поступила свежая сочная ароматная клубника
+            из Алтайского края. Крупные отборные ягоды можно приобрести свежими от 200 гр, или замороженными от 1 кг.
+            Поторопитесь, сезон клубники короткий и свежие ягоды скоро закончатся.</p>
+          <time class="new__item-text new__item-text--date" datetime="2022-06-22">22 июня 2022</time>
+        </li>
+        <li class="new__item">
+          <h3 class="new__item-text new__item-text--title">В июне дарим скидку 15% на все свежие ягоды</h3>
+          <p class="new__item-text new__item-text--description">Свежие ягоды урожая этого года со скидкой 15%. Клубнику,
+            малину, голубику, вишню доставим от 200 гр. </p>
+          <time class="new__item-text new__item-text--date" datetime="2022-06-15">15 июня 2022</time>
+        </li>
+        <li class="new__item">
+          <h3 class="new__item-text new__item-text--title">Микс из ягод</h3>
+          <p class="new__item-text new__item-text--description">Мы приготовим для вас смеси
+            из различных замороженных ягод по вашему пожеланию. Ягодные смеси удобно использовать для приготовления
+            напитков. Все ягоды замораживаются методом шоковой заморозки, что позволяет сохранить
+            их естественный вкус и аромат.</p>
+          <time class="new__item-text new__item-text--date" datetime="2022-06-02">02 июня 2022</time>
+        </li>
+      </ul>
+    </section>
+    <section class="contacts">
+      <h2 class="contacts__title">Где забрать ягоды?</h2>
+      <p class="contacts__title-bottom">Забери ягоды с нашего склада по адресу:</p>
+      <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
+      <a class="contacts__info contacts__info--tel" href="tel:+79105244118">+7 910 524 41 18</a>
+      <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
+      <div class="contacts__map">
+          <picture class="contacts__map-wrapper">
+            <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
+              media="(min-width: 1440px)">
+            <source type="images/webp" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
+              media="(min-width: 768px)">
+            <source type="images/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
+            <source srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x"
+              media="(min-width: 1440px)">
+            <source srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x"
+              media="(min-width: 768px)">
+            <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x"
+              width="320" height="372" alt="Карта">
+          </picture>
+      </div>
+    </section>
   </main>
+
+  <footer class="page__footer">
+    <a class="main-header__logo" href="index.html">
+      <img src="images/logo.svg" width="52" height="52" alt="Логотип Ягода">
+      <span class="main-header__logo-text">Ягода</span>
+    </a>
+    <ul class="page__footer-social social">
+      <li class="social__item">
+        <a class="social__link social__vk" href="#">
+          <svg class="social__vk-img" width="28" height="22">
+            <use xlink:href="./img/stack.svg#vkontakte"></use>
+          </svg>
+          <span class="visually-hidden">Телеграм</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__yt" href="#">
+          <svg class="social__yt-img" width="28" height="22">
+            <use xlink:href="./img/stack.svg#youtube"></use>
+          </svg>
+          <span class="visually-hidden">В контакте</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__tg" href="#">
+          <svg class="social__tg-img" width="28" height="22">
+            <use xlink:href="./img/stack.svg#telegram"></use>
+          </svg>
+          <span class="visually-hidden">Ютуб</span>
+        </a>
+      </li>
+    </ul>
+      <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <svg class="page__footer-html-img" width="27" height="34">
+          <use xlink:href="./img/stack.svg#htmlacademy"></use>
+        </svg>
+        <span class="visually-hidden">Логотип html academy</span>
+      </a>
+  </footer>
 </body>
 
 </html>
-
