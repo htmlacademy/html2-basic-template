@@ -1,1 +1,23 @@
-/* здесь подключите шрифты*/
+@font-face {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Comfortaa/Comfortaa-400.woff2") format("woff2"), url("../fonts/Comfortaa/Comfortaa-400.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Raleway/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Amatic SC";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Amatic/AmaticSC-Bold.woff2") format("woff2"), url("../fonts/Amatic/AmaticSC-Bold.woff") format("woff");
+  font-display: swap;
+}

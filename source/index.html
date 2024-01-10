@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ягоды</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+  <link rel="preload" href="./fonts/Comfortaa/Comfortaa-400.woff2" as="font">
+  <link rel="preload" href="./fonts/Raleway/Raleway-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/Amatic/AmaticSC-Bold.woff2" as="font">
+</head>
+
+<body class="page__body no-js">
+  <header class="main-header">
+    <!-- Навигация -->
+    <div class="main-header__wrapper container">
+      <a class="main-header__logo" href="index.html">
+        <img src="images/logo.svg" width="52" height="52" alt="Логотип Ягода">
+        <span class="main-header__logo-text">Ягода</span>
+      </a>
+      <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
+    <nav class="main-header__nav main-nav container">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__item-link" href="index.html">Каталог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__item-link" href="№">Новости</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__item-link" href="#">Контакты</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__item-link" href="form.html">Заказать</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <main class="main-container">
+    <h1 class="visually-hidden">Интернет магазин доставки ягод</h1>
+    <section class="hero">
+      <h2 class="hero__title">Ягоды с доставкой</h2>
+      <ul class="hero__list">
+        <li class="hero__item">Отборные ягоды</li>
+        <li class="hero__item">Натуральный вкус сохранён методом шоковой заморозки</li>
+        <li class="hero__item">Отборные ягоды</li>
+      </ul>
+    </section>
+  </main>
+</body>
+
 </html>
+

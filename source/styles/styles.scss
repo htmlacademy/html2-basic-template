@@ -4,4 +4,6 @@
 @import "./global/fonts.scss";
 
 /* BLOCKS */
+@import "./blocks/mixins/media.scss";
+@import "./blocks/mixins/mixins.scss";
 @import "./blocks/header.scss";
