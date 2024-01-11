@@ -1,0 +1,44 @@
+.hero {
+  padding: 62px 30px 150px 30px;
+  background-image: url("../../images/hero-back@1x.jpg");
+  width: 100%;
+  min-height: 640px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-color: $hero-background;
+}
+
+.hero__title {
+  width: 265px;
+  margin: 0 auto;
+  font-family: "Comfortaa", sans-serif;
+  padding-bottom: 32px;
+}
+
+.hero__list {
+  @include list;
+
+  padding: 0 60px 0 70px;
+  padding-bottom: 64px;
+  margin: 0 auto;
+}
+
+.hero__item {
+  color: $main-text;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 164px;
+}
+
+.hero__item:not(:last-child) {
+  padding-bottom: 22px;
+}
+
+.hero__button {
+  margin: 0 auto;
+}

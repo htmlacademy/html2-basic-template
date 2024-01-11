@@ -1,10 +1,25 @@
 // COLORS
 
 $black: #000000;
+$blue-grey: #f1f6fc;
+$white: #fbfcfe;
+$green: #0f805d;
+$special-grey: #d3dbe5;
+$purple: #6a107a;
 
 // TEXT COLORS
 
 $main-text: $black;
+$main-title: $green;
+$button-text: $white;
+$catalog-title: $green;
+
+// BACKGROUND COLORS
+
+$main-background: $white;
+$head-background: $blue-grey;
+$hero-background: $special-grey;
+$button-color: $purple;
 
 // Viewports
 $phone: 320px;

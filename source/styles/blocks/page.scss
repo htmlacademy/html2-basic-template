@@ -1,0 +1,57 @@
+.page__title {
+  color: $main-title;
+  text-align: center;
+  font-family: "Comfortaa", "Arial", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.page__button {
+  display: block;
+  flex-shrink: 0;
+  padding: 16px 82px;
+  background-color: $button-color;
+  color: $button-text;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  width: 264px;
+}
+
+.page__footer {
+  padding: 20px 26px 20px 26px;
+  background-color: $head-background;
+  position: relative;
+}
+
+.page__footer-logo {
+  position: absolute;
+  left: 26px;
+  top: 11px;
+}
+
+.page__footer-text {
+  display: none;
+}
+
+.page__footer-html {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: $main-text;
+  font-family: inherit;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.page__footer-html-img {
+  padding-left: 8px;
+}

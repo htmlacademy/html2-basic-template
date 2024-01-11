@@ -1,0 +1,9 @@
+.social {
+  @include list;
+
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 20px;
+}

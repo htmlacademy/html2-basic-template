@@ -19,14 +19,14 @@
 <body class="page__body no-js">
   <header class="main-header">
     <!-- Навигация -->
-    <div class="main-header__wrapper container">
+    <div class="main-header__wrapper">
       <a class="main-header__logo" href="#">
         <img src="images/logo.svg" width="52" height="52" alt="Логотип Ягода">
-        <span class="main-header__logo-text">Ягода</span>
+        <img src="images/berry.svg" class="main-header__logo-text" width="65" height="36">
       </a>
       <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
-    <nav class="main-header__nav main-nav container">
+    <nav class="main-header__nav main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -35,8 +35,6 @@
           <li class="main-nav__item">
             <a class="main-nav__item-link" href="№">Новости</a>
           </li>
-        </ul>
-        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__item-link" href="#">Контакты</a>
           </li>
@@ -50,29 +48,25 @@
   </header>
 
   <main class="main-container">
-    <h1 class="visually-hidden">Интернет магазин  ягода</h1>
+    <h1 class="visually-hidden">Интернет магазин ягода</h1>
     <section class="hero">
-      <h2 class="hero__title">Ягоды с доставкой</h2>
+      <h2 class="hero__title page__title">Ягоды с&nbsp;доставкой</h2>
       <ul class="hero__list">
         <li class="hero__item">Отборные ягоды</li>
         <li class="hero__item">Натуральный вкус сохранён методом шоковой заморозки</li>
         <li class="hero__item">Доставка по Санкт-Петербургу</li>
       </ul>
-      <a class="hero__buttom" href="form.html">Заказать</a>
+      <a class="hero__button page__button" href="form.html">Заказать</a>
     </section>
-    <section class="catalog">
-      <h2 class="catalog__title">Каталог</h2>
+    <section class="catalog container">
+      <h2 class="catalog__title page__title">Каталог</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-              <source type="image/webp" srcset="images/raspberries@1x.webp 1x, images/raspberries@2x.webp 2x"
-                media="(min-width: 1440px)">
-              <source type="image/webp" srcset="images/raspberries@1x.webp 1x, images/raspberries@2x.webp 2x"
-                media="(min-width: 768px)">
+
               <source type="image/webp" srcset="images/raspberries@1x.webp 1x, images/raspberries@2x.webp 2x">
-              <source srcset="images/raspberries@1x.jpg 1x, images/raspberries@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="images/raspberries@1x.jpg 1x, images/raspberries@2x.jpg 2x" media="(min-width: 768px)">
+
               <img class="catalog__item-img" src="images/raspberries@1x.jpg" srcset="images/raspberries@2x.jpg 2x"
                 width="344" height="180" alt="Малина">
             </picture>
@@ -82,18 +76,14 @@
             <dt class="price__description price__description--rub">350 ₽</dt>
             <dd class="price__description price__description--quantity">за 1 кг</dd>
           </dl>
-          <a class="catalog__item-button" href="form.html">Заказать</a>
+          <a class="catalog__item-button page__button" href="form.html">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-              <source type="image/webp" srcset="images/blackberry@1x.jpg 1x, images/blackberry@2x.jpg 2x"
-                media="(min-width: 1440px)">
-              <source type="image/webp" srcset="images/blackberry@1x.jpg 1x, images/blackberry@2x.jpg 2x"
-                media="(min-width: 768px)">
+
               <source type="image/webp" srcset="images/blackberry@1x.webp 1x, images/blackberry@2x.webp 2x">
-              <source srcset="images/blackberry@1x.jpg 1x, images/blackberry@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="images/blackberry@1x.jpg 1x, images/blackberry@2x.jpg 2x" media="(min-width: 768px)">
+
               <img class="catalog__item-img" src="images/blackberry@1x.jpg" srcset="images/blackberry@2x.jpg 2x"
                 width="344" height="180" alt="Малина">
             </picture>
@@ -103,18 +93,14 @@
             <dt class="price__description price__description--rub">550 ₽</dt>
             <dd class="price__description price__description--quantity">за 1 кг</dd>
           </dl>
-          <a class="catalog__item-button" href="form.html">Заказать</a>
+          <a class="catalog__item-button page__button" href="form.html">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-              <source type="image/webp" srcset="images/cowberry@1x.jpg 1x, images/cowberry@2x.jpg 2x"
-                media="(min-width: 1440px)">
-              <source type="image/webp" srcset="images/cowberry@1x.jpg 1x, images/cowberry@2x.jpg 2x"
-                media="(min-width: 768px)">
+
               <source type="image/webp" srcset="images/cowberry@1x.webp 1x, images/cowberry@2x.webp 2x">
-              <source srcset="images/cowberry@1x.jpg 1x, images/cowberry@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="images/cowberry@1x.jpg 1x, images/cowberry@2x.jpg 2x" media="(min-width: 768px)">
+
               <img class="catalog__item-img" src="images/cowberry@1x.jpg" srcset="images/cowberry@2x.jpg 2x" width="344"
                 height="180" alt="Малина">
             </picture>
@@ -124,18 +110,14 @@
             <dt class="price__description price__description--rub">390 ₽</dt>
             <dd class="price__description price__description--quantity">за 1 кг</dd>
           </dl>
-          <a class="catalog__item-button" href="form.html">Заказать</a>
+          <a class="catalog__item-button page__button" href="form.html">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-              <source type="image/webp" srcset="images/strawberry@1x.webp 1x, images/strawberry@2x.webp 2x"
-                media="(min-width: 1440px)">
-              <source type="image/webp" srcset="images/strawberry@1x.webp 1x, images/strawberry@2x.webp 2x"
-                media="(min-width: 768px)">
+
               <source type="image/webp" srcset="images/strawberry@1x.webp 1x, images/strawberry@2x.webp 2x">
-              <source srcset="images/strawberry@1x.jpg 1x, images/strawberry@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="images/strawberry@1x.jpg 1x, images/strawberry@2x.jpg 2x" media="(min-width: 768px)">
+
               <img class="catalog__item-img" src="images/strawberry@1x.jpg" srcset="images/strawberry@2x.jpg 2x"
                 width="344" height="180" alt="Малина">
             </picture>
@@ -145,18 +127,14 @@
             <dt class="price__description price__description--rub">450 ₽</dt>
             <dd class="price__description price__description--quantity">за 1 кг</dd>
           </dl>
-          <a class="catalog__item-button" href="form.html">Заказать</a>
+          <a class="catalog__item-button page__button" href="form.html">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-              <source type="image/webp" srcset="images/cherry@1x.jpg 1x, images/cherry@2x.jpg 2x"
-                media="(min-width: 1440px)">
-              <source type="image/webp" srcset="images/cherry@1x.jpg 1x, images/cherry@2x.jpg 2x"
-                media="(min-width: 768px)">
+
               <source type="image/webp" srcset="images/cherry@1x.webp 1x, images/cherry@2x.webp 2x">
-              <source srcset="images/cherry@1x.jpg 1x, images/cherry@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="images/cherry@1x.jpg 1x, images/cherry@2x.jpg 2x" media="(min-width: 768px)">
+
               <img class="catalog__item-img" src="images/cherry@1x.jpg" srcset="images/cherry@2x.jpg 2x" width="344"
                 height="180" alt="Малина">
             </picture>
@@ -166,18 +144,14 @@
             <dt class="price__description price__description--rub">375 ₽</dt>
             <dd class="price__description price__description--quantity">за 1 кг</dd>
           </dl>
-          <a class="catalog__item-button" href="form.html">Заказать</a>
+          <a class="catalog__item-button page__button" href="form.html">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-              <source type="image/webp" srcset="images/gooseberry@1x.jpg 1x, images/gooseberry@2x.jpg 2x"
-                media="(min-width: 1440px)">
-              <source type="image/webp" srcset="images/gooseberry@1x.jpg 1x, images/gooseberry@2x.jpg 2x"
-                media="(min-width: 768px)">
+
               <source type="image/webp" srcset="images/gooseberry@1x.webp 1x, images/gooseberry@2x.webp 2x">
-              <source srcset="images/gooseberry@1x.jpg 1x, images/gooseberry@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="images/gooseberry@1x.jpg 1x, images/gooseberry@2x.jpg 2x" media="(min-width: 768px)">
+
               <img class="catalog__item-img" src="images/gooseberry@1x.jpg" srcset="images/gooseberry@2x.jpg 2x"
                 width="344" height="180" alt="Малина">
             </picture>
@@ -187,18 +161,14 @@
             <dt class="price__description price__description--rub">300 ₽</dt>
             <dd class="price__description price__description--quantity">за 1 кг</dd>
           </dl>
-          <a class="catalog__item-button" href="form.html">Заказать</a>
+          <a class="catalog__item-button page__button" href="form.html">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-              <source type="image/webp" srcset="images/blueberry@1x.jpg 1x, images/blueberry@2x.jpg 2x"
-                media="(min-width: 1440px)">
-              <source type="image/webp" srcset="images/blueberry@1x.jpg 1x, images/blueberry@2x.jpg 2x"
-                media="(min-width: 768px)">
+
               <source type="image/webp" srcset="images/blueberry@1x.webp 1x, images/blueberry@2x.webp 2x">
-              <source srcset="images/blueberry@1x.jpg 1x, images/blueberry@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="images/blueberry@1x.jpg 1x, images/blueberry@2x.jpg 2x" media="(min-width: 768px)">
+
               <img class="catalog__item-img" src="images/blueberry@1x.jpg" srcset="images/blueberry@2x.jpg 2x"
                 width="344" height="180" alt="Малина">
             </picture>
@@ -208,18 +178,14 @@
             <dt class="price__description price__description--rub">510 ₽</dt>
             <dd class="price__description price__description--quantity">за 1 кг</dd>
           </dl>
-          <a class="catalog__item-button" href="form.html">Заказать</a>
+          <a class="catalog__item-button page__button" href="form.html">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-              <source type="image/webp" srcset="images/cranberry@1x.jpg 1x, images/cranberry@2x.jpg 2x"
-                media="(min-width: 1440px)">
-              <source type="image/webp" srcset="images/cranberry@1x.jpg 1x, images/cranberry@2x.jpg 2x"
-                media="(min-width: 768px)">
+
               <source type="image/webp" srcset="images/cranberry@1x.webp 1x, images/cranberry@2x.webp 2x">
-              <source srcset="images/cranberry@1x.jpg 1x, images/cranberry@2x.jpg 2x" media="(min-width: 1150px)">
-              <source srcset="images/cranberry@1x.jpg 1x, images/cranberry@2x.jpg 2x" media="(min-width: 768px)">
+
               <img class="catalog__item-img" src="images/cranberry@1x.jpg" srcset="images/cranberry@2x.jpg 2x"
                 width="344" height="180" alt="Малина">
             </picture>
@@ -229,13 +195,13 @@
             <dt class="price__description price__description--rub">320 ₽</dt>
             <dd class="price__description price__description--quantity">за 1 кг</dd>
           </dl>
-          <a class="catalog__item-button" href="form.html">Заказать</a>
+          <a class="catalog__item-button page__button" href="form.html">Заказать</a>
         </li>
       </ul>
     </section>
 
-    <section class="new">
-      <h2 class="new__title">Что новенького?</h2>
+    <section class="new container">
+      <h2 class="new__title page__title">Что новенького?</h2>
       <ul class="new__list">
         <li class="new__item">
           <h3 class="new__item-text new__item-text--title">Новый урожай клубники</h3>
@@ -245,7 +211,7 @@
           <time class="new__item-text new__item-text--date" datetime="2022-06-22">22 июня 2022</time>
         </li>
         <li class="new__item">
-          <h3 class="new__item-text new__item-text--title">В июне дарим скидку 15% на все свежие ягоды</h3>
+          <h3 class="new__item-text new__item-text--title">В июне дарим скидку&nbsp;15% на все свежие ягоды</h3>
           <p class="new__item-text new__item-text--description">Свежие ягоды урожая этого года со скидкой 15%. Клубнику,
             малину, голубику, вишню доставим от 200 гр. </p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-15">15 июня 2022</time>
@@ -261,66 +227,66 @@
       </ul>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Где забрать ягоды?</h2>
-      <p class="contacts__title-bottom">Забери ягоды с нашего склада по адресу:</p>
-      <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
-      <a class="contacts__info contacts__info--tel" href="tel:+79105244118">+7 910 524 41 18</a>
-      <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
+      <h2 class="contacts__title page__title">Где забрать ягоды?</h2>
+        <p class="contacts__info contacts__info--title">Забери ягоды с нашего склада по адресу:</p>
+        <div class="contacts__wrapper">
+        <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
+        <a class="contacts__info contacts__info--tel" href="tel:+79105244118">+7 910 524 41 18</a>
+        <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
+      </div>
       <div class="contacts__map">
-          <picture class="contacts__map-wrapper">
-            <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
-              media="(min-width: 1440px)">
-            <source type="images/webp" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
-              media="(min-width: 768px)">
-            <source type="images/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
-            <source srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x"
-              media="(min-width: 1440px)">
-            <source srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x"
-              media="(min-width: 768px)">
-            <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x"
-              width="320" height="372" alt="Карта">
-          </picture>
+        <picture class="contacts__map-wrapper">
+          <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
+            media="(min-width: 1440px)">
+          <source type="images/webp" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x"
+            media="(min-width: 768px)">
+          <source type="images/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
+          <source srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" media="(min-width: 1440px)">
+          <source srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" media="(min-width: 768px)">
+          <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x" width="320" height="372"
+            alt="Карта">
+        </picture>
       </div>
     </section>
   </main>
 
   <footer class="page__footer">
-    <a class="main-header__logo" href="index.html">
+    <a class="page__footer-logo" href="index.html">
       <img src="images/logo.svg" width="52" height="52" alt="Логотип Ягода">
-      <span class="main-header__logo-text">Ягода</span>
+      <img src="images/berry.svg" class="page__footer-text" width="65" height="36">
     </a>
     <ul class="page__footer-social social">
       <li class="social__item">
         <a class="social__link social__vk" href="#">
-          <svg class="social__vk-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#vkontakte"></use>
+          <svg class="social__vk-img" width="32" height="32">
+            <use xlink:href="./images/icons/stack.svg#telegram"></use>
           </svg>
           <span class="visually-hidden">Телеграм</span>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link social__yt" href="#">
-          <svg class="social__yt-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#youtube"></use>
+          <svg class="social__yt-img" width="32" height="32">
+            <use xlink:href="./images/icons/stack.svg#vkontakte"></use>
           </svg>
           <span class="visually-hidden">В контакте</span>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link social__tg" href="#">
-          <svg class="social__tg-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#telegram"></use>
+          <svg class="social__tg-img" width="32" height="32">
+            <use xlink:href="./images/icons/stack.svg#youtube"></use>
           </svg>
           <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
     </ul>
-      <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-        <svg class="page__footer-html-img" width="27" height="34">
-          <use xlink:href="./img/stack.svg#htmlacademy"></use>
-        </svg>
-        <span class="visually-hidden">Логотип html academy</span>
-      </a>
+    <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+      <svg class="page__footer-html-img" width="32" height="32">
+        <use xlink:href="./images/icons/stack.svg#htmlacademy"></use>
+      </svg>
+      <span class="visually-hidden">Логотип html academy</span>
+    </a>
   </footer>
 </body>
 

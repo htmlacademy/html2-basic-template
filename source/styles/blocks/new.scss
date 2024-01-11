@@ -1,0 +1,49 @@
+.new {
+  padding-bottom: 164px;
+}
+
+.new__title {
+  margin: 0;
+  padding-bottom: 64px;
+}
+
+.new__list {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.new__item {
+  padding: 32px 20px 72px 20px;
+  border: 2px solid $green;
+  border-radius: 40px;
+}
+
+.new__item-text {
+  margin: 0;
+  color: $main-text;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &--title {
+    font-size: 20px;
+    text-align: center;
+    width: 204px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  &--date {
+    display: block;
+    text-align: end;
+  }
+
+  &--description {
+    min-height: 207px;
+  }
+}
