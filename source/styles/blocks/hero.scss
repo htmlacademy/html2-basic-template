@@ -14,7 +14,7 @@
   width: 265px;
   margin: 0 auto;
   font-family: "Comfortaa", sans-serif;
-  padding-bottom: 32px;
+  padding-bottom: 38px;
 }
 
 .hero__list {
@@ -26,6 +26,7 @@
 }
 
 .hero__item {
+  position: relative;
   color: $main-text;
   font-family: inherit;
   font-size: 16px;
@@ -33,10 +34,42 @@
   font-weight: 400;
   line-height: normal;
   width: 164px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: none;
+    background-color: $green;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: -39px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--berry::before {
+    mask-image: url("../../images/icons/stack.svg#icon-leaf");
+  }
+
+  &--freeze::before {
+    mask-image: url("../../images/icons/stack.svg#snow");
+    width: 24px;
+    height: 24px;
+  }
+
+  &--delivery::before {
+    mask-image: url("../../images/icons/stack.svg#delivery");
+    width: 32px;
+    height: 32px;
+    left: -43px;
+  }
 }
 
 .hero__item:not(:last-child) {
-  padding-bottom: 22px;
+  margin-bottom: 19px;
 }
 
 .hero__button {

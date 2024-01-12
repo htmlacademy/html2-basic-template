@@ -16,9 +16,33 @@
 }
 
 .new__item {
-  padding: 32px 20px 72px 20px;
+  position: relative;
+  padding: 41px 20px 69px 18px;
   border: 2px solid $green;
   border-radius: 40px;
+
+  &--discount {
+    padding: 29px 20px 69px 18px;
+  }
+
+  &--mix {
+    padding: 52px 17px 69px 20px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../images/icons/stack.svg#path");
+    display: block;
+    width: 76px;
+    height: 32px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+  }
 }
 
 .new__item-text {
@@ -29,13 +53,14 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: 0.2px;
 
   &--title {
     font-size: 20px;
     text-align: center;
     width: 204px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
   &--date {
@@ -44,6 +69,14 @@
   }
 
   &--description {
-    min-height: 207px;
+    min-height: 192px;
+  }
+
+  &--discount {
+    padding-bottom: 18px;
+  }
+
+  &--mix {
+    padding-bottom: 43px;
   }
 }

@@ -21,13 +21,16 @@
     <!-- Навигация -->
     <div class="main-header__wrapper">
       <a class="main-header__logo" href="#">
-        <img src="images/logo.svg" width="52" height="52" alt="Логотип Ягода">
+        <div class="main-header__logo-main-wrapper">
+          <svg width="36" height="44" viewBox="0 0 36 44" class="main-header__logo-main">
+            <use href="images/icons/stack.svg#logo-main"></use>
+          </svg>
+        </div>
         <img src="images/berry.svg" class="main-header__logo-text" width="65" height="36">
       </a>
       <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
     <nav class="main-header__nav main-nav">
-      <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__item-link" href="index.html">Каталог</a>
@@ -42,7 +45,6 @@
             <a class="main-nav__item-link" href="form.html">Заказать</a>
           </li>
         </ul>
-      </div>
     </nav>
 
   </header>
@@ -52,9 +54,9 @@
     <section class="hero">
       <h2 class="hero__title page__title">Ягоды с&nbsp;доставкой</h2>
       <ul class="hero__list">
-        <li class="hero__item">Отборные ягоды</li>
-        <li class="hero__item">Натуральный вкус сохранён методом шоковой заморозки</li>
-        <li class="hero__item">Доставка по Санкт-Петербургу</li>
+        <li class="hero__item hero__item--berry">Отборные ягоды</li>
+        <li class="hero__item hero__item--freeze">Натуральный вкус сохранён методом шоковой заморозки</li>
+        <li class="hero__item hero__item--delivery">Доставка по Санкт-Петербургу</li>
       </ul>
       <a class="hero__button page__button" href="form.html">Заказать</a>
     </section>
@@ -64,9 +66,7 @@
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-
               <source type="image/webp" srcset="images/raspberries@1x.webp 1x, images/raspberries@2x.webp 2x">
-
               <img class="catalog__item-img" src="images/raspberries@1x.jpg" srcset="images/raspberries@2x.jpg 2x"
                 width="344" height="180" alt="Малина">
             </picture>
@@ -81,9 +81,7 @@
         <li class="catalog__item">
           <a class="catalog__item-picture" href="#">
             <picture class="catalog__item-picture">
-
               <source type="image/webp" srcset="images/blackberry@1x.webp 1x, images/blackberry@2x.webp 2x">
-
               <img class="catalog__item-img" src="images/blackberry@1x.jpg" srcset="images/blackberry@2x.jpg 2x"
                 width="344" height="180" alt="Малина">
             </picture>
@@ -200,36 +198,36 @@
       </ul>
     </section>
 
-    <section class="new container">
+    <section class="new container container--new">
       <h2 class="new__title page__title">Что новенького?</h2>
       <ul class="new__list">
         <li class="new__item">
           <h3 class="new__item-text new__item-text--title">Новый урожай клубники</h3>
           <p class="new__item-text new__item-text--description">К нам поступила свежая сочная ароматная клубника
-            из Алтайского края. Крупные отборные ягоды можно приобрести свежими от 200 гр, или замороженными от 1 кг.
+            из&nbsp;Алтайского края. Крупные отборные ягоды можно приобрести свежими от 200 гр, или замороженными от 1 кг.
             Поторопитесь, сезон клубники короткий и свежие ягоды скоро закончатся.</p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-22">22 июня 2022</time>
         </li>
-        <li class="new__item">
-          <h3 class="new__item-text new__item-text--title">В июне дарим скидку&nbsp;15% на все свежие ягоды</h3>
+        <li class="new__item new__item--discount">
+          <h3 class="new__item-text new__item-text--title new__item-text--discount">В июне дарим скидку&nbsp;15% на все свежие ягоды</h3>
           <p class="new__item-text new__item-text--description">Свежие ягоды урожая этого года со скидкой 15%. Клубнику,
             малину, голубику, вишню доставим от 200 гр. </p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-15">15 июня 2022</time>
         </li>
-        <li class="new__item">
-          <h3 class="new__item-text new__item-text--title">Микс из ягод</h3>
+        <li class="new__item new__item--mix">
+          <h3 class="new__item-text new__item-text--title new__item-text--mix">Микс из ягод</h3>
           <p class="new__item-text new__item-text--description">Мы приготовим для вас смеси
-            из различных замороженных ягод по вашему пожеланию. Ягодные смеси удобно использовать для приготовления
+            из&nbsp;различных замороженных ягод по вашему пожеланию. Ягодные смеси удобно использовать для приготовления
             напитков. Все ягоды замораживаются методом шоковой заморозки, что позволяет сохранить
-            их естественный вкус и аромат.</p>
+            их&nbsp;естественный вкус и аромат.</p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-02">02 июня 2022</time>
         </li>
       </ul>
     </section>
     <section class="contacts">
       <h2 class="contacts__title page__title">Где забрать ягоды?</h2>
-        <p class="contacts__info contacts__info--title">Забери ягоды с нашего склада по адресу:</p>
-        <div class="contacts__wrapper">
+      <p class="contacts__info contacts__info--title">Забери ягоды с нашего склада по адресу:</p>
+      <div class="contacts__wrapper">
         <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
         <a class="contacts__info contacts__info--tel" href="tel:+79105244118">+7 910 524 41 18</a>
         <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
@@ -282,7 +280,7 @@
       </li>
     </ul>
     <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-      <svg class="page__footer-html-img" width="32" height="32">
+      <svg class="page__footer-html-img" width="28" height="32">
         <use xlink:href="./images/icons/stack.svg#htmlacademy"></use>
       </svg>
       <span class="visually-hidden">Логотип html academy</span>

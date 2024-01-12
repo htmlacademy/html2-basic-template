@@ -1,9 +1,10 @@
+
 .main-nav__list {
   @include list;
-}
 
-.main-nav__item {
-  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
 }
 
 .main-nav__item-link {

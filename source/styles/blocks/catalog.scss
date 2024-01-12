@@ -1,6 +1,22 @@
 .catalog {
-  padding-top: 30px;
+  position: relative;
+  padding-top: 61px;
   padding-bottom: 161px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../images/icons/stack.svg#line-leaf");
+    display: block;
+    width: 228px;
+    height: 32px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 50%;
+    bottom: 64px;
+    transform: translateX(-50%);
+  }
 }
 
 .catalog__list {
@@ -13,13 +29,13 @@
 
 .catalog__title {
   margin: 0;
-  padding-bottom: 60px;
+  padding-bottom: 71px;
 }
 
 .catalog__item {
   border-radius: 40px;
   box-shadow: 0 4px 4px 0 rgba(88, 13, 101, 0.15);
-  padding-bottom: 54px;
+  padding-bottom: 53px;
 }
 
 .catalog__item-picture {
@@ -45,7 +61,7 @@
   font-weight: 400;
   line-height: normal;
   padding-top: 28px;
-  padding-bottom: 32px;
+  padding-bottom: 26px;
 }
 
 .catalog__item-button {

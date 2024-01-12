@@ -1,8 +1,13 @@
 .container {
   display: block;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 28px;
+  padding-right: 28px;
   min-width: 320px;
   max-width: 1440px;
+
+  &--new {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 }

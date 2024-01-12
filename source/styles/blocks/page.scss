@@ -22,6 +22,18 @@
   line-height: normal;
   letter-spacing: 1px;
   width: 264px;
+
+  &:hover {
+    background-color: $violet;
+  }
+
+  &:focus {
+    background-color: $violet;
+  }
+
+  &:active {
+    background-color: $purple-disabled;
+  }
 }
 
 .page__footer {
@@ -42,7 +54,7 @@
 
 .page__footer-html {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   color: $main-text;
   font-family: inherit;

@@ -2,8 +2,8 @@
   @include list;
 
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 20px;
   align-items: start;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
 }

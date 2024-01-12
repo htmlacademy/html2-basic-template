@@ -9,15 +9,15 @@
   justify-content: space-between;
   padding: 5px 26px 5px 21px;
   position: relative;
-  height: 68px;
+  height: 62px;
 }
 
 .main-header__nav {
-  padding: 16px 0 131px 0;
+  padding: 38px 0 148px 0;
   position: absolute;
   z-index: 3;
   left: 0;
-  top: 69px;
+  top: 62px;
   width: 100%;
   background-color: $head-background;
   display: none;
@@ -27,9 +27,55 @@
   display: flex;
   position: absolute;
   top: 50%;
-  left: 26px;
+  left: 34px;
   transform: translateY(-50%);
   z-index: 4;
+
+  &:hover {
+    .main-header__logo-main-wrapper::before {
+      background-color: $green-hover;
+    }
+  }
+
+  &:active {
+    .main-header__logo-main-wrapper::before {
+      background-color: $green-disabled;
+    }
+  }
+}
+
+.main-header__logo-main-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    mask-image: url("../../images/icons/stack.svg#leafs");
+    width: 28px;
+    height: 11px;
+    display: block;
+    left: 4px;
+    top: 2px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: $green;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    mask-image: url("../../images/icons/stack.svg#main-berry");
+    width: 34px;
+    height: 29px;
+    display: block;
+    left: 1px;
+    top: 13px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: $violet;
+    z-index: -1;
+  }
 }
 
 .main-header__logo-text {
@@ -38,17 +84,61 @@
 
 .main-header__button {
   display: block;
-  background-image: url("../images/icons/stack.svg#menu-open");
+  mask-image: url("../../images/icons/stack.svg#menu-open");
   width: 60px;
   height: 60px;
   border: none;
-  background-color: transparent;
+  background-color: $green;
   background-repeat: no-repeat;
   background-position: center;
   margin-left: auto;
   z-index: 5;
   position: absolute;
-  right: 30px;
+  right: 21px;
   top: 50%;
   transform: translateY(-50%);
+
+  &:hover {
+    background-color: $green-hover;
+  }
+
+  &:focus {
+    background-color: $green-hover;
+  }
 }
+
+.main-header__toggle-closed {
+  mask-image: url("../../images/icons/stack.svg#menu-close");
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $green;
+
+  &:hover {
+    background-color: $green-hover;
+  }
+
+  &:focus {
+    background-color: $green-hover;
+  }
+}
+
+.main-nav__opened {
+  display: block;
+}
+
+.no-js {
+  .main-header__nav {
+    display: block;
+    position: static;
+    z-index: 5555;
+    margin-top: 0;
+  }
+
+  .main-header__button {
+    display: none;
+  }
+}
+
