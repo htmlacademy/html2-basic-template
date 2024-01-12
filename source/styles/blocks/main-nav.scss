@@ -5,6 +5,16 @@
   display: flex;
   flex-direction: column;
   row-gap: 28px;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: unset;
+    gap: 16px;
+  }
+}
+
+.main-nav__item {
+  min-width: 112px;
 }
 
 .main-nav__item-link {
@@ -16,4 +26,8 @@
   font-weight: 400;
   line-height: normal;
   max-width: 320px;
+
+  @include tablet {
+    padding: 42px 16px 38px 0;
+  }
 }

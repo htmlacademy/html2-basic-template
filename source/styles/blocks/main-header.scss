@@ -2,6 +2,10 @@
   background-color: $head-background;
   box-shadow: 0 4px 4px 0 rgba(88, 13, 101, 0.25);
   position: relative;
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .main-header__wrapper {
@@ -10,6 +14,12 @@
   padding: 5px 26px 5px 21px;
   position: relative;
   height: 62px;
+
+  @include tablet {
+    min-height: 104px;
+    padding: 0;
+    width: 48%;
+  }
 }
 
 .main-header__nav {
@@ -21,10 +31,20 @@
   width: 100%;
   background-color: $head-background;
   display: none;
+
+
+  @include tablet {
+    padding: 26px 10px 22px 0;
+    position: static;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
 }
 
 .main-header__logo {
   display: flex;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 34px;
@@ -41,6 +61,18 @@
     .main-header__logo-main-wrapper::before {
       background-color: $green-disabled;
     }
+  }
+
+  @include tablet {
+    top: 53%;
+    left: 31px;
+  }
+}
+
+.main-header__logo-main {
+  @include tablet {
+    width: 46px;
+    height: 48px;
   }
 }
 
@@ -60,6 +92,13 @@
     background-position: top;
     background-color: $green;
     z-index: -1;
+
+    @include tablet {
+      top: 0;
+      left: 7px;
+      width: 34px;
+      height: 15px;
+    }
   }
 
   &::after {
@@ -75,11 +114,25 @@
     background-position: top;
     background-color: $violet;
     z-index: -1;
+
+    @include tablet {
+      width: 38px;
+      height: 32px;
+      left: 4px;
+      top: 14px;
+    }
   }
 }
 
 .main-header__logo-text {
   display: none;
+
+  @include tablet {
+    display: block;
+    width: 69px;
+    height: 81px;
+    margin-left: 14px;
+  }
 }
 
 .main-header__button {
@@ -104,6 +157,10 @@
 
   &:focus {
     background-color: $green-hover;
+  }
+
+  @include tablet {
+    display: none;
   }
 }
 
@@ -141,4 +198,3 @@
     display: none;
   }
 }
-

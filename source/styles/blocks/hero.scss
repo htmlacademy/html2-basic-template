@@ -8,6 +8,12 @@
   display: flex;
   flex-direction: column;
   background-color: $hero-background;
+
+  @include tablet {
+    background-image: url("../../images/hero-back-tablet@1x.jpg");
+    min-height: 977px;
+    padding: 142px 20px 470px 210px;
+  }
 }
 
 .hero__title {
@@ -15,6 +21,12 @@
   margin: 0 auto;
   font-family: "Comfortaa", sans-serif;
   padding-bottom: 38px;
+
+  @include tablet {
+    width: 532px;
+    text-align: start;
+    padding-bottom: 51px;
+  }
 }
 
 .hero__list {
@@ -23,6 +35,12 @@
   padding: 0 60px 0 70px;
   padding-bottom: 64px;
   margin: 0 auto;
+
+  @include tablet {
+    padding: 0;
+    margin: 0;
+    margin-left: 47px;
+  }
 }
 
 .hero__item {
@@ -66,10 +84,21 @@
     height: 32px;
     left: -43px;
   }
+
+  @include tablet {
+    font-size: 18px;
+    width: 458px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
 }
 
 .hero__item:not(:last-child) {
   margin-bottom: 19px;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
 }
 
 .hero__button {
