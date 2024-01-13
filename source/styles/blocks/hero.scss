@@ -15,6 +15,13 @@
     padding: 142px 20px 420px 210px;
     margin-bottom: 40px;
   }
+
+  @include desktop {
+    background-image: url("../../images/hero-back-desktop@1x.jpg");
+    min-height: 797px;
+    padding: 173px 349px 150px 535px;
+    margin-bottom: 40px;
+  }
 }
 
 .hero__title {
@@ -28,6 +35,11 @@
     text-align: start;
     padding-bottom: 51px;
   }
+
+  @include desktop {
+    width: auto;
+    padding-bottom: 56px;
+  }
 }
 
 .hero__list {
@@ -40,6 +52,10 @@
   @include tablet {
     padding: 0 0 55px 47px;
     margin: 0;
+  }
+
+  @include desktop {
+    padding-left: 72px;
   }
 }
 
@@ -103,13 +119,18 @@
 
 .hero__button {
   margin: 0 auto;
-  padding: 16px 84px;
+  padding: 16px 89px 16px 83px;
 
   @include tablet {
     margin-left: 0;
     font-size: 28px;
     letter-spacing: 1.4px;
     padding: 17px 109px;
+  }
+
+  @include desktop {
+    margin-left: 37px;
+    padding: 19px 109px;
   }
 }
 

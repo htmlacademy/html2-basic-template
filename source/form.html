@@ -19,15 +19,20 @@
 <body class="page__body no-js">
   <header class="main-header">
     <!-- Навигация -->
-    <div class="main-header__wrapper container">
-      <a class="main-header__logo" href="index.html">
-        <img src="images/logo.svg" width="52" height="52" alt="Логотип Ягода">
-        <span class="main-header__logo-text">Ягода</span>
+    <div class="main-header__wrapper main-header__wrapper--form">
+      <a class="main-header__logo page__logo" href="index.html">
+        <div class="main-header__logo-main-wrapper page__logo-wrapper">
+          <svg width="36" height="44" viewBox="0 0 36 44" class="main-header__logo-main page__logo-main">
+            <use href="images/icons/stack.svg#logo-main"></use>
+          </svg>
+        </div>
+        <svg width="70" height="40" viewBox="0 0 36 44" class="main-header__logo-text page__logo-text">
+          <use href="images/icons/stack.svg#berry"></use>
+        </svg>
       </a>
       <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
-    <nav class="main-header__nav main-nav container">
-      <div class="main-nav__wrapper">
+    <nav class="main-header__nav main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__item-link" href="index.html">Каталог</a>
@@ -35,8 +40,6 @@
           <li class="main-nav__item">
             <a class="main-nav__item-link" href="№">Новости</a>
           </li>
-        </ul>
-        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__item-link" href="#">Контакты</a>
           </li>
@@ -44,7 +47,6 @@
             <a class="main-nav__item-link" href="form.html">Заказать</a>
           </li>
         </ul>
-      </div>
     </nav>
 
   </header>
@@ -65,8 +67,8 @@
             alt="Замороженная брусника">
         </picture>
       </div>
-      <p class="hero-inner__title">Закажи ягоды</p>
-      <p class="hero-inner__deskription">Мы соберем для вас ягоды и доставим их в удобном для вас виде - свежими или
+      <p class="hero-inner__title page__title">Закажи ягоды</p>
+      <p class="hero-inner__deskription page__text container">Мы соберем для вас ягоды и&nbsp;доставим их в удобном для&nbsp;вас&nbspвиде - свежими или
         замороженными</p>
     </section>
     <section class="order">
@@ -257,11 +259,13 @@
       </form>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Где забрать ягоды?</h2>
-      <p class="contacts__title-bottom">Забери ягоды с нашего склада по адресу:</p>
-      <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
-      <a class="contacts__info contacts__info--tel" href="tel:+79105244118">+7 910 524 41 18</a>
-      <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
+      <h2 class="contacts__title page__title container">Где забрать <span class="contacts__title-berry">ягоды?</span></h2>
+      <p class="contacts__info contacts__info--title">Забери ягоды с нашего склада по адресу:</p>
+      <div class="contacts__wrapper container">
+        <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
+        <a class="contacts__info contacts__info--tel" href="tel:+79105244118">+7 910 524 41 18</a>
+        <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
+      </div>
       <div class="contacts__map">
         <picture class="contacts__map-wrapper">
           <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
@@ -279,39 +283,45 @@
   </main>
 
   <footer class="page__footer">
-    <a class="page__footer-logo" href="index.html">
-      <img src="images/logo.svg" width="52" height="52" alt="Логотип Ягода">
-      <span class="page__footer-text">Ягода</span>
+    <a class="page__footer-logo page__logo" href="#">
+      <div class="page__footer-logo-main-wrapper page__logo-wrapper">
+        <svg width="36" height="44" viewBox="0 0 36 44" class="page__footer-logo-main page__logo-main">
+          <use href="images/icons/stack.svg#logo-main"></use>
+        </svg>
+      </div>
+      <svg width="70" height="40" viewBox="0 0 36 44" class="page__footer-logo-text page__logo-text">
+        <use href="images/icons/stack.svg#berry"></use>
+      </svg>
     </a>
     <ul class="page__footer-social social">
       <li class="social__item">
-        <a class="social__link social__vk" href="#">
-          <svg class="social__vk-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#vkontakte"></use>
+        <a class="social__link social__tg" href="#">
+          <svg class="social__vk-img" width="32" height="32">
+            <use xlink:href="./images/icons/stack.svg#telegram"></use>
           </svg>
           <span class="visually-hidden">Телеграм</span>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__yt" href="#">
-          <svg class="social__yt-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#youtube"></use>
+        <a class="social__link social__vk" href="#">
+          <svg class="social__yt-img" width="32" height="32">
+            <use xlink:href="./images/icons/stack.svg#vkontakte"></use>
           </svg>
           <span class="visually-hidden">В контакте</span>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__tg" href="#">
-          <svg class="social__tg-img" width="28" height="22">
-            <use xlink:href="./img/stack.svg#telegram"></use>
+        <a class="social__link social__yt" href="#">
+          <svg class="social__tg-img" width="32" height="32">
+            <use xlink:href="./images/icons/stack.svg#youtube"></use>
           </svg>
           <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
     </ul>
     <a class="page__footer-html" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-      <svg class="page__footer-html-img" width="27" height="34">
-        <use xlink:href="./img/stack.svg#htmlacademy"></use>
+      <svg class="page__footer-html-img" width="28" height="32">
+        <use xlink:href="./images/icons/stack.svg#htmlacademy"></use>
       </svg>
       <span class="visually-hidden">Логотип html academy</span>
     </a>

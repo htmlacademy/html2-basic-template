@@ -1,10 +1,42 @@
 .new {
+  position: relative;
   padding-bottom: 164px;
 
   @include tablet {
     padding-bottom: 225px;
   }
+
+  @include desktop {
+    padding-bottom: 244px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../images/icons/stack.svg#line-leaf");
+    display: block;
+    width: 228px;
+    height: 32px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 50%;
+    bottom: 72px;
+    transform: translateX(-50%);
+
+    @include tablet {
+      background-image: url("../../images/icons/stack.svg#line-leaf-tablet");
+      width: 296px;
+      height: 42px;
+      bottom: 73px;
+    }
+
+    @include desktop {
+      bottom: 101px;
+    }
+  }
 }
+
 
 .new__title {
   margin: 0;
@@ -12,6 +44,10 @@
 
   @include tablet {
     padding-bottom: 72px;
+  }
+
+  @include desktop {
+    padding-bottom: 97px;
   }
 }
 
@@ -29,6 +65,12 @@
     column-gap: 20px;
     row-gap: 34px;
   }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+  }
 }
 
 .new__item {
@@ -36,9 +78,15 @@
   padding: 41px 20px 69px 18px;
   border: 2px solid $green;
   border-radius: 40px;
+  width: 268px;
 
   @include tablet {
     padding: 47px 36px 103px 34px;
+    width: 348px;
+  }
+
+  @include desktop {
+    width: 360px;
   }
 
   &--discount {
@@ -79,10 +127,6 @@
       bottom: 41px;
     }
   }
-
-  @include tablet {
-    width: 348px;
-  }
 }
 
 .new__item-text {
@@ -113,6 +157,10 @@
       padding-bottom: 42px;
       width: 276px;
     }
+
+    @include desktop {
+      padding-bottom: 39px;
+    }
   }
 
   &--date {
@@ -134,6 +182,10 @@
     @include tablet {
       padding-bottom: 26px;
     }
+
+    @include desktop {
+      padding-bottom: 22px;
+    }
   }
 
   &--mix {
@@ -141,6 +193,10 @@
 
     @include tablet {
       padding-bottom: 58px;
+    }
+
+    @include desktop {
+      padding-bottom: 56px;
     }
   }
 }

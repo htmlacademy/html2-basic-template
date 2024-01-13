@@ -11,6 +11,10 @@
     flex-direction: unset;
     gap: 16px;
   }
+
+  @include desktop {
+    gap: 49px;
+  }
 }
 
 .main-nav__item {
@@ -29,5 +33,9 @@
 
   @include tablet {
     padding: 42px 16px 38px 0;
+  }
+
+  @include desktop {
+    padding: 39px 24px 39px 0;
   }
 }

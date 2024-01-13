@@ -20,4 +20,15 @@
       padding-right: 26px;
     }
   }
+
+  @include desktop {
+    padding-left: 155px;
+    padding-right: 157px;
+
+
+    &--new {
+      padding-left: 165px;
+      padding-right: 156px;
+    }
+  }
 }

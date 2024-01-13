@@ -7,6 +7,10 @@
     padding-bottom: 216px;
   }
 
+  @include desktop {
+    padding-bottom: 241px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -27,6 +31,10 @@
       height: 42px;
       bottom: 73px;
     }
+
+    @include desktop {
+      bottom: 98px;
+    }
   }
 }
 
@@ -43,11 +51,21 @@
     column-gap: 50px;
     row-gap: 52px;
   }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 21px;
+    row-gap: 52px;
+  }
 }
 
 .catalog__title {
   margin: 0;
   padding-bottom: 71px;
+
+  @include desktop {
+    padding-bottom: 93px;
+  }
 }
 
 .catalog__item {

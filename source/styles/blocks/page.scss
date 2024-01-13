@@ -23,6 +23,10 @@
     top: 53%;
     left: 31px;
   }
+
+  @include desktop {
+    left: 11px;
+  }
 }
 
 .page__logo-main {
@@ -103,6 +107,20 @@
   @include tablet {
     font-size: 48px;
   }
+
+  @include desktop {
+    font-size: 52px;
+  }
+}
+
+.page__text {
+  color: $main-text;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .page__button {
@@ -141,6 +159,11 @@
     display: flex;
     justify-content: space-between;
     padding: 36px 26px 28px 300px;
+    gap: 30px;
+  }
+
+  @include desktop {
+    padding: 32px 160px 28px 636px;
   }
 }
 
@@ -150,6 +173,11 @@
   @include tablet {
     top: 53%;
     left: 26px;
+  }
+
+  @include desktop {
+    top: 55%;
+    left: 163px;
   }
 }
 

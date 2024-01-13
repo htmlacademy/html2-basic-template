@@ -4,6 +4,13 @@
   @include tablet {
     margin-bottom: 100px;
   }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 21px;
+    grid-template-rows: auto auto 1fr;
+  }
 }
 
 .contacts__wrapper {
@@ -17,18 +24,34 @@
     padding-left: 216px;
     margin-bottom: 45px;
   }
+
+  @include desktop {
+    margin: 0;
+    padding-left: 136px;
+    justify-content: flex-start;
+  }
 }
 
 .contacts__title {
   padding-bottom: 70px;
-  padding-right: 5px;
+  padding-right: 41px;
 
   @include tablet {
     width: 528px;
     padding-left: 0;
-    padding-right: 12px;
+    padding-right: 19px;
     padding-bottom: 72px;
   }
+
+  @include desktop {
+    width: 550px;
+    margin: 0;
+    padding-bottom: 58px;
+  }
+}
+
+.contacts__title-berry {
+  padding-left: 13px;
 }
 
 .contacts__info {
@@ -81,6 +104,14 @@
     line-height: normal;
     padding-bottom: 27px;
   }
+
+  @include desktop {
+    padding-right: 0;
+    margin: 0;
+    padding-left: 100px;
+    width: 505px;
+    padding-top: 13px;
+  }
 }
 
 .contacts__info--address {
@@ -124,4 +155,12 @@
   height: 372px;
   object-fit: cover;
   display: block;
+}
+
+.contacts__map {
+  @include desktop {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    padding-left: 156px;
+  }
 }
