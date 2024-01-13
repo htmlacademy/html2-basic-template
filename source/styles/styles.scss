@@ -1,12 +1,9 @@
-/* GLOBAL */
+@import "./blocks/mixins/media.scss";
+@import "./blocks/mixins/mixins.scss";
 @import "./global/variables.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
 @import "./global/container.scss";
-
-/* BLOCKS */
-@import "./blocks/mixins/media.scss";
-@import "./blocks/mixins/mixins.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/page.scss";
 @import "./blocks/hero.scss";

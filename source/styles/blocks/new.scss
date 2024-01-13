@@ -1,10 +1,18 @@
 .new {
   padding-bottom: 164px;
+
+  @include tablet {
+    padding-bottom: 225px;
+  }
 }
 
 .new__title {
   margin: 0;
   padding-bottom: 64px;
+
+  @include tablet {
+    padding-bottom: 72px;
+  }
 }
 
 .new__list {
@@ -13,6 +21,14 @@
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 34px;
+  }
 }
 
 .new__item {
@@ -21,12 +37,25 @@
   border: 2px solid $green;
   border-radius: 40px;
 
+  @include tablet {
+    padding: 47px 36px 103px 34px;
+  }
+
   &--discount {
     padding: 29px 20px 69px 18px;
+
+    @include tablet {
+      padding: 31px 36px 103px 34px;
+    }
   }
 
   &--mix {
     padding: 52px 17px 69px 20px;
+
+    @include tablet {
+      padding: 63px 33px 104px 34px;
+      margin-right: 10px;
+    }
   }
 
   &::after {
@@ -42,6 +71,17 @@
     left: 50%;
     bottom: 22px;
     transform: translateX(-50%);
+
+    @include tablet {
+      background-image: url("../../images/icons/stack.svg#path");
+      width: 96px;
+      height: 40px;
+      bottom: 41px;
+    }
+  }
+
+  @include tablet {
+    width: 348px;
   }
 }
 
@@ -55,12 +95,24 @@
   line-height: normal;
   letter-spacing: 0.2px;
 
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   &--title {
     font-size: 20px;
     text-align: center;
     width: 204px;
     margin: 0 auto;
     padding-bottom: 30px;
+
+    @include tablet {
+      font-size: 28px;
+      line-height: normal;
+      padding-bottom: 42px;
+      width: 276px;
+    }
   }
 
   &--date {
@@ -70,13 +122,25 @@
 
   &--description {
     min-height: 192px;
+
+    @include tablet {
+      min-height: 212px;
+    }
   }
 
   &--discount {
     padding-bottom: 18px;
+
+    @include tablet {
+      padding-bottom: 26px;
+    }
   }
 
   &--mix {
     padding-bottom: 43px;
+
+    @include tablet {
+      padding-bottom: 58px;
+    }
   }
 }

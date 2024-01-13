@@ -3,6 +3,10 @@
   padding-top: 61px;
   padding-bottom: 161px;
 
+  @include tablet {
+    padding-bottom: 216px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -16,6 +20,13 @@
     left: 50%;
     bottom: 64px;
     transform: translateX(-50%);
+
+    @include tablet {
+      background-image: url("../../images/icons/stack.svg#line-leaf-tablet");
+      width: 296px;
+      height: 42px;
+      bottom: 73px;
+    }
   }
 }
 
@@ -25,6 +36,13 @@
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 52px;
+  }
 }
 
 .catalog__title {
@@ -65,7 +83,7 @@
 }
 
 .catalog__item-button {
-  width: 220px;
   margin: 0 auto;
   padding: 14px 64px;
+  width: 220px;
 }

@@ -20,13 +20,13 @@
   <header class="main-header">
     <!-- Навигация -->
     <div class="main-header__wrapper">
-      <a class="main-header__logo" href="#">
-        <div class="main-header__logo-main-wrapper">
-          <svg width="36" height="44" viewBox="0 0 36 44" class="main-header__logo-main">
+      <a class="main-header__logo page__logo" href="#">
+        <div class="main-header__logo-main-wrapper page__logo-wrapper">
+          <svg width="36" height="44" viewBox="0 0 36 44" class="main-header__logo-main page__logo-main">
             <use href="images/icons/stack.svg#logo-main"></use>
           </svg>
         </div>
-        <svg width="70" height="40" viewBox="0 0 36 44" class="main-header__logo-text">
+        <svg width="70" height="40" viewBox="0 0 36 44" class="main-header__logo-text page__logo-text">
           <use href="images/icons/stack.svg#berry"></use>
         </svg>
       </a>
@@ -206,14 +206,13 @@
         <li class="new__item">
           <h3 class="new__item-text new__item-text--title">Новый урожай клубники</h3>
           <p class="new__item-text new__item-text--description">К нам поступила свежая сочная ароматная клубника
-            из&nbsp;Алтайского края. Крупные отборные ягоды можно приобрести свежими от 200 гр, или замороженными от 1 кг.
-            Поторопитесь, сезон клубники короткий и свежие ягоды скоро закончатся.</p>
+            из&nbsp;Алтайского края. Крупные отборные ягоды можно приобрести свежими от&nbsp;200 гр, или замороженными от&nbsp;1&nbsp;кг. Поторопитесь, сезон клубники короткий и свежие ягоды скоро закончатся.</p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-22">22 июня 2022</time>
         </li>
         <li class="new__item new__item--discount">
           <h3 class="new__item-text new__item-text--title new__item-text--discount">В июне дарим скидку&nbsp;15% на все свежие ягоды</h3>
           <p class="new__item-text new__item-text--description">Свежие ягоды урожая этого года со скидкой 15%. Клубнику,
-            малину, голубику, вишню доставим от 200 гр. </p>
+            малину, голубику, вишню доставим от&nbsp;200&nbsp;гр. </p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-15">15 июня 2022</time>
         </li>
         <li class="new__item new__item--mix">
@@ -221,15 +220,15 @@
           <p class="new__item-text new__item-text--description">Мы приготовим для вас смеси
             из&nbsp;различных замороженных ягод по вашему пожеланию. Ягодные смеси удобно использовать для приготовления
             напитков. Все ягоды замораживаются методом шоковой заморозки, что позволяет сохранить
-            их&nbsp;естественный вкус и аромат.</p>
+            их&nbsp;естественный вкус и&nbsp;аромат.</p>
           <time class="new__item-text new__item-text--date" datetime="2022-06-02">02 июня 2022</time>
         </li>
       </ul>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title page__title">Где забрать ягоды?</h2>
+      <h2 class="contacts__title page__title container">Где забрать ягоды?</h2>
       <p class="contacts__info contacts__info--title">Забери ягоды с нашего склада по адресу:</p>
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper container">
         <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
         <a class="contacts__info contacts__info--tel" href="tel:+79105244118">+7 910 524 41 18</a>
         <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
@@ -251,13 +250,19 @@
   </main>
 
   <footer class="page__footer">
-    <a class="page__footer-logo" href="index.html">
-      <img src="images/logo.svg" width="52" height="52" alt="Логотип Ягода">
-      <img src="images/berry.svg" class="page__footer-text" width="65" height="36">
+    <a class="page__footer-logo page__logo" href="#">
+      <div class="page__footer-logo-main-wrapper page__logo-wrapper">
+        <svg width="36" height="44" viewBox="0 0 36 44" class="page__footer-logo-main page__logo-main">
+          <use href="images/icons/stack.svg#logo-main"></use>
+        </svg>
+      </div>
+      <svg width="70" height="40" viewBox="0 0 36 44" class="page__footer-logo-text page__logo-text">
+        <use href="images/icons/stack.svg#berry"></use>
+      </svg>
     </a>
     <ul class="page__footer-social social">
       <li class="social__item">
-        <a class="social__link social__vk" href="#">
+        <a class="social__link social__tg" href="#">
           <svg class="social__vk-img" width="32" height="32">
             <use xlink:href="./images/icons/stack.svg#telegram"></use>
           </svg>
@@ -265,7 +270,7 @@
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__yt" href="#">
+        <a class="social__link social__vk" href="#">
           <svg class="social__yt-img" width="32" height="32">
             <use xlink:href="./images/icons/stack.svg#vkontakte"></use>
           </svg>
@@ -273,7 +278,7 @@
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__tg" href="#">
+        <a class="social__link social__yt" href="#">
           <svg class="social__tg-img" width="32" height="32">
             <use xlink:href="./images/icons/stack.svg#youtube"></use>
           </svg>

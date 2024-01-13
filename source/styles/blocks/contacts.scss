@@ -1,5 +1,9 @@
 .contacts {
   margin-bottom: 60px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
 }
 
 .contacts__wrapper {
@@ -8,12 +12,23 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 33px;
+
+  @include tablet {
+    padding-left: 216px;
+    margin-bottom: 45px;
+  }
 }
 
 .contacts__title {
-  margin: 0;
   padding-bottom: 70px;
   padding-right: 5px;
+
+  @include tablet {
+    width: 528px;
+    padding-left: 0;
+    padding-right: 12px;
+    padding-bottom: 72px;
+  }
 }
 
 .contacts__info {
@@ -26,6 +41,12 @@
   font-weight: 400;
   line-height: normal;
   margin: 0;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
 
   &::after {
     position: absolute;
@@ -52,6 +73,14 @@
   &::after {
     display: none;
   }
+
+  @include tablet {
+    font-size: 20px;
+    width: 420px;
+    padding-right: 9px;
+    line-height: normal;
+    padding-bottom: 27px;
+  }
 }
 
 .contacts__info--address {
@@ -59,6 +88,10 @@
 
   &::after {
     background-image: url("../../images/icons/stack.svg#cont-leaf");
+  }
+
+  @include tablet {
+    margin-bottom: 24px;
   }
 }
 
@@ -69,6 +102,10 @@
 
   &::after {
     background-image: url("../../images/icons/stack.svg#tel");
+  }
+
+  @include tablet {
+    margin-bottom: 24px;
   }
 }
 
