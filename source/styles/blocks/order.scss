@@ -1,0 +1,30 @@
+.order {
+  position: relative;
+  padding-bottom: 183px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../images/icons/stack.svg#line-leaf");
+    display: block;
+    width: 228px;
+    height: 32px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 50%;
+    bottom: 61px;
+    transform: translateX(-50%);
+
+    @include tablet {
+      background-image: url("../../images/icons/stack.svg#line-leaf-tablet");
+      width: 296px;
+      height: 42px;
+      bottom: 73px;
+    }
+  }
+
+  @include tablet {
+    padding-bottom: 214px;
+  }
+}

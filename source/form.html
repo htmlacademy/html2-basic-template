@@ -20,15 +20,16 @@
   <header class="main-header">
     <!-- Навигация -->
     <div class="main-header__wrapper main-header__wrapper--form">
-      <a class="main-header__logo page__logo" href="index.html">
+      <a class="main-header__logo page__logo page__logo--form" href="index.html">
         <div class="main-header__logo-main-wrapper page__logo-wrapper">
-          <svg width="36" height="44" viewBox="0 0 36 44" class="main-header__logo-main page__logo-main">
+          <svg  class="main-header__logo-main page__logo-main" width="36" height="44" viewBox="0 0 36 44">
             <use href="images/icons/stack.svg#logo-main"></use>
           </svg>
         </div>
-        <svg width="70" height="40" viewBox="0 0 36 44" class="main-header__logo-text page__logo-text">
+        <svg class="main-header__logo-text page__logo-text" width="70" height="40" viewBox="0 0 36 44">
           <use href="images/icons/stack.svg#berry"></use>
         </svg>
+        <span class="visually-hidden">Логотип ягода</span>
       </a>
       <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
@@ -68,7 +69,7 @@
         </picture>
       </div>
       <p class="hero-inner__title page__title">Закажи ягоды</p>
-      <p class="hero-inner__deskription page__text container">Мы соберем для вас ягоды и&nbsp;доставим их в удобном для&nbsp;вас&nbspвиде - свежими или
+      <p class="hero-inner__description page__text container">Мы соберем для вас ягоды и&nbsp;доставим их в удобном для&nbsp;вас&nbspвиде - свежими или
         замороженными</p>
     </section>
     <section class="order">
@@ -78,73 +79,73 @@
 
         <!-- Выбор ягод чекбокс -->
         <fieldset class="form__fieldset form__fieldset--checkbox">
-          <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox container container--checkbox">
-            <h3 class="form__title form__title--checkbox">Выберите ягоды</h3>
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox container container--form">
+            <legend class="form__title form__title--checkbox">Выберите ягоды</legend>
             <ul class="form__list form__list--checkbox">
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--br form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="cowberry">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">брусника</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--kr form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="gooseberry" checked>
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">крыжовник</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox ">
+              <li class="form__item form__item--vi form__item-control form__item-control--checkbox ">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="cherry">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">вишня</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--ma form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="raspberries">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">малина</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--go form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="blueberry">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">голубика</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--mo form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="cloudberry">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">морошка</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--ej form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="blackberry">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">ежевика</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--ch form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="blueberry">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">черника</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--kl form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="strawberry">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">клубника</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--klu form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="cranberry">
                   <span class="form__control-mark"></span>
@@ -156,10 +157,10 @@
         </fieldset>
 
         <!-- Выбор вида хранения чекбокс -->
-        <fieldset class="form__fieldset form__fieldset--checkbox">
-          <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox container container--checkbox">
-            <h3 class="form__title form__title--checkbox">Вид хранения</h3>
-            <ul class="form__list form__list--checkbox">
+        <fieldset class="form__fieldset form__fieldset--freeze">
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox container container--form">
+            <legend class="form__title form__title--freeze">Вид хранения</legend>
+            <ul class="form__list form__list--freeze">
               <li class="form__item form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="fresh">
@@ -167,14 +168,14 @@
                   <span class="form__control-label">свежие ягоды</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox">
+              <li class="form__item form__item--freeze form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
-                  <input class="form__control-input visually-hidden" type="checkbox" name="freeze" checked>
+                  <input class="form__control-input visually-hidden" type="checkbox" name="freeze">
                   <span class="form__control-mark"></span>
-                  <span class="form__control-label">замороженные ягоды</span>
+                  <span class="form__control-label form__control-label--freeze">замороженные ягоды</span>
                 </label>
               </li>
-              <li class="form__item form__item-control form__item-control--checkbox ">
+              <li class="form__item form__item--mix form__item-control form__item-control--checkbox ">
                 <label class="form__control form__control--checkbox">
                   <input class="form__control-input visually-hidden" type="checkbox" name="mix">
                   <span class="form__control-mark"></span>
@@ -186,48 +187,48 @@
         </fieldset>
 
         <!-- Радиокнопки выбора -->
-        <fieldset class="form__fieldset form__fieldset--radio container container--form">
-          <div class="form__fieldset-wrapper">
-            <h3 class="form__title form__title--radio">Способ доставки</h3>
-            <ul class="form__list form__list-control">
+        <fieldset class="form__fieldset form__fieldset--radio">
+          <div class="form__fieldset-wrapper container container--form">
+            <legend class="form__title form__title--radio">Способ доставки</legend>
+            <ul class="form__list form__list--radio">
               <li class="form__item form__item-control form__item-control--radio">
-                <label class="form__control">
+                <label class="form__control form__control--delivery">
                   <input class="form__control-input visually-hidden" type="radio" name="programs-group" value="delivery"
                     checked>
                   <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__control-label">Доставка (по СПБ в пределах КАД)</span>
+                  <span class="form__control-label form__control-label--delivery">Доставка<br>(по СПБ в пределах &thinsp;КАД)</span>
                 </label>
               </li>
               <li class="form__item form__item-control form__item-control--radio">
-                <label class="form__control">
+                <label class="form__control form__control--delivery">
                   <input class="form__control-input visually-hidden" type="radio" name="programs-group" value="stock">
                   <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__control-label">Самовывоз (Набережная Обводного канала, 101)</span>
+                  <span class="form__control-label form__control-label--stock">Самовывоз<br>(Набережная Обводного канала, 101)</span>
                 </label>
               </li>
             </ul>
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset">
-          <div class="form__fieldset-wrapper">
-            <h3 class="form__title form__title--name">Ваши контакты</h3>
-            <ul class="form__list">
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <div class="form__fieldset-wrapper container container--form container--contacts">
+            <legend class="form__title form__title--name">Ваши контакты</legend>
+            <ul class="form__list form__list--contacts">
 
-              <li class="form__item">
-                <label class="form__item-name" for="fild-about-name">Имя</label>
+              <li class="form__item form__item--name">
+                <label class="form__item-name" for="fild-about-name">Имя<span class="form__item-star">*</span></label>
                 <input class="form__input-all" type="text" id="fild-about-name" name="fild-about-name"
                   placeholder="Как к вам обращаться?" required>
               </li>
 
-              <li class="form__item">
-                <label class="form__about-item-name" for="fild-about-tel">Телефон:</label>
+              <li class="form__item form__item--tel">
+                <label class="form__item-name" for="fild-about-tel">Телефон<span class="form__item-star">*</span></label>
                 <input class="form__input-all" type="tel" id="fild-about-tel" name="fild-about-tel"
-                  placeholder="+7 ХХХ ХХХ ХХ ХХ" required>
+                  placeholder="+7 xxx xxx xx xx" required>
               </li>
 
-              <li class="form__item">
-                <label class="form__item-name visually-hidden" for="fild-about-mail">Ваш Email*</label>
+              <li class="form__item form__item--mail">
+                <label class="form__item-name" for="fild-about-mail">Email<span class="form__item-star">*</span></label>
                 <input class="form__input-all" type="email" id="fild-about-mail" name="fild-about-tel"
                   placeholder="Ваш email" required>
               </li>
@@ -236,21 +237,21 @@
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--add container container--form">
-          <div class="form__fieldset-wrapper form__fieldset-wrapper--input">
-            <h3 class="form__title form__title--add">Адрес</h3>
+        <fieldset class="form__fieldset form__fieldset--address">
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
+            <legend class="form__title form__title--add">Адрес<span class="form__item-star">*</span></legend>
             <div class="form__wrapper-input">
-              <textarea class="form__input-all form__input-all--textarea" id="fild-about-address"
-                name="fild-about-comment" placeholder="Адрес в Санкт-Петербурге" required></textarea>
+              <input class="form__input-all form__input-all--address" id="fild-about-address"
+                name="fild-about-comment" placeholder="Адрес в Санкт-Петербурге" required>
             </div>
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--add container container--form">
-          <div class="form__fieldset-wrapper form__fieldset-wrapper--input">
-            <h3 class="form__title form__title--add">Пожелания к заказу</h3>
+        <fieldset class="form__fieldset form__fieldset--add">
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
+            <legend class="form__title form__title--add form__title--addorder">Пожелания к заказу<span class="form__item-star">*</span></legend>
             <div class="form__wrapper-input">
-              <textarea class="form__input-all form__input-all--textarea" id="fild-about-comment"
+              <textarea class="form__input-all form__input-all--order" id="fild-about-comment"
                 name="fild-about-comment" placeholder="Чем мы можем вам помочь?" required></textarea>
             </div>
           </div>
@@ -259,7 +260,7 @@
       </form>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title page__title container">Где забрать <span class="contacts__title-berry">ягоды?</span></h2>
+      <h2 class="contacts__title contacts__title--form page__title container">Где забрать <span class="contacts__title-berry">ягоды?</span></h2>
       <p class="contacts__info contacts__info--title">Забери ягоды с нашего склада по адресу:</p>
       <div class="contacts__wrapper container">
         <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>

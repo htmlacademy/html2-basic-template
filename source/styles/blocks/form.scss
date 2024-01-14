@@ -1,0 +1,370 @@
+.form__fieldset {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &--checkbox {
+    padding-bottom: 81px;
+  }
+
+  &--freeze {
+    padding-bottom: 25px;
+  }
+
+  &--radio {
+    padding-bottom: 32px;
+  }
+
+  &--contacts {
+    padding-bottom: 37px;
+  }
+
+  &--address {
+    padding-bottom: 34px;
+  }
+
+  &--add {
+    padding-bottom: 28px;
+  }
+
+  @include tablet {
+    &--checkbox {
+      padding-bottom: 43px;
+    }
+
+    &--freeze {
+      padding-bottom: 41px;
+    }
+
+    &--radio {
+      padding-bottom: 45px;
+    }
+
+    &--address {
+      padding-bottom: 37px;
+    }
+
+    &--add {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+.form__list {
+  @include list;
+
+  &--checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 18px;
+  }
+
+  &--freeze {
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+  }
+
+  &--radio {
+    padding-left: 3px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  &--contacts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 37px;
+  }
+
+  @include tablet {
+    column-gap: 50px;
+    row-gap: 10px;
+
+    &--freeze {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 53px;
+      row-gap: 10px;
+    }
+
+    &--radio {
+      flex-direction: row;
+      padding-left: 2px;
+      column-gap: 23px;
+    }
+
+    &--contacts {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 24px;
+      row-gap: 36px;
+    }
+  }
+}
+
+.form__item {
+  @include tablet {
+    &--br {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    &--kl {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    &--mo {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+
+    &--vi {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    &--klu {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    &--ch {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+
+    &--go {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+
+    &--kr {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+
+    &--ej {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+
+    &--ma {
+      grid-column: 2/3;
+      grid-row: 4/5;
+    }
+
+    &--mix {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    &--freeze {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    &--tel {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+
+    &--mail {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+  }
+}
+
+.form__title {
+  margin: 0;
+  color: $green;
+  font-family: inherit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  padding-bottom: 24px;
+
+  &--freeze {
+    letter-spacing: 0;
+  }
+
+  &--radio {
+    padding-bottom: 31px;
+  }
+
+  &--name {
+    padding-bottom: 33px;
+  }
+
+  &--add {
+    color: $main-text;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    padding: 0 0 5px 13px;
+  }
+
+  &--addorder {
+    padding-bottom: 7px;
+  }
+
+  @include tablet {
+    font-size: 28px;
+    padding-bottom: 33px;
+
+    &--radio {
+      padding-bottom: 40px;
+    }
+
+    &--name {
+      text-align: center;
+      padding-bottom: 41px;
+    }
+
+    &--add {
+      font-size: 16px;
+      line-height: 20px;
+      padding-bottom: 2px;
+    }
+  }
+}
+
+.form__control-label {
+  color: $main-text;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+
+  &--delivery {
+    width: 156px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 22px;
+
+    &--freeze {
+      min-width: 187px;
+    }
+
+    &--delivery {
+      width: 172px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.form__control {
+  position: relative;
+  display: flex;
+  padding: 0 0 0 37px;
+  min-height: 38px;
+  align-items: center;
+
+  &--delivery {
+    padding-left: 34px;
+  }
+}
+
+.form__control-mark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $green;
+  transform: translateY(-50%);
+  border-radius: 20%;
+
+  &--radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
+
+.form__input-all {
+  padding: 16px 12px;
+  border-radius: 20px;
+  border: 1px solid $green;
+  color: $leaf-grey;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  min-width: 269px;
+
+  &--address {
+    min-height: 88px;
+  }
+
+  &--order {
+    min-height: 124px;
+  }
+
+  @include tablet {
+    min-width: 300px;
+
+    &--address {
+      padding: 16px 12px 15px 12px;
+      min-width: 624px;
+      min-height: 52px;
+    }
+
+    &--order {
+      min-height: 144px;
+      min-width: 624px;
+    }
+  }
+}
+
+.form__item-name {
+  color: $main-text;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: block;
+  padding: 0 0 5px 13px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 2px;
+  }
+}
+
+.form__item-star {
+  color: $error;
+  padding-left: 5px;
+}
+
+.form__button {
+  padding: 15px 85px 12px 74px;
+  width: 264px;
+  margin: 0 auto;
+  letter-spacing: 1px;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    padding: 16px 104px 18px 104px;
+    width: 336px;
+  }
+}

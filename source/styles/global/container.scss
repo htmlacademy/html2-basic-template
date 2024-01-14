@@ -7,7 +7,12 @@
   max-width: 1440px;
 
   &--new {
-    padding-left: 26px;
+    padding-left: 25px;
+    padding-right: 26px;
+  }
+
+  &--form {
+    padding-left: 25px;
     padding-right: 26px;
   }
 
@@ -18,6 +23,16 @@
     &--new {
       padding-left: 26px;
       padding-right: 26px;
+    }
+
+    &--form {
+      padding-left: 142px;
+      padding-right: 143px;
+    }
+
+    &--contacts {
+      padding-left: 72px;
+      padding-right: 72px;
     }
   }
 

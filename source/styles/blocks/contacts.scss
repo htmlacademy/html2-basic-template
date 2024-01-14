@@ -36,11 +36,19 @@
   padding-bottom: 70px;
   padding-right: 41px;
 
+  &--form {
+    padding-bottom: 64px;
+  }
+
   @include tablet {
     width: 528px;
     padding-left: 0;
     padding-right: 19px;
     padding-bottom: 72px;
+
+    &--form {
+      padding-bottom: 72px;
+    }
   }
 
   @include desktop {

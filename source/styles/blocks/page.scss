@@ -7,14 +7,18 @@
   transform: translateY(-50%);
   z-index: 4;
 
+  &--form {
+    top: 53%;
+  }
+
   &:hover {
-    .main-header__logo-main-wrapper::before {
+    .page__logo-wrapper::before {
       background-color: $green-hover;
     }
   }
 
   &:active {
-    .main-header__logo-main-wrapper::before {
+    .page__logo-wrapper::before {
       background-color: $green-disabled;
     }
   }
