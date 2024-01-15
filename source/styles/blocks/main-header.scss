@@ -9,6 +9,10 @@
 
   @include desktop {
     padding: 24px 192px 22px 152px;
+
+    &--form {
+      padding: 23px 192px 16px 152px;
+    }
   }
 }
 
@@ -22,12 +26,10 @@
   @include tablet {
     min-height: 104px;
     padding: 0;
-    width: 48%;
   }
 
   @include desktop {
     min-height: auto;
-    width: 44%;
   }
 
   &--form {
@@ -47,16 +49,20 @@
 
 
   @include tablet {
-    padding: 26px 10px 22px 0;
+    padding: 26px 26px 22px 0;
     position: static;
     display: flex;
     align-items: center;
     background-color: transparent;
+    justify-content: end;
+    margin-left: auto;
   }
 
   @include desktop {
     width: auto;
     padding: 0;
+    padding-right: 18px;
+    padding-left: 20px;
   }
 }
 

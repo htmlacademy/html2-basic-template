@@ -22,9 +22,17 @@
       height: 42px;
       bottom: 73px;
     }
+
+    @include desktop {
+      bottom: 100px;
+    }
   }
 
   @include tablet {
     padding-bottom: 214px;
+  }
+
+  @include desktop {
+    padding-bottom: 241px;
   }
 }

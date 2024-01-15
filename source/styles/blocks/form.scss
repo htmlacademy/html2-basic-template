@@ -5,7 +5,7 @@
   margin: 0;
 
   &--checkbox {
-    padding-bottom: 81px;
+    padding-bottom: 25px;
   }
 
   &--freeze {
@@ -49,6 +49,16 @@
       padding-bottom: 35px;
     }
   }
+
+  @include desktop {
+    &--checkbox {
+      padding-bottom: 50px;
+    }
+
+    &--add {
+      padding-bottom: 42px;
+    }
+  }
 }
 
 .form__list {
@@ -81,8 +91,10 @@
   }
 
   @include tablet {
-    column-gap: 50px;
-    row-gap: 10px;
+    &--checkbox {
+      column-gap: 50px;
+      row-gap: 10px;
+    }
 
     &--freeze {
       display: grid;
@@ -103,9 +115,37 @@
       row-gap: 36px;
     }
   }
+
+  @include desktop {
+    &--checkbox {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      column-gap: 48px;
+    }
+
+    &--freeze {
+      display: flex;
+      flex-direction: row;
+      column-gap: 48px;
+    }
+
+    &--radio {
+      column-gap: 48px;
+      padding-left: 3px;
+    }
+
+    &--contacts {
+      grid-template-columns: auto 1fr;
+      column-gap: 24px;
+    }
+  }
 }
 
 .form__item {
+  &--klu {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
   @include tablet {
     &--br {
       grid-column: 1/2;
@@ -177,6 +217,58 @@
       grid-column: 2/3;
     }
   }
+
+  @include desktop {
+    &--br {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    &--kl {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+
+    &--mo {
+      grid-column: 5/6;
+      grid-row: 1/2;
+    }
+
+    &--vi {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    &--klu {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+
+    &--ch {
+      grid-column: 5/6;
+      grid-row: 2/3;
+    }
+
+    &--go {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    &--kr {
+      grid-column: 4/5;
+      grid-row: 1/2;
+    }
+
+    &--ej {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    &--ma {
+      grid-column: 4/5;
+      grid-row: 2/3;
+    }
+  }
 }
 
 .form__title {
@@ -236,6 +328,23 @@
       padding-bottom: 2px;
     }
   }
+
+  @include desktop {
+    padding-bottom: 41px;
+
+    &--radio {
+      padding-bottom: 48px;
+    }
+
+    &--name {
+      text-align: left;
+      padding-bottom: 50px;
+    }
+
+    &--add {
+      padding-bottom: 2px;
+    }
+  }
 }
 
 .form__control-label {
@@ -264,6 +373,12 @@
       letter-spacing: 0;
     }
   }
+
+  @include desktop {
+    &--delivery {
+      width: 216px;
+    }
+  }
 }
 
 .form__control {
@@ -275,6 +390,18 @@
 
   &--delivery {
     padding-left: 34px;
+  }
+
+  &:hover .form__control-mark {
+    border: 1px solid $green-hover;
+  }
+
+  &:active .form__control-mark {
+    background-color: 1px solid $green-hover;
+  }
+
+  &:focus .form__control-mark {
+    outline: 1px solid $green-hover;
   }
 }
 
@@ -295,11 +422,53 @@
   }
 }
 
+.form__control-input[type="checkbox"]:checked + .form__control-mark::after {
+  position: absolute;
+  mask-image: url("../../images/icons/stack.svg#selected");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $green;
+  width: 24px;
+  height: 24px;
+  border: none;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form__control-input[type="checkbox"]:checked + .form__control-mark:hover::after {
+  background-color: $green-hover;
+}
+
+.form__control-input[type="radio"]:checked + .form__control-mark::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $green;
+  width: 10px;
+  height: 10px;
+  border: none;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.form__control-input[type="radio"]:checked + .form__control-mark:hover::after {
+  background-color: $green-hover;
+}
+
+.form__control-input:focus + .form__control-mark {
+  outline: 1px auto $green-hover;
+}
+
 .form__input-all {
   padding: 16px 12px;
   border-radius: 20px;
   border: 1px solid $green;
-  color: $leaf-grey;
+  color: $main-text;
   font-family: inherit;
   font-size: 16px;
   font-style: normal;
@@ -329,6 +498,27 @@
       min-height: 144px;
       min-width: 624px;
     }
+  }
+
+  &:hover {
+    border-color: $green-hover;
+  }
+
+  &:focus {
+    border-color: transparent;
+    outline: 1px solid $green-hover;
+  }
+
+  &:disabled {
+    border-color: $leaf-grey;
+  }
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: $error;
   }
 }
 
@@ -367,4 +557,8 @@
     padding: 16px 104px 18px 104px;
     width: 336px;
   }
+}
+
+.form__control-input:disabled + .form__control-mark {
+  border: 1px solid $leaf-grey;
 }

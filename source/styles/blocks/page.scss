@@ -15,11 +15,19 @@
     .page__logo-wrapper::before {
       background-color: $green-hover;
     }
+
+    .page__logo-text {
+      color: $green-hover;
+    }
   }
 
   &:active {
     .page__logo-wrapper::before {
       background-color: $green-disabled;
+    }
+
+    .page__logo-text {
+      color: $green-disabled;
     }
   }
 
@@ -30,6 +38,10 @@
 
   @include desktop {
     left: 11px;
+
+    &--form {
+      top: 50%;
+    }
   }
 }
 
@@ -90,6 +102,7 @@
 
 .page__logo-text {
   display: none;
+  color: $green;
 
   @include tablet {
     display: block;
@@ -180,7 +193,7 @@
   }
 
   @include desktop {
-    top: 55%;
+    top: 50%;
     left: 163px;
   }
 }
@@ -199,13 +212,26 @@
   @include tablet {
     font-size: 16px;
   }
+
+  &:hover {
+    color: $green-hover;
+  }
+
+  &:active {
+    color: $green-disabled;
+  }
 }
 
 .page__footer-html-img {
   padding-left: 8px;
 
   @include tablet {
-    width: 34px;
+    width: 35px;
     height: 36px;
+  }
+
+  @include desktop {
+    width: 32px;
+    height: 48px;
   }
 }

@@ -230,7 +230,8 @@
       </ul>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title page__title container">Где забрать <span class="contacts__title-berry">ягоды?</span></h2>
+      <h2 class="contacts__title page__title container">Где забрать <span class="contacts__title-berry">ягоды?</span>
+      </h2>
       <p class="contacts__info contacts__info--title">Забери ягоды с нашего склада по адресу:</p>
       <div class="contacts__wrapper container">
         <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
@@ -238,6 +239,8 @@
         <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
       </div>
       <div class="contacts__map">
+        <div id="map" class="contacts__ymap"></div>
+        <noscript>
         <picture class="contacts__map-wrapper">
           <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
             media="(min-width: 1440px)">
@@ -249,6 +252,7 @@
           <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x" width="320" height="372"
             alt="Карта">
         </picture>
+      </noscript>
       </div>
     </section>
   </main>
@@ -297,6 +301,10 @@
       <span class="visually-hidden">Логотип html academy</span>
     </a>
   </footer>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e7c66693-e05c-42de-8da5-daaf062d9b85&lang=ru_RU">
+  </script>
+
 </body>
 
 </html>

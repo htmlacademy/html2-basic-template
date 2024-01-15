@@ -19,6 +19,18 @@
 
 .main-nav__item {
   min-width: 112px;
+
+  &:hover {
+    .main-nav__item-link {
+      color: $green-hover;
+    }
+  }
+
+  &:active {
+    .main-nav__item-link {
+      color: $green;
+    }
+  }
 }
 
 .main-nav__item-link {

@@ -17,12 +17,12 @@
 </head>
 
 <body class="page__body no-js">
-  <header class="main-header">
+  <header class="main-header main-header--form">
     <!-- Навигация -->
     <div class="main-header__wrapper main-header__wrapper--form">
       <a class="main-header__logo page__logo page__logo--form" href="index.html">
         <div class="main-header__logo-main-wrapper page__logo-wrapper">
-          <svg  class="main-header__logo-main page__logo-main" width="36" height="44" viewBox="0 0 36 44">
+          <svg class="main-header__logo-main page__logo-main" width="36" height="44" viewBox="0 0 36 44">
             <use href="images/icons/stack.svg#logo-main"></use>
           </svg>
         </div>
@@ -34,20 +34,20 @@
       <button class="main-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
     <nav class="main-header__nav main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="index.html">Каталог</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="№">Новости</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">Контакты</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="form.html">Заказать</a>
-          </li>
-        </ul>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__item-link" href="index.html">Каталог</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__item-link" href="№">Новости</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__item-link" href="#">Контакты</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__item-link" href="form.html">Заказать</a>
+        </li>
+      </ul>
     </nav>
 
   </header>
@@ -69,7 +69,8 @@
         </picture>
       </div>
       <p class="hero-inner__title page__title">Закажи ягоды</p>
-      <p class="hero-inner__description page__text container">Мы соберем для вас ягоды и&nbsp;доставим их в удобном для&nbsp;вас&nbspвиде - свежими или
+      <p class="hero-inner__description page__text container">Мы соберем для вас ягоды и&nbsp;доставим их в удобном<br
+          class="hero-inner__description-text"> для вас виде - свежими или
         замороженными</p>
     </section>
     <section class="order">
@@ -80,7 +81,7 @@
         <!-- Выбор ягод чекбокс -->
         <fieldset class="form__fieldset form__fieldset--checkbox">
           <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox container container--form">
-            <legend class="form__title form__title--checkbox">Выберите ягоды</legend>
+            <h2 class="form__title form__title--checkbox">Выберите ягоды</h2>
             <ul class="form__list form__list--checkbox">
               <li class="form__item form__item--br form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
@@ -91,7 +92,7 @@
               </li>
               <li class="form__item form__item--kr form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
-                  <input class="form__control-input visually-hidden" type="checkbox" name="gooseberry" checked>
+                  <input class="form__control-input visually-hidden" type="checkbox" name="gooseberry">
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">крыжовник</span>
                 </label>
@@ -119,7 +120,7 @@
               </li>
               <li class="form__item form__item--mo form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
-                  <input class="form__control-input visually-hidden" type="checkbox" name="cloudberry">
+                  <input class="form__control-input visually-hidden" type="checkbox" name="cloudberry" disabled>
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">морошка</span>
                 </label>
@@ -133,7 +134,7 @@
               </li>
               <li class="form__item form__item--ch form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
-                  <input class="form__control-input visually-hidden" type="checkbox" name="blueberry">
+                  <input class="form__control-input visually-hidden" type="checkbox" name="blueberry" disabled>
                   <span class="form__control-mark"></span>
                   <span class="form__control-label">черника</span>
                 </label>
@@ -159,7 +160,7 @@
         <!-- Выбор вида хранения чекбокс -->
         <fieldset class="form__fieldset form__fieldset--freeze">
           <div class="form__fieldset-wrapper form__fieldset-wrapper--checkbox container container--form">
-            <legend class="form__title form__title--freeze">Вид хранения</legend>
+            <h2 class="form__title form__title--freeze">Вид хранения</h2>
             <ul class="form__list form__list--freeze">
               <li class="form__item form__item-control form__item-control--checkbox">
                 <label class="form__control form__control--checkbox">
@@ -189,21 +190,23 @@
         <!-- Радиокнопки выбора -->
         <fieldset class="form__fieldset form__fieldset--radio">
           <div class="form__fieldset-wrapper container container--form">
-            <legend class="form__title form__title--radio">Способ доставки</legend>
+            <h2 class="form__title form__title--radio">Способ доставки</h2>
             <ul class="form__list form__list--radio">
               <li class="form__item form__item-control form__item-control--radio">
                 <label class="form__control form__control--delivery">
-                  <input class="form__control-input visually-hidden" type="radio" name="programs-group" value="delivery"
-                    checked>
+                  <input class="form__control-input visually-hidden" type="radio" name="programs-group"
+                    value="delivery">
                   <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__control-label form__control-label--delivery">Доставка<br>(по СПБ в пределах &thinsp;КАД)</span>
+                  <span class="form__control-label form__control-label--delivery">Доставка<br>(по СПБ в пределах
+                    &thinsp;КАД)</span>
                 </label>
               </li>
               <li class="form__item form__item-control form__item-control--radio">
                 <label class="form__control form__control--delivery">
                   <input class="form__control-input visually-hidden" type="radio" name="programs-group" value="stock">
                   <span class="form__control-mark form__control-mark--radio"></span>
-                  <span class="form__control-label form__control-label--stock">Самовывоз<br>(Набережная Обводного канала, 101)</span>
+                  <span class="form__control-label form__control-label--stock">Самовывоз<br>(Набережная Обводного
+                    канала, 101)</span>
                 </label>
               </li>
             </ul>
@@ -212,7 +215,7 @@
 
         <fieldset class="form__fieldset form__fieldset--contacts">
           <div class="form__fieldset-wrapper container container--form container--contacts">
-            <legend class="form__title form__title--name">Ваши контакты</legend>
+            <h2 class="form__title form__title--name">Ваши контакты</h2>
             <ul class="form__list form__list--contacts">
 
               <li class="form__item form__item--name">
@@ -222,7 +225,8 @@
               </li>
 
               <li class="form__item form__item--tel">
-                <label class="form__item-name" for="fild-about-tel">Телефон<span class="form__item-star">*</span></label>
+                <label class="form__item-name" for="fild-about-tel">Телефон<span
+                    class="form__item-star">*</span></label>
                 <input class="form__input-all" type="tel" id="fild-about-tel" name="fild-about-tel"
                   placeholder="+7 xxx xxx xx xx" required>
               </li>
@@ -238,21 +242,24 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--address">
-          <div class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
-            <legend class="form__title form__title--add">Адрес<span class="form__item-star">*</span></legend>
+          <div
+            class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
+            <h2 class="form__title form__title--add">Адрес<span class="form__item-star">*</span></h2>
             <div class="form__wrapper-input">
-              <input class="form__input-all form__input-all--address" id="fild-about-address"
-                name="fild-about-comment" placeholder="Адрес в Санкт-Петербурге" required>
+              <input class="form__input-all form__input-all--address" id="fild-about-address" name="fild-about-comment"
+                placeholder="Адрес в Санкт-Петербурге" required>
             </div>
           </div>
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--add">
-          <div class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
-            <legend class="form__title form__title--add form__title--addorder">Пожелания к заказу<span class="form__item-star">*</span></legend>
+          <div
+            class="form__fieldset-wrapper form__fieldset-wrapper--input container container--form container--contacts">
+            <h2 class="form__title form__title--add form__title--addorder">Пожелания к заказу<span
+                class="form__item-star">*</span></h2>
             <div class="form__wrapper-input">
-              <textarea class="form__input-all form__input-all--order" id="fild-about-comment"
-                name="fild-about-comment" placeholder="Чем мы можем вам помочь?" required></textarea>
+              <textarea class="form__input-all form__input-all--order" id="fild-about-comment" name="fild-about-comment"
+                placeholder="Чем мы можем вам помочь?" required></textarea>
             </div>
           </div>
         </fieldset>
@@ -260,7 +267,8 @@
       </form>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title contacts__title--form page__title container">Где забрать <span class="contacts__title-berry">ягоды?</span></h2>
+      <h2 class="contacts__title contacts__title--form page__title container">Где забрать <span
+          class="contacts__title-berry">ягоды?</span></h2>
       <p class="contacts__info contacts__info--title">Забери ягоды с нашего склада по адресу:</p>
       <div class="contacts__wrapper container">
         <address class="contacts__info contacts__info--address">Набережная Обводного канала, 101</address>
@@ -268,6 +276,8 @@
         <a class="contacts__info contacts__info--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
       </div>
       <div class="contacts__map">
+        <div id="map" class="contacts__ymap"></div>
+        <noscript>
         <picture class="contacts__map-wrapper">
           <source type="images/webp" srcset="image/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x"
             media="(min-width: 1440px)">
@@ -279,6 +289,7 @@
           <img class="contacts__map-img" src="images/map@1x.jpg" srcset="images/map@2x.jpg 2x" width="320" height="372"
             alt="Карта">
         </picture>
+      </noscript>
       </div>
     </section>
   </main>
@@ -327,6 +338,10 @@
       <span class="visually-hidden">Логотип html academy</span>
     </a>
   </footer>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e7c66693-e05c-42de-8da5-daaf062d9b85&lang=ru_RU">
+  </script>
+
 </body>
 
 </html>

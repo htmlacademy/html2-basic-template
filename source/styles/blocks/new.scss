@@ -75,7 +75,7 @@
 
 .new__item {
   position: relative;
-  padding: 41px 20px 69px 18px;
+  padding: 41px 17px 69px 18px;
   border: 2px solid $green;
   border-radius: 40px;
   width: 268px;
@@ -90,7 +90,7 @@
   }
 
   &--discount {
-    padding: 29px 20px 69px 18px;
+    padding: 28px 16px 70px 19px;
 
     @include tablet {
       padding: 31px 36px 103px 34px;
@@ -98,7 +98,7 @@
   }
 
   &--mix {
-    padding: 52px 17px 69px 20px;
+    padding: 51px 15px 70px 18px;
 
     @include tablet {
       padding: 63px 33px 104px 34px;

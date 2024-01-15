@@ -158,11 +158,21 @@
   }
 }
 
+.contacts__ymap {
+  display: block;
+  z-index: 3;
+  height: 372px;
+  position: relative;
+}
+
 .contacts__map-img {
-  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 372px;
   object-fit: cover;
   display: block;
+  width: 100%;
 }
 
 .contacts__map {
@@ -170,5 +180,6 @@
     grid-column: 1/2;
     grid-row: 1/4;
     padding-left: 156px;
+    width: 710px;
   }
 }

@@ -26,6 +26,10 @@
       height: 42px;
       bottom: 73px;
     }
+
+    @include desktop {
+      bottom: 62px;
+    }
   }
 }
 
@@ -37,6 +41,10 @@
   @include tablet {
     width: 532px;
     padding: 102px 0 51px 0;
+  }
+
+  @include desktop {
+    padding-bottom: 47px;
   }
 }
 
@@ -62,5 +70,17 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.2px;
+  }
+
+  @include desktop {
+    width: 550px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+
+.hero-inner__description-text {
+  @include desktop {
+    display: none;
   }
 }
