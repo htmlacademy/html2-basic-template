@@ -1,6 +1,10 @@
 .contacts {
   margin-bottom: 60px;
 
+  &--form {
+    margin-bottom: 63px;
+  }
+
   @include tablet {
     margin-bottom: 100px;
   }
@@ -27,7 +31,7 @@
 
   @include desktop {
     margin: 0;
-    padding-left: 136px;
+    padding-left: 132px;
     justify-content: flex-start;
   }
 }
@@ -54,7 +58,7 @@
   @include desktop {
     width: 550px;
     margin: 0;
-    padding-bottom: 58px;
+    padding-bottom: 60px;
   }
 }
 
@@ -116,9 +120,10 @@
   @include desktop {
     padding-right: 0;
     margin: 0;
-    padding-left: 100px;
+    padding-left: 91px;
     width: 505px;
     padding-top: 13px;
+    padding-bottom: 26px;
   }
 }
 
