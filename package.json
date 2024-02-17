@@ -30,7 +30,7 @@
     "optimize:vector": "gulp optimizeVector"
   },
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "2.0.8",
+    "@htmlacademy/editorconfig-cli": "2.0.9",
     "@linthtml/linthtml": "0.9.5",
     "autoprefixer": "10.4.17",
     "browser-sync": "3.0.2",
