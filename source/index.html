@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page__body">
+  <header class="header" data-test="header">
+    <div class="header__wrapper">
+      <a class="header__logo" href="#">
+        <img class="header__logo-image" src="#" alt="Логотип Drink2Go">
+      </a>
+      <div class="header__description-wrapper">
+        <p class="header__show-description">
+          Интернет-магазин кофейных напитков
+        </p>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list main-nav">
+          <li class="main-nav__item main-nav__item--current">Главная</li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Каталог</a>
+          </li>
+          <li class="main-nav__item">Доставка</li>
+          <li class="main-nav__item">О нас</li>
+        </ul>
+        <div class="header__nav-wrapper nav-user">
+          <a class="nav-user__enter" href="#">картинка</a>
+          <a class="nav-user__basket" href="#">картинка</a>
+          <button class="nav-user__burger-button" type="button" aria-label="Открывает меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+</body>
+
 </html>
