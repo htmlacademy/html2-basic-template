@@ -2,12 +2,99 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go Декаф Флэт Уайт</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="main-header">
+      <div class="main-header__container container">
+        <div class="main-header__logo">
+          <a class="main-header__link logo" href="index.html" aria-current="page">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-image-desktop.svg" width="70" height="59">
+              <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg" width="60" height="50">
+              <img class="logo__image" src="img/logo-image-mobile.svg" width="33" height="38" alt="Логотип Drink2Go.">
+            </picture>
+          </a>
+          <div class="main-header__nav">
+            <button class="main-header__toggle main-header__toggle--closed" type="button">
+              <span class="visually-hidden">Войти</span>
+            </button>
+            <button class="main-header__toggle main-header__toggle--closed" type="button">
+              <span class="visually-hidden">Корзина</span>
+            </button>
+            <button class="main-header__toggle main-header__toggle--closed" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
+        </div>
+        <nav class="main-nav main-nav--index main-nav--closed">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item site-list__item--current">
+                <a class="site-list__link" href="index.html" aria-current="page">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="delivery.html">Доставка</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="about-us.html">О нас</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main-container">
+      <section class="main-container__section hero">
+        <div class="hero__wrapper container">
+          <span class="main_container-badge">Новинка!</span>
+          <h1 class="main-container__title">Декаф Флэт Уайт</h1>
+          <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop.png, img/index-can-desktop@2x.png 2x" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png, img/index-can-tablet@2x.png 2x" width="709" height="609">
+            <img class="hero__product-image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Белая банка кофе Drink2Go.">
+          </picture>
+        </div>
+        <div class="hero__price">
+          <span class="hero__price-old">295₽</span>
+          <span class="hero__price-new">225₽</span>
+          <a class="hero__link button button--index" href="catalog.html">Заказать</a>
+        </div>
+      </section>
+      <section class="main-container__section advantages">
+        <div class="advantages__container container">
+          <span class="main_container-badge">Преимущества</span>
+          <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <h3 class="advantages__item-title">Скорость</h3>
+              <p class="advantages__text advantages__text--speed">Готовый напиток всегда под рукой — просто открой банку</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__item-title">Удобство</h3>
+              <p class="advantages__text advantages__text--fit">Легко помещается и в карман, и в маленькую сумочку</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__item-title">Бодрость</h3>
+              <p class="advantages__text advantages__text--energy">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__item-title">Экологичность</h3>
+              <p class="advantages__text advantages__text--eco">Вся упаковка сделана из перерабатываемых материалов</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="main-container__section catalog">
+        <div class="catalog__container container">
+        </div>
+      </section>
   </body>
 </html>
