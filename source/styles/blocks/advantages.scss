@@ -1,0 +1,13 @@
+.advantages {
+  text-align: center;
+}
+
+.advantages__title {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.advantages__list {
+  @include list;
+}

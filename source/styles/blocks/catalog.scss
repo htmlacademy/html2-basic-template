@@ -1,0 +1,49 @@
+.catalog__title {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.catalog__sorting {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.catalog__select {
+  color: $base-primary;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  background-color: inherit;
+}
+
+.catalog__list {
+  @include list;
+}
+
+.catalog__item-title {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.catalog__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.catalog__button {
+  color: $base-white;
+  background-color: $base-primary;
+  border: none;
+}
+
+.catalog__pagination-list {
+  @include list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -1,0 +1,15 @@
+.main-container__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.main-container__badge {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $base-primary;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}

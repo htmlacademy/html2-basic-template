@@ -2,6 +2,15 @@
 @import "./global/variables.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/mixins.scss";
+@import "./global/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/container.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/filter.scss";

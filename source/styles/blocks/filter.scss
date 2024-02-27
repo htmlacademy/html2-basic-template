@@ -1,0 +1,38 @@
+.filter {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter__title {
+  font-weight: 600;
+}
+
+.filter__range-input {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.filter__range-input--from {
+  color: $base-grey;
+}
+
+.filter__set {
+  border: none;
+}
+
+.filter__button {
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+}
+
+.filter__button--submit {
+  background-color: $base-primary;
+  color: $base-white;
+}
+
+.filter__button--reset {
+  background-color: $base-white;
+  color:$base-primary;
+}

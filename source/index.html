@@ -5,6 +5,7 @@
     <title>Drink2Go Декаф Флэт Уайт</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preload" href="fonts/Montserrat/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
@@ -18,17 +19,6 @@
               <img class="logo__image" src="img/logo-image-mobile.svg" width="33" height="38" alt="Логотип Drink2Go.">
             </picture>
           </a>
-          <div class="main-header__nav">
-            <button class="main-header__toggle main-header__toggle--closed" type="button">
-              <span class="visually-hidden">Войти</span>
-            </button>
-            <button class="main-header__toggle main-header__toggle--closed" type="button">
-              <span class="visually-hidden">Корзина</span>
-            </button>
-            <button class="main-header__toggle main-header__toggle--closed" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-          </div>
         </div>
         <nav class="main-nav main-nav--index main-nav--closed">
           <div class="main-nav__wrapper">
@@ -48,6 +38,17 @@
             </ul>
           </div>
         </nav>
+        <div class="main-header__nav">
+          <button class="main-header__button" type="button">
+            <span class="visually-hidden">Войти</span>
+          </button>
+          <button class="main-header__button" type="button">
+            <span class="visually-hidden">Корзина</span>
+          </button>
+          <button class="main-header__toggle main-header__toggle--closed" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
       </div>
     </header>
     <main class="main-container">
@@ -62,7 +63,7 @@
             <img class="hero__product-image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Белая банка кофе Декаф Флэт Уайт.">
           </picture>
         </div>
-        <div class="hero__price">
+        <div class="hero__price container">
           <span class="hero__price-old">295₽</span>
           <span class="hero__price-new">225₽</span>
           <a class="hero__link button button--index" href="catalog.html">Заказать</a>
@@ -120,7 +121,7 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset class="filter__milk">
+            <fieldset class="filter__set">
               <legend class="filter__title">Наличие молока</legend>
               <label class="filter__label">
                 <input class="filter__radio visually-hidden" type="radio" name="milk" value="does not matter" checked="checked">
@@ -143,7 +144,7 @@
                 <span class="filter__mark">Без молока</span>
               </label>
             </fieldset>
-            <fieldset class="filter__country">
+            <fieldset class="filter__set">
               <legend class="filter__title">Страна произрастания</legend>
               <label class="filter__label">
                 <input class="filter__box visually-hidden" type="checkbox" name="country" value="Brazil" checked="checked">
@@ -171,9 +172,9 @@
                 <span class="filter__check">Перу</span>
               </label>
             </fieldset>
-            <div class="filter__button">
-              <button class="filter__submit" type="submit">Применить</button>
-              <button class="filter__reset" type="reset">Сбросить</button>
+            <div class="filter__button-container">
+              <button class="filter__button filter__button--submit" type="submit">Применить</button>
+              <button class="filter__button filter__button--reset" type="reset">Сбросить</button>
             </div>
           </form>
           <div class="catalog__sorting">
@@ -198,7 +199,7 @@
                 <p class="catalog__text">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               </a>
               <span class="catalog__price">225₽</span>
-              <button class="catalog__button button" type="button">В корзину</button>
+              <button class="catalog__button" type="button">В корзину</button>
             </li>
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -212,7 +213,7 @@
                 <p class="catalog__text">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               </a>
               <span class="catalog__price">225₽</span>
-              <button class="catalog__button button" type="button">В корзину</button>
+              <button class="catalog__button" type="button">В корзину</button>
             </li>
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -222,11 +223,11 @@
                     <img class="catalog__image" loading="lazy" src="images/catalog/item-1@1x.jpg" srcset="images/catalog/item-1@2x.jpg 2x" width="130" height="188" alt="Чёрная банка кофе Декаф Флэт Уайт.">
                   </picture>
                 </div>
-                <h4 class="catalog__title">Декаф Флэт Уайт</h4>
+                <h4 class="catalog__item-title">Декаф Флэт Уайт</h4>
                 <p class="catalog__text">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               </a>
               <span class="catalog__price">225₽</span>
-              <button class="catalog__button button" type="button">В корзину</button>
+              <button class="catalog__button" type="button">В корзину</button>
             </li>
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -240,7 +241,7 @@
                 <p class="catalog__text">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               </a>
               <span class="catalog__price">225₽</span>
-              <button class="catalog__button button" type="button">В корзину</button>
+              <button class="catalog__button" type="button">В корзину</button>
             </li>
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -254,7 +255,7 @@
                 <p class="catalog__text">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               </a>
               <span class="catalog__price">225₽</span>
-              <button class="catalog__button button" type="button">В корзину</button>
+              <button class="catalog__button" type="button">В корзину</button>
             </li>
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -268,7 +269,7 @@
                 <p class="catalog__text">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               </a>
               <span class="catalog__price">225₽</span>
-              <button class="catalog__button button" type="button">В корзину</button>
+              <button class="catalog__button" type="button">В корзину</button>
             </li>
           </ul>
           <ul class="catalog__pagination-list">

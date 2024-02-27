@@ -1,0 +1,19 @@
+.hero {
+  font-family: $montserrat-font;
+  text-align: center;
+}
+
+.hero__price {
+  line-height: 32px;
+}
+
+.hero__price-old {
+  font-size: 16px;
+  color: $base-primary;
+  text-decoration: line-through;
+}
+
+.hero__price-new {
+  font-size: 20px;
+  font-weight: 600;
+}
