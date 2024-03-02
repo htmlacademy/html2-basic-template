@@ -24,7 +24,6 @@
     "lint:html": "linthtml build/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
     "lint:styles": "stylelint \"source/styles/**/*.scss\"",
-
     "lint:scripts": "eslint . --ignore-path .gitignore --ignore-pattern vendor/",
     "optimize": "npm-run-all -p optimize:**",
     "optimize:raster": "gulp optimizeRaster",
@@ -33,7 +32,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "3.0.0",
     "@linthtml/linthtml": "0.9.5",
-    "autoprefixer": "10.4.17",
+    "autoprefixer": "10.4.18",
     "browser-sync": "3.0.2",
     "browserslist-to-esbuild": "2.1.1",
     "eslint": "8.57.0",
