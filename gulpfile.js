@@ -18,6 +18,8 @@ import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 
+import { getProjectRoot } from './.github/utils/getProjectRoot.js';
+
 const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
 const PATH_TO_SOURCE = './source/';
@@ -35,9 +37,16 @@ const PATHS_TO_STATIC = [
 ];
 let isDevelopment = true;
 
+const data = {
+  project: {
+    name: 'Cat Energy',
+    root: getProjectRoot(),
+  },
+};
+
 export function processMarkup () {
   return src(`${PATH_TO_SOURCE}**/*.html`)
-    .pipe(nunjucksCompile())
+    .pipe(nunjucksCompile(data))
     .pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
     .pipe(dest(PATH_TO_DIST))
     .pipe(server.stream());
