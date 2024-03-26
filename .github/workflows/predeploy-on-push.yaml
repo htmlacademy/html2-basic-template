@@ -1,4 +1,4 @@
-name: Deploy to GitHub-Pages
+name: Prepare for deploy on push to master branch
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  deploy:
-    name: Deploy
+  predeploy-on-push:
+    name: Predeploy on push to master branch
 
     permissions:
       contents: write
@@ -36,6 +36,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          REPO_NAME: ${{ github.event.repository.name }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
