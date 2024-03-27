@@ -6,11 +6,6 @@ import { nunjucksCompile } from 'gulp-nunjucks';
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import postcss from 'gulp-postcss';
-import postImport from 'postcss-import';
-import postUrl from 'postcss-url';
-import sass from '@csstools/postcss-sass';
-import autoprefixer from 'autoprefixer';
-import csso from 'postcss-csso';
 import { createGulpEsbuild } from 'gulp-esbuild';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
 import sharp from 'gulp-sharp-responsive';
@@ -56,16 +51,7 @@ export function processStyles () {
         this.emit('end');
       },
     }))
-    .pipe(postcss([
-      postImport({
-        plugins: [
-          sass(),
-        ],
-      }),
-      postUrl({ assetsPath: '../' }),
-      autoprefixer(),
-      csso()
-    ]))
+    .pipe(postcss())
     .pipe(rename({ extname: '.css' }))
     .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
     .pipe(server.stream());
