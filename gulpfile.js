@@ -4,12 +4,8 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import { nunjucksCompile } from 'gulp-nunjucks';
 import htmlmin from 'gulp-htmlmin';
-import * as dartSass from 'sass';
-import gulpSass from 'gulp-sass';
+import rename from 'gulp-rename';
 import postcss from 'gulp-postcss';
-import postUrl from 'postcss-url';
-import autoprefixer from 'autoprefixer';
-import csso from 'postcss-csso';
 import { createGulpEsbuild } from 'gulp-esbuild';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
 import sharp from 'gulp-sharp-responsive';
@@ -19,7 +15,6 @@ import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 
 const { src, dest, watch, series, parallel } = gulp;
-const sass = gulpSass(dartSass);
 const PATH_TO_SOURCE = './source/';
 const PATH_TO_DIST = './build/';
 const PATH_TO_RAW = './raw/';
@@ -49,14 +44,17 @@ export function lintBem () {
 }
 
 export function processStyles () {
+  const context = { isDevelopment };
+
   return src(`${PATH_TO_SOURCE}styles/*.scss`, { sourcemaps: isDevelopment })
-    .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([
-      postUrl({ assetsPath: '../' }),
-      autoprefixer(),
-      csso()
-    ]))
+    .pipe(plumber({
+      errorHandler(err) {
+        console.error(err.message); // eslint-disable-line
+        this.emit('end');
+      },
+    }))
+    .pipe(postcss(context))
+    .pipe(rename({ extname: '.css' }))
     .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
     .pipe(server.stream());
 }
