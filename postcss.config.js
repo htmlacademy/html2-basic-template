@@ -13,7 +13,16 @@ export default function (context) {
       },
       'postcss-url': [
         {
-          assetsPath: '../',
+          filter: '**/*',
+          url: 'rebase',
+        },
+        {
+          filter: '**/icons/**/*.svg',
+          url: (asset) => asset.url.replace(
+            /icons\/(.+?)\.svg$/,
+            (match, p1) => `icons/stack.svg#${p1.replace(/\//g, '_')}`
+          ),
+          multi: true,
         },
       ],
       'postcss-lightningcss': {
