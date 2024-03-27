@@ -44,6 +44,8 @@ export function lintBem () {
 }
 
 export function processStyles () {
+  const context = { isDevelopment };
+
   return src(`${PATH_TO_SOURCE}styles/*.scss`, { sourcemaps: isDevelopment })
     .pipe(plumber({
       errorHandler(err) {
@@ -51,7 +53,7 @@ export function processStyles () {
         this.emit('end');
       },
     }))
-    .pipe(postcss())
+    .pipe(postcss(context))
     .pipe(rename({ extname: '.css' }))
     .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
     .pipe(server.stream());

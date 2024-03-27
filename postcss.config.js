@@ -1,6 +1,8 @@
 import sass from '@csstools/postcss-sass';
 
-export default function () {
+export default function (context) {
+  const { isDevelopment } = context;
+
   return {
     parser: 'postcss-scss',
     plugins: {
@@ -14,8 +16,11 @@ export default function () {
           assetsPath: '../',
         },
       ],
-      'autoprefixer': {},
-      'postcss-csso': {},
+      'postcss-lightningcss': {
+        'lightningcssOptions': {
+          'minify': !isDevelopment,
+        },
+      },
     },
   };
 }
