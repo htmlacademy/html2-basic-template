@@ -29,7 +29,6 @@ const PATHS_TO_STATIC = [
   `${PATH_TO_SOURCE}favicons/**/*.{png,svg}`,
   `${PATH_TO_SOURCE}vendor/**/*`,
   `${PATH_TO_SOURCE}images/**/*`,
-  `!${PATH_TO_SOURCE}images/icons/**/*`,
   `!${PATH_TO_SOURCE}**/README.md`,
 ];
 let isDevelopment = true;
@@ -112,9 +111,9 @@ export function optimizeVector () {
 }
 
 export function createStack () {
-  return src(`${PATH_TO_SOURCE}images/icons/**/*.svg`)
+  return src(`${PATH_TO_SOURCE}icons/**/*.svg`)
     .pipe(stacksvg())
-    .pipe(dest(`${PATH_TO_DIST}images/icons`));
+    .pipe(dest(`${PATH_TO_DIST}icons`));
 }
 
 export function copyStatic () {
@@ -150,7 +149,7 @@ export function startServer () {
   watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
-  watch(`${PATH_TO_SOURCE}images/icons/**/*.svg`, series(createStack, reloadServer));
+  watch(`${PATH_TO_SOURCE}icons/**/*.svg`, series(createStack, reloadServer));
   watch(PATHS_TO_STATIC, series(reloadServer));
 }
 
