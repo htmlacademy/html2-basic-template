@@ -1,6 +1,6 @@
 import { readFileSync, rmSync } from 'node:fs';
 
-import gulp from 'gulp';
+import { src, dest, watch, series, parallel } from 'gulp';
 import plumber from 'gulp-plumber';
 import { nunjucksCompile } from 'gulp-nunjucks';
 import htmlmin from 'gulp-htmlmin';
@@ -18,7 +18,6 @@ import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 
-const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
 const PATH_TO_SOURCE = './source/';
 const PATH_TO_DIST = './build/';
