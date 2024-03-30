@@ -80,7 +80,7 @@
 │   ├── styles/                 # Папка для препроцессорных файлов sass
 │   │   ├── blocks/             # Стили БЭМ-блоков
 │   │   │   └── header.scss     # Стили для конкретного БЭМ-блока
-│   │   ├── global              # Файл для подключения стилей библиотек из папки
+│   │   ├── common/             # Папка для общих стилей (не БЭМ-блоки)
 │   │   │   ├── fonts.scss      # Подключение шрифтов к проекту
 │   │   │   ├── global.scss     # Глобальные стили, которые касаются всего проекта
 │   │   │   └── variables.scss  # Переменные для всего проекта
@@ -146,20 +146,20 @@
     └── styles/
         ├── blocks/
         │   └── header.scss
-        ├── global
+        ├── common/
         │   ├── fonts.scss
         │   ├── global.scss
         │   └── variables.scss
         └── styles.scss
 ```
 
-Все БЭМ-блоки и остальные препроцессорные файлы подключайте в `source/styles/styles.scss`.
+Все БЭМ-блоки и остальные препроцессорные файлы подключайте в `source/styles/styles.scss`:
 
 ```scss
-/* GLOBAL */
-@import "./global/variables.scss";
-@import "./global/global.scss";
-@import "./global/fonts.scss";
+/* COMMON */
+@import "./common/variables.scss";
+@import "./common/global.scss";
+@import "./common/fonts.scss";
 
 /* BLOCKS */
 @import "./blocks/header.scss";
@@ -167,7 +167,7 @@
 
 БЭМ-блоки импортируйте в секцию `/* BLOCKS */`.
 
-Все препроцессорные файлы сборка обработает и превратит в `styles.css`. Файл `styles.css` сборка перенесёт в
+Все препроцессорные файлы сборка обработает и превратит в `styles.css`. Файл `styles.css` сборка перенесёт в:
 
 ```shell
 └── build/
