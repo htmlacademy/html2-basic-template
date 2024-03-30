@@ -43,7 +43,7 @@ export function processMarkup () {
 }
 
 export function lintBem () {
-  return src(`${PATH_TO_SOURCE}*.html`)
+  return src(`${PATH_TO_DIST}**/*.html`)
     .pipe(bemlinter());
 }
 
