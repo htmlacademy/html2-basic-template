@@ -8,8 +8,7 @@ import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
-import autoprefixer from 'autoprefixer';
-import csso from 'postcss-csso';
+import lightningcss from 'postcss-lightningcss';
 import { createGulpEsbuild } from 'gulp-esbuild';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
 import sharp from 'gulp-sharp-responsive';
@@ -52,8 +51,11 @@ export function processStyles () {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       postUrl({ assetsPath: '../' }),
-      autoprefixer(),
-      csso()
+      lightningcss({
+        lightningcssOptions: {
+          minify: !isDevelopment,
+        },
+      })
     ]))
     .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
     .pipe(server.stream());
