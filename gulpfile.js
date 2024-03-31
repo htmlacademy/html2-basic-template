@@ -50,7 +50,20 @@ export function processStyles () {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      postUrl({ assetsPath: '../' }),
+      postUrl([
+        {
+          filter: '**/*',
+          assetsPath: '../',
+        },
+        {
+          filter: '**/icons/**/*.svg',
+          url: (asset) => asset.url.replace(
+            /icons\/(.+?)\.svg$/,
+            (match, p1) => `icons/stack.svg#${p1.replace(/\//g, '_')}`
+          ),
+          multi: true,
+        },
+      ]),
       lightningcss({
         lightningcssOptions: {
           minify: !isDevelopment,
