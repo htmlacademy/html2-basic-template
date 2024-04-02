@@ -35,7 +35,7 @@
     "browserslist-to-esbuild": "2.1.1",
     "eslint": "8.57.0",
     "eslint-config-htmlacademy": "10.0.1",
-    "gulp": "5.0.0",
+    "gulp": "4.0.2",
     "gulp-esbuild": "0.12.0",
     "gulp-html-bemlinter": "3.0.1",
     "gulp-htmlmin": "5.0.1",
