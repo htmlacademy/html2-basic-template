@@ -2,7 +2,6 @@ import { readFileSync, rmSync } from 'node:fs';
 
 import { src, dest, watch, series, parallel } from 'gulp';
 import plumber from 'gulp-plumber';
-import { nunjucksCompile } from 'gulp-nunjucks';
 import htmlmin from 'gulp-htmlmin';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -34,14 +33,13 @@ let isDevelopment = true;
 
 export function processMarkup () {
   return src(`${PATH_TO_SOURCE}**/*.html`)
-    .pipe(nunjucksCompile())
     .pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
     .pipe(dest(PATH_TO_DIST))
     .pipe(server.stream());
 }
 
 export function lintBem () {
-  return src(`${PATH_TO_DIST}**/*.html`)
+  return src(`${PATH_TO_SOURCE}**/*.html`)
     .pipe(bemlinter());
 }
 
