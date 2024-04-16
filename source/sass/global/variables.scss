@@ -1,1 +1,72 @@
-/* здесь используйте глобальные переменные */
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-neon-blue: #2c39f2;
+$color-torch-red: #ff1553;
+$color-dark-brown: #484848;
+$color-light-blue: #316dc2;
+$color-endeavour: #275699;
+$color-cerulean-blue: #316dc2;
+$color-alabaster: #f0efe9;
+$color-charcoal: #484848;
+$color-wild-watermelon: #ff5e66;
+$color-navy-blue: #0266c1;
+
+$color-photo-overlay:                    rgba(#316dc2, 20%);
+$color-form-overlay:                    rgba(#0d1d33, 40%);
+
+
+// Gradient
+
+$black-to-right: linear-gradient(
+  90deg,
+  rgba(0, 0, 0, 0.75) 0%,
+  rgba(0, 0, 0, 0) 75%
+);
+$color-form-overlay:                    rgba(#0d1d33, 40%);
+$main-gradient: linear-gradient(
+  200deg,
+  #5413A7 0%,
+  #9C55F5 75%
+);
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default: 16px;
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-montserrat: "Montserrat", "Arial", sans-serif;
+$ff-manrope: "Manrope", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default: ease;
+$trans-default: 1s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-600: 0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-1200: 1200px;
+$vp-768: 768px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

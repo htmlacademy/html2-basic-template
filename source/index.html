@@ -5,10 +5,83 @@
     <title>Название проекта</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Manrope-Light.woff2 " as="font" type="font/woff2" crossorigin="anonymous">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
+  <body class="container">
+    <header class="header" data-name="header">
+      <a class="header__logo-link" href="index.html" aria-current="page" data-name="header-logo">
+        <img src="./img/botozz.png" width="82" height="52" alt="Переход на главную страницу.">
+      </a>
+    </header>
+    <section class="form">
+        <div class="form__inner">
+          <div class="form__inner-wrapper">
+            <h1 class="form__title">Адаптация и благополучие сотрудников</h2>
+            <p class="form__text">Оставьте заявку на&nbsp;создание корпоративного чат-бота.</p>
+            <div class="form__wrapper" data-form-validate data-callback="base">
+              <form method="post" action="https://echo.htmlacademy.ru/">
+                <div class="form__inner-wrapper">
+                  <div class="custom-input form__input" data-validate-type="text" data-limitation="name" data-required="data-required">
+                    <input type="text" name="Имя" placeholder="Имя" id="name-second-from" aria-label="Введите ваше имя."/>
+                  </div>
+                  <div class="custom-input form__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                    <input type="tel" name="Телефон" placeholder="Телефон" id="mobile-number-second-from" aria-label="Введите ваш телефон."/>
+                  </div>
+                  <div class="auto-resize-textarea form__textarea custom-input form__input" data-validate-type="text" data-limitation="name" data-required="data-required">
+                    <textarea name="Комментарий" rows="2" placeholder="Комментарий" aria-label="textarea"></textarea>
+                  </div>
+                  <div class="form__checkbox-wrapper">
+                    <div class="custom-toggle custom-toggle--checkbox form__checkbox" data-validate-type="checkbox" data-message-base="">
+                      <label>
+                        <input type="checkbox" value="Согласие на звонок" name="user-agreement" tabindex="-1"/>
+                        <span class="custom-toggle__icon form__toggle-icon" tabindex="0">
+                        </span>
+                        <span class="custom-toggle__label form__checkbox-label">Позвонить</span>
+                      </label>
+                    </div>
+                    <div class="custom-toggle custom-toggle--checkbox form__checkbox" data-validate-type="checkbox" data-message-base="">
+                      <label>
+                        <input type="checkbox" value="Согласие на смс в вотсап" name="user-agreement" tabindex="-1"/>
+                        <span class="custom-toggle__icon form__toggle-icon" tabindex="0">
+                        </span>
+                        <span class="custom-toggle__label form__checkbox-label">Написать в WhatsApp</span>
+                      </label>
+                    </div>
+                  </div>
+                  <button class="form__button general-button general-button--dark" aria-label="Отправить форму обратной связи." data-open-modal="modal-1">
+                    <span>Отправить</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="form__inner-img">
+            <picture>
+              <img src="./img/phone.png" width="410"
+                height="459" alt="Фотография руки с телефоном.">
+            </picture>
+          </div>
+        </div>
+    </section>
+    <footer class="footer"></footer>
 
-    <script src="js/script.js" defer></script>
+    <section class="modal modal--preload" data-modal="modal-1">
+      <div class="modal__wrapper masa-modal">
+        <div class="modal__overlay" data-close-modal="data-close-modal"></div>
+            <div class="masa-modal__container">
+              <button class="masa-modal__button-close" type="button" aria-label="Закрыть попап." data-close-modal="data-close-modal" data-focus="data-focus">
+                <img src="./img/cross.svg" width="10" height="10" alt="Закрыть попап.">
+              </button>
+              <h3>Спасибо! Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 30&nbsp;минут.</h3>
+            </div>
+      </div>
+    </section>
+    <script src="js/vendor.min.js" type="module"></script>
+    <script src="js/main.min.js" type="module"></script>
   </body>
 </html>

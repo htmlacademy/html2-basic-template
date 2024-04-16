@@ -1,0 +1,466 @@
+.masa-modal {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 90px;
+
+  background-color: transparent;
+  border: none;
+
+  @include vp-1199 {
+    padding: 204px 129px 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-width: 320px;
+    padding: 23px 0 0;
+  }
+}
+
+.masa-modal__container {
+  position: relative;
+
+  max-width: 510px;
+  margin: 0 auto;
+  padding: 53px 80px 60px;
+
+  background-color: $color-default-white;
+  border-radius: 16px;
+
+  @include vp-1199 {
+    width: 100%;
+    max-width: unset;
+    min-height: 510px;
+    padding: 55px 80px 60px;
+  }
+
+  @include vp-767 {
+    width: 90.6%;
+    min-width: 290px;
+    padding: 37px 15px 40px;
+  }
+}
+
+.masa-modal__button-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  width: 22px;
+  height: 22px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include vp-767 {
+    top: 18px;
+    right: 23px;
+
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.masa-modal__icon {
+  @include vp-767 {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.masa-modal__container h3 {
+  margin: 0;
+  margin-bottom: 7px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: $color-light-blue;
+
+  @include vp-1199 {
+    margin-bottom: 13px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.masa-modal__container p {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: $color-dark-brown;
+
+  @include vp-1199 {
+    margin-bottom: 21px;
+
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
+    padding: 0 10px;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.masa-modal__container br {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.masa-modal__input {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 17px;
+  padding: 0;
+
+  @include vp-1199 {
+    margin-bottom: 16px;
+  }
+}
+
+.masa-modal__input label {
+  display: block;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(72, 72, 72, 0.8);
+
+  @include vp-1199 {
+    margin-bottom: 7px;
+
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 7px;
+
+    line-height: 14px;
+  }
+}
+
+.masa-modal__input input {
+  padding: 16px 25px;
+
+  font-size: 14px;
+
+  background-color: transparent;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
+
+  @include vp-767 {
+    padding: 13px 25px;
+  }
+
+  &:disabled {
+    background: rgba(169, 175, 183, 0.2);
+    border: 1px solid rgba(169, 175, 183, 0.5);
+  }
+
+  &:hover {
+    border: 1px solid $color-charcoal;
+  }
+
+  &:focus {
+    border: 1px solid $color-charcoal;
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 1px solid $color-charcoal;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid $color-charcoal;
+    outline: none;
+  }
+
+  &:hover + label {
+    color: $color-charcoal;
+  }
+
+  &:focus + label {
+    color: $color-charcoal;
+  }
+
+  &:focus-visible + label {
+    color: $color-charcoal;
+  }
+
+  &:active + label {
+    color: $color-charcoal;
+  }
+}
+
+.masa-modal__select {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 12px;
+}
+
+.is-open .masa-modal__button-select {
+  border: 1px solid $color-dark-brown;
+}
+
+.masa-modal__select-list {
+  max-height: 182px;
+
+  border: 1px solid $color-dark-brown;
+  border-radius: 8px;
+}
+
+.masa-modal__select-item {
+  padding: 17px 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-dark-brown;
+}
+
+.masa-modal__select-item:hover:not(.focus-visible) {
+  color: $color-default-white;
+
+  background-color: $color-light-blue;
+}
+
+.masa-modal__select p {
+  display: block;
+  margin: 0;
+  margin-bottom: 7px;
+  padding: 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: start;
+  color: rgba(72, 72, 72, 0.8);
+
+  @include vp-1199 {
+    margin-bottom: 6px;
+
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    line-height: 14px;
+  }
+}
+
+.masa-modal__button-select {
+  min-height: 50px;
+  padding: 10px 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #484848;
+
+  border: 1px solid rgba(72, 72, 72, 0.3);
+
+  @include vp-767 {
+    min-height: 44px;
+  }
+
+  &:hover {
+    border: 1px solid $color-dark-brown;
+  }
+
+  &:focus {
+    border: 1px solid $color-dark-brown;
+  }
+
+  &:focus-visible {
+    border: 1px solid $color-dark-brown;
+  }
+
+  &:hover + p {
+    color: $color-charcoal;
+  }
+
+  &:focus + p {
+    color: $color-charcoal;
+  }
+
+  &:focus-visible + p {
+    color: $color-charcoal;
+  }
+
+  &:active + p {
+    color: $color-charcoal;
+  }
+}
+
+.masa-modal__checkbox {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.masa-modal__checkbox:last-of-type {
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 29px;
+  padding: 0;
+
+  @include vp-767 {
+    margin-top: -6px;
+    margin-bottom: 7px;
+  }
+}
+
+.masa-modal__checkbox-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-dark-brown;
+
+  opacity: 0.9;
+}
+
+.masa-modal__checkbox label {
+  padding-left: 30px;
+}
+
+.custom-toggle--checkbox .masa-modal__toggle-icon,
+.custom-toggle--radio .masa-modal__toggle-icon {
+  top: 6px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid rgba(49, 109, 194, 0.7);
+  border-radius: 2px;
+
+  @include vp-767 {
+    top: 12px;
+  }
+
+  &:hover {
+    background-color: rgba(49, 109, 194, 0.7);
+    border: 1px solid transparent;
+  }
+
+  &:focus-visible {
+    background-color: rgba(49, 109, 194, 0.7);
+    border: 1px solid transparent;
+    outline: none;
+  }
+
+  &:active {
+    background-color: rgba(49, 109, 194, 0.7);
+    border: 1px solid transparent;
+    outline: none;
+  }
+}
+
+.custom-toggle--checkbox .masa-modal__toggle-icon::before,
+.custom-toggle--radio .masa-modal__toggle-icon::before {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-toggle input:checked + .masa-modal__toggle-icon::before {
+  width: 10px;
+  height: 10px;
+
+  background-color: transparent;
+  background-image: url("../img/svg/check-white.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+}
+
+.custom-toggle input:checked + .masa-modal__toggle-icon {
+  background-color: $color-light-blue;
+  border: 1px solid $color-light-blue;
+
+  &:hover {
+    background-color: transparent;
+
+    &::before {
+      background-image: url("../img/svg/check.svg");
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+
+    &::before {
+      background-image: url("../img/svg/check.svg");
+    }
+  }
+
+  &:focus-visible {
+    background-color: transparent;
+
+    &::before {
+      background-image: url("../img/svg/check.svg");
+    }
+  }
+}
+
+.is-invalid.custom-toggle--checkbox .masa-modal__toggle-icon,
+.custom-toggle--radio .masa-modal__toggle-icon {
+  background: rgba(255, 94, 102, 0.2);
+  border: 1px solid $color-wild-watermelon;
+  opacity: 0.7;
+}
+
+.masa-modal__button {
+  width: 194px;
+  margin: 0 auto;
+
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.masa-modal__select-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-dark-brown;
+}

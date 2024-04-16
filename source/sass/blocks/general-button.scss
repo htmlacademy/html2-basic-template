@@ -1,0 +1,211 @@
+.general-button {
+  //display: grid;
+  //align-items: center;
+  margin-left: 140px;
+  padding: 3px 3px 3px 29px;
+
+  color: $color-light-blue;
+  word-break: break-all;
+
+  background-color: $color-default-black;
+  border: 1px solid $color-default-black;
+  border-radius: 30px;
+  cursor: pointer;
+
+  user-select: none;
+
+  gap: 29px;
+  grid-template-columns: 1fr 46px;
+
+  @include vp-767 {
+    width: 100%;
+    padding: 3px 3px 3px 19px;
+
+    gap: 19px;
+    grid-template-columns: 1fr 34px;
+  }
+
+  &:hover {
+    color: $color-default-white;
+
+    background-color: $color-default-black;
+  }
+
+  &:focus {
+    color: $color-default-white;
+
+    background-color: $color-default-black;
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: $color-default-white;
+
+    background-color: $color-default-black;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+
+    background-color: $color-default-black;
+    outline: none;
+  }
+}
+
+.general-button span {
+  max-width: 280px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+}
+
+.general-button__icon-wrapper {
+  width: 46px;
+  height: 46px;
+  background-color: $color-default-black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: $color-default-white;
+  color: $color-default-white;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.general-button:hover .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: $color-light-blue;
+  transform: rotate(45deg);
+  color: $color-light-blue;
+  transition: 1;
+}
+
+.general-button:focus .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: $color-light-blue;
+  color: $color-light-blue;
+  transform: rotate(45deg);
+}
+
+.general-button:focus-visible .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: $color-light-blue;
+  color: $color-light-blue;
+  transform: rotate(45deg);
+}
+
+.general-button:active .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: rgba(49, 109, 194, 0.7);
+  color: rgba(49, 109, 194, 0.7);
+  transform: rotate(45deg);
+}
+
+.general-button__icon {
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 22px;
+  width: 22px;
+  right: -5px;
+  position: relative;
+  top: 5px;
+}
+
+.general-button--dark {
+  color: $color-default-white;
+  max-width: 270px;
+  text-align: center;
+  padding: 20px 30px;
+  border-radius: 20px;
+  grid-template-columns: 1fr;
+
+  background-color: $color-default-black;
+  border: 1px solid $color-default-black;
+
+  &:hover {
+    color: $color-default-black;
+    fill: $color-default-white;
+
+    background-color: $color-default-white;
+  }
+
+  &:focus {
+    color: $color-default-black;
+    fill: $color-default-white;
+
+    background-color: $color-default-white;
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: $color-default-white;
+    fill: $color-default-white;
+
+    background-color: $color-default-black;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-default-white;
+    fill: $color-default-black;
+
+    background-color: $color-default-black;
+    outline: none;
+  }
+}
+
+.general-button--dark .general-button__icon-wrapper {
+  background-color: $color-default-white;
+
+  stroke: $color-light-blue;
+  color: $color-light-blue;
+}
+
+.general-button--dark:hover .general-button__icon-wrapper {
+  background-color: $color-light-blue;
+  transform: rotate(45deg);
+
+  stroke: $color-default-white;
+  color: $color-default-white;
+}
+
+.general-button--dark:focus .general-button__icon-wrapper {
+  background-color: $color-light-blue;
+  transform: rotate(45deg);
+
+  stroke: $color-default-white;
+  color: $color-default-white;
+}
+
+.general-button--dark:focus-visible .general-button__icon-wrapper {
+  background-color: $color-light-blue;
+  transform: rotate(45deg);
+
+  stroke: $color-default-white;
+  color: $color-default-white;
+}
+
+.general-button--dark:active .general-button__icon-wrapper {
+  background-color: $color-light-blue;
+  transform: rotate(45deg);
+
+  stroke: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+}
