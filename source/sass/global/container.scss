@@ -1,0 +1,8 @@
+.container {
+  width: 100%;
+  flex-grow: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 70px;
+  background-image: $main-gradient;
+}
