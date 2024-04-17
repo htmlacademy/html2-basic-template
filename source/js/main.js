@@ -1,8 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import {initModals} from './modals/init-modals';
 import {Form} from './form';
 import {CustomSelect} from './custom-select';
-
 
 window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();

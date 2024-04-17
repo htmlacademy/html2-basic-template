@@ -21,9 +21,8 @@ $color-charcoal: #484848;
 $color-wild-watermelon: #ff5e66;
 $color-navy-blue: #0266c1;
 
-$color-photo-overlay:                    rgba(#316dc2, 20%);
-$color-form-overlay:                    rgba(#0d1d33, 40%);
-
+$color-photo-overlay: rgba(#316dc2, 20%);
+$color-form-overlay: rgba(#0d1d33, 40%);
 
 // Gradient
 
@@ -32,12 +31,8 @@ $black-to-right: linear-gradient(
   rgba(0, 0, 0, 0.75) 0%,
   rgba(0, 0, 0, 0) 75%
 );
-$color-form-overlay:                    rgba(#0d1d33, 40%);
-$main-gradient: linear-gradient(
-  200deg,
-  #5413A7 0%,
-  #9C55F5 75%
-);
+$color-form-overlay: rgba(#0d1d33, 40%);
+$main-gradient: linear-gradient(200deg, #5413a7 0%, #9c55f5 75%);
 // Typography
 // ---------------------------------
 

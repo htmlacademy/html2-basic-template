@@ -3,7 +3,6 @@
   position: relative;
 
   display: flex;
-  width: 530px;
   padding: 14px 0 28px;
 
   @media screen and (max-width: 767px) {
@@ -101,3 +100,13 @@
     }
   }
 }
+
+
+.custom-textarea {
+  width: 530px;
+
+  &::placeholder  {
+    color: #000000;
+  }
+}
+

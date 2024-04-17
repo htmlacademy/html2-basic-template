@@ -70,80 +70,11 @@
   }
 }
 
-.form__img img {
-  width: 100%;
-  height: 100%;
+.form__inner-wrapper-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
-
-/*.form__inner {
-  position: relative;
-  z-index: 2;
-
-  max-width: 498px;
-  padding: 82px 74px 51px;
-
-  //background-color: $color-light-blue;
-  border-radius: 16px;
-
-  @include vp-1199 {
-    max-width: 65.2%;
-    padding: 60px 45px 58px;
-  }
-
-  @include vp-767 {
-    max-width: 100%;
-    padding: 51px 15px 50px;
-  }
-}
-
-.form__inner h2 {
-  margin: 0;
-  margin-bottom: 25px;
-  padding: 0;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 36px;
-  color: $color-default-white;
-
-  @include vp-1199 {
-    margin-bottom: 28px;
-
-    font-size: 28px;
-    line-height: 28px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 17px;
-
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-
-.form__inner p {
-  margin: 0;
-  margin-bottom: 19px;
-  padding: 0;
-
-  line-height: 26px;
-  color: $color-alabaster;
-
-  opacity: 0.9;
-
-  @include vp-1199 {
-    margin-bottom: 31px;
-
-    line-height: 20px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 25px;
-
-    font-size: 14px;
-  }
-}*/
 
 .form__input {
   position: relative;
