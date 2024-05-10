@@ -37,7 +37,7 @@
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "4.0.2",
     "gulp-esbuild": "0.12.0",
-    "gulp-html-bemlinter": "3.0.1",
+    "gulp-html-bemlinter": "4.0.0",
     "gulp-htmlmin": "5.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "10.0.0",
@@ -50,7 +50,7 @@
     "postcss": "8.4.38",
     "postcss-lightningcss": "1.0.0",
     "postcss-url": "10.1.3",
-    "sass": "1.76.0",
+    "sass": "1.77.0",
     "stylelint": "16.5.0",
     "stylelint-config-htmlacademy": "4.2.1",
     "w3c-html-validator": "1.8.1"
