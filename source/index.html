@@ -9,7 +9,56 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+
+    <header class="header">
+      <a href="#" class="header__logo">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logos/logo-desktop.svg" width="170" height="36" alt="">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logos/logo-tablet.svg" width="82" height="36" alt="">
+          <img class="header__logo-image" src="images/logos/logo-mobile.svg" width="32" height="36" alt="Drink2Go. Интернет-магазин по продаже кофейных напитков.">
+        </picture>
+      </a>
+      <div class="nav">
+        <button class="nav__button nav--closed" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="nav__wrapper">
+          <ul class="nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <span class="site-list__item-link">Главная</span>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__item-link">Каталог</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__item-link">Доставка</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__item-link">О нас</a>
+            </li>
+          </ul>
+          <ul class="nav__list user-list">
+            <li class="user-list__item">
+              <a href="#" class="user-list__login">
+                <svg class="user-list__login-icon" width="16" height="16">
+                  <use href="icons/stack.svg#user"></use>
+                </svg>
+                <span class="visually-hidden">Войти</span>
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a href="#" class="user-list__basket">
+                <svg class="user-list__basket-icon" width="16" height="16">
+                  <use href="icons/stack.svg#basket"></use>
+                </svg>
+                <span class="visually-hidden">Корзина</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
     <main>
       <h1>Страница для старта</h1>
     </main>
