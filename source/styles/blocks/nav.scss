@@ -1,0 +1,94 @@
+.nav {
+  display: flex;
+  flex-direction: row-reverse;
+  // align-items: center;
+  margin-left: auto;
+
+  font-family: $medium-font;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.nav__button {
+  display: block;
+  margin: 0;
+  // padding: 22px;
+  padding: 0 22px;
+  background: transparent;
+  border: 0;
+
+  @include viewport-tablet {
+    display: none;
+  }
+}
+
+.nav__button::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.nav__button--closed::before {
+  background-image: url("../../icons/stack.svg#burger");
+}
+
+.nav__button--opened::before {
+  background-image: url("../../icons/stack.svg#close");
+}
+
+.nav__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav__list {
+  @include reset-list;
+
+  text-align: center;
+}
+
+// .nav__list-item {
+//   // display: flex;
+// }
+
+.nav__list-item:hover,
+.nav__list-item:focus,
+.nav__list-item:active {
+  color: $base-primary;
+}
+
+.nav__list-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  color: $base-black;
+  text-decoration: none;
+
+  @include viewport-tablet {
+    // padding: 32px 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+
+    &::before {
+      background-color: $base-primary;
+    }
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+}
+
+// .nav__list-link:hover::before,
+// .nav__list-link:focus::before {
+//   background-color: $base-primary;
+// }
