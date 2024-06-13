@@ -16,6 +16,10 @@
     transform: translateY(-100%);
   }
 
+  @include viewport-desktop {
+    margin-right: 162px;
+  }
+
   &--closed {
     transform: translateY(-100%);
 
@@ -33,16 +37,11 @@
   }
 }
 
-// .site-list__item {
-//   padding: 20px;
-// }
-
 .site-list__item--active {
   background-color: $base-secondary;
 
   @include viewport-tablet {
     background-color: $base-white;
-    // border-bottom: 2px solid $base-primary;
   }
 }
 

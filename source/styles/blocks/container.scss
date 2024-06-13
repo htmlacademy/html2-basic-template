@@ -1,0 +1,14 @@
+.container {
+  padding: 0 var(--padding-offset);
+  margin: 0 auto;
+  width: 100%;
+  max-width: $tablet-width;
+
+  @include viewport-tablet {
+    max-width: $desktop-width;
+  }
+
+  @include viewport-desktop {
+    --padding-offset: 40px;
+  }
+}
