@@ -1,0 +1,116 @@
+.features {
+  padding: 50px 0 60px;
+
+  @include viewport-tablet {
+    padding: 60px 0 100px;
+  }
+
+  @include viewport-desktop {
+    padding: 100px 0 120px;
+  }
+}
+
+.features__title {
+  &::before {
+    content: "Преимущества";
+  }
+}
+
+.features-list {
+  @include reset-list;
+
+  display: grid;
+  gap: 32px;
+  max-width: 280px;
+  margin: 0 auto;
+
+  @include viewport-tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 30px;
+    max-width: 708px;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: $desktop-width;
+  }
+}
+
+.features-list__item {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  display: grid;
+  grid-template-areas:
+    "icon"
+    "title"
+    "description";
+  justify-items: center;
+  text-align: center;
+
+  @include viewport-tablet {
+    grid-template-areas:
+      "icon title"
+      "icon description";
+    column-gap: 20px;
+    justify-items: start;
+    text-align: left;
+  }
+
+  @include viewport-desktop {
+    grid-template-areas:
+      "icon"
+      "title"
+      "description";
+    justify-items: center;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    grid-area: icon;
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin-bottom: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--speed::before {
+    background-image: url("../../icons/stack.svg#speed");
+  }
+
+  &--fit::before {
+    background-image: url("../../icons/stack.svg#fit");
+  }
+
+  &--energy::before {
+    background-image: url("../../icons/stack.svg#energy");
+  }
+
+  &--eco::before {
+    background-image: url("../../icons/stack.svg#eco");
+  }
+}
+
+.features-list__item-title {
+  grid-area: title;
+  margin-bottom: 4px;
+
+  @include viewport-tablet {
+    margin-bottom: 10px;
+  }
+}
+
+.features-list__item-description {
+  grid-area: description;
+  margin: 0;
+
+  @include viewport-tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
