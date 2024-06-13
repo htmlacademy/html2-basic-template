@@ -1,10 +1,11 @@
 .site-list {
   position: absolute;
-  top: 60px;
   right: 0;
   left: 0;
   background-color: $base-white;
   border-top: 1px solid $base-secondary;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
 
   @include viewport-tablet {
     position: relative;
@@ -12,6 +13,23 @@
     display: flex;
     margin-right: 60px;
     border: 0;
+    transform: translateY(-100%);
+  }
+
+  &--closed {
+    transform: translateY(-100%);
+
+    @include viewport-tablet {
+      transform: translateY(0);
+    }
+  }
+
+  &--opened {
+    transform: translateY(60px);
+
+    @include viewport-tablet {
+      transform: translateY(0);
+    }
   }
 }
 

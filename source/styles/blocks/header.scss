@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  // align-items: center;
   min-height: 60px;
   padding: 0;
   padding-left: 20px;
@@ -19,6 +18,7 @@
 .header__logo {
   display: block;
   align-self: center;
+  z-index: 3;
 
   @include viewport-desktop {
     margin-right: 20px;
@@ -31,8 +31,11 @@
 
 .header__description {
   display: none;
+  font-size: 12px;
+  line-height: 16px;
 
   @include viewport-desktop {
+    display: block;
     align-self: center;
   }
 }
