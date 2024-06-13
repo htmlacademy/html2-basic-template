@@ -2,15 +2,17 @@
   position: absolute;
   right: 0;
   left: 0;
+  flex-direction: column;
   background-color: $base-white;
   border-top: 1px solid $base-secondary;
   transform: translateY(0);
   transition: transform 0.5s ease-in-out;
+  z-index: 1;
 
   @include viewport-tablet {
     position: relative;
     top: 0;
-    display: flex;
+    flex-direction: row;
     margin-right: 60px;
     border: 0;
     transform: translateY(-100%);

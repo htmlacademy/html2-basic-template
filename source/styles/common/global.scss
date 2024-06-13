@@ -10,8 +10,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: $regular-font;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-black;
 }
 
 img {
@@ -31,4 +32,56 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.custom-br {
+  display: block;
+}
+
+.title {
+  margin: 0;
+  font-family: $bold-font;
+
+  &--md {
+    font-size: 24px;
+    line-height: 36px;
+
+    @include viewport-tablet {
+      font-size: 42px;
+      line-height: 64px;
+    }
+  }
+
+  &--sm {
+    font-size: 18px;
+    line-height: 32px;
+
+    @include viewport-tablet {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+.section-title {
+  margin-bottom: 36px;
+  text-align: center;
+
+  @include viewport-tablet {
+    margin-bottom: 60px;
+  }
+
+  @include viewport-desktop {
+    margin-bottom: 80px;
+  }
+
+  &::before {
+    position: relative;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $base-primary;
+  }
 }
