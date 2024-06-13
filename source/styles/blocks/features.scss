@@ -1,0 +1,17 @@
+.features {
+  padding: 50px 0 60px;
+
+  @include viewport-tablet {
+    padding: 60px 0 100px;
+  }
+
+  @include viewport-desktop {
+    padding: 100px 0 120px;
+  }
+}
+
+.features__title {
+  &::before {
+    content: "Преимущества";
+  }
+}
