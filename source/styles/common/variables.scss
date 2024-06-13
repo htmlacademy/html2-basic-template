@@ -1,1 +1,35 @@
 /* здесь используйте глобальные переменные */
+
+:root {
+  --padding-offset: 20px;
+}
+
+// COLORS
+
+$base-white: #ffffff;
+$base-grey: #bdbdbd;
+$base-black: #333333;
+$base-primary: #7859cf;
+$base-secondary: #f0ebff;
+
+$primary-opacity: rgba(120, 89, 207, 0.25);
+$primary-lighter: #9070ec;
+$primary-darker: #593cac;
+
+$light-grey: #e2e2e2;
+$lightest-grey: #f8f8f8;
+$flat-white: #f3ebe1;
+$lavender-latte: #eae6fc;
+$espresso: #e5e6e8;
+
+// FONTS
+
+$regular-font: "Montserrat-Regular", "Arial", sans-serif;
+$medium-font: "Montserrat-Medium", "Arial", sans-serif;
+$semibold-font: "Montserrat-SemiBold", "Arial", sans-serif;
+$bold-font: "Montserrat-Bold", "Arial", sans-serif;
+
+// VIEWPORTS
+
+$tablet-width: 768px;
+$desktop-width: 1440px;

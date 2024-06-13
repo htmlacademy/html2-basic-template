@@ -1,5 +1,58 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 60px;
+  padding: 0;
+
+  @include viewport-tablet {
+    // padding-right: 20px;
+  }
+
+  @include viewport-desktop {
+    // padding: 0 40px;
+  }
+}
+
+// .header .container {
+//   padding-right: 0;
+
+//   @include viewport-tablet {
+//     padding-right: auto;
+//   }
+// }
+
+.header__wrapper {
+  display: flex;
+  height: 100%;
+  margin-right: -20px;
+
+  @include viewport-tablet {
+    margin-right: 0;
+  }
+}
+
+.header__logo {
+  display: block;
+  align-self: center;
+  z-index: 3;
+
+  @include viewport-desktop {
+    margin-right: 20px;
+  }
+}
+
+.header__logo-image {
+  display: block;
+}
+
+.header__description {
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+
+  @include viewport-desktop {
+    display: block;
+    align-self: center;
+  }
 }
