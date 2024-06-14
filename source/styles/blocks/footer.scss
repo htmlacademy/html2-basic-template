@@ -1,0 +1,26 @@
+.footer__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.footer__logo-image {
+  display: block;
+}
+
+.footer__bottom {
+  position: relative;
+  padding: 20px 0 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    width: calc(100% + $padding-offset * 2);
+    height: 1px;
+    margin-left: -$padding-offset;
+    background-color: $base-secondary;
+  }
+}

@@ -1,0 +1,13 @@
+.copyright {
+  display: block;
+  // margin: 0 auto;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: $base-grey;
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: inherit;
+}

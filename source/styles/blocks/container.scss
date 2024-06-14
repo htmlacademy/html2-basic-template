@@ -1,5 +1,5 @@
 .container {
-  padding: 0 var(--padding-offset);
+  padding: 0 $padding-offset;
   margin: 0 auto;
   width: 100%;
   max-width: $tablet-width;
@@ -9,6 +9,6 @@
   }
 
   @include viewport-desktop {
-    --padding-offset: 40px;
+    $padding-offset: 40px;
   }
 }
