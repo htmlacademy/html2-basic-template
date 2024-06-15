@@ -2,5 +2,38 @@
   @include reset-list;
 
   display: flex;
+  align-items: center;
   gap: 20px;
+}
+
+.social-list__link {
+  display: block;
+  padding: 10px;
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $base-grey;
+    mask-image: var(--bgi);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &--vk::before {
+    --bgi: url("../../icons/stack.svg#vk");
+  }
+
+  &--pinterest::before {
+    width: 22px;
+    height: 22px;
+    --bgi: url("../../icons/stack.svg#pinterest");
+  }
+
+  &--ok::before {
+    --bgi: url("../../icons/stack.svg#ok");
+  }
 }

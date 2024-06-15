@@ -1,6 +1,6 @@
 .copyright {
-  display: block;
-  // margin: 0 auto;
+  display: inline-block;
+  width: 100%;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
@@ -8,6 +8,21 @@
 }
 
 .copyright__link {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: inherit;
+
+  &::after {
+    content: "";
+    position: relative;
+    width: 12px;
+    height: 16px;
+    margin-left: 4px;
+    background-color: $base-grey;
+    mask-image: url("../../icons/academy.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
 }

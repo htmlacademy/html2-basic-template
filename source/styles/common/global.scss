@@ -1,5 +1,9 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
 
+:root {
+  --padding-offset: 20px;
+}
+
 *,
 *::before,
 *::after {
