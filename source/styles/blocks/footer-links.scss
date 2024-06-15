@@ -70,6 +70,7 @@
   display: grid;
   grid-template-columns: 13px 1fr;
   gap: 6px;
+  padding: 8px 0;
   font-style: normal;
 
   &::before {
@@ -86,12 +87,8 @@
     mask-size: contain;
   }
 
-  &--address {
-    margin-bottom: 16px;
-
-    &::before {
-      --bgi: url("../../icons/stack.svg#address");
-    }
+  &--address::before {
+    --bgi: url("../../icons/stack.svg#address");
   }
 
   &--phone::before {
