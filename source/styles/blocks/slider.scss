@@ -1,0 +1,24 @@
+.slider__price-old {
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+}
+
+.slider__price-now {
+  font-family: $semibold-font;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.slider__title {
+  &::before {
+    content: "Новинка!";
+    position: relative;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $base-primary;
+  }
+}
