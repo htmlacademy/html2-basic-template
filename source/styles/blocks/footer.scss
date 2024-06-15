@@ -58,6 +58,10 @@
     padding: 0;
   }
 
+  @include viewport-desktop {
+    grid-column: 1 / -1;
+  }
+
   &::before {
     content: "";
     position: absolute;
