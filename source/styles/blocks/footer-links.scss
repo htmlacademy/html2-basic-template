@@ -46,18 +46,24 @@
   gap: 4px;
 }
 
-.footer-links__list-item {
-  padding: 8px 0;
-}
-
 .footer-links__link {
   display: block;
+  padding: 8px 0;
   font-family: $medium-font;
   font-size: 12px;
   line-height: 16px;
   text-decoration: none;
   text-transform: uppercase;
   color: $base-black;
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .footer-links__group-contact {
@@ -65,10 +71,6 @@
   grid-template-columns: 13px 1fr;
   gap: 6px;
   font-style: normal;
-
-  // &--address {
-  //   margin-bottom: 16px;
-  // }
 
   &::before {
     content: "";

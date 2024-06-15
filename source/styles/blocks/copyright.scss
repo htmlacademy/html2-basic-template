@@ -25,4 +25,22 @@
     mask-position: center;
     mask-size: contain;
   }
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $base-primary;
+  }
+
+  &:active {
+    color: $base-primary;
+  }
+
+  &:active::after {
+    background-color: $primary-darker;
+  }
 }

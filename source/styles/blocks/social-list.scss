@@ -36,4 +36,10 @@
   &--ok::before {
     --bgi: url("../../icons/stack.svg#ok");
   }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    background-color: $base-primary;
+  }
 }
