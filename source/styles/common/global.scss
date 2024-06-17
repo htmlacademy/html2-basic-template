@@ -49,6 +49,11 @@ img {
   &--lg {
     font-size: 36px;
     line-height: 48px;
+
+    @include viewport-desktop {
+      font-size: 56px;
+      line-height: 80px;
+    }
   }
 
   &--md {
