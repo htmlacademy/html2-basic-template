@@ -12,4 +12,17 @@
   &--accent {
     background-color: $base-primary;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &--accent:disabled {
+    background-color: $base-grey;
+  }
 }
