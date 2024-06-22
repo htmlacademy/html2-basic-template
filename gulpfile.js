@@ -1,6 +1,6 @@
 import { readFileSync, rmSync } from 'node:fs';
 
-import gulp from 'gulp';
+import { src, dest, watch, series, parallel } from 'gulp';
 import plumber from 'gulp-plumber';
 import htmlmin from 'gulp-htmlmin';
 import * as dartSass from 'sass';
@@ -10,24 +10,20 @@ import postUrl from 'postcss-url';
 import lightningcss from 'postcss-lightningcss';
 import { createGulpEsbuild } from 'gulp-esbuild';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
-import sharp from 'gulp-sharp-responsive';
-import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 
-const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
 const PATH_TO_SOURCE = './source/';
 const PATH_TO_DIST = './build/';
-const PATH_TO_RAW = './raw/';
 const PATHS_TO_STATIC = [
-  `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
   `${PATH_TO_SOURCE}*.ico`,
   `${PATH_TO_SOURCE}*.webmanifest`,
-  `${PATH_TO_SOURCE}favicons/**/*.{png,svg}`,
+  `${PATH_TO_SOURCE}favicons/**/*.{svg,png,webp}`,
+  `${PATH_TO_SOURCE}fonts/**/*.woff2`,
+  `${PATH_TO_SOURCE}images/**/*{svg,avif,webp}`,
   `${PATH_TO_SOURCE}vendor/**/*`,
-  `${PATH_TO_SOURCE}images/**/*`,
   `!${PATH_TO_SOURCE}**/README.md`,
 ];
 let isDevelopment = true;
@@ -90,40 +86,6 @@ export function processScripts () {
     .pipe(server.stream());
 }
 
-export function optimizeRaster () {
-  const RAW_DENSITY = 2;
-  const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
-
-  function createOptionsFormat() {
-    const formats = [];
-
-    for (const format of TARGET_FORMATS) {
-      for (let density = RAW_DENSITY; density > 0; density--) {
-        formats.push(
-          {
-            format,
-            rename: { suffix: `@${density}x` },
-            width: ({ width }) => Math.ceil(width * density / RAW_DENSITY),
-            jpegOptions: { progressive: true },
-          },
-        );
-      }
-    }
-
-    return { formats };
-  }
-
-  return src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`)
-    .pipe(sharp(createOptionsFormat()))
-    .pipe(dest(`${PATH_TO_SOURCE}images`));
-}
-
-export function optimizeVector () {
-  return src([`${PATH_TO_RAW}**/*.svg`])
-    .pipe(svgo())
-    .pipe(dest(PATH_TO_SOURCE));
-}
-
 export function createStack () {
   return src(`${PATH_TO_SOURCE}icons/**/*.svg`)
     .pipe(stacksvg())
@@ -131,7 +93,7 @@ export function createStack () {
 }
 
 export function copyStatic () {
-  return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE })
+  return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE, encoding: false })
     .pipe(dest(PATH_TO_DIST));
 }
 
