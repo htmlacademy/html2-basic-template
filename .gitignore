@@ -2,8 +2,7 @@ node_modules
 build
 .idea
 .DS_Store
-raw/**/*.jpg
-raw/**/*.jpeg
-raw/**/*.png
-raw/**/*.svg
-!raw/**/README.md
+source/**/*.jpg
+source/**/*.jpeg
+source/**/*.png
+!source/favicons/**/*.png
