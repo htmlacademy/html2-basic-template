@@ -25,13 +25,13 @@
     "lint:bem": "gulp lintBem --silent",
     "lint:styles": "stylelint \"source/styles/**/*.scss\"",
     "lint:scripts": "eslint . --ignore-path .gitignore --ignore-pattern vendor/",
-    "optimize": "conjure all -i source -r",
+    "optimize": "conjure all -i source -p source -r",
     "optimize:images": "conjure images -i source/images -r",
-    "optimize:favicons": "conjure favicons -i source/favicons -r",
+    "optimize:favicons": "conjure favicons -p source",
     "optimize:icons": "conjure icons -i source/icons"
   },
   "devDependencies": {
-    "@firefoxic/conjure": "1.0.3",
+    "@firefoxic/conjure": "2.0.0",
     "@htmlacademy/editorconfig-cli": "3.0.0",
     "@linthtml/linthtml": "0.9.6",
     "browser-sync": "3.0.2",
