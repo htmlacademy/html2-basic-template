@@ -20,6 +20,7 @@ jobs:
           node-version-file: 'package.json'
           cache: npm
       - run: npm ci
+      - run: npm run lint
       - run: npm run build
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
