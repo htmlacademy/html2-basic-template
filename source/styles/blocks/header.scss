@@ -1,5 +1,128 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
+  background-color: $white;
   padding: 10px 15px;
 }
+
+.header__wrapper {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    width: 320px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    display: flex;
+  }
+}
+
+.header__text-title-desktop--hidden {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.js-toggle-button {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  right: 20px;
+  z-index: 2;
+  background-color: $white;
+  display: block;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header--closed .js-toggle-button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $base-black;
+  box-shadow: 0 8px 0 0 $base-black, 0 16px 0 0 $base-black;
+}
+
+.header--closed .js-toggle-button:active::before {
+  background-color: fade($base-black, 30%);
+  box-shadow:
+    0 8px 0 0 fade($base-black, 30%),
+    0 16px 0 0 fade($base-black, 30%);
+}
+
+@media (max-width: $mobile-width-only) {
+  .header--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .header--closed .site-list__link {
+    padding-right: 70px;
+    padding-left: 70px;
+    text-align: center;
+  }
+
+  .header--opened .main-nav__wrapper {
+    width: 100%;
+    position: absolute;
+    top: 66px;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+    background-color: $white;
+  }
+
+  .header--nojs .js-toggle-button {
+    display: none;
+  }
+
+  .header--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+    display: block;
+  }
+}
+
+.header--opened .js-toggle-button {
+  @media (max-width: $mobile-width-only) {
+    background-color: $white;
+    display: block;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      right: 0;
+      width: 24px;
+      height: 1px;
+      background-color: $base-black;
+    }
+
+    &::before {
+      transform: rotate(50grad);
+    }
+
+    &::after {
+      transform: rotate(-50grad);
+      box-shadow: none;
+    }
+  }
+}
+
