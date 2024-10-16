@@ -1,13 +1,14 @@
 .header {
   background-color: $white;
-  padding: 10px 15px;
 }
 
 .header__wrapper {
+
   @media (max-width: $mobile-width-only) {
     position: relative;
     width: 320px;
-    height: 60px;
+    padding: 12px 20px;
+    min-height: 60px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -15,7 +16,17 @@
 
   @media (min-width: $tablet-width) {
     width: 768px;
+    min-height: 80px;
+    padding: 0 20px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header__logo-wrapper {
+  @media (min-width: $tablet-width) {
+    width: 145px;
   }
 }
 
@@ -32,7 +43,7 @@
   content: "";
   width: 24px;
   height: 24px;
-  right: 20px;
+  right: 33px;
   z-index: 2;
   background-color: $white;
   display: block;
@@ -108,10 +119,10 @@
     &::after {
       content: "";
       position: absolute;
-      top: 11px;
+      top: 12px;
       right: 0;
-      width: 24px;
-      height: 1px;
+      width: 18px;
+      height: 2px;
       background-color: $base-black;
     }
 
@@ -125,4 +136,3 @@
     }
   }
 }
-
