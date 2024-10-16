@@ -1,0 +1,13 @@
+.main-nav__wrapper {
+  @media (min-width: $tablet-width) {
+    width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 478px;
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+}

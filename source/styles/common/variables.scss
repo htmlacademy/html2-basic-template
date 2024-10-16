@@ -1,1 +1,29 @@
-/* здесь используйте глобальные переменные */
+/* Fonts*/
+$montserrat-regular: "Montserrat Regular", "Arial", sans-serif;
+$montserrat-medium: "Montserrat Medium", "Arial", sans-serif;
+$montserrat-semi-bold: "Montserrat Semi Bold", "Arial", sans-serif;
+$montserrat-bold: "Montserrat Bold", "Arial", sans-serif;
+
+/*Base colors*/
+$white: #ffffff;
+$base-black: #333333;
+$base-grey: #bdbdbd;
+$base-primary: #7859cf;
+$base-secondary: #f0ebff;
+
+/*Background colors*/
+$flat-white: #f3ebe1;
+$lavender-latte: #eae6fc;
+$espresso: #e5e6e8;
+$background-lightest-grey: #f8f8f8;
+
+/* Alt colors*/
+$light-grey: #e2e2e2;
+$primary-lighter: #9070ec;
+$primary-darker: #593cac;
+
+/* Width*/
+$mobile-width: 320px;
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;

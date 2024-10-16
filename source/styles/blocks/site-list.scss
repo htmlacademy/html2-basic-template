@@ -1,0 +1,25 @@
+.site-list a {
+  display: block;
+  font-family: $montserrat-medium;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  // border-bottom: 1px solid #e6e6e6;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 23px 0 22px;
+    outline-offset: unset;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

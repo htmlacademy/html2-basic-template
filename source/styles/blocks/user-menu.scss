@@ -1,0 +1,18 @@
+.user-menu {
+  @include list-reset;
+}
+
+.user-menu__wrapper {
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 478px;
+  }
+}
