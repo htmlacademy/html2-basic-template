@@ -316,3 +316,4 @@
 Таким образом, вы можете удобно организовать и внедрить сторонние библиотеки в ваш проект, сохраняя их структуру в папке `source/vendor/`.
 # cofee-shop-drink2go
 # cofee-shop-drink2go
+# html2-basic-template
