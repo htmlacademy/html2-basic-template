@@ -1,30 +1,55 @@
-# Папка для изображений.
+# Папка для отимизированных изображений
 
-Все SVG-иконки предназначенных для спрайта кладите в `images/icons/`:
-```
-images/
-  icons/
-    vk.svg
-```
-
-Остальную векторную и растровую графику кладите непосредственно в папку `images/`:
-```
-images/
-  bg.jpg
-  hero.png
-  burger.svg
+```shell
+└── source/
+    └── images/
+        ├── hero@1x.jpg
+        ├── hero@1x.webp
+        ├── hero@2x.jpg
+        ├── hero@2x.webp
+        └── logo.svg
 ```
 
-Графику можно группировать папками в `images/`:
+Отсюда файлы изображений при продакшен-сборке без изменений попадают в `build/images/`:
+
+```shell
+└── build/
+    └── images/
+        ├── hero@1x.jpg
+        ├── hero@1x.webp
+        ├── hero@2x.jpg
+        ├── hero@2x.webp
+        └── logo.svg
 ```
-images/
-  catalog/
-    product-1.jpg
-    product-2.jpg
-  form/
-    check.jpg
-    uncheck.jpg
-  bg.jpg
-  hero.png
-  burger.svg
+
+При дев-сборке изображения не копируются в `build/images/`, сервер их забирает из `source/images/`
+
+## Пример подключения изображения
+
+В стилевом файле БЭМ-блока пути должны быть валидными для исходников (как подсказывает редактор):
+
+```scss
+.hero {
+  background-image:
+    image-set(
+      url("../../images/hero@1x.webp") 1x type("image/webp"),
+      url("../../images/hero@2x.webp") 2x type("image/webp"),
+      url("../../images/hero@1x.jpg") 1x type("image/jpeg"),
+      url("../../images/hero@2x.jpg") 2x type("image/jpeg")
+    );
+}
+```
+
+Сборка сама исправит эти пути на валидные для билда:
+
+```css
+.hero {
+  background-image:
+    image-set(
+      url("../images/hero@1x.webp") 1x type("image/webp"),
+      url("../images/hero@2x.webp") 2x type("image/webp"),
+      url("../images/hero@1x.jpg") 1x type("image/jpeg"),
+      url("../images/hero@2x.jpg") 2x type("image/jpeg")
+    );
+}
 ```

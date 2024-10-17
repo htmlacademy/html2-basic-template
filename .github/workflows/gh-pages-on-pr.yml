@@ -1,13 +1,13 @@
-name: Deploy to GitHub-Pages
+name: Deploy on pull request
 
 on:
-  push:
+  pull_request_target:
     branches:
-      - master
+      - '*'
 
 jobs:
-  deploy:
-    name: Deploy
+  deploy-on-pull-request:
+    name: Deploy on Pull Request
 
     permissions:
       contents: write
@@ -18,6 +18,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: 'refs/pull/${{ github.event.pull_request.number }}/merge'
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -42,3 +44,4 @@ jobs:
         with:
           folder: ./build
           branch: gh-pages
+          target-folder: ${{ github.event.pull_request.number }}

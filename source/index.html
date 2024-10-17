@@ -1,14 +1,173 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
 
-    <script src="js/script.js" defer></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Интернет-магазин кофейных напитков drink2go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="#" type="font/woff2" as="font">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page__body">
+
+  <!--header-->
+  <header class="header header--closed header--nojs" data-test="header">
+    <div class="header__wrapper">
+      <div class="header__logo-wrapper">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" width="170" height="36" srcset="images/logo-desktop.svg">
+            <source media="(min-width: 768px)" width="82" height="36" srcset="images/logo-tablet.svg">
+            <img src="images/logo-mobile.svg" width="32" height="36" loading="lazy"
+              alt="Логотип интернет-магазина drink2go">
+          </picture>
+        </a>
+        <span class="header__text-title-desktop header__text-title-desktop--hidden">Интернет-магазин
+          кофейных напитков
+        </span>
+      </div>
+      <button class="header__toggle-menu js-toggle-button" type="button">
+        <span class="visually-hidden"> Открыть меню
+        </span>
+      </button>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item-current">
+              <a class="site-list__link" href="#">Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Каталог
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Доставка
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">О Нас
+              </a>
+            </li>
+          </ul>
+      </nav>
+      <div class="user-menu__wrapper">
+        <ul class="user-menu">
+          <li class="user-menu__item">
+            <a class="user-menu__link user-menu__enter" href="#">
+              <span class="user-menu__enter-text user-menu__enter--hidden">Войти</span>
+              <!-- <svg class="user__icon" width="16" height="30px">
+                <use xlink:href="icons/header/stack.svg#header_enter"></use>
+              </svg> -->
+            </a>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__link user-menu__cart" href="#">
+              <span class="user-menu__cart-text user-menu__cart--hidden">Корзина</span>
+              <!-- <svg class="user__icon" width="24" height="19">
+                <use xlink:href="icons/header/stack.svg#header_cart"></use>
+              </svg> -->
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!--slider-->
+    <section class="slider" data-test="slider">
+      <h1 class="visually-hidden">Интернет-магазин кофейных напитков drink2go</h1>
+      <div class="slider__wrapper">
+
+        <div class="slider__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="images/cofee-flat-white/flat-white-desktop@1x.webp 1x, images/cofee-flat-white/flat-white-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="images/cofee-flat-white/flat-white-tablet@1x.webp 1x, images/cofee-flat-white/flat-white-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="images/cofee-flat-white/flat-white-mobile@1x.webp 1x, images/cofee-flat-white/flat-white-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)"
+              srcset="images/cofee-flat-white/flat-white-desktop@1x.png 1x, images/cofee-flat-white/flat-white-desktop@2x.png 2x"
+              width="600" height="600">
+            <source media="(min-width: 768px)"
+              srcset="images/cofee-flat-white/flat-white-tablet@1x.img 1x, images/cofee-flat-white/flat-white-tablet@2x.img 2x"
+              width="476" height="476">
+            <img class="slider__img" src="images/cofee-flat-white/flat-white-mobile@1x.png"
+              srcset="images/cofee-flat-white/flat-white-mobile@1x.png 1x, images/cofee-flat-white/flat-white-mobile@2x.png 2x"
+              width="240" height="280" loading="lazy" alt="Кофе в бежевой банке Декаф Флэт Уайт">
+          </picture>
+        </div>
+        <button class="slider-button-prev"></button>
+        <button class="slider-button-next"></button>
+        <span class="slider__subtitle">Новинка!</span>
+        <h2 class="slider__title">Декаф Флэт Уайт</h2>
+        <p class="slider__description">
+          Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления
+          после тяжёлого рабочего дня
+        </p>
+        <span class="slider__price-older">295&#8381;</span>
+        <span class="slider__price">225&#8381;</span>
+        <a class="button slider__button" href="#">
+          Заказать
+        </a>
+      </div>
+    </section>
+
+    <!--features-->
+    <section class="features" data-test="features">
+      <div class="features__wrapper">
+        <span class="features__subtitle">Преимущества</span>
+        <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <h3 class="features__caption">Скорость</h3>
+            <p class="features__description">
+              Готовый напиток всегда под рукой — просто открой банку
+            </p>
+          </li>
+          <li class="features__item">
+            <h3 class="features__caption">Удобство</h3>
+            <p class="features__description">
+              Легко помещается и в карман, и в маленькую сумочку
+            </p>
+          </li>
+          <li class="features__item">
+            <h3 class="features__caption">Бодрость</h3>
+            <p class="features__description">
+              Сбалансированная доза кофеина даст мощный заряд энергии
+            </p>
+          </li>
+          <li class="features__item">
+            <h3 class="features__caption">Экологичность</h3>
+            <p class="features__description">
+              Вся упаковка сделана из перерабатываемых материалов
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--catalog-->
+    <section class="catalog" data-test="catalog">
+      <div class="catalog__wrapper">
+        <span class="catalog__subtitle">Каталог</span>
+        <h2 class="catalog__title">Каталог кофейных напитков</h2>
+        <span class="catalog__price">Цена</span>
+
+      </div>
+    </section>
+
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+
 </html>

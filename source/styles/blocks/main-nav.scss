@@ -1,0 +1,25 @@
+.main-nav__wrapper {
+  @media (min-width: $tablet-width) {
+    // width: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    // width: 478px;
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 458px;
+  }
+}

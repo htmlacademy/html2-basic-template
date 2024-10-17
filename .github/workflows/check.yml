@@ -17,10 +17,10 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: 'package.json'
 
@@ -36,3 +36,5 @@ jobs:
 
       - name: Run checks
         run: npm run lint
+        env:
+          FORCE_COLOR: true

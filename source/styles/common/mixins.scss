@@ -1,0 +1,14 @@
+ /*reset default styles (ul)*/
+ @mixin list-reset {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+ }
+
+ @mixin user-menu-base-styles {
+   content: "";
+   width: 16px;
+   height: 16px;
+   display: block;
+   background: #444444;
+ }

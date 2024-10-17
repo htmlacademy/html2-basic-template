@@ -1,0 +1,123 @@
+.site-list a {
+  display: block;
+  font-family: $montserrat-medium;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 23px 0 22px;
+    outline-offset: unset;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
+}
+
+// .site-list {
+//   @media (min-width: $tablet-width) {
+//     width: 436px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     margin: 0 auto;
+//     width: 475px;
+//   }
+// }
+
+.site-list__item {
+  // z-index: 10;
+  // position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 0;
+    display: flex;
+    width: 100px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:last-child {
+
+    @media (max-width: $mobile-width-only) {
+      border-bottom: 1px solid $base-secondary;
+    }
+  }
+}
+
+.site-list__item-current {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    color: $base-primary;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background-color: $base-primary;
+    }
+  }
+
+  // &--bg-index::after {
+  //   @media (min-width: $desktop-width) {
+  //     background-color: $text-color;
+  //   }
+  // }
+}
+
+// .site-list__link {
+//   min-width: 55px;
+//   outline-offset: 5px;
+// }
+
+// .site-list__link--bg-index {
+//   @media (min-width: $desktop-width) {
+//     color: $text-color;
+//   }
+// }
+
+// .site-list__item a[href] {
+//   @media (min-width: $tablet-width) {
+//     &:hover {
+//       transition: all 0.2s ease;
+//       opacity: 0.6;
+//     }
+
+//     &:active {
+//       opacity: 0.3;
+//     }
+//   }
+
+//   @media (max-width: $mobile-width-only) {
+//     &:hover {
+//       transition: all 0.2s ease;
+//       opacity: 0.6;
+//     }
+
+//     &:active {
+//       opacity: 0.3;
+//     }
+//   }
+// }
