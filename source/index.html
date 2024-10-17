@@ -78,19 +78,42 @@
   </header>
 
   <main class="main-container">
-    <!--Promo-->
-    <section class="promo" data-test="promo">
+    <!--slider-->
+    <section class="slider" data-test="slider">
       <h1 class="visually hidden">Интернет-магазин кофейных напитков drink2go</h1>
-      <div class="promo__wrapper">
-        <span class="promo__subtitle">Новинка!</span>
-        <h2 class="promo__title">Декаф Флэт Уайт</h2>
-        <p class="promo__desc">
+      <div class="slider__wrapper">
+
+        <div class="slider__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="images/cofee/flat-white-desktop@1x.webp 1x, images/cofee/flat-white-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="images/cofee/flat-white-tablet@1x.webp 1x, images/cofee/flat-white-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="images/cofee/flat-white-mobile@1x.webp 1x, images/cofee/flat-white-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)"
+              srcset="images/cofee/flat-white-desktop@1x.png 1x, images/cofee/flat-white-desktop@2x.png 2x"
+              width="600" height="600">
+            <source media="(min-width: 768px)"
+              srcset="images/cofee/flat-white-tablet@1x.png 1x, images/cofee/flat-white-tablet@2x.png 2x"
+              width="476" height="476">
+            <img class="slider__img" src="images/cofee/flat-white-mobile@1x.png"
+              srcset="images/cofee/flat-white-mobile@1x.png 1x, images/cofee/flat-white-mobile@2x.png 2x"
+              width="240" height="280" loading="lazy" alt="Кофе в бежевой банке Декаф Флэт Уайт">
+          </picture>
+        </div>
+        <button class="slider-button-prev"></button>
+        <button class="slider-button-next"></button>
+        <span class="slider__subtitle">Новинка!</span>
+        <h2 class="slider__title">Декаф Флэт Уайт</h2>
+        <p class="slider__description">
           Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления
           после тяжёлого рабочего дня
         </p>
-        <span class="promo__price-older">295&#8381;</span>
-        <span class="promo__price">225&#8381;</span>
-        <a class="button promo__button" href="#">
+        <span class="slider__price-older">295&#8381;</span>
+        <span class="slider__price">225&#8381;</span>
+        <a class="button slider__button" href="#">
           Заказать
         </a>
       </div>
@@ -104,25 +127,25 @@
         <ul class="features__list">
           <li class="features__item">
             <h3 class="features__caption">Скорость</h3>
-            <p class="features__desc">
+            <p class="features__description">
               Готовый напиток всегда под рукой — просто открой банку
             </p>
           </li>
           <li class="features__item">
             <h3 class="features__caption">Удобство</h3>
-            <p class="features__desc">
+            <p class="features__description">
               Легко помещается и в карман, и в маленькую сумочку
             </p>
           </li>
           <li class="features__item">
             <h3 class="features__caption">Бодрость</h3>
-            <p class="features__desc">
+            <p class="features__description">
               Сбалансированная доза кофеина даст мощный заряд энергии
             </p>
           </li>
           <li class="features__item">
             <h3 class="features__caption">Экологичность</h3>
-            <p class="features__desc">
+            <p class="features__description">
               Вся упаковка сделана из перерабатываемых материалов
             </p>
           </li>

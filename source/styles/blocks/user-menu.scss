@@ -8,16 +8,22 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    min-width: 260px;
+  }
 }
 
-.user-menu__wrapper {
-  width: 210px;
 
-  @media (min-width: $tablet-width) {
-    width: 180px;
+.user-menu__wrapper {
+  @media (max-width: $mobile-width-only) {
+    width: 210px;
   }
 
-  @media (min-width: $desktop-width) {}
+  @media (min-width: $tablet-width) {
+    // width: 180px;
+  }
 }
 
 .user-menu__item {
@@ -27,6 +33,10 @@
   height: 60px;
 
   @media (min-width: $tablet-width) {}
+
+  @media (min-width: $desktop-width) {
+    min-width: 120px;
+  }
 }
 
 .user-menu__link {
@@ -45,7 +55,6 @@
   }
 }
 
-
 .user-menu__enter {
   &::before {
     @include user-menu-base-styles;
@@ -57,5 +66,13 @@
   &::before {
     @include user-menu-base-styles;
     mask-image: url("../../icons/header/cart.svg");
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .user-menu__cart::before,
+  .user-menu__enter::before {
+    margin-right: 10px;
   }
 }
