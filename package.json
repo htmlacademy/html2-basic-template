@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": "^18.18 || ^20.9"
+    "node": "^22.18"
   },
   "browserslist": [
     "last 2 versions",
@@ -21,7 +21,7 @@
     "lint:spaces": "ec --exclude vendor/*",
     "lint:markup": "cd source && html-validator --quiet",
     "lint:html": "linthtml source/**/*.html --config .linthtmlrc",
-    "lint:bem": "gulp lintBem --silent",
+    "lint:bem": "bemlint source/**/*.html",
     "lint:styles": "stylelint \"source/styles/**/*.scss\"",
     "lint:scripts": "eslint . --ignore-path .gitignore --ignore-pattern vendor/",
     "optimize": "npm-run-all -p optimize:**",
@@ -31,29 +31,29 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "3.0.0",
     "@linthtml/linthtml": "0.9.6",
-    "browser-sync": "3.0.2",
+    "browser-sync": "3.0.4",
     "browserslist-to-esbuild": "2.1.1",
     "eslint": "8.57.0",
     "eslint-config-htmlacademy": "10.0.1",
-    "gulp": "4.0.2",
-    "gulp-esbuild": "0.12.0",
-    "gulp-html-bemlinter": "4.0.0",
+    "gulp": "5.0.1",
+    "gulp-esbuild": "0.14.1",
+    "@firefoxic/bemlint": "^6.0.0",
     "gulp-htmlmin": "5.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "10.0.0",
     "gulp-sass": "5.1.0",
     "gulp-sharp-responsive": "0.4.1",
-    "gulp-stacksvg": "4.0.0",
+    "gulp-stacksvg": "5.0.1",
     "gulp-svgmin": "4.1.0",
-    "linthtml-config-htmlacademy": "1.0.25",
+    "linthtml-config-htmlacademy": "1.1.0",
     "npm-run-all": "4.1.5",
-    "postcss": "8.4.38",
-    "postcss-lightningcss": "1.0.0",
+    "postcss": "8.5.6",
+    "postcss-lightningcss": "1.0.2",
     "postcss-url": "10.1.3",
     "sass": "1.77.4",
-    "stylelint": "16.6.1",
+    "stylelint": "16.25.0",
     "stylelint-config-htmlacademy": "4.2.3",
-    "w3c-html-validator": "1.8.1"
+    "w3c-html-validator": "2.0.0"
   },
   "overrides": {
     "es5-ext": "0.10.53"

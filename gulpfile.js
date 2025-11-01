@@ -1,5 +1,4 @@
 import { readFileSync, rmSync } from 'node:fs';
-
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import htmlmin from 'gulp-htmlmin';
@@ -14,7 +13,6 @@ import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
-import bemlinter from 'gulp-html-bemlinter';
 
 const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
@@ -39,10 +37,6 @@ export function processMarkup () {
     .pipe(server.stream());
 }
 
-export function lintBem () {
-  return src(`${PATH_TO_SOURCE}**/*.html`)
-    .pipe(bemlinter());
-}
 
 export function processStyles () {
   return src(`${PATH_TO_SOURCE}styles/*.scss`, { sourcemaps: isDevelopment })
