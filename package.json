@@ -29,6 +29,7 @@
     "optimize:vector": "gulp optimizeVector"
   },
   "devDependencies": {
+    "@firefoxic/bemlint": "6.0.0",
     "@htmlacademy/editorconfig-cli": "3.0.0",
     "@linthtml/linthtml": "0.9.6",
     "browser-sync": "3.0.4",
@@ -37,7 +38,6 @@
     "eslint-config-htmlacademy": "10.0.1",
     "gulp": "5.0.1",
     "gulp-esbuild": "0.14.1",
-    "@firefoxic/bemlint": "^6.0.0",
     "gulp-htmlmin": "5.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "10.0.0",
