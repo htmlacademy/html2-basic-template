@@ -125,7 +125,7 @@ export function createStack () {
 }
 
 export function copyStatic () {
-  return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE })
+  return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE, encoding: false })
     .pipe(dest(PATH_TO_DIST));
 }
 
