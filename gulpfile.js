@@ -1,4 +1,4 @@
-import { readFileSync, rmSync } from 'node:fs';
+import {globSync, readFileSync, rmSync} from 'node:fs';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import htmlmin from 'gulp-htmlmin';
@@ -7,14 +7,14 @@ import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import lightningcss from 'postcss-lightningcss';
-import { createGulpEsbuild } from 'gulp-esbuild';
+import {createGulpEsbuild} from 'gulp-esbuild';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
 import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
-import { stacksvg } from 'gulp-stacksvg';
+import {stacksvg} from 'gulp-stacksvg';
 import server from 'browser-sync';
 
-const { src, dest, watch, series, parallel } = gulp;
+const {src, dest, watch, series, parallel} = gulp;
 const sass = gulpSass(dartSass);
 const PATH_TO_SOURCE = './source/';
 const PATH_TO_DIST = './build/';
@@ -30,18 +30,22 @@ const PATHS_TO_STATIC = [
 ];
 let isDevelopment = true;
 
-export function processMarkup () {
+const SASS_OPTIONS = {
+  silenceDeprecations: ['import', 'global-builtin', 'legacy-js-api'],
+};
+
+export function processMarkup() {
   return src(`${PATH_TO_SOURCE}**/*.html`)
-    .pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
+    .pipe(htmlmin({collapseWhitespace: !isDevelopment}))
     .pipe(dest(PATH_TO_DIST))
     .pipe(server.stream());
 }
 
 
-export function processStyles () {
-  return src(`${PATH_TO_SOURCE}styles/*.scss`, { sourcemaps: isDevelopment })
+export function processStyles() {
+  return src(`${PATH_TO_SOURCE}styles/*.scss`, {sourcemaps: isDevelopment})
     .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass(SASS_OPTIONS).on('error', sass.logError))
     .pipe(postcss([
       postUrl([
         {
@@ -52,7 +56,7 @@ export function processStyles () {
           filter: '**/icons/**/*.svg',
           url: (asset) => asset.url.replace(
             /icons\/(.+?)\.svg$/,
-            (match, p1) => `icons/stack.svg#${p1.replace(/\//g, '_')}`
+            (match, p1) => `icons/stack.svg#${p1.replace(/\//g, '_')}`,
           ),
           multi: true,
         },
@@ -61,17 +65,19 @@ export function processStyles () {
         lightningcssOptions: {
           minify: !isDevelopment,
         },
-      })
+      }),
     ]))
-    .pipe(dest(`${PATH_TO_DIST}styles`, { sourcemaps: isDevelopment }))
+    .pipe(dest(`${PATH_TO_DIST}styles`, {sourcemaps: isDevelopment}))
     .pipe(server.stream());
 }
 
-export function processScripts () {
-  const gulpEsbuild = createGulpEsbuild({ incremental: isDevelopment });
+export function processScripts() {
+  const gulpEsbuild = createGulpEsbuild({incremental: isDevelopment});
+  const entryPoints = globSync(`${PATH_TO_SOURCE}scripts/*.js`);
 
   return src(`${PATH_TO_SOURCE}scripts/*.js`)
     .pipe(gulpEsbuild({
+      entryPoints,
       bundle: true,
       format: 'esm',
       // splitting: true,
@@ -84,7 +90,7 @@ export function processScripts () {
     .pipe(server.stream());
 }
 
-export function optimizeRaster () {
+export function optimizeRaster() {
   const RAW_DENSITY = 2;
   const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
 
@@ -96,52 +102,57 @@ export function optimizeRaster () {
         formats.push(
           {
             format,
-            rename: { suffix: `@${density}x` },
-            width: ({ width }) => Math.ceil(width * density / RAW_DENSITY),
-            jpegOptions: { progressive: true },
+            rename: {suffix: `@${density}x`},
+            width: ({width}) => Math.ceil(width * density / RAW_DENSITY),
+            jpegOptions: {progressive: true},
           },
         );
       }
     }
 
-    return { formats };
+    return {formats};
   }
 
-  return src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`)
+  return src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`, {encoding: false})
     .pipe(sharp(createOptionsFormat()))
     .pipe(dest(`${PATH_TO_SOURCE}images`));
 }
 
-export function optimizeVector () {
+export function optimizeVector() {
   return src([`${PATH_TO_RAW}**/*.svg`])
     .pipe(svgo())
     .pipe(dest(PATH_TO_SOURCE));
 }
 
-export function createStack () {
+export function createStack() {
   return src(`${PATH_TO_SOURCE}icons/**/*.svg`)
     .pipe(stacksvg())
     .pipe(dest(`${PATH_TO_DIST}icons`));
 }
 
-export function copyStatic () {
-  return src(PATHS_TO_STATIC, { base: PATH_TO_SOURCE, encoding: false })
+export function copyStatic() {
+  return src(PATHS_TO_STATIC, {base: PATH_TO_SOURCE, encoding: false})
     .pipe(dest(PATH_TO_DIST));
 }
 
-export function startServer () {
+function reloadServer(done) {
+  server.reload();
+  done();
+}
+
+export function startServer() {
   const serveStatic = PATHS_TO_STATIC
     .filter((path) => path.startsWith('!') === false)
     .map((path) => {
       const dir = path.replace(/(\/\*\*\/.*$)|\/$/, '');
       const route = dir.replace(PATH_TO_SOURCE, '/');
 
-      return { route, dir };
+      return {route, dir};
     });
 
   server.init({
     server: {
-      baseDir: PATH_TO_DIST
+      baseDir: PATH_TO_DIST,
     },
     serveStatic,
     cors: true,
@@ -161,12 +172,7 @@ export function startServer () {
   watch(PATHS_TO_STATIC, series(reloadServer));
 }
 
-function reloadServer (done) {
-  server.reload();
-  done();
-}
-
-export function removeBuild (done) {
+export function removeBuild(done) {
   rmSync(PATH_TO_DIST, {
     force: true,
     recursive: true,
@@ -174,7 +180,7 @@ export function removeBuild (done) {
   done();
 }
 
-export function buildProd (done) {
+export function buildProd(done) {
   isDevelopment = false;
   series(
     removeBuild,
@@ -188,7 +194,7 @@ export function buildProd (done) {
   )(done);
 }
 
-export function runDev (done) {
+export function runDev(done) {
   series(
     removeBuild,
     parallel(
