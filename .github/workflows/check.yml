@@ -32,7 +32,7 @@ jobs:
           restore-keys: cache-npm-
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Run checks
         run: npm run lint
