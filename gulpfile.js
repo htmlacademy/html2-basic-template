@@ -1,4 +1,6 @@
 import {globSync, readFileSync, rmSync} from 'node:fs';
+import {Transform} from 'node:stream';
+import process from 'node:process';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import htmlmin from 'gulp-htmlmin';
@@ -92,9 +94,24 @@ export function processScripts() {
     .pipe(server.stream());
 }
 
+function logProgress(total) {
+  let count = 0;
+
+  return new Transform({
+    objectMode: true,
+    transform(file, _encoding, callback) {
+      count += 1;
+      process.stdout.write(`Готово ${count}/${total}: ${file.relative}\n`);
+      callback(null, file);
+    },
+  });
+}
+
 export function optimizeRaster() {
   const RAW_DENSITY = 2;
   const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
+  const sources = globSync(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`);
+  const total = sources.length * TARGET_FORMATS.length * RAW_DENSITY;
 
   function createOptionsFormat() {
     const formats = [];
@@ -117,12 +134,16 @@ export function optimizeRaster() {
 
   return src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`, {encoding: false})
     .pipe(sharp(createOptionsFormat()))
+    .pipe(logProgress(total))
     .pipe(dest(`${PATH_TO_SOURCE}images`));
 }
 
 export function optimizeVector() {
+  const sources = globSync(`${PATH_TO_RAW}**/*.svg`);
+
   return src([`${PATH_TO_RAW}**/*.svg`])
     .pipe(svgo())
+    .pipe(logProgress(sources.length))
     .pipe(dest(PATH_TO_SOURCE));
 }
 
