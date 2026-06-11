@@ -21,12 +21,14 @@ const PATH_TO_DIST = './build/';
 const PATH_TO_RAW = './raw/';
 const PATHS_TO_STATIC = [
   `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
-  `${PATH_TO_SOURCE}*.ico`,
-  `${PATH_TO_SOURCE}*.webmanifest`,
   `${PATH_TO_SOURCE}favicons/**/*.{png,svg}`,
   `${PATH_TO_SOURCE}vendor/**/*`,
   `${PATH_TO_SOURCE}images/**/*`,
   `!${PATH_TO_SOURCE}**/README.md`,
+];
+const PATHS_TO_ROOT_STATIC = [
+  `${PATH_TO_SOURCE}*.ico`,
+  `${PATH_TO_SOURCE}*.webmanifest`,
 ];
 let isDevelopment = true;
 
@@ -131,7 +133,12 @@ export function createStack() {
 }
 
 export function copyStatic() {
-  return src(PATHS_TO_STATIC, {base: PATH_TO_SOURCE, encoding: false})
+  return src([...PATHS_TO_ROOT_STATIC, ...PATHS_TO_STATIC], {base: PATH_TO_SOURCE, encoding: false})
+    .pipe(dest(PATH_TO_DIST));
+}
+
+export function copyRootStatic() {
+  return src(PATHS_TO_ROOT_STATIC, {base: PATH_TO_SOURCE, encoding: false})
     .pipe(dest(PATH_TO_DIST));
 }
 
@@ -169,6 +176,7 @@ export function startServer() {
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
   watch(`${PATH_TO_SOURCE}icons/**/*.svg`, series(createStack, reloadServer));
+  watch(PATHS_TO_ROOT_STATIC, series(copyRootStatic, reloadServer));
   watch(PATHS_TO_STATIC, series(reloadServer));
 }
 
@@ -202,6 +210,7 @@ export function runDev(done) {
       processStyles,
       processScripts,
       createStack,
+      copyRootStatic,
     ),
     startServer,
   )(done);
