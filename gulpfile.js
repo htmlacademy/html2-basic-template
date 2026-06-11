@@ -161,7 +161,7 @@ export function copyStatic() {
     .pipe(dest(PATH_TO_DIST));
 }
 
-export function copyRootStatic() {
+function copyRootStatic() {
   return src(PATHS_TO_ROOT_STATIC, {base: PATH_TO_SOURCE, encoding: false})
     .pipe(dest(PATH_TO_DIST));
 }
