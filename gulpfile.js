@@ -1,6 +1,5 @@
 import {globSync, readFileSync, rmSync} from 'node:fs';
 import {Transform} from 'node:stream';
-import {pipeline} from 'node:stream/promises';
 import process from 'node:process';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
@@ -12,6 +11,7 @@ import postUrl from 'postcss-url';
 import lightningcss from 'postcss-lightningcss';
 import {createGulpEsbuild} from 'gulp-esbuild';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
+import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
 import {stacksvg} from 'gulp-stacksvg';
 import server from 'browser-sync';
@@ -107,8 +107,7 @@ function logProgress(total) {
   });
 }
 
-export async function optimizeRaster() {
-  const {default: sharp} = await import('gulp-sharp-responsive');
+export function optimizeRaster() {
   const RAW_DENSITY = 2;
   const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
   const sources = globSync(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`);
@@ -133,12 +132,10 @@ export async function optimizeRaster() {
     return {formats};
   }
 
-  await pipeline(
-    src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`, {encoding: false}),
-    sharp(createOptionsFormat()),
-    logProgress(total),
-    dest(`${PATH_TO_SOURCE}images`),
-  );
+  return src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`, {encoding: false})
+    .pipe(sharp(createOptionsFormat()))
+    .pipe(logProgress(total))
+    .pipe(dest(`${PATH_TO_SOURCE}images`));
 }
 
 export function optimizeVector() {
