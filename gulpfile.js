@@ -110,8 +110,7 @@ function logProgress(total) {
 export function optimizeRaster() {
   const RAW_DENSITY = 2;
   const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
-  const sources = globSync(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`);
-  const total = sources.length * TARGET_FORMATS.length * RAW_DENSITY;
+  const SOURCE_GLOB = `${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`;
 
   function createOptionsFormat() {
     const formats = [];
@@ -132,18 +131,22 @@ export function optimizeRaster() {
     return {formats};
   }
 
-  return src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`, {encoding: false})
-    .pipe(sharp(createOptionsFormat()))
+  const options = createOptionsFormat();
+  const total = globSync(SOURCE_GLOB).length * options.formats.length;
+
+  return src(SOURCE_GLOB, {encoding: false})
+    .pipe(sharp(options))
     .pipe(logProgress(total))
     .pipe(dest(`${PATH_TO_SOURCE}images`));
 }
 
 export function optimizeVector() {
-  const sources = globSync(`${PATH_TO_RAW}**/*.svg`);
+  const SOURCE_GLOB = `${PATH_TO_RAW}**/*.svg`;
+  const total = globSync(SOURCE_GLOB).length;
 
-  return src([`${PATH_TO_RAW}**/*.svg`])
+  return src([SOURCE_GLOB])
     .pipe(svgo())
-    .pipe(logProgress(sources.length))
+    .pipe(logProgress(total))
     .pipe(dest(PATH_TO_SOURCE));
 }
 
