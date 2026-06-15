@@ -58,6 +58,7 @@
     "w3c-html-validator": "2.2.1"
   },
   "overrides": {
-    "es5-ext": "0.10.53"
+    "es5-ext": "0.10.53",
+    "sharp": "0.35.0"
   }
 }

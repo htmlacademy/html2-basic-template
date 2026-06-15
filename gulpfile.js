@@ -1,4 +1,6 @@
 import {globSync, readFileSync, rmSync} from 'node:fs';
+import {Transform} from 'node:stream';
+import process from 'node:process';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import htmlmin from 'gulp-htmlmin';
@@ -21,12 +23,14 @@ const PATH_TO_DIST = './build/';
 const PATH_TO_RAW = './raw/';
 const PATHS_TO_STATIC = [
   `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
-  `${PATH_TO_SOURCE}*.ico`,
-  `${PATH_TO_SOURCE}*.webmanifest`,
   `${PATH_TO_SOURCE}favicons/**/*.{png,svg}`,
   `${PATH_TO_SOURCE}vendor/**/*`,
   `${PATH_TO_SOURCE}images/**/*`,
   `!${PATH_TO_SOURCE}**/README.md`,
+];
+const PATHS_TO_ROOT_STATIC = [
+  `${PATH_TO_SOURCE}*.ico`,
+  `${PATH_TO_SOURCE}*.webmanifest`,
 ];
 let isDevelopment = true;
 
@@ -90,9 +94,23 @@ export function processScripts() {
     .pipe(server.stream());
 }
 
+function logProgress(total) {
+  let count = 0;
+
+  return new Transform({
+    objectMode: true,
+    transform(file, _encoding, callback) {
+      count += 1;
+      process.stdout.write(`Готово ${count}/${total}: ${file.relative}\n`);
+      callback(null, file);
+    },
+  });
+}
+
 export function optimizeRaster() {
   const RAW_DENSITY = 2;
   const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
+  const SOURCE_GLOB = `${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`;
 
   function createOptionsFormat() {
     const formats = [];
@@ -113,14 +131,22 @@ export function optimizeRaster() {
     return {formats};
   }
 
-  return src(`${PATH_TO_RAW}images/**/*.{png,jpg,jpeg}`, {encoding: false})
-    .pipe(sharp(createOptionsFormat()))
+  const options = createOptionsFormat();
+  const total = globSync(SOURCE_GLOB).length * options.formats.length;
+
+  return src(SOURCE_GLOB, {encoding: false})
+    .pipe(sharp(options))
+    .pipe(logProgress(total))
     .pipe(dest(`${PATH_TO_SOURCE}images`));
 }
 
 export function optimizeVector() {
-  return src([`${PATH_TO_RAW}**/*.svg`])
+  const SOURCE_GLOB = `${PATH_TO_RAW}**/*.svg`;
+  const total = globSync(SOURCE_GLOB).length;
+
+  return src([SOURCE_GLOB])
     .pipe(svgo())
+    .pipe(logProgress(total))
     .pipe(dest(PATH_TO_SOURCE));
 }
 
@@ -131,7 +157,12 @@ export function createStack() {
 }
 
 export function copyStatic() {
-  return src(PATHS_TO_STATIC, {base: PATH_TO_SOURCE, encoding: false})
+  return src([...PATHS_TO_ROOT_STATIC, ...PATHS_TO_STATIC], {base: PATH_TO_SOURCE, encoding: false})
+    .pipe(dest(PATH_TO_DIST));
+}
+
+function copyRootStatic() {
+  return src(PATHS_TO_ROOT_STATIC, {base: PATH_TO_SOURCE, encoding: false})
     .pipe(dest(PATH_TO_DIST));
 }
 
@@ -169,6 +200,7 @@ export function startServer() {
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
   watch(`${PATH_TO_SOURCE}icons/**/*.svg`, series(createStack, reloadServer));
+  watch(PATHS_TO_ROOT_STATIC, series(copyRootStatic, reloadServer));
   watch(PATHS_TO_STATIC, series(reloadServer));
 }
 
@@ -202,6 +234,7 @@ export function runDev(done) {
       processStyles,
       processScripts,
       createStack,
+      copyRootStatic,
     ),
     startServer,
   )(done);
